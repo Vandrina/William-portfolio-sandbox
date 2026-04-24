@@ -15,6 +15,15 @@ manifest_path = root / 'data' / 'manifest.json'
 
 image_extensions = {'.jpg', '.jpeg', '.png', '.gif', '.webp'}
 
+old_manifest = {}
+if manifest_path.exists():
+    try:
+        with manifest_path.open('r', encoding='utf-8') as old_file:
+            old_items = json.load(old_file)
+            old_manifest = {item.get('file'): item for item in old_items if isinstance(item, dict) and item.get('file')}
+    except Exception:
+        print('Warning: could not read existing manifest metadata; rebuilding fresh.')
+
 manifest = []
 
 for image_path in sorted(images_root.rglob('*')):
@@ -38,8 +47,10 @@ for image_path in sorted(images_root.rglob('*')):
         thumb_width, thumb_height = img.size
 
     discipline = image_path.parent.name
+    key = str(relative_path).replace('\\', '/')
+    old_item = old_manifest.get(key, {})
     manifest.append({
-        'file': str(relative_path).replace('\\', '/'),
+        'file': key,
         'thumbnail': str(thumb_path.relative_to(root)).replace('\\', '/'),
         'width': full_width,
         'height': full_height,
@@ -48,9 +59,9 @@ for image_path in sorted(images_root.rglob('*')):
         'aspectRatio': round(full_width / full_height, 4),
         'thumbAspectRatio': round(thumb_width / thumb_height, 4),
         'discipline': discipline,
-        'clients': [],
-        'keywords': [],
-        'sort': 999,
+        'clients': old_item.get('clients', []),
+        'keywords': old_item.get('keywords', []),
+        'sort': old_item.get('sort', 999),
     })
 
 manifest_path.parent.mkdir(parents=True, exist_ok=True)
