@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio — William McGuire</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .filter-wrap {
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    padding: 18px 32px;
+    position: sticky;
+    top: 62px;
+    z-index: 90;
+  }
+  .filter-inner { max-width: var(--max); margin: 0 auto; }
+  .filter-groups {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    align-items: start;
+  }
+  .filter-left { display: flex; flex-direction: column; gap: 10px; }
+  .filter-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+  }
+  .filter-group-label {
+    font-family: var(--font-head);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--bright);
+    margin-right: 2px;
+    flex-shrink: 0;
+  }
+  .filter-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 11px;
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text);
+    background: transparent;
+    border: 1px solid var(--mid);
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s, background 0.2s;
+    user-select: none;
+  }
+  .filter-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .filter-btn.active {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: rgba(200,164,110,0.08);
+  }
+  .filter-btn.active::after { content: '✓'; font-size: 10px; opacity: 0.8; }
+  .filter-all-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding-left: 12px;
+    border-left: 1px solid var(--border);
+  }
+  .filter-btn-all {
+    padding: 8px 16px;
+    font-family: var(--font-head);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    background: transparent;
+    border: 1px solid var(--muted);
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+    white-space: nowrap;
+  }
+  .filter-btn-all:hover,
+  .filter-btn-all.active { border-color: var(--accent); color: var(--accent); }
+  .logic-toggle {
+    display: flex;
+    border: 1px solid var(--border-mid);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--surface);
+  }
+  .logic-btn {
+    padding: 5px 10px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--muted);
+    background: var(--surface);
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s, background 0.2s;
+    letter-spacing: 0.05em;
+  }
+  .logic-btn.active { color: var(--accent); background: var(--bg-3); }
+  .active-summary {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .active-summary-label {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .active-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px 8px;
+    font-family: var(--font-body);
+    font-size: 11px;
+    color: var(--accent);
+    border: 1px solid var(--accent-dim);
+    border-radius: 3px;
+    background: rgba(200,164,110,0.06);
+  }
+  .active-tag-remove { cursor: pointer; opacity: 0.6; font-size: 12px; transition: opacity 0.2s; }
+  .active-tag-remove:hover { opacity: 1; }
+  .clear-btn {
+    padding: 3px 8px;
+    font-family: var(--font-mono);
+    font-size: 9px;
+    color: var(--muted);
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    cursor: pointer;
+    letter-spacing: 0.08em;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .clear-btn:hover { color: var(--text); border-color: var(--border-mid); }
+  .filter-mobile-toggle {
+    display: none;
+    width: 100%;
+    padding: 10px 16px;
+    font-family: var(--font-head);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    background: var(--surface);
+    border: 1px solid var(--border-mid);
+    border-radius: var(--radius);
+    cursor: pointer;
+    justify-content: space-between;
+    align-items: center;
+    transition: border-color 0.2s;
+  }
+  .filter-mobile-toggle:hover { border-color: var(--accent); }
+
+  .results-bar { padding: 12px 32px; background: var(--bg-2); border-bottom: 1px solid var(--border); }
+  .results-inner { max-width: var(--max); margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .results-count { font-family: var(--font-mono); font-size: 11px; color: var(--mid); letter-spacing: 0.06em; }
+  .results-count strong { color: var(--text); }
+
+  .gallery-wrap { padding: 28px 32px 64px; }
+  .gallery-inner { max-width: var(--max); margin: 0 auto; }
+  .gallery-grid { columns: 4; column-gap: 12px; }
+
+  .gal-item {
+    break-inside: avoid;
+    margin-bottom: 12px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    position: relative;
+    cursor: pointer;
+    display: block;
+    background: var(--surface);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  }
+  .gal-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(0,0,0,0.45);
+    border-color: var(--border-mid);
+  }
+  .gal-item.hidden { display: none; }
+
+  /* Blur-up image loading */
+  .gal-item .img-wrap {
+    position: relative;
+    overflow: hidden;
+    display: block;
+  }
+  .gal-item .img-placeholder {
+    display: block;
+    width: 100%;
+    height: auto;
+    filter: blur(12px);
+    transform: scale(1.05);
+    transition: opacity 0.4s ease;
+  }
+  .gal-item .img-main {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    filter: blur(0);
+    transition: opacity 0.5s ease;
+  }
+  .gal-item .img-main.loaded {
+    opacity: 1;
+  }
+  .gal-item .img-main.loaded + .img-placeholder,
+  .gal-item.img-ready .img-placeholder {
+    opacity: 0;
+  }
+
+  .gal-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(10,10,12,0.88) 0%, rgba(10,10,12,0.2) 50%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 14px;
+    z-index: 2;
+  }
+  .gal-item:hover .gal-overlay { opacity: 1; }
+  .gal-overlay-discipline {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    color: var(--accent);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+  }
+  .gal-overlay-client {
+    font-family: var(--font-head);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--bright);
+  }
+
+  .gallery-empty { display: none; padding: 80px 32px; text-align: center; }
+  .gallery-empty.visible { display: block; }
+  .gallery-empty-title { font-family: var(--font-head); font-size: 18px; font-weight: 600; color: var(--mid); margin-bottom: 8px; }
+  .gallery-empty-desc { font-family: var(--font-body); font-size: 13px; color: var(--muted); }
+
+  .lightbox {
+    position: fixed; inset: 0;
+    background: rgba(10,10,12,0.94);
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+  }
+  .lightbox.open { display: flex; }
+  .lightbox-inner {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  .lightbox-img {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: var(--radius);
+    box-shadow: 0 32px 80px rgba(0,0,0,0.7);
+  }
+  .lightbox-meta { display: flex; gap: 12px; align-items: center; }
+  .lightbox-discipline { font-family: var(--font-mono); font-size: 9px; color: var(--accent); letter-spacing: 0.12em; text-transform: uppercase; }
+  .lightbox-client { font-family: var(--font-head); font-size: 14px; font-weight: 600; color: var(--bright); }
+  .lightbox-close {
+    position: fixed; top: 24px; right: 24px;
+    width: 40px; height: 40px;
+    background: var(--surface); border: 1px solid var(--border-mid); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; color: var(--mid); font-size: 18px;
+    transition: color 0.2s, border-color 0.2s; z-index: 1001;
+  }
+  .lightbox-close:hover { color: var(--bright); border-color: var(--mid); }
+  .lightbox-nav {
+    position: fixed; top: 50%; transform: translateY(-50%);
+    width: 44px; height: 44px;
+    background: rgba(20,20,22,0.75); border: 1px solid var(--border-mid); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; color: var(--mid); font-size: 18px;
+    transition: color 0.2s, background 0.2s; z-index: 1001;
+  }
+  .lightbox-nav:hover { color: var(--bright); background: rgba(20,20,22,0.95); }
+  .lightbox-prev { left: 24px; }
+  .lightbox-next { right: 24px; }
+
+  @media (max-width: 1024px) { .gallery-grid { columns: 3; } }
+  @media (max-width: 768px) {
+    .filter-wrap { padding: 14px 20px; }
+    .gallery-wrap { padding: 20px 20px 48px; }
+    .gallery-grid { columns: 2; }
+    .results-bar { padding: 10px 20px; }
+    .filter-mobile-toggle { display: flex; }
+    .filter-groups { display: none; }
+    .filter-groups.mobile-open { display: grid; margin-top: 12px; }
+    .filter-groups { grid-template-columns: 1fr; }
+    .filter-all-wrap {
+      flex-direction: row;
+      border-left: none;
+      border-top: 1px solid var(--border);
+      padding-left: 0;
+      padding-top: 10px;
+      justify-content: flex-start;
+    }
+  }
+  @media (max-width: 480px) { .gallery-grid { columns: 1; } }
+</style>
+</head>
+<body>
+
+<div class="nav-wrap">
+  <nav class="nav">
+    <a href="index.html" class="nav-id">
+      <div class="nav-name">William McGuire</div>
+      <div class="nav-sub">Illustration <span>·</span> Concept Art <span>·</span> Animation</div>
+    </a>
+    <div class="nav-links">
+      <a href="portfolio.html" class="nav-item active">Portfolio</a>
+      <a href="about.html" class="nav-item">About</a>
+      <a href="contact.html" class="nav-item">Contact</a>
+      <a href="https://williammcguire.shop" class="nav-shop nav-item">↗ Shop</a>
+    </div>
+  </nav>
+</div>
+
+<div class="page-head">
+  <div class="page-head-inner">
+    <div class="page-eyebrow">The Work</div>
+    <h1 class="page-title">Portfolio</h1>
+    <p class="page-desc">Filter by discipline, client, or both. Select multiple to combine.</p>
+  </div>
+</div>
+
+<div class="filter-wrap">
+  <div class="filter-inner">
+    <button class="filter-mobile-toggle" id="filterToggle">
+      <span>Filter</span>
+      <span id="filterToggleIcon">↓</span>
+    </button>
+    <div class="filter-groups" id="filterGroups">
+      <div class="filter-left">
+        <div class="filter-group">
+          <span class="filter-group-label">Disciplines</span>
+          <button class="filter-btn" data-type="discipline" data-value="illustration">Illustration</button>
+          <button class="filter-btn" data-type="discipline" data-value="concept-art">Concept Art</button>
+          <button class="filter-btn" data-type="discipline" data-value="toy-design">Toy Design</button>
+          <button class="filter-btn" data-type="discipline" data-value="backgrounds">Backgrounds</button>
+          <button class="filter-btn" data-type="discipline" data-value="books">Books</button>
+          <button class="filter-btn" data-type="discipline" data-value="nft">NFTs</button>
+        </div>
+        <div class="filter-group">
+          <span class="filter-group-label">Client</span>
+          <button class="filter-btn" data-type="client" data-value="microsoft">Microsoft</button>
+          <button class="filter-btn" data-type="client" data-value="amazon">Amazon</button>
+          <button class="filter-btn" data-type="client" data-value="big-fish">Big Fish</button>
+          <button class="filter-btn" data-type="client" data-value="elevated-games">Elevated Games</button>
+          <button class="filter-btn" data-type="client" data-value="reflective-games">Reflective Games</button>
+          <button class="filter-btn" data-type="client" data-value="dreambox-learning">Dreambox Learning</button>
+          <button class="filter-btn" data-type="client" data-value="leapfrog">LeapFrog</button>
+          <button class="filter-btn" data-type="client" data-value="paramount">Paramount</button>
+          <button class="filter-btn" data-type="client" data-value="handmade-by-robots">Handmade by Robots</button>
+          <button class="filter-btn" data-type="client" data-value="mystery-society">Mystery Society</button>
+          <button class="filter-btn" data-type="client" data-value="nordstrom">Nordstrom</button>
+          <button class="filter-btn" data-type="client" data-value="nickelodeon">Nickelodeon</button>
+          <button class="filter-btn" data-type="client" data-value="stone-arch-books">Stone Arch Books</button>
+          <button class="filter-btn" data-type="client" data-value="tech-smart-kids">Tech Smart Kids</button>
+          <button class="filter-btn" data-type="client" data-value="agency">Agency</button>
+        </div>
+      </div>
+      <div class="filter-all-wrap">
+        <button class="filter-btn-all active" id="filterAll">View All</button>
+        <div class="logic-toggle">
+          <button class="logic-btn active" data-logic="or">OR</button>
+          <button class="logic-btn" data-logic="and">AND</button>
+        </div>
+      </div>
+    </div>
+    <div class="active-summary" id="activeSummary" style="display:none;">
+      <span class="active-summary-label">Active</span>
+      <div id="activeTags"></div>
+      <button class="clear-btn" id="clearAll">CLEAR</button>
+    </div>
+  </div>
+</div>
+
+<div class="results-bar">
+  <div class="results-inner">
+    <div class="results-count">Showing <strong id="visibleCount">0</strong> of <strong id="totalCount">0</strong> pieces</div>
+  </div>
+</div>
+
+<div class="gallery-wrap">
+  <div class="gallery-inner">
+    <div class="gallery-grid" id="galleryGrid"></div>
+    <div class="gallery-empty" id="galleryEmpty">
+      <div class="gallery-empty-title">No pieces match that filter combination.</div>
+      <div class="gallery-empty-desc">Try adjusting or clearing your filters.</div>
+    </div>
+  </div>
+</div>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose">✕</button>
+  <button class="lightbox-nav lightbox-prev" id="lightboxPrev">‹</button>
+  <button class="lightbox-nav lightbox-next" id="lightboxNext">›</button>
+  <div class="lightbox-inner">
+    <img class="lightbox-img" id="lightboxImg" src="" alt="">
+    <div class="lightbox-meta">
+      <span class="lightbox-discipline" id="lightboxDiscipline"></span>
+      <span class="lightbox-client" id="lightboxClient"></span>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-name">William McGuire</div>
+    <div class="footer-tagline">Illustrator · Concept Artist · Animator</div>
+  </div>
+  <div class="footer-base">
+    <div class="footer-copy">© william mcguire — williammcguire.net</div>
+    <div class="footer-links">
+      <a href="portfolio.html" class="footer-link">Portfolio</a>
+      <a href="about.html" class="footer-link">About</a>
+      <a href="contact.html" class="footer-link">Contact</a>
+      <a href="https://williammcguire.shop" class="footer-link gold">↗ Shop</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  'use strict';
+
+  let manifest = [];
+  let activeFilters = { discipline: new Set(), client: new Set() };
+  let filterLogic = 'or';
+  let visibleItems = [];
+  let lightboxIndex = 0;
+
+  const grid = document.getElementById('galleryGrid');
+  const emptyState = document.getElementById('galleryEmpty');
+  const visibleCount = document.getElementById('visibleCount');
+  const totalCount = document.getElementById('totalCount');
+  const activeSummary = document.getElementById('activeSummary');
+  const activeTags = document.getElementById('activeTags');
+  const filterToggle = document.getElementById('filterToggle');
+  const filterToggleIcon = document.getElementById('filterToggleIcon');
+  const filterGroups = document.getElementById('filterGroups');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxDiscipline = document.getElementById('lightboxDiscipline');
+  const lightboxClient = document.getElementById('lightboxClient');
+
+  // Determine base path for assets (works on GitHub Pages and custom domain)
+  const basePath = document.querySelector('meta[name="base-path"]')?.content || '';
+
+  // ── Lazy loading ──
+  const lazyObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const mainImg = el.querySelector('.img-main');
+      if (mainImg && mainImg.dataset.src) {
+        mainImg.src = mainImg.dataset.src;
+        mainImg.removeAttribute('data-src');
+        mainImg.onload = () => {
+          mainImg.classList.add('loaded');
+          el.classList.add('img-ready');
+        };
+        mainImg.onerror = () => {
+          el.classList.add('img-ready');
+        };
+      }
+      lazyObserver.unobserve(el);
+    });
+  }, { rootMargin: '400px 0px' });
+
+  // ── Load manifest ──
+  // Use relative path — works correctly when served from any subdirectory
+  fetch('./data/manifest.json')
+    .then(r => {
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      return r.json();
+    })
+    .then(data => {
+      manifest = data;
+
+      /* Display order options — uncomment one:
+      // Randomized on each load:
+      // manifest.sort(() => Math.random() - 0.5);
+
+      // By sort field in manifest (add "sort": 1 etc to manifest entries):
+      // manifest.sort((a, b) => (a.sort || 999) - (b.sort || 999));
+      */
+
+      totalCount.textContent = manifest.length;
+      buildGallery(true);          // build DOM, skip initial filter pass
+      readUrlParams();             // apply URL filters if any
+      requestAnimationFrame(() => filterGallery()); // single filter pass after DOM settles
+    })
+    .catch(err => {
+      console.error('Failed to load manifest:', err);
+      emptyState.querySelector('.gallery-empty-title').textContent = 'Could not load portfolio.';
+      emptyState.querySelector('.gallery-empty-desc').textContent = 'Please try refreshing the page.';
+      emptyState.classList.add('visible');
+    });
+
+  // ── Build gallery ──
+  function buildGallery(skipFilter) {
+    grid.innerHTML = '';
+
+    manifest.forEach((item, index) => {
+      const el = document.createElement('div');
+      el.className = 'gal-item';
+      el.dataset.index = index;
+      el.dataset.discipline = item.discipline;
+      el.dataset.clients = (item.clients || []).join(',');
+
+      const thumbSrc = item.file.replace(/^images\//, 'thumbnails/');
+      const blurSrc  = item.file.replace(/^images\//, 'gallery-blur-placeholders/');
+      const fullSrc  = item.file;
+      el.dataset.full = fullSrc;
+
+      const clientLabel = (item.clients || []).map(c => formatLabel(c)).join(', ');
+
+      el.innerHTML = `
+        <div class="img-wrap">
+          <img class="img-placeholder" src="${blurSrc}" alt="" aria-hidden="true">
+          <img class="img-main" data-src="${thumbSrc}" alt="${formatLabel(item.discipline)}${clientLabel ? ' — ' + clientLabel : ''}">
+        </div>
+        <div class="gal-overlay">
+          <div class="gal-overlay-discipline">${formatLabel(item.discipline)}</div>
+          ${clientLabel ? `<div class="gal-overlay-client">${clientLabel}</div>` : ''}
+        </div>
+      `;
+
+      lazyObserver.observe(el);
+      el.addEventListener('click', () => openLightbox(index));
+      grid.appendChild(el);
+    });
+
+    if (!skipFilter) filterGallery();
+  }
+
+  // ── Filter logic ──
+  function filterGallery() {
+    const items = grid.querySelectorAll('.gal-item');
+    const selDisc   = [...activeFilters.discipline];
+    const selClient = [...activeFilters.client];
+    const noFilters = selDisc.length === 0 && selClient.length === 0;
+
+    visibleItems = [];
+
+    items.forEach(el => {
+      const index = parseInt(el.dataset.index);
+      const item = manifest[index];
+      const itemClients = item.clients || [];
+      const itemDisc = item.discipline;
+      let show;
+
+      if (noFilters) {
+        show = true;
+      } else if (filterLogic === 'or') {
+        const discHit   = selDisc.length > 0   && selDisc.includes(itemDisc);
+        const clientHit = selClient.length > 0 && itemClients.some(c => selClient.includes(c));
+        if (selDisc.length > 0 && selClient.length > 0) {
+          show = discHit || clientHit;
+        } else if (selDisc.length > 0) {
+          show = discHit;
+        } else {
+          show = clientHit;
+        }
+      } else {
+        // AND: must satisfy every type that has active filters
+        const discOk   = selDisc.length === 0   || selDisc.includes(itemDisc);
+        const clientOk = selClient.length === 0  || itemClients.some(c => selClient.includes(c));
+        show = discOk && clientOk;
+      }
+
+      el.classList.toggle('hidden', !show);
+      if (show) visibleItems.push(index);
+    });
+
+    visibleCount.textContent = visibleItems.length;
+    emptyState.classList.toggle('visible', visibleItems.length === 0);
+    updateActiveSummary();
+    updateUrl();
+  }
+
+  // ── Filter buttons ──
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const type  = btn.dataset.type;
+      const value = btn.dataset.value;
+      if (activeFilters[type].has(value)) {
+        activeFilters[type].delete(value);
+        btn.classList.remove('active');
+      } else {
+        activeFilters[type].add(value);
+        btn.classList.add('active');
+      }
+      updateAllButton();
+      filterGallery();
+    });
+  });
+
+  document.getElementById('filterAll').addEventListener('click', clearAllFilters);
+  document.getElementById('clearAll').addEventListener('click', clearAllFilters);
+
+  function clearAllFilters() {
+    activeFilters.discipline.clear();
+    activeFilters.client.clear();
+    document.querySelectorAll('.filter-btn.active').forEach(b => b.classList.remove('active'));
+    updateAllButton();
+    filterGallery();
+  }
+
+  function updateAllButton() {
+    const hasAny = activeFilters.discipline.size > 0 || activeFilters.client.size > 0;
+    document.getElementById('filterAll').classList.toggle('active', !hasAny);
+  }
+
+  // ── Logic toggle ──
+  document.querySelectorAll('.logic-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterLogic = btn.dataset.logic;
+      document.querySelectorAll('.logic-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      filterGallery();
+    });
+  });
+
+  // ── Mobile toggle ──
+  filterToggle.addEventListener('click', () => {
+    const open = filterGroups.classList.toggle('mobile-open');
+    filterToggleIcon.textContent = open ? '↑' : '↓';
+  });
+
+  // ── Active summary ──
+  function updateActiveSummary() {
+    const hasAny = activeFilters.discipline.size > 0 || activeFilters.client.size > 0;
+    activeSummary.style.display = hasAny ? 'flex' : 'none';
+    activeTags.innerHTML = '';
+    [...activeFilters.discipline].forEach(v => activeTags.appendChild(makeTag(v, 'discipline')));
+    [...activeFilters.client].forEach(v => activeTags.appendChild(makeTag(v, 'client')));
+  }
+
+  function makeTag(value, type) {
+    const tag = document.createElement('div');
+    tag.className = 'active-tag';
+    tag.innerHTML = `${formatLabel(value)} <span class="active-tag-remove">×</span>`;
+    tag.querySelector('.active-tag-remove').addEventListener('click', () => {
+      activeFilters[type].delete(value);
+      const btn = document.querySelector(`.filter-btn[data-type="${type}"][data-value="${value}"]`);
+      if (btn) btn.classList.remove('active');
+      updateAllButton();
+      filterGallery();
+    });
+    return tag;
+  }
+
+  // ── URL params ──
+  function updateUrl() {
+    const params = new URLSearchParams();
+    if (activeFilters.discipline.size > 0) params.set('view', [...activeFilters.discipline].join(','));
+    if (activeFilters.client.size > 0) params.set('client', [...activeFilters.client].join(','));
+    const newUrl = params.toString()
+      ? `${window.location.pathname}?${params.toString()}`
+      : window.location.pathname;
+    window.history.replaceState({}, '', newUrl);
+  }
+
+  function readUrlParams() {
+    const params = new URLSearchParams(window.location.search);
+    const view   = params.get('view');
+    const client = params.get('client');
+
+    if (view) {
+      view.split(',').forEach(v => {
+        v = v.trim().toLowerCase();
+        if (!v) return;
+        activeFilters.discipline.add(v);
+        const btn = document.querySelector(`.filter-btn[data-type="discipline"][data-value="${v}"]`);
+        if (btn) btn.classList.add('active');
+      });
+    }
+    if (client) {
+      client.split(',').forEach(c => {
+        c = c.trim().toLowerCase();
+        if (!c) return;
+        activeFilters.client.add(c);
+        const btn = document.querySelector(`.filter-btn[data-type="client"][data-value="${c}"]`);
+        if (btn) btn.classList.add('active');
+      });
+    }
+    if (view || client) updateAllButton();
+  }
+
+  // ── Lightbox ──
+  function openLightbox(index) {
+    lightboxIndex = visibleItems.indexOf(index);
+    if (lightboxIndex === -1) lightboxIndex = 0;
+    showLightboxItem();
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function showLightboxItem() {
+    const index = visibleItems[lightboxIndex];
+    const item  = manifest[index];
+    const el    = grid.querySelector(`.gal-item[data-index="${index}"]`);
+    lightboxImg.src = el ? el.dataset.full : item.file;
+    lightboxImg.alt = formatLabel(item.discipline);
+    lightboxDiscipline.textContent = formatLabel(item.discipline);
+    lightboxClient.textContent = (item.clients || []).map(c => formatLabel(c)).join(', ');
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+    lightboxImg.src = '';
+  }
+
+  document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+  document.getElementById('lightboxPrev').addEventListener('click', () => {
+    lightboxIndex = (lightboxIndex - 1 + visibleItems.length) % visibleItems.length;
+    showLightboxItem();
+  });
+  document.getElementById('lightboxNext').addEventListener('click', () => {
+    lightboxIndex = (lightboxIndex + 1) % visibleItems.length;
+    showLightboxItem();
+  });
+  document.addEventListener('keydown', e => {
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft')  { lightboxIndex = (lightboxIndex - 1 + visibleItems.length) % visibleItems.length; showLightboxItem(); }
+    if (e.key === 'ArrowRight') { lightboxIndex = (lightboxIndex + 1) % visibleItems.length; showLightboxItem(); }
+  });
+
+  function formatLabel(slug) {
+    if (!slug) return '';
+    return slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+  }
+
+})();
+</script>
+</body>
+</html>

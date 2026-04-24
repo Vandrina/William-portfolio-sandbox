@@ -35,15 +35,18 @@
       <a href="contact.html" class="nav-item">Contact</a>
       <a href="shop.html" class="nav-shop nav-item">Shop ↗</a>
     </div>
-    <button class="nav-hamburger" id="navHamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
+  <div class="nav-mobile-menu" id="navMobileMenu">
+    <a href="portfolio.html">Portfolio</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="shop.html" class="shop">Shop ↗</a>
+  </div>
 </div>
-<div class="nav-mobile-menu" id="navMobileMenu">
-  <a href="portfolio.html">Portfolio</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-  <a href="shop.html" class="shop">Shop ↗</a>
-</div>
+
 
 <div class="policy-wrap">
   <div class="policy-inner">
@@ -82,19 +85,23 @@
     <div class="footer-tagline">Illustrator · Concept Artist · Animator</div>
   </div>
   <div class="footer-base">
-    <a href="portfolio.html" class="footer-link">Portfolio</a>
-    <a href="about.html" class="footer-link">About</a>
-    <a href="contact.html" class="footer-link">Contact</a>
-    <a href="shop.html" class="footer-link gold">Shop ↗</a>
-  </div>
-  <div class="footer-legal">
-    <div class="footer-copy">© william mcguire — williammcguire.net</div>
-    <div class="footer-legal-links">
-      <a href="privacy.html" class="footer-legal-link">Privacy Policy</a>
-      <a href="terms.html" class="footer-legal-link">Terms of Use</a>
+    <div class="footer-left">
+      <div class="footer-copy">© william mcguire — williammcguire.net</div>
+      <div class="footer-legal">
+        <a href="privacy.html" class="footer-legal-link">Privacy</a>
+        <a href="terms.html" class="footer-legal-link">Terms</a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="portfolio.html" class="footer-link">Portfolio</a>
+      <a href="about.html" class="footer-link">About</a>
+      <a href="contact.html" class="footer-link">Contact</a>
+      <a href="shop.html" class="footer-link gold">Shop ↗</a>
     </div>
   </div>
 </footer>
+
+
 <script>
 (function() {
   var btn = document.getElementById('navHamburger'), menu = document.getElementById('navMobileMenu');

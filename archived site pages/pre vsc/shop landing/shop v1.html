@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop — William McGuire</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500&family=Space+Mono:wght@400;700&display=optional">
+<link rel="stylesheet" href="style.css">
+<style>
+  .shop-wrap {
+    padding: 100px 32px 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 62px);
+  }
+  .shop-inner {
+    max-width: 480px;
+    text-align: center;
+  }
+  .shop-eyebrow {
+    font-family: var(--font-mono); font-size: 9px;
+    color: var(--accent); letter-spacing: 0.16em;
+    text-transform: uppercase; margin-bottom: 20px;
+  }
+  .shop-title {
+    font-family: var(--font-head); font-size: 36px; font-weight: 700;
+    color: var(--bright); letter-spacing: -0.02em; line-height: 1.15;
+    margin-bottom: 16px;
+  }
+  .shop-desc {
+    font-family: var(--font-body); font-size: 15px;
+    line-height: 1.8; color: var(--text);
+    margin-bottom: 40px;
+  }
+  .shop-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .shop-divider {
+    width: 40px; height: 1px;
+    background: var(--accent-dim);
+    margin: 0 auto 40px;
+  }
+
+  @media (max-width: 768px) {
+    .shop-wrap { padding: 64px 20px 80px; }
+    .shop-title { font-size: 28px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="nav-wrap">
+  <nav class="nav">
+    <a href="index.html" class="nav-id">
+      <div class="nav-name">William McGuire</div>
+      <div class="nav-sub">Illustration <span>·</span> Concept Art <span>·</span> Animation</div>
+    </a>
+    <div class="nav-links">
+      <a href="portfolio.html" class="nav-item">Portfolio</a>
+      <a href="about.html" class="nav-item">About</a>
+      <a href="contact.html" class="nav-item">Contact</a>
+      <a href="shop.html" class="nav-shop nav-item active">↗ Shop</a>
+    </div>
+  </nav>
+</div>
+
+<div class="shop-wrap">
+  <div class="shop-inner">
+
+    <div class="shop-eyebrow">Coming Soon</div>
+    <h1 class="shop-title">The Shop is on its way.</h1>
+
+    <div class="shop-divider"></div>
+
+    <p class="shop-desc">
+      Prints, stickers, and original work will be available here soon. In the meantime, browse the portfolio or follow along on Instagram for new work and updates.
+    </p>
+
+    <div class="shop-actions">
+      <a href="portfolio.html" class="btn btn-gold">Browse Portfolio</a>
+      <a href="https://instagram.com/bill.mcguire" target="_blank" class="btn btn-ghost">@bill.mcguire on Instagram</a>
+    </div>
+
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-name">William McGuire</div>
+    <div class="footer-tagline">Illustrator · Concept Artist · Animator</div>
+  </div>
+  <div class="footer-base">
+    <div class="footer-copy">© william mcguire — williammcguire.net</div>
+    <div class="footer-links">
+      <a href="portfolio.html" class="footer-link">Portfolio</a>
+      <a href="about.html" class="footer-link">About</a>
+      <a href="contact.html" class="footer-link">Contact</a>
+      <a href="shop.html" class="footer-link gold">↗ Shop</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

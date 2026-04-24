@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — William McGuire</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .contact-wrap { padding: 64px 32px; }
+  .contact-inner {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .contact-eyebrow {
+    font-family: var(--font-mono); font-size: 9px;
+    color: var(--muted); letter-spacing: 0.16em;
+    text-transform: uppercase; margin-bottom: 12px;
+  }
+  .contact-title {
+    font-family: var(--font-head); font-size: 38px; font-weight: 700;
+    color: var(--bright); letter-spacing: -0.02em; margin-bottom: 16px;
+  }
+  .contact-intro {
+    font-family: var(--font-body); font-size: 15px;
+    line-height: 1.8; color: var(--text); margin-bottom: 48px;
+  }
+  .contact-intro strong { color: var(--bright); }
+
+  .contact-availability {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+  }
+  .avail-tag {
+    padding: 8px 16px;
+    font-family: var(--font-head);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--accent);
+    border: 1px solid var(--accent-dim);
+    border-radius: var(--radius);
+    letter-spacing: 0.02em;
+  }
+
+  .contact-divider {
+    width: 40px; height: 1px;
+    background: var(--border-mid);
+    margin: 0 0 48px;
+  }
+
+  .contact-methods { display: flex; flex-direction: column; gap: 16px; margin-bottom: 48px; }
+  .contact-method {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    text-decoration: none;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .contact-method:hover { border-color: var(--accent-dim); background: var(--bg-3); }
+  .contact-method-icon {
+    font-size: 20px;
+    width: 40px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+  .contact-method-label {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    color: var(--muted);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+  }
+  .contact-method-value {
+    font-family: var(--font-head);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--bright);
+  }
+  .contact-method-note {
+    font-family: var(--font-body);
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  .contact-note {
+    font-family: var(--font-body);
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.7;
+    border-left: 2px solid var(--border-mid);
+    padding-left: 16px;
+  }
+
+  @media (max-width: 768px) {
+    .contact-wrap { padding: 40px 20px; }
+    .contact-title { font-size: 28px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="nav-wrap">
+  <nav class="nav">
+    <a href="index.html" class="nav-id">
+      <div class="nav-name">William McGuire</div>
+      <div class="nav-sub">Illustration <span>·</span> Concept Art <span>·</span> Animation</div>
+    </a>
+    <div class="nav-links">
+      <a href="portfolio.html" class="nav-item">Portfolio</a>
+      <a href="about.html" class="nav-item">About</a>
+      <a href="contact.html" class="nav-item active">Contact</a>
+      <a href="https://williammcguire.shop" class="nav-shop nav-item">↗ Shop</a>
+    </div>
+  </nav>
+</div>
+
+<div class="contact-wrap">
+  <div class="contact-inner">
+
+    <div class="contact-eyebrow">Get in touch</div>
+    <h1 class="contact-title">Let's Work Together</h1>
+
+    <p class="contact-intro">
+      Available for <strong>contract</strong>, <strong>freelance</strong>, and <strong>full-time</strong> opportunities across illustration, concept art, toy design, and animation.
+    </p>
+
+    <div class="contact-availability">
+      <div class="avail-tag">Contract</div>
+      <div class="avail-tag">Freelance</div>
+      <div class="avail-tag">Full-Time</div>
+    </div>
+
+    <div class="contact-divider"></div>
+
+    <div class="contact-methods">
+
+      <!-- Replace href with actual email -->
+      <a href="mailto:william@williammcguire.net" class="contact-method">
+        <div class="contact-method-icon">✉</div>
+        <div>
+          <div class="contact-method-label">Email</div>
+          <div class="contact-method-value">william@williammcguire.net</div>
+          <div class="contact-method-note">Best for project inquiries and full-time opportunities</div>
+        </div>
+      </a>
+
+      <!-- Replace href with actual LinkedIn URL -->
+      <a href="https://linkedin.com/in/williammcguire" target="_blank" class="contact-method">
+        <div class="contact-method-icon">in</div>
+        <div>
+          <div class="contact-method-label">LinkedIn</div>
+          <div class="contact-method-value">linkedin.com/in/williammcguire</div>
+          <div class="contact-method-note">Professional profile and resume</div>
+        </div>
+      </a>
+
+      <!-- Optional: Instagram -->
+      <a href="https://instagram.com/williammcguireart" target="_blank" class="contact-method">
+        <div class="contact-method-icon">◎</div>
+        <div>
+          <div class="contact-method-label">Instagram</div>
+          <div class="contact-method-value">@williammcguireart</div>
+          <div class="contact-method-note">Work in progress and new pieces</div>
+        </div>
+      </a>
+
+    </div>
+
+    <p class="contact-note">
+      Response time is typically within 48 hours. For time-sensitive projects please note your deadline in your message.
+    </p>
+
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-name">William McGuire</div>
+    <div class="footer-tagline">Illustrator · Concept Artist · Animator</div>
+  </div>
+  <div class="footer-base">
+    <div class="footer-copy">© william mcguire — williammcguire.net</div>
+    <div class="footer-links">
+      <a href="portfolio.html" class="footer-link">Portfolio</a>
+      <a href="about.html" class="footer-link">About</a>
+      <a href="contact.html" class="footer-link">Contact</a>
+      <a href="https://williammcguire.shop" class="footer-link gold">↗ Shop</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

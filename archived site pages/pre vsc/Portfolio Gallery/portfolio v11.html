@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="background:#1c1c1e">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,41 +14,68 @@
     border-bottom: 1px solid var(--border);
     padding: 18px 32px;
     position: sticky;
-    top: 70px;
+    top: 62px;
     z-index: 90;
   }
   .filter-inner { max-width: var(--max); margin: 0 auto; }
   .filter-groups { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: start; }
   .filter-left { display: flex; flex-direction: column; gap: 10px; }
   .filter-group { display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; gap: 6px; }
-  .filter-group-label { font-family: var(--font-head); font-size: 15px; font-weight: 600; color: var(--bright); margin-right: 2px; flex-shrink: 0; }
+  .filter-group-label {
+    font-family: var(--font-head); font-size: 15px; font-weight: 600;
+    color: var(--bright); margin-right: 2px; flex-shrink: 0;
+  }
   .filter-btn {
-    display: inline-flex; align-items: center; gap: 5px; padding: 5px 11px;
-    font-family: var(--font-body); font-size: 12px; font-weight: 500; color: var(--text);
-    background: transparent; border: 1px solid var(--mid); border-radius: var(--radius);
-    cursor: pointer; transition: border-color 0.2s, color 0.2s, background 0.2s; user-select: none;
+    display: inline-flex; align-items: center; gap: 5px;
+    padding: 5px 11px; font-family: var(--font-body); font-size: 12px; font-weight: 500;
+    color: var(--text); background: transparent; border: 1px solid var(--mid);
+    border-radius: var(--radius); cursor: pointer;
+    transition: border-color 0.2s, color 0.2s, background 0.2s; user-select: none;
   }
   .filter-btn:hover { border-color: var(--accent); color: var(--accent); }
   .filter-btn.active { border-color: var(--accent); color: var(--accent); background: rgba(200,164,110,0.08); }
   .filter-btn.active::after { content: '✓'; font-size: 10px; opacity: 0.8; }
-  .filter-all-wrap { display: flex; flex-direction: column; align-items: center; gap: 8px; padding-left: 12px; border-left: 1px solid var(--border); }
+  .filter-all-wrap {
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    padding-left: 12px; border-left: 1px solid var(--border);
+  }
   .filter-btn-all {
     padding: 8px 16px; font-family: var(--font-head); font-size: 13px; font-weight: 600;
     color: var(--text); background: transparent; border: 1px solid var(--muted);
     border-radius: var(--radius); cursor: pointer; transition: border-color 0.2s, color 0.2s; white-space: nowrap;
   }
   .filter-btn-all:hover, .filter-btn-all.active { border-color: var(--accent); color: var(--accent); }
-  .logic-toggle { display: flex; border: 1px solid var(--border-mid); border-radius: var(--radius); overflow: hidden; background: var(--surface); }
-  .logic-btn { padding: 5px 10px; font-family: var(--font-mono); font-size: 10px; font-weight: 700; color: var(--muted); background: var(--surface); border: none; cursor: pointer; transition: color 0.2s, background 0.2s; letter-spacing: 0.05em; }
+  .logic-toggle {
+    display: flex; border: 1px solid var(--border-mid);
+    border-radius: var(--radius); overflow: hidden; background: var(--surface);
+  }
+  .logic-btn {
+    padding: 5px 10px; font-family: var(--font-mono); font-size: 10px; font-weight: 700;
+    color: var(--muted); background: var(--surface); border: none; cursor: pointer;
+    transition: color 0.2s, background 0.2s; letter-spacing: 0.05em;
+  }
   .logic-btn.active { color: var(--accent); background: var(--bg-3); }
   .active-summary { margin-top: 10px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
   .active-summary-label { font-family: var(--font-mono); font-size: 9px; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; }
-  .active-tag { display: inline-flex; align-items: center; gap: 5px; padding: 3px 8px; font-family: var(--font-body); font-size: 11px; color: var(--accent); border: 1px solid var(--accent-dim); border-radius: 3px; background: rgba(200,164,110,0.06); }
+  .active-tag {
+    display: inline-flex; align-items: center; gap: 5px; padding: 3px 8px;
+    font-family: var(--font-body); font-size: 11px; color: var(--accent);
+    border: 1px solid var(--accent-dim); border-radius: 3px; background: rgba(200,164,110,0.06);
+  }
   .active-tag-remove { cursor: pointer; opacity: 0.6; font-size: 12px; transition: opacity 0.2s; }
   .active-tag-remove:hover { opacity: 1; }
-  .clear-btn { padding: 3px 8px; font-family: var(--font-mono); font-size: 9px; color: var(--muted); background: transparent; border: 1px solid var(--border); border-radius: 3px; cursor: pointer; letter-spacing: 0.08em; transition: color 0.2s, border-color 0.2s; }
+  .clear-btn {
+    padding: 3px 8px; font-family: var(--font-mono); font-size: 9px; color: var(--muted);
+    background: transparent; border: 1px solid var(--border); border-radius: 3px; cursor: pointer;
+    letter-spacing: 0.08em; transition: color 0.2s, border-color 0.2s;
+  }
   .clear-btn:hover { color: var(--text); border-color: var(--border-mid); }
-  .filter-mobile-toggle { display: none; width: 100%; padding: 10px 16px; font-family: var(--font-head); font-size: 13px; font-weight: 600; color: var(--text); background: var(--surface); border: 1px solid var(--border-mid); border-radius: var(--radius); cursor: pointer; justify-content: space-between; align-items: center; transition: border-color 0.2s; }
+  .filter-mobile-toggle {
+    display: none; width: 100%; padding: 10px 16px; font-family: var(--font-head);
+    font-size: 13px; font-weight: 600; color: var(--text); background: var(--surface);
+    border: 1px solid var(--border-mid); border-radius: var(--radius); cursor: pointer;
+    justify-content: space-between; align-items: center; transition: border-color 0.2s;
+  }
   .filter-mobile-toggle:hover { border-color: var(--accent); }
 
   .results-bar { padding: 12px 32px; background: var(--bg-2); border-bottom: 1px solid var(--border); }
@@ -63,43 +90,21 @@
   .gal-item {
     break-inside: avoid; margin-bottom: 12px; border-radius: var(--radius); overflow: hidden;
     border: 1px solid var(--border); position: relative; cursor: pointer; display: block;
-    background: var(--surface);
-    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    background: var(--surface); transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   }
   .gal-item:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.45); border-color: var(--border-mid); }
   .gal-item.hidden { display: none; }
-
-  /* Shine effect on hover */
-  .gal-item::after {
-    content: ''; position: absolute; top: 0; left: -100%;
-    width: 60%; height: 100%;
-    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.03) 30%, rgba(255,255,255,0.07) 50%, rgba(255,255,255,0.03) 70%, transparent 100%);
-    transform: skewX(-20deg); z-index: 3; pointer-events: none; transition: left 0s;
+  .gal-item img { display: block; width: 100%; height: auto; }
+  .gal-item img.lazy {
+    opacity: 0; filter: blur(8px); transform: scale(1.02);
+    transition: opacity 0.5s ease, filter 0.5s ease, transform 0.5s ease;
   }
-  .gal-item:hover::after { left: 150%; transition: left 0.5s ease; }
-
-  /* Blur-up: visible blurry state first, then sharpens */
-  .gal-item img {
-    display: block; width: 100%; height: auto;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  .gal-item img.loading {
-    opacity: 1;
-    filter: blur(10px);
-    transform: scale(1.02);
-    transition: filter 0.6s ease, transform 0.6s ease, opacity 0.2s ease;
-  }
-  .gal-item img.loaded {
-    opacity: 1;
-    filter: blur(0);
-    transform: scale(1);
-  }
+  .gal-item img.loaded { opacity: 1; filter: blur(0); transform: scale(1); }
 
   .gal-overlay {
     position: absolute; inset: 0; z-index: 2;
     background: linear-gradient(to top, rgba(10,10,12,0.88) 0%, rgba(10,10,12,0.2) 50%, transparent 100%);
-    opacity: 0; transition: opacity 0.2s ease;
+    opacity: 0; transition: opacity 0.25s ease;
     display: flex; flex-direction: column; justify-content: flex-end; padding: 14px;
   }
   .gal-item:hover .gal-overlay { opacity: 1; }
@@ -149,7 +154,7 @@
       <div class="nav-sub">Illustration <span>·</span> Concept Art <span>·</span> Animation</div>
     </a>
     <div class="nav-links">
-      <a href="portfolio.html" class="nav-item">Portfolio</a>
+      <a href="portfolio.html" class="nav-item active">Portfolio</a>
       <a href="about.html" class="nav-item">About</a>
       <a href="contact.html" class="nav-item">Contact</a>
       <a href="shop.html" class="nav-shop nav-item">Shop ↗</a>
@@ -158,20 +163,19 @@
       <span></span><span></span><span></span>
     </button>
   </nav>
-  <div class="nav-mobile-menu" id="navMobileMenu">
-    <a href="portfolio.html">Portfolio</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a href="shop.html" class="shop">Shop ↗</a>
-  </div>
 </div>
-
+<div class="nav-mobile-menu" id="navMobileMenu">
+  <a href="portfolio.html" class="active">Portfolio</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="shop.html" class="shop">Shop ↗</a>
+</div>
 
 <div class="page-head">
   <div class="page-head-inner">
     <div class="page-eyebrow">The Work</div>
     <h1 class="page-title">Portfolio</h1>
-    <p class="page-desc">View by discipline, client, or any combination.</p>
+    <p class="page-desc">Filter by discipline, client, or both. Select multiple to combine.</p>
   </div>
 </div>
 
@@ -242,9 +246,6 @@
   </div>
 </div>
 
-<!-- Scroll to top -->
-<button class="scroll-top" id="scrollTop" aria-label="Back to top">↑</button>
-
 <div class="lightbox" id="lightbox">
   <button class="lightbox-close" id="lightboxClose">✕</button>
   <button class="lightbox-nav lightbox-prev" id="lightboxPrev">‹</button>
@@ -258,51 +259,37 @@
   </div>
 </div>
 
-<!-- Scroll to top -->
-<button class="scroll-top" id="scrollTop" aria-label="Back to top">↑</button>
-
 <footer class="footer">
   <div class="footer-top">
     <div class="footer-name">William McGuire</div>
     <div class="footer-tagline">Illustrator · Concept Artist · Animator</div>
   </div>
   <div class="footer-base">
-    <div class="footer-left">
-      <div class="footer-copy">© william mcguire — williammcguire.net</div>
-      <div class="footer-legal">
-        <a href="privacy.html" class="footer-legal-link">Privacy</a>
-        <a href="terms.html" class="footer-legal-link">Terms</a>
-      </div>
-    </div>
+    <div class="footer-copy">© william mcguire — williammcguire.net</div>
     <div class="footer-links">
       <a href="portfolio.html" class="footer-link">Portfolio</a>
       <a href="about.html" class="footer-link">About</a>
       <a href="contact.html" class="footer-link">Contact</a>
+      <a href="privacy.html" class="footer-link">Privacy</a>
+      <a href="terms.html" class="footer-link">Terms</a>
       <a href="shop.html" class="footer-link gold">Shop ↗</a>
     </div>
   </div>
 </footer>
-
 
 <script>
 (function() {
   'use strict';
 
   // Hamburger
-  var hbtn = document.getElementById('navHamburger'), hmenu = document.getElementById('navMobileMenu');
+  var hbtn = document.getElementById('navHamburger');
+  var hmenu = document.getElementById('navMobileMenu');
   if (hbtn && hmenu) {
     hbtn.addEventListener('click', function() { hmenu.classList.toggle('open'); });
-    document.addEventListener('click', function(e) { if (!hbtn.contains(e.target) && !hmenu.contains(e.target)) hmenu.classList.remove('open'); });
+    document.addEventListener('click', function(e) {
+      if (!hbtn.contains(e.target) && !hmenu.contains(e.target)) hmenu.classList.remove('open');
+    });
   }
-
-  // Scroll to top — show when page title scrolls out of view
-  var scrollTopBtn = document.getElementById('scrollTop');
-  var pageHead = document.querySelector('.page-head');
-  var scrollObserver = new IntersectionObserver(function(entries) {
-    scrollTopBtn.classList.toggle('visible', !entries[0].isIntersecting);
-  }, { threshold: 0 });
-  if (pageHead) scrollObserver.observe(pageHead);
-  scrollTopBtn.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
 
   var manifest = [];
   var activeFilters = { discipline: new Set(), client: new Set() };
@@ -310,61 +297,58 @@
   var visibleItems = [];
   var lightboxIndex = 0;
 
-  var grid = document.getElementById('galleryGrid');
-  var emptyState = document.getElementById('galleryEmpty');
-  var emptyTitle = document.getElementById('galleryEmptyTitle');
-  var emptyDesc  = document.getElementById('galleryEmptyDesc');
-  var visibleCount = document.getElementById('visibleCount');
-  var totalCount   = document.getElementById('totalCount');
+  var grid          = document.getElementById('galleryGrid');
+  var emptyState    = document.getElementById('galleryEmpty');
+  var emptyTitle    = document.getElementById('galleryEmptyTitle');
+  var emptyDesc     = document.getElementById('galleryEmptyDesc');
+  var visibleCount  = document.getElementById('visibleCount');
+  var totalCount    = document.getElementById('totalCount');
   var activeSummary = document.getElementById('activeSummary');
   var activeTags    = document.getElementById('activeTags');
   var filterToggle  = document.getElementById('filterToggle');
   var filterToggleIcon = document.getElementById('filterToggleIcon');
   var filterGroups  = document.getElementById('filterGroups');
-  var lightbox = document.getElementById('lightbox');
-  var lightboxImg  = document.getElementById('lightboxImg');
+  var lightbox      = document.getElementById('lightbox');
+  var lightboxImg   = document.getElementById('lightboxImg');
   var lightboxDiscipline = document.getElementById('lightboxDiscipline');
   var lightboxClient     = document.getElementById('lightboxClient');
 
-  // Lazy load with visible blur effect
-  // rootMargin 0px: images only load when entering viewport, so blur is visible
+  // Lazy load — reduced rootMargin so blur is visible during scroll
   var lazyObserver = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
       if (!entry.isIntersecting) return;
       var img = entry.target;
-      if (!img.dataset.src) return;
-      var src = img.dataset.src;
-      img.removeAttribute('data-src');
-      // Show blurry immediately when loading starts
-      img.classList.add('loading');
-      img.src = src;
-      img.onload = function() {
-        img.classList.remove('loading');
-        img.classList.add('loaded');
-      };
-      img.onerror = function() {
-        img.classList.remove('loading');
-        img.classList.add('loaded');
-      };
+      if (img.dataset.src) {
+        img.src = img.dataset.src;
+        img.removeAttribute('data-src');
+        img.onload  = function() { img.classList.add('loaded'); };
+        img.onerror = function() { img.classList.add('loaded'); };
+      }
       lazyObserver.unobserve(img);
     });
-  }, { rootMargin: '0px 0px' });
+  }, { rootMargin: '100px 0px' }); // reduced from 400px so blur is visible
 
+  // Load manifest
   fetch('./data/manifest.json')
-    .then(function(r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+    .then(function(r) {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    })
     .then(function(data) {
       manifest = data;
-      /* Display order:
+
+      /* Display order — uncomment one:
       // manifest.sort(function() { return Math.random() - 0.5; });
       // manifest.sort(function(a,b) { return (a.sort||999)-(b.sort||999); });
       */
+
       totalCount.textContent = manifest.length;
       buildGallery(true);
       readUrlParams();
       requestAnimationFrame(function() { filterGallery(); });
     })
     .catch(function(err) {
-      console.error('Manifest failed:', err);
+      console.error('Manifest load failed:', err);
       emptyTitle.textContent = 'Could not load portfolio.';
       emptyDesc.textContent  = 'Please try refreshing the page.';
       emptyState.classList.add('visible');
@@ -379,21 +363,20 @@
       el.dataset.discipline = item.discipline;
       el.dataset.clients    = (item.clients || []).join(',');
       el.dataset.full       = item.file;
-      if (item.thumbAspectRatio || item.aspectRatio) {
-        el.style.aspectRatio = item.thumbAspectRatio || item.aspectRatio;
-      }
 
-      var thumbSrc    = item.thumbnail || item.file.replace(/^images\//, 'thumbnails/');
+      // Thumbnail path — mirrors images/ folder under thumbnails/
+      var thumbSrc    = item.file.replace(/^images\//, 'thumbnails/');
       var clientLabel = (item.clients || []).map(formatLabel).join(', ');
 
       el.innerHTML =
-        '<img data-src="' + thumbSrc + '" width="' + (item.thumbWidth || 1) + '" height="' + (item.thumbHeight || 1) + '" alt="' + formatLabel(item.discipline) + (clientLabel ? ' — ' + clientLabel : '') + '">' +
+        '<img class="lazy" data-src="' + thumbSrc + '" alt="' + formatLabel(item.discipline) + (clientLabel ? ' — ' + clientLabel : '') + '">' +
         '<div class="gal-overlay">' +
           '<div class="gal-overlay-discipline">' + formatLabel(item.discipline) + '</div>' +
           (clientLabel ? '<div class="gal-overlay-client">' + clientLabel + '</div>' : '') +
         '</div>';
 
-      lazyObserver.observe(el.querySelector('img'));
+      var img = el.querySelector('img');
+      lazyObserver.observe(img);
       el.addEventListener('click', (function(i) { return function() { openLightbox(i); }; })(index));
       grid.appendChild(el);
     });
@@ -405,12 +388,14 @@
     var selDisc   = Array.from(activeFilters.discipline);
     var selClient = Array.from(activeFilters.client);
     var noFilters = selDisc.length === 0 && selClient.length === 0;
+
     var sameTypeConflict = filterLogic === 'and' && (
       (selDisc.length > 1 && selClient.length === 0) ||
       (selClient.length > 1 && selDisc.length === 0)
     );
 
     visibleItems = [];
+
     items.forEach(function(el) {
       var index       = parseInt(el.dataset.index);
       var item        = manifest[index];
@@ -423,13 +408,13 @@
       } else if (sameTypeConflict) {
         show = false;
       } else if (filterLogic === 'or') {
-        var dHit = selDisc.length > 0   && selDisc.indexOf(itemDisc) !== -1;
-        var cHit = selClient.length > 0 && itemClients.some(function(c) { return selClient.indexOf(c) !== -1; });
-        show = dHit || cHit;
+        var discHit   = selDisc.length > 0   && selDisc.indexOf(itemDisc) !== -1;
+        var clientHit = selClient.length > 0 && itemClients.some(function(c) { return selClient.indexOf(c) !== -1; });
+        show = discHit || clientHit;
       } else {
-        var dOk = selDisc.length === 0   || selDisc.indexOf(itemDisc) !== -1;
-        var cOk = selClient.length === 0  || itemClients.some(function(c) { return selClient.indexOf(c) !== -1; });
-        show = dOk && cOk;
+        var discOk   = selDisc.length === 0   || selDisc.indexOf(itemDisc) !== -1;
+        var clientOk = selClient.length === 0  || itemClients.some(function(c) { return selClient.indexOf(c) !== -1; });
+        show = discOk && clientOk;
       }
 
       el.classList.toggle('hidden', !show);
@@ -441,8 +426,8 @@
     if (sameTypeConflict) {
       emptyTitle.textContent = 'AND works across disciplines and clients.';
       emptyDesc.textContent  = selDisc.length > 1
-        ? 'Select one discipline, then add a client to narrow results.'
-        : 'Select one client, then add a discipline to narrow results.';
+        ? 'Select one discipline, then add a client filter to narrow results.'
+        : 'Select one client, then add a discipline filter to narrow results.';
     } else {
       emptyTitle.textContent = 'No pieces match that filter combination.';
       emptyDesc.textContent  = 'Try adjusting or clearing your filters.';
@@ -455,9 +440,13 @@
 
   document.querySelectorAll('.filter-btn').forEach(function(btn) {
     btn.addEventListener('click', function() {
-      var type = btn.dataset.type, value = btn.dataset.value;
-      if (activeFilters[type].has(value)) { activeFilters[type].delete(value); btn.classList.remove('active'); }
-      else { activeFilters[type].add(value); btn.classList.add('active'); }
+      var type  = btn.dataset.type;
+      var value = btn.dataset.value;
+      if (activeFilters[type].has(value)) {
+        activeFilters[type].delete(value); btn.classList.remove('active');
+      } else {
+        activeFilters[type].add(value); btn.classList.add('active');
+      }
       updateAllButton(); filterGallery();
     });
   });
@@ -472,7 +461,8 @@
   }
 
   function updateAllButton() {
-    document.getElementById('filterAll').classList.toggle('active', activeFilters.discipline.size === 0 && activeFilters.client.size === 0);
+    var hasAny = activeFilters.discipline.size > 0 || activeFilters.client.size > 0;
+    document.getElementById('filterAll').classList.toggle('active', !hasAny);
   }
 
   document.querySelectorAll('.logic-btn').forEach(function(btn) {
@@ -492,8 +482,8 @@
     var hasAny = activeFilters.discipline.size > 0 || activeFilters.client.size > 0;
     activeSummary.style.display = hasAny ? 'flex' : 'none';
     activeTags.innerHTML = '';
-    Array.from(activeFilters.discipline).forEach(function(v) { activeTags.appendChild(makeTag(v,'discipline')); });
-    Array.from(activeFilters.client).forEach(function(v) { activeTags.appendChild(makeTag(v,'client')); });
+    Array.from(activeFilters.discipline).forEach(function(v) { activeTags.appendChild(makeTag(v, 'discipline')); });
+    Array.from(activeFilters.client).forEach(function(v) { activeTags.appendChild(makeTag(v, 'client')); });
   }
 
   function makeTag(value, type) {
@@ -502,7 +492,7 @@
     tag.innerHTML = formatLabel(value) + ' <span class="active-tag-remove">×</span>';
     tag.querySelector('.active-tag-remove').addEventListener('click', function() {
       activeFilters[type].delete(value);
-      var btn = document.querySelector('.filter-btn[data-type="'+type+'"][data-value="'+value+'"]');
+      var btn = document.querySelector('.filter-btn[data-type="' + type + '"][data-value="' + value + '"]');
       if (btn) btn.classList.remove('active');
       updateAllButton(); filterGallery();
     });
@@ -513,24 +503,30 @@
     var params = new URLSearchParams();
     if (activeFilters.discipline.size > 0) params.set('view',   Array.from(activeFilters.discipline).join(','));
     if (activeFilters.client.size > 0)     params.set('client', Array.from(activeFilters.client).join(','));
-    window.history.replaceState({}, '', params.toString() ? window.location.pathname+'?'+params.toString() : window.location.pathname);
+    var newUrl = params.toString() ? window.location.pathname + '?' + params.toString() : window.location.pathname;
+    window.history.replaceState({}, '', newUrl);
   }
 
   function readUrlParams() {
     var params = new URLSearchParams(window.location.search);
-    var view = params.get('view'), client = params.get('client');
-    if (view) view.split(',').forEach(function(v) {
-      v = v.trim().toLowerCase(); if (!v) return;
-      activeFilters.discipline.add(v);
-      var b = document.querySelector('.filter-btn[data-type="discipline"][data-value="'+v+'"]');
-      if (b) b.classList.add('active');
-    });
-    if (client) client.split(',').forEach(function(c) {
-      c = c.trim().toLowerCase(); if (!c) return;
-      activeFilters.client.add(c);
-      var b = document.querySelector('.filter-btn[data-type="client"][data-value="'+c+'"]');
-      if (b) b.classList.add('active');
-    });
+    var view   = params.get('view');
+    var client = params.get('client');
+    if (view) {
+      view.split(',').forEach(function(v) {
+        v = v.trim().toLowerCase(); if (!v) return;
+        activeFilters.discipline.add(v);
+        var btn = document.querySelector('.filter-btn[data-type="discipline"][data-value="' + v + '"]');
+        if (btn) btn.classList.add('active');
+      });
+    }
+    if (client) {
+      client.split(',').forEach(function(c) {
+        c = c.trim().toLowerCase(); if (!c) return;
+        activeFilters.client.add(c);
+        var btn = document.querySelector('.filter-btn[data-type="client"][data-value="' + c + '"]');
+        if (btn) btn.classList.add('active');
+      });
+    }
     if (view || client) updateAllButton();
   }
 
@@ -545,11 +541,11 @@
   function showLightboxItem() {
     var index = visibleItems[lightboxIndex];
     var item  = manifest[index];
-    var el    = grid.querySelector('.gal-item[data-index="'+index+'"]');
+    var el    = grid.querySelector('.gal-item[data-index="' + index + '"]');
     lightboxImg.src = el ? el.dataset.full : item.file;
     lightboxImg.alt = formatLabel(item.discipline);
     lightboxDiscipline.textContent = formatLabel(item.discipline);
-    lightboxClient.textContent = (item.clients||[]).map(formatLabel).join(', ');
+    lightboxClient.textContent = (item.clients || []).map(formatLabel).join(', ');
   }
 
   function closeLightbox() {
@@ -560,19 +556,24 @@
 
   document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
   lightbox.addEventListener('click', function(e) { if (e.target === lightbox) closeLightbox(); });
-  document.getElementById('lightboxPrev').addEventListener('click', function() { lightboxIndex=(lightboxIndex-1+visibleItems.length)%visibleItems.length; showLightboxItem(); });
-  document.getElementById('lightboxNext').addEventListener('click', function() { lightboxIndex=(lightboxIndex+1)%visibleItems.length; showLightboxItem(); });
+  document.getElementById('lightboxPrev').addEventListener('click', function() {
+    lightboxIndex = (lightboxIndex - 1 + visibleItems.length) % visibleItems.length; showLightboxItem();
+  });
+  document.getElementById('lightboxNext').addEventListener('click', function() {
+    lightboxIndex = (lightboxIndex + 1) % visibleItems.length; showLightboxItem();
+  });
   document.addEventListener('keydown', function(e) {
     if (!lightbox.classList.contains('open')) return;
-    if (e.key==='Escape') closeLightbox();
-    if (e.key==='ArrowLeft') { lightboxIndex=(lightboxIndex-1+visibleItems.length)%visibleItems.length; showLightboxItem(); }
-    if (e.key==='ArrowRight') { lightboxIndex=(lightboxIndex+1)%visibleItems.length; showLightboxItem(); }
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft')  { lightboxIndex = (lightboxIndex - 1 + visibleItems.length) % visibleItems.length; showLightboxItem(); }
+    if (e.key === 'ArrowRight') { lightboxIndex = (lightboxIndex + 1) % visibleItems.length; showLightboxItem(); }
   });
 
   function formatLabel(slug) {
     if (!slug) return '';
-    return slug.split('-').map(function(w) { return w.charAt(0).toUpperCase()+w.slice(1); }).join(' ');
+    return slug.split('-').map(function(w) { return w.charAt(0).toUpperCase() + w.slice(1); }).join(' ');
   }
+
 })();
 </script>
 </body>

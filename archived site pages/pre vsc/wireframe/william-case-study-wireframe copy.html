@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Study: Character Design — Wireframe</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap');
+
+  :root {
+    --bg:          #1c1c1e;
+    --bg-2:        #222224;
+    --bg-3:        #282828;
+    --surface:     #242426;
+    --border:      #2e2e32;
+    --border-mid:  #3a3a3e;
+    --muted:       #52525a;
+    --mid:         #7a7a84;
+    --text:        #d0d0d8;
+    --bright:      #eeeef2;
+    --accent:      #c8a46e;
+    --accent-dim:  #6e5830;
+    --font-head:   'Outfit', system-ui, sans-serif;
+    --font-body:   'Inter', system-ui, sans-serif;
+    --font-mono:   'Space Mono', monospace;
+    --max:         1140px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Dev label ── */
+  .dev-bar {
+    background: #111113;
+    border-bottom: 1px solid #1e1e22;
+    padding: 10px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .dev-l { font-family: var(--font-mono); font-size: 10px; color: var(--muted); letter-spacing: 0.1em; }
+  .dev-r { font-size: 10px; color: #2a2a30; }
+
+  /* ── Browser chrome ── */
+  .browser {
+    background: #161618;
+    border-bottom: 1px solid #1e1e22;
+    padding: 8px 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .dots { display: flex; gap: 5px; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; }
+  .dot-r { background: #3a1e1e; }
+  .dot-y { background: #3a2e1a; }
+  .dot-g { background: #1a2e1e; }
+  .url-bar {
+    background: var(--bg-2);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: 5px 14px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--muted);
+    flex: 1;
+  }
+  .url-accent { color: var(--accent-dim); }
+
+  /* ══════════════════════════════════════
+     NAV
+  ══════════════════════════════════════ */
+  .nav-wrap {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(28,28,30,0.97);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 32px;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-id {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    line-height: 1;
+  }
+  .nav-name {
+    font-family: var(--font-head);
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--bright);
+    letter-spacing: -0.01em;
+  }
+  .nav-sub {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    color: var(--muted);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  .nav-sub span { color: var(--border-mid); margin: 0 4px; }
+
+  .nav-links { display: flex; align-items: center; gap: 2px; }
+  .nav-item {
+    padding: 7px 13px;
+    font-family: var(--font-head);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--mid);
+    border-radius: 4px;
+    cursor: default;
+    letter-spacing: 0.01em;
+  }
+  .nav-item:hover { color: var(--text); background: var(--bg-2); }
+  .nav-item.active { color: var(--bright); background: var(--bg-3); }
+  .nav-shop {
+    margin-left: 10px;
+    padding: 7px 15px;
+    font-family: var(--font-head);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--accent);
+    border: 1px solid var(--accent-dim);
+    border-radius: 4px;
+    cursor: default;
+    letter-spacing: 0.02em;
+  }
+
+  /* ══════════════════════════════════════
+     CASE STUDY HEADER
+  ══════════════════════════════════════ */
+  .cs-header {
+    padding: 48px 32px 32px;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg-2);
+  }
+  .cs-header-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+  }
+
+  /* Breadcrumb */
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    margin-bottom: 24px;
+  }
+  .breadcrumb a { color: var(--mid); }
+  .breadcrumb a:hover { color: var(--text); }
+  .breadcrumb span { color: var(--border-mid); }
+
+  /* Title & Meta */
+  .cs-title {
+    font-family: var(--font-head);
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--bright);
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+
+  .cs-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  .cs-meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .cs-meta-label {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    color: var(--muted);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .cs-meta-value {
+    font-family: var(--font-body);
+    font-size: 13px;
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  /* Tags */
+  .cs-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .cs-tag {
+    padding: 5px 10px;
+    font-family: var(--font-body);
+    font-size: 11px;
+    color: var(--accent);
+    background: var(--accent-dim);
+    border: 1px solid var(--accent);
+    border-radius: 3px;
+  }
+
+  /* ══════════════════════════════════════
+     CASE STUDY CONTENT
+  ══════════════════════════════════════ */
+  .cs-content {
+    padding: 52px 32px;
+  }
+  .cs-content-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+  }
+
+  /* Intro paragraph */
+  .cs-intro {
+    max-width: 740px;
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--text);
+    margin-bottom: 52px;
+  }
+
+  /* Section */
+  .cs-section {
+    margin-bottom: 64px;
+  }
+  .cs-section:last-child { margin-bottom: 0; }
+
+  .cs-section-title {
+    font-family: var(--font-head);
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--bright);
+    letter-spacing: -0.01em;
+    margin-bottom: 18px;
+  }
+
+  .cs-section-text {
+    max-width: 740px;
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text);
+    margin-bottom: 32px;
+  }
+  .cs-section-text p { margin-bottom: 16px; }
+  .cs-section-text p:last-child { margin-bottom: 0; }
+
+  /* Image Grid */
+  .cs-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+
+  .cs-img {
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    position: relative;
+  }
+  .cs-img-wrap {
+    width: 100%;
+    aspect-ratio: 4/3;
+    background: linear-gradient(145deg, #1a1428 0%, #141428 60%, #1e1e28 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    color: rgba(255,255,255,0.04);
+  }
+  .cs-img-caption {
+    padding: 12px 14px;
+    background: var(--bg-3);
+    font-family: var(--font-body);
+    font-size: 12px;
+    color: var(--mid);
+    border-top: 1px solid var(--border);
+  }
+
+  /* Full-width image */
+  .cs-img-full {
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    margin-bottom: 32px;
+  }
+  .cs-img-full .cs-img-wrap {
+    aspect-ratio: 16/9;
+  }
+
+  /* ══════════════════════════════════════
+     FOOTER
+  ══════════════════════════════════════ */
+  .footer {
+    background: #111113;
+    border-top: 1px solid var(--border);
+    padding: 28px 32px;
+  }
+  .footer-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-copy {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: #2a2a30;
+  }
+  .footer-links { display: flex; gap: 18px; }
+  .footer-link {
+    font-family: var(--font-body);
+    font-size: 11px;
+    color: #2a2a30;
+    cursor: default;
+  }
+  .footer-link.gold { color: var(--accent-dim); }
+
+  /* Back to Gallery CTA */
+  .back-to-gallery {
+    padding: 32px 32px 52px;
+    background: var(--bg-2);
+    border-top: 1px solid var(--border);
+  }
+  .back-to-gallery-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    text-align: center;
+  }
+  .back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    font-family: var(--font-head);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    background: var(--surface);
+    border: 1px solid var(--border-mid);
+    border-radius: 6px;
+    cursor: default;
+    letter-spacing: 0.01em;
+  }
+  .back-btn:hover {
+    background: var(--bg-3);
+    border-color: var(--accent-dim);
+    color: var(--accent);
+  }
+
+  /* ══════════════════════════════════════
+     NOTES
+  ══════════════════════════════════════ */
+  .notes {
+    background: #0c0c0e;
+    border-top: 1px solid #1a1a1e;
+    padding: 28px 32px;
+  }
+  .notes-title {
+    font-family: var(--font-mono);
+    font-size: 9px; color: var(--muted);
+    letter-spacing: 0.16em; text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .notes-grid { display: grid; grid-template-columns: 1fr; gap: 20px; max-width: 840px; }
+  .nb h4 {
+    font-family: var(--font-head);
+    font-size: 12px; font-weight: 600;
+    color: #444448; margin-bottom: 5px;
+  }
+  .nb p { font-family: var(--font-body); font-size: 11px; color: #303036; line-height: 1.7; }
+  .nb code {
+    font-family: var(--font-mono); font-size: 10px;
+    background: #181818; color: #404048;
+    padding: 1px 5px; border-radius: 2px;
+  }
+</style>
+</head>
+<body>
+
+<div class="dev-bar">
+  <div class="dev-l">case study wireframe — william mcguire portfolio</div>
+  <div class="dev-r">CPT UI + Portfolio Filter Gallery · Case study single post layout</div>
+</div>
+
+<div class="browser">
+  <div class="dots">
+    <div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div>
+  </div>
+  <div class="url-bar"><span class="url-accent">portfolio</span>.williammcguire.shop<span style="color:#3a3a3e">/character-evolution-game-project</span></div>
+</div>
+
+<!-- ═══ NAV ═══ -->
+<div class="nav-wrap">
+  <div class="nav">
+    <div class="nav-id">
+      <div class="nav-name">William McGuire</div>
+      <div class="nav-sub">Illustration <span>·</span> Concept Art <span>·</span> Animation</div>
+    </div>
+    <div class="nav-links">
+      <div class="nav-item active"><span>Portfolio</span></div>
+      <div class="nav-item"><span>About</span></div>
+      <div class="nav-item"><span>Contact</span></div>
+      <div class="nav-shop">↗ Shop</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ CASE STUDY HEADER ═══ -->
+<div class="cs-header">
+  <div class="cs-header-inner">
+    
+    <!-- Breadcrumb navigation -->
+    <div class="breadcrumb">
+      <a href="#">PORTFOLIO</a>
+      <span>→</span>
+      <a href="#">CONCEPT ART</a>
+      <span>→</span>
+      <span>CHARACTER EVOLUTION</span>
+    </div>
+
+    <!-- Title -->
+    <h1 class="cs-title">Character Evolution: From Sketch to Final Design</h1>
+
+    <!-- Metadata -->
+    <div class="cs-meta">
+      <div class="cs-meta-item">
+        <div class="cs-meta-label">CLIENT</div>
+        <div class="cs-meta-value">Independent Game Studio</div>
+      </div>
+      <div class="cs-meta-item">
+        <div class="cs-meta-label">DISCIPLINE</div>
+        <div class="cs-meta-value">Concept Art</div>
+      </div>
+      <div class="cs-meta-item">
+        <div class="cs-meta-label">YEAR</div>
+        <div class="cs-meta-value">2024</div>
+      </div>
+      <div class="cs-meta-item">
+        <div class="cs-meta-label">ROLE</div>
+        <div class="cs-meta-value">Character Designer</div>
+      </div>
+    </div>
+
+    <!-- Tags (disciplines/subjects) -->
+    <div class="cs-tags">
+      <div class="cs-tag">Concept Art</div>
+      <div class="cs-tag">Character Design</div>
+      <div class="cs-tag">Game Development</div>
+      <div class="cs-tag">Iteration Process</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══ CASE STUDY CONTENT ═══ -->
+<div class="cs-content">
+  <div class="cs-content-inner">
+
+    <!-- Intro paragraph -->
+    <div class="cs-intro">
+      <p>This case study documents the character design process for a protagonist in an indie action game. The creative brief called for a character who felt both relatable and mysterious—someone players could project themselves onto while maintaining a distinctive visual signature. Over the course of six weeks and multiple feedback rounds, the design evolved from rough exploratory sketches to a fully-realized character ready for 3D modeling.</p>
+    </div>
+
+    <!-- Section: The Brief -->
+    <div class="cs-section">
+      <h2 class="cs-section-title">The Brief</h2>
+      <div class="cs-section-text">
+        <p>The studio wanted a character who could anchor a dark fantasy narrative—someone with a backstory visible in their design. Key requirements included: asymmetrical costume elements to suggest a patched-together survival aesthetic, a color palette that wouldn't clash with the game's environment (muted earth tones with one accent color), and a silhouette readable at small scale.</p>
+        <p>The art director referenced characters like Ellie from The Last of Us and Arya Stark from Game of Thrones as tonal benchmarks—grounded, resourceful, and visually distinct without being over-designed.</p>
+      </div>
+    </div>
+
+    <!-- Section: Initial Sketches -->
+    <div class="cs-section">
+      <h2 class="cs-section-title">Initial Exploration</h2>
+      <div class="cs-section-text">
+        <p>The first round focused on silhouette variety. I explored eight different approaches, ranging from heavily armored to minimal gear, testing different proportions and postures. The studio gravitated toward the leaner, more agile designs—characters who looked like they had to move fast and think faster.</p>
+      </div>
+      
+      <div class="cs-images">
+        <div class="cs-img">
+          <div class="cs-img-wrap">🎨</div>
+          <div class="cs-img-caption">Sketch 1: Armored variant</div>
+        </div>
+        <div class="cs-img">
+          <div class="cs-img-wrap">✏️</div>
+          <div class="cs-img-caption">Sketch 2: Minimal gear approach</div>
+        </div>
+        <div class="cs-img">
+          <div class="cs-img-wrap">🖌</div>
+          <div class="cs-img-caption">Sketch 3: Hybrid design</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section: Refinement -->
+    <div class="cs-section">
+      <h2 class="cs-section-title">Refinement & Feedback</h2>
+      <div class="cs-section-text">
+        <p>Based on the initial feedback, I narrowed the field to three finalists and developed each one with color, lighting, and costume detail. This is where the patched-together aesthetic really came into focus—mismatched fabrics, worn leather, practical straps and buckles that felt functional rather than decorative.</p>
+        <p>The studio's main concern at this stage was that the character felt too "clean" for someone who had been surviving in the wild for months. The next iteration introduced dirt, tears, and asymmetrical wear patterns to sell the lived-in quality they were after.</p>
+      </div>
+
+      <div class="cs-img-full">
+        <div class="cs-img-wrap">🖼</div>
+        <div class="cs-img-caption">Refinement stage: Three finalists with full color and detail</div>
+      </div>
+    </div>
+
+    <!-- Section: Final Design -->
+    <div class="cs-section">
+      <h2 class="cs-section-title">Final Design</h2>
+      <div class="cs-section-text">
+        <p>The final design combined elements from two of the three finalists: the costume structure from variant A and the facial features and posture from variant C. The color palette settled on charcoal gray base tones with rust-orange accents (scarf, belt buckle, shoulder strap detail).</p>
+        <p>The turnaround sheet included front, back, and three-quarter views, plus callouts for material textures and equipment function. This package was handed off to the 3D modeler with notes on which details were critical to preserve and which could be simplified for performance.</p>
+      </div>
+
+      <div class="cs-img-full">
+        <div class="cs-img-wrap">⭐</div>
+        <div class="cs-img-caption">Final turnaround: Front, back, and three-quarter views with material callouts</div>
+      </div>
+    </div>
+
+    <!-- Section: What I Learned -->
+    <div class="cs-section">
+      <h2 class="cs-section-title">What I Learned</h2>
+      <div class="cs-section-text">
+        <p>This project reinforced the value of silhouette testing early and often. The designs that felt strongest in black-and-white thumbnail form were the ones that held up through every revision. It also taught me to design with the 3D pipeline in mind—asymmetry is visually interesting, but too much asymmetry creates UV mapping headaches downstream.</p>
+        <p>The most valuable feedback came from the studio's environmental artist, who pointed out that the character's color palette needed to contrast with the game's dominant green-brown forest environments. That small adjustment (shifting from muted blues to rust-orange accents) made the character pop in-context without feeling out of place.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══ BACK TO GALLERY CTA ═══ -->
+<div class="back-to-gallery">
+  <div class="back-to-gallery-inner">
+    <div class="back-btn">← Back to Portfolio</div>
+  </div>
+</div>
+
+<!-- ═══ FOOTER ═══ -->
+<div class="footer">
+  <div class="footer-inner">
+    <div class="footer-copy">© william mcguire — portfolio.williammcguire.shop</div>
+    <div class="footer-links">
+      <div class="footer-link">Portfolio</div>
+      <div class="footer-link">About</div>
+      <div class="footer-link">Contact</div>
+      <div class="footer-link gold">↗ Shop</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ NOTES ═══ -->
+<div class="notes">
+  <div class="notes-title">Case Study Structure Notes</div>
+  <div class="notes-grid">
+    <div class="nb">
+      <h4>What This Shows Hiring Managers</h4>
+      <p>Case studies demonstrate <strong>process thinking</strong>, not just final output. This layout shows: how you interpret creative briefs, how you respond to feedback, how your designs evolve through iteration, and how you communicate decisions to a team. Studios want to see your <strong>thinking</strong>, and this format delivers it without requiring them to guess. It's essentially a pre-interview—they know what working with you would be like before they ever schedule a call.</p>
+    </div>
+    
+    <div class="nb">
+      <h4>Architecture: CPT UI + Portfolio Filter Gallery</h4>
+      <p>Each case study is a <strong>Portfolio post</strong> (custom post type via CPT UI). Multiple images are attached to the post. The post is tagged with Client (Independent Game Studio), Discipline (Concept Art), and Subject (Character Design, Game Development). The main gallery page (built with Portfolio Filter Gallery) shows the <strong>featured image</strong> from each case study post. Clicking through takes you to this single-post layout. Filtering still works—case studies appear in filtered views just like standalone images. The URL structure is clean: <code>/character-evolution-game-project</code> instead of <code>?p=123</code>.</p>
+    </div>
+
+    <div class="nb">
+      <h4>Content Structure</h4>
+      <p>This wireframe demonstrates a typical case study flow: <strong>The Brief</strong> (what the client wanted), <strong>Initial Exploration</strong> (first round sketches/variations), <strong>Refinement & Feedback</strong> (how the design evolved based on input), <strong>Final Design</strong> (the delivered work), and <strong>What I Learned</strong> (reflection/takeaways). Not every case study needs all five sections—some might be simpler (just Brief → Process → Final), others might be more complex (multiple feedback rounds, technical challenges solved). The structure adapts to the project.</p>
+    </div>
+
+    <div class="nb">
+      <h4>William's Workload</h4>
+      <p>Writing 2-3 paragraphs per section is <strong>not</strong> a massive lift. This example case study has ~600 words total. That's one solid writing session per project. William doesn't need to write case studies for <strong>every</strong> piece in the portfolio—just the ones where the process story is worth telling. A good target: 5-8 case studies total, covering his best work across different disciplines and clients. Quality over quantity. One strong case study is worth more than ten mediocre image-only posts.</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

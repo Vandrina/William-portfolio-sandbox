@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio — William McGuire</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:          #1c1c1e;
+    --bg-2:        #222224;
+    --bg-3:        #282828;
+    --surface:     #242426;
+    --border:      #2e2e32;
+    --border-mid:  #3a3a3e;
+    --muted:       #52525a;
+    --mid:         #7a7a84;
+    --text:        #d0d0d8;
+    --bright:      #eeeef2;
+    --accent:      #c8a46e;
+    --accent-dim:  #6e5830;
+    --accent-light:#d4b580;
+    --font-head:   'Outfit', system-ui, sans-serif;
+    --font-body:   'Inter', system-ui, sans-serif;
+    --font-mono:   'Space Mono', monospace;
+    --max:         1140px;
+    --radius:      6px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+
+  /* ── NAV ── */
+  .nav-wrap {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(28,28,30,0.97);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 32px;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-id {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    line-height: 1;
+    text-decoration: none;
+  }
+  .nav-name {
+    font-family: var(--font-head);
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--bright);
+    letter-spacing: -0.01em;
+  }
+  .nav-sub {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    color: var(--muted);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  .nav-sub span { color: var(--border-mid); margin: 0 4px; }
+  .nav-links { display: flex; align-items: center; gap: 2px; }
+  .nav-item {
+    padding: 7px 13px;
+    font-family: var(--font-head);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--mid);
+    border-radius: 4px;
+    text-decoration: none;
+    transition: color 0.2s, background 0.2s;
+  }
+  .nav-item:hover { color: var(--text); background: var(--bg-2); }
+  .nav-item.active { color: var(--bright); background: var(--bg-3); }
+  .nav-shop {
+    margin-left: 10px;
+    padding: 7px 15px;
+    font-family: var(--font-head);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--accent);
+    border: 1px solid var(--accent-dim);
+    border-radius: 4px;
+    text-decoration: none;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .nav-shop:hover { border-color: var(--accent); color: var(--accent-light); }
+
+  /* ── PAGE HEADER ── */
+  .page-head {
+    background: var(--bg-2);
+    border-bottom: 1px solid var(--border);
+    padding: 36px 32px 28px;
+  }
+  .page-head-inner { max-width: var(--max); margin: 0 auto; }
+  .page-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    color: var(--muted);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .page-title {
+    font-family: var(--font-head);
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--bright);
+    letter-spacing: -0.02em;
+    margin-bottom: 6px;
+  }
+  .page-desc {
+    font-family: var(--font-body);
+    font-size: 13px;
+    color: var(--mid);
+    max-width: 520px;
+  }
+
+  /* ── FILTER BAR ── */
+  .filter-wrap {
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    padding: 18px 32px;
+    position: sticky;
+    top: 62px;
+    z-index: 90;
+  }
+  .filter-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+  }
+
+  /* Filter groups layout */
+  .filter-groups {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    align-items: start;
+  }
+
+  .filter-left { display: flex; flex-direction: column; gap: 10px; }
+
+  .filter-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .filter-group-label {
+    font-family: var(--font-head);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--bright);
+    margin-right: 2px;
+    flex-shrink: 0;
+    cursor: default;
+  }
+
+  /* Filter buttons */
+  .filter-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 11px;
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text);
+    background: transparent;
+    border: 1px solid var(--mid);
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s, background 0.2s;
+    user-select: none;
+  }
+  .filter-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  .filter-btn.active {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: rgba(200,164,110,0.08);
+  }
+  .filter-btn.active::after {
+    content: '✓';
+    font-size: 10px;
+    opacity: 0.8;
+  }
+
+  /* All button */
+  .filter-all-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding-left: 12px;
+    border-left: 1px solid var(--border);
+  }
+  .filter-btn-all {
+    padding: 8px 16px;
+    font-family: var(--font-head);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    background: transparent;
+    border: 1px solid var(--muted);
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+    white-space: nowrap;
+  }
+  .filter-btn-all:hover,
+  .filter-btn-all.active {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  /* Logic toggle */
+  .logic-toggle {
+    display: flex;
+    border: 1px solid var(--border-mid);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--surface);
+  }
+  .logic-btn {
+    padding: 5px 10px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--muted);
+    background: var(--surface);
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s, background 0.2s;
+    letter-spacing: 0.05em;
+  }
+  .logic-btn.active {
+    color: var(--accent);
+    background: var(--bg-3);
+  }
+
+  /* Active filters summary */
+  .active-summary {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .active-summary-label {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .active-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px 8px;
+    font-family: var(--font-body);
+    font-size: 11px;
+    color: var(--accent);
+    border: 1px solid var(--accent-dim);
+    border-radius: 3px;
+    background: rgba(200,164,110,0.06);
+  }
+  .active-tag-remove {
+    cursor: pointer;
+    opacity: 0.6;
+    font-size: 12px;
+    line-height: 1;
+    transition: opacity 0.2s;
+  }
+  .active-tag-remove:hover { opacity: 1; }
+  .clear-btn {
+    padding: 3px 8px;
+    font-family: var(--font-mono);
+    font-size: 9px;
+    color: var(--muted);
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    cursor: pointer;
+    letter-spacing: 0.08em;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .clear-btn:hover { color: var(--text); border-color: var(--border-mid); }
+
+  /* Mobile filter toggle */
+  .filter-mobile-toggle {
+    display: none;
+    width: 100%;
+    padding: 10px 16px;
+    font-family: var(--font-head);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    background: var(--surface);
+    border: 1px solid var(--border-mid);
+    border-radius: var(--radius);
+    cursor: pointer;
+    text-align: left;
+    justify-content: space-between;
+    align-items: center;
+    transition: border-color 0.2s;
+  }
+  .filter-mobile-toggle:hover { border-color: var(--accent); }
+
+  /* ── RESULTS BAR ── */
+  .results-bar {
+    padding: 12px 32px;
+    background: var(--bg-2);
+    border-bottom: 1px solid var(--border);
+  }
+  .results-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .results-count {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--mid);
+    letter-spacing: 0.06em;
+  }
+  .results-count strong { color: var(--text); }
+
+  /* ── GALLERY GRID ── */
+  .gallery-wrap {
+    padding: 28px 32px 64px;
+  }
+  .gallery-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+  }
+  .gallery-grid {
+    columns: 4;
+    column-gap: 12px;
+  }
+
+  /* Gallery item */
+  .gal-item {
+    break-inside: avoid;
+    margin-bottom: 12px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    position: relative;
+    cursor: pointer;
+    display: block;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, opacity 0.3s ease;
+  }
+  .gal-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(0,0,0,0.45);
+    border-color: var(--border-mid);
+  }
+  .gal-item.hidden {
+    display: none;
+  }
+  .gal-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  /* Hover overlay */
+  .gal-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(10,10,12,0.88) 0%, rgba(10,10,12,0.2) 50%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 14px;
+  }
+  .gal-item:hover .gal-overlay { opacity: 1; }
+  .gal-overlay-discipline {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    color: var(--accent);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+  }
+  .gal-overlay-client {
+    font-family: var(--font-head);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--bright);
+  }
+
+  /* Empty state */
+  .gallery-empty {
+    display: none;
+    padding: 80px 32px;
+    text-align: center;
+  }
+  .gallery-empty.visible { display: block; }
+  .gallery-empty-title {
+    font-family: var(--font-head);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--mid);
+    margin-bottom: 8px;
+  }
+  .gallery-empty-desc {
+    font-family: var(--font-body);
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  /* Lightbox */
+  .lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(10,10,12,0.94);
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+  }
+  .lightbox.open { display: flex; }
+  .lightbox-inner {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  .lightbox-img {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: var(--radius);
+    box-shadow: 0 32px 80px rgba(0,0,0,0.7);
+  }
+  .lightbox-meta {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+  .lightbox-discipline {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    color: var(--accent);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .lightbox-client {
+    font-family: var(--font-head);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--bright);
+  }
+  .lightbox-close {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    width: 40px;
+    height: 40px;
+    background: var(--surface);
+    border: 1px solid var(--border-mid);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--mid);
+    font-size: 18px;
+    transition: color 0.2s, border-color 0.2s;
+    z-index: 1001;
+  }
+  .lightbox-close:hover { color: var(--bright); border-color: var(--mid); }
+  .lightbox-nav {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    background: rgba(20,20,22,0.75);
+    border: 1px solid var(--border-mid);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--mid);
+    font-size: 18px;
+    transition: color 0.2s, background 0.2s;
+    z-index: 1001;
+  }
+  .lightbox-nav:hover { color: var(--bright); background: rgba(20,20,22,0.95); }
+  .lightbox-prev { left: 24px; }
+  .lightbox-next { right: 24px; }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: #111113;
+    border-top: 1px solid var(--border);
+    padding: 0 32px;
+  }
+  .footer-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #1a1a1e;
+  }
+  .footer-name {
+    font-family: var(--font-head);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--bright);
+    margin-bottom: 3px;
+    letter-spacing: -0.01em;
+  }
+  .footer-desc {
+    font-family: var(--font-body);
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .footer-actions { display: flex; gap: 8px; }
+  .f-btn {
+    padding: 6px 13px;
+    font-family: var(--font-head);
+    font-size: 11px;
+    font-weight: 500;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .f-ghost { border: 1px solid var(--border); color: var(--mid); }
+  .f-ghost:hover { border-color: var(--border-mid); color: var(--text); }
+  .f-gold  { border: 1px solid var(--accent-dim); color: var(--accent); }
+  .f-gold:hover { border-color: var(--accent); }
+  .footer-base {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 14px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-copy {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: #2a2a30;
+  }
+  .footer-links { display: flex; gap: 18px; }
+  .footer-link {
+    font-family: var(--font-body);
+    font-size: 11px;
+    color: #2a2a30;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer-link:hover { color: var(--muted); }
+  .footer-link.gold { color: var(--accent-dim); }
+  .footer-link.gold:hover { color: var(--accent); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 1024px) {
+    .gallery-grid { columns: 3; }
+  }
+  @media (max-width: 768px) {
+    .nav { padding: 0 20px; }
+    .page-head { padding: 24px 20px 20px; }
+    .filter-wrap { padding: 14px 20px; top: 62px; }
+    .gallery-wrap { padding: 20px 20px 48px; }
+    .gallery-grid { columns: 2; }
+    .results-bar { padding: 10px 20px; }
+    .footer { padding: 0 20px; }
+
+    .filter-mobile-toggle { display: flex; }
+    .filter-groups { display: none; }
+    .filter-groups.mobile-open { display: grid; margin-top: 12px; }
+    .filter-groups { grid-template-columns: 1fr; }
+    .filter-all-wrap {
+      flex-direction: row;
+      border-left: none;
+      border-top: 1px solid var(--border);
+      padding-left: 0;
+      padding-top: 10px;
+      justify-content: flex-start;
+    }
+    .nav-links .nav-item:not(.nav-shop) { display: none; }
+  }
+  @media (max-width: 480px) {
+    .gallery-grid { columns: 1; }
+    .page-title { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<div class="nav-wrap">
+  <nav class="nav">
+    <a href="index.html" class="nav-id">
+      <div class="nav-name">William McGuire</div>
+      <div class="nav-sub">Illustration <span>·</span> Concept Art <span>·</span> Animation</div>
+    </a>
+    <div class="nav-links">
+      <a href="portfolio.html" class="nav-item active">Portfolio</a>
+      <a href="about.html" class="nav-item">About</a>
+      <a href="contact.html" class="nav-item">Contact</a>
+      <a href="https://williammcguire.shop" class="nav-shop nav-item">↗ Shop</a>
+    </div>
+  </nav>
+</div>
+
+<!-- PAGE HEADER -->
+<div class="page-head">
+  <div class="page-head-inner">
+    <div class="page-eyebrow">The Work</div>
+    <h1 class="page-title">Portfolio</h1>
+    <p class="page-desc">Filter by discipline, client, or both. Select multiple to combine.</p>
+  </div>
+</div>
+
+<!-- FILTER BAR -->
+<div class="filter-wrap">
+  <div class="filter-inner">
+
+    <!-- Mobile toggle -->
+    <button class="filter-mobile-toggle" id="filterToggle">
+      <span>Filter</span>
+      <span id="filterToggleIcon">↓</span>
+    </button>
+
+    <!-- Filter groups -->
+    <div class="filter-groups" id="filterGroups">
+      <div class="filter-left">
+
+        <!-- Discipline -->
+        <div class="filter-group" id="disciplineGroup">
+          <span class="filter-group-label">View</span>
+          <button class="filter-btn" data-type="discipline" data-value="illustration">Illustration</button>
+          <button class="filter-btn" data-type="discipline" data-value="concept-art">Concept Art</button>
+          <button class="filter-btn" data-type="discipline" data-value="toy-design">Toy Design</button>
+          <button class="filter-btn" data-type="discipline" data-value="backgrounds">Backgrounds</button>
+          <button class="filter-btn" data-type="discipline" data-value="books">Books</button>
+          <button class="filter-btn" data-type="discipline" data-value="nft">NFTs</button>
+        </div>
+
+        <!-- Client -->
+        <div class="filter-group" id="clientGroup">
+          <span class="filter-group-label">Client</span>
+          <button class="filter-btn" data-type="client" data-value="microsoft">Microsoft</button>
+          <button class="filter-btn" data-type="client" data-value="amazon">Amazon</button>
+          <button class="filter-btn" data-type="client" data-value="big-fish">Big Fish</button>
+          <button class="filter-btn" data-type="client" data-value="elevated-games">Elevated Games</button>
+          <button class="filter-btn" data-type="client" data-value="reflective-games">Reflective Games</button>
+          <button class="filter-btn" data-type="client" data-value="dreambox-learning">Dreambox Learning</button>
+          <button class="filter-btn" data-type="client" data-value="leapfrog">LeapFrog</button>
+          <button class="filter-btn" data-type="client" data-value="paramount">Paramount</button>
+          <button class="filter-btn" data-type="client" data-value="handmade-by-robots">Handmade by Robots</button>
+          <button class="filter-btn" data-type="client" data-value="mystery-society">Mystery Society</button>
+          <button class="filter-btn" data-type="client" data-value="nordstrom">Nordstrom</button>
+          <button class="filter-btn" data-type="client" data-value="nickelodeon">Nickelodeon</button>
+          <button class="filter-btn" data-type="client" data-value="stone-arch-books">Stone Arch Books</button>
+          <button class="filter-btn" data-type="client" data-value="tech-smart-kids">Tech Smart Kids</button>
+          <button class="filter-btn" data-type="client" data-value="agency">Agency</button>
+        </div>
+
+      </div>
+
+      <!-- All + Logic -->
+      <div class="filter-all-wrap">
+        <button class="filter-btn-all active" id="filterAll">View All</button>
+        <div class="logic-toggle" id="logicToggle">
+          <button class="logic-btn active" data-logic="or">OR</button>
+          <button class="logic-btn" data-logic="and">AND</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Active filters summary -->
+    <div class="active-summary" id="activeSummary" style="display:none;">
+      <span class="active-summary-label">Active</span>
+      <div id="activeTags"></div>
+      <button class="clear-btn" id="clearAll">CLEAR</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- RESULTS BAR -->
+<div class="results-bar">
+  <div class="results-inner">
+    <div class="results-count">Showing <strong id="visibleCount">0</strong> of <strong id="totalCount">0</strong> pieces</div>
+  </div>
+</div>
+
+<!-- GALLERY -->
+<div class="gallery-wrap">
+  <div class="gallery-inner">
+    <div class="gallery-grid" id="galleryGrid"></div>
+    <div class="gallery-empty" id="galleryEmpty">
+      <div class="gallery-empty-title">No pieces match that filter combination.</div>
+      <div class="gallery-empty-desc">Try adjusting or clearing your filters.</div>
+    </div>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose">✕</button>
+  <button class="lightbox-nav lightbox-prev" id="lightboxPrev">‹</button>
+  <button class="lightbox-nav lightbox-next" id="lightboxNext">›</button>
+  <div class="lightbox-inner">
+    <img class="lightbox-img" id="lightboxImg" src="" alt="">
+    <div class="lightbox-meta">
+      <span class="lightbox-discipline" id="lightboxDiscipline"></span>
+      <span class="lightbox-client" id="lightboxClient"></span>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-name">William McGuire</div>
+      <div class="footer-desc">Illustrator, concept artist, and animator available for freelance and full-time.</div>
+    </div>
+    <div class="footer-actions">
+      <a href="about.html" class="f-btn f-ghost">About</a>
+      <a href="contact.html" class="f-btn f-ghost">Contact</a>
+      <a href="resume.pdf" class="f-btn f-ghost">↓ Resume</a>
+      <a href="https://williammcguire.shop" class="f-btn f-gold">↗ Shop</a>
+    </div>
+  </div>
+  <div class="footer-base">
+    <div class="footer-copy">© william mcguire — williammcguire.net</div>
+    <div class="footer-links">
+      <a href="portfolio.html" class="footer-link">Portfolio</a>
+      <a href="about.html" class="footer-link">About</a>
+      <a href="contact.html" class="footer-link">Contact</a>
+      <a href="https://williammcguire.shop" class="footer-link gold">↗ Shop</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  'use strict';
+
+  // ── State ──
+  let manifest = [];
+  let activeFilters = { discipline: new Set(), client: new Set() };
+  let filterLogic = 'or';
+  let visibleItems = [];
+  let lightboxIndex = 0;
+
+  // ── DOM refs ──
+  const grid = document.getElementById('galleryGrid');
+  const emptyState = document.getElementById('galleryEmpty');
+  const visibleCount = document.getElementById('visibleCount');
+  const totalCount = document.getElementById('totalCount');
+  const activeSummary = document.getElementById('activeSummary');
+  const activeTags = document.getElementById('activeTags');
+  const filterToggle = document.getElementById('filterToggle');
+  const filterToggleIcon = document.getElementById('filterToggleIcon');
+  const filterGroups = document.getElementById('filterGroups');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxDiscipline = document.getElementById('lightboxDiscipline');
+  const lightboxClient = document.getElementById('lightboxClient');
+
+  // ── Load manifest ──
+  fetch('data/manifest.json')
+    .then(r => r.json())
+    .then(data => {
+      manifest = data;
+      totalCount.textContent = manifest.length;
+      buildGallery();
+      readUrlParams();
+    })
+    .catch(err => {
+      console.error('Failed to load manifest:', err);
+      emptyState.classList.add('visible');
+    });
+
+  // ── Build gallery items ──
+  function buildGallery() {
+    grid.innerHTML = '';
+    manifest.forEach((item, index) => {
+      const el = document.createElement('div');
+      el.className = 'gal-item';
+      el.dataset.index = index;
+      el.dataset.discipline = item.discipline;
+      el.dataset.clients = (item.clients || []).join(',');
+
+      const clientLabel = item.clients && item.clients.length
+        ? item.clients.map(c => formatLabel(c)).join(', ')
+        : '';
+
+      el.innerHTML = `
+        <img src="${item.file}" alt="${formatLabel(item.discipline)}${clientLabel ? ' — ' + clientLabel : ''}" loading="lazy">
+        <div class="gal-overlay">
+          <div class="gal-overlay-discipline">${formatLabel(item.discipline)}</div>
+          ${clientLabel ? `<div class="gal-overlay-client">${clientLabel}</div>` : ''}
+        </div>
+      `;
+
+      el.addEventListener('click', () => openLightbox(index));
+      grid.appendChild(el);
+    });
+
+    filterGallery();
+  }
+
+  // ── Filter logic ──
+  function filterGallery() {
+    const items = grid.querySelectorAll('.gal-item');
+    const hasDisc = activeFilters.discipline.size > 0;
+    const hasClient = activeFilters.client.size > 0;
+    const hasAny = hasDisc || hasClient;
+
+    visibleItems = [];
+
+    items.forEach(el => {
+      const index = parseInt(el.dataset.index);
+      const item = manifest[index];
+      const itemClients = (item.clients || []);
+      const itemDisc = item.discipline;
+
+      let show = true;
+
+      if (hasAny) {
+        const discMatch = !hasDisc || activeFilters.discipline.has(itemDisc);
+        const clientMatch = !hasClient || itemClients.some(c => activeFilters.client.has(c));
+
+        if (filterLogic === 'and') {
+          show = (hasDisc ? discMatch : true) && (hasClient ? clientMatch : true);
+        } else {
+          // OR: show if matches any active filter
+          if (hasDisc && hasClient) {
+            show = discMatch || clientMatch;
+          } else if (hasDisc) {
+            show = discMatch;
+          } else {
+            show = clientMatch;
+          }
+        }
+      }
+
+      if (show) {
+        el.classList.remove('hidden');
+        visibleItems.push(index);
+      } else {
+        el.classList.add('hidden');
+      }
+    });
+
+    visibleCount.textContent = visibleItems.length;
+    emptyState.classList.toggle('visible', visibleItems.length === 0);
+    updateActiveSummary();
+    updateUrl();
+  }
+
+  // ── Filter buttons ──
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const type = btn.dataset.type;
+      const value = btn.dataset.value;
+
+      if (activeFilters[type].has(value)) {
+        activeFilters[type].delete(value);
+        btn.classList.remove('active');
+      } else {
+        activeFilters[type].add(value);
+        btn.classList.add('active');
+      }
+
+      updateAllButton();
+      filterGallery();
+    });
+  });
+
+  // All button
+  document.getElementById('filterAll').addEventListener('click', () => {
+    clearAllFilters();
+  });
+
+  // Clear all
+  document.getElementById('clearAll').addEventListener('click', clearAllFilters);
+
+  function clearAllFilters() {
+    activeFilters.discipline.clear();
+    activeFilters.client.clear();
+    document.querySelectorAll('.filter-btn.active').forEach(b => b.classList.remove('active'));
+    updateAllButton();
+    filterGallery();
+  }
+
+  function updateAllButton() {
+    const hasAny = activeFilters.discipline.size > 0 || activeFilters.client.size > 0;
+    const allBtn = document.getElementById('filterAll');
+    allBtn.classList.toggle('active', !hasAny);
+  }
+
+  // Logic toggle
+  document.querySelectorAll('.logic-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterLogic = btn.dataset.logic;
+      document.querySelectorAll('.logic-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      filterGallery();
+    });
+  });
+
+  // Mobile toggle
+  filterToggle.addEventListener('click', () => {
+    const open = filterGroups.classList.toggle('mobile-open');
+    filterToggleIcon.textContent = open ? '↑' : '↓';
+  });
+
+  // ── Active summary ──
+  function updateActiveSummary() {
+    const hasAny = activeFilters.discipline.size > 0 || activeFilters.client.size > 0;
+    activeSummary.style.display = hasAny ? 'flex' : 'none';
+
+    activeTags.innerHTML = '';
+    [...activeFilters.discipline].forEach(v => {
+      activeTags.appendChild(makeTag(v, 'discipline'));
+    });
+    [...activeFilters.client].forEach(v => {
+      activeTags.appendChild(makeTag(v, 'client'));
+    });
+  }
+
+  function makeTag(value, type) {
+    const tag = document.createElement('div');
+    tag.className = 'active-tag';
+    tag.innerHTML = `${formatLabel(value)} <span class="active-tag-remove" data-type="${type}" data-value="${value}">×</span>`;
+    tag.querySelector('.active-tag-remove').addEventListener('click', () => {
+      activeFilters[type].delete(value);
+      const btn = document.querySelector(`.filter-btn[data-type="${type}"][data-value="${value}"]`);
+      if (btn) btn.classList.remove('active');
+      updateAllButton();
+      filterGallery();
+    });
+    return tag;
+  }
+
+  // ── URL params ──
+  function updateUrl() {
+    const params = new URLSearchParams();
+    if (activeFilters.discipline.size > 0) {
+      params.set('view', [...activeFilters.discipline].join(','));
+    }
+    if (activeFilters.client.size > 0) {
+      params.set('client', [...activeFilters.client].join(','));
+    }
+    const newUrl = params.toString()
+      ? `${window.location.pathname}?${params.toString()}`
+      : window.location.pathname;
+    window.history.replaceState({}, '', newUrl);
+  }
+
+  function readUrlParams() {
+    const params = new URLSearchParams(window.location.search);
+
+    // Handle clean slug routing: /microsoft or /illustration
+    // These are handled by 404.html redirect — params will already be set
+
+    const view = params.get('view');
+    const client = params.get('client');
+
+    if (view) {
+      view.split(',').forEach(v => {
+        v = v.trim();
+        activeFilters.discipline.add(v);
+        const btn = document.querySelector(`.filter-btn[data-type="discipline"][data-value="${v}"]`);
+        if (btn) btn.classList.add('active');
+      });
+    }
+
+    if (client) {
+      client.split(',').forEach(c => {
+        c = c.trim();
+        activeFilters.client.add(c);
+        const btn = document.querySelector(`.filter-btn[data-type="client"][data-value="${c}"]`);
+        if (btn) btn.classList.add('active');
+      });
+    }
+
+    if (view || client) {
+      updateAllButton();
+      filterGallery();
+    }
+  }
+
+  // ── Lightbox ──
+  function openLightbox(index) {
+    lightboxIndex = visibleItems.indexOf(index);
+    if (lightboxIndex === -1) lightboxIndex = 0;
+    showLightboxItem();
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function showLightboxItem() {
+    const index = visibleItems[lightboxIndex];
+    const item = manifest[index];
+    lightboxImg.src = item.file;
+    lightboxImg.alt = formatLabel(item.discipline);
+    lightboxDiscipline.textContent = formatLabel(item.discipline);
+    lightboxClient.textContent = item.clients && item.clients.length
+      ? item.clients.map(c => formatLabel(c)).join(', ')
+      : '';
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+    lightboxImg.src = '';
+  }
+
+  document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+
+  document.getElementById('lightboxPrev').addEventListener('click', () => {
+    lightboxIndex = (lightboxIndex - 1 + visibleItems.length) % visibleItems.length;
+    showLightboxItem();
+  });
+
+  document.getElementById('lightboxNext').addEventListener('click', () => {
+    lightboxIndex = (lightboxIndex + 1) % visibleItems.length;
+    showLightboxItem();
+  });
+
+  document.addEventListener('keydown', e => {
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') {
+      lightboxIndex = (lightboxIndex - 1 + visibleItems.length) % visibleItems.length;
+      showLightboxItem();
+    }
+    if (e.key === 'ArrowRight') {
+      lightboxIndex = (lightboxIndex + 1) % visibleItems.length;
+      showLightboxItem();
+    }
+  });
+
+  // ── Helpers ──
+  function formatLabel(slug) {
+    if (!slug) return '';
+    return slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+  }
+
+})();
+</script>
+</body>
+</html>
