@@ -3054,9 +3054,9 @@
     "sort": 999
   },
   {
-    "file": "images/nft/costume/BabyZim.jpg",
-    "thumbnail": "thumbnails/nft/costume/BabyZim.jpg",
-    "placeholder": "gallery-blur-placeholders/nft/costume/BabyZim.jpg",
+    "file": "images/nfts/costume/BabyZim.jpg",
+    "thumbnail": "thumbnails/nfts/costume/BabyZim.jpg",
+    "placeholder": "gallery-blur-placeholders/nfts/costume/BabyZim.jpg",
     "width": 2458,
     "height": 1232,
     "thumbWidth": 600,
@@ -3071,9 +3071,9 @@
     "sort": 999
   },
   {
-    "file": "images/nft/costume/BattleDib.jpg",
-    "thumbnail": "thumbnails/nft/costume/BattleDib.jpg",
-    "placeholder": "gallery-blur-placeholders/nft/costume/BattleDib.jpg",
+    "file": "images/nfts/costume/BattleDib.jpg",
+    "thumbnail": "thumbnails/nfts/costume/BattleDib.jpg",
+    "placeholder": "gallery-blur-placeholders/nfts/costume/BattleDib.jpg",
     "width": 2458,
     "height": 1232,
     "thumbWidth": 600,
@@ -3088,9 +3088,9 @@
     "sort": 999
   },
   {
-    "file": "images/nft/costume/BolognaZim.jpg",
-    "thumbnail": "thumbnails/nft/costume/BolognaZim.jpg",
-    "placeholder": "gallery-blur-placeholders/nft/costume/BolognaZim.jpg",
+    "file": "images/nfts/costume/BolognaZim.jpg",
+    "thumbnail": "thumbnails/nfts/costume/BolognaZim.jpg",
+    "placeholder": "gallery-blur-placeholders/nfts/costume/BolognaZim.jpg",
     "width": 2458,
     "height": 1232,
     "thumbWidth": 600,
@@ -3105,9 +3105,9 @@
     "sort": 999
   },
   {
-    "file": "images/nft/costume/BoyCostumeGir.jpg",
-    "thumbnail": "thumbnails/nft/costume/BoyCostumeGir.jpg",
-    "placeholder": "gallery-blur-placeholders/nft/costume/BoyCostumeGir.jpg",
+    "file": "images/nfts/costume/BoyCostumeGir.jpg",
+    "thumbnail": "thumbnails/nfts/costume/BoyCostumeGir.jpg",
+    "placeholder": "gallery-blur-placeholders/nfts/costume/BoyCostumeGir.jpg",
     "width": 2458,
     "height": 1232,
     "thumbWidth": 600,
@@ -3122,9 +3122,9 @@
     "sort": 999
   },
   {
-    "file": "images/nft/costume/CapturedZim.jpg",
-    "thumbnail": "thumbnails/nft/costume/CapturedZim.jpg",
-    "placeholder": "gallery-blur-placeholders/nft/costume/CapturedZim.jpg",
+    "file": "images/nfts/costume/CapturedZim.jpg",
+    "thumbnail": "thumbnails/nfts/costume/CapturedZim.jpg",
+    "placeholder": "gallery-blur-placeholders/nfts/costume/CapturedZim.jpg",
     "width": 2458,
     "height": 1232,
     "thumbWidth": 600,
@@ -3139,9 +3139,9 @@
     "sort": 999
   },
   {
-    "file": "images/nft/costume/CatGir.jpg",
-    "thumbnail": "thumbnails/nft/costume/CatGir.jpg",
-    "placeholder": "gallery-blur-placeholders/nft/costume/CatGir.jpg",
+    "file": "images/nfts/costume/CatGir.jpg",
+    "thumbnail": "thumbnails/nfts/costume/CatGir.jpg",
+    "placeholder": "gallery-blur-placeholders/nfts/costume/CatGir.jpg",
     "width": 2458,
     "height": 1232,
     "thumbWidth": 600,
@@ -3156,9 +3156,9 @@
     "sort": 999
   },
   {
-    "file": "images/nft/costume/GermfighterZim.jpg",
-    "thumbnail": "thumbnails/nft/costume/GermfighterZim.jpg",
-    "placeholder": "gallery-blur-placeholders/nft/costume/GermfighterZim.jpg",
+    "file": "images/nfts/costume/GermfighterZim.jpg",
+    "thumbnail": "thumbnails/nfts/costume/GermfighterZim.jpg",
+    "placeholder": "gallery-blur-placeholders/nfts/costume/GermfighterZim.jpg",
     "width": 2458,
     "height": 1232,
     "thumbWidth": 600,
@@ -3173,9 +3173,9 @@
     "sort": 999
   },
   {
-    "file": "images/nft/costume/OldManZim.jpg",
-    "thumbnail": "thumbnails/nft/costume/OldManZim.jpg",
-    "placeholder": "gallery-blur-placeholders/nft/costume/OldManZim.jpg",
+    "file": "images/nfts/costume/OldManZim.jpg",
+    "thumbnail": "thumbnails/nfts/costume/OldManZim.jpg",
+    "placeholder": "gallery-blur-placeholders/nfts/costume/OldManZim.jpg",
     "width": 2458,
     "height": 1232,
     "thumbWidth": 600,
@@ -3190,43 +3190,9 @@
     "sort": 999
   },
   {
-    "file": "images/nft/costume/OrganStealerZim.jpg",
-    "thumbnail": "thumbnails/nft/costume/OrganStealerZim.jpg",
-    "placeholder": "gallery-blur-placeholders/nft/costume/OrganStealerZim.jpg",
-    "width": 2458,
-    "height": 1232,
-    "thumbWidth": 600,
-    "thumbHeight": 301,
-    "aspectRatio": 1.9951,
-    "thumbAspectRatio": 1.9934,
-    "discipline": "nfts",
-    "clients": [
-      "nickelodeon"
-    ],
-    "keywords": ["costume"],
-    "sort": 999
-  },
-  {
-    "file": "images/nft/costume/ProjectorGir.jpg",
-    "thumbnail": "thumbnails/nft/costume/ProjectorGir.jpg",
-    "placeholder": "gallery-blur-placeholders/nft/costume/ProjectorGir.jpg",
-    "width": 2458,
-    "height": 1232,
-    "thumbWidth": 600,
-    "thumbHeight": 301,
-    "aspectRatio": 1.9951,
-    "thumbAspectRatio": 1.9934,
-    "discipline": "nfts",
-    "clients": [
-      "nickelodeon"
-    ],
-    "keywords": [],
-    "sort": 999
-  },
-  {
-    "file": "images/nft/costume/SuperheroDib.jpg",
-    "thumbnail": "thumbnails/nft/costume/SuperheroDib.jpg",
-    "placeholder": "gallery-blur-placeholders/nft/costume/SuperheroDib.jpg",
+    "file": "images/nfts/costume/OrganStealerZim.jpg",
+    "thumbnail": "thumbnails/nfts/costume/OrganStealerZim.jpg",
+    "placeholder": "gallery-blur-placeholders/nfts/costume/OrganStealerZim.jpg",
     "width": 2458,
     "height": 1232,
     "thumbWidth": 600,
@@ -3241,9 +3207,9 @@
     "sort": 999
   },
   {
-    "file": "images/nft/costume/TeddybearZim.jpg",
-    "thumbnail": "thumbnails/nft/costume/TeddybearZim.jpg",
-    "placeholder": "gallery-blur-placeholders/nft/costume/TeddybearZim.jpg",
+    "file": "images/nfts/costume/ProjectorGir.jpg",
+    "thumbnail": "thumbnails/nfts/costume/ProjectorGir.jpg",
+    "placeholder": "gallery-blur-placeholders/nfts/costume/ProjectorGir.jpg",
     "width": 2458,
     "height": 1232,
     "thumbWidth": 600,
@@ -3258,26 +3224,9 @@
     "sort": 999
   },
   {
-    "file": "images/nft/costume/WeaponFormGir.jpg",
-    "thumbnail": "thumbnails/nft/costume/WeaponFormGir.jpg",
-    "placeholder": "gallery-blur-placeholders/nft/costume/WeaponFormGir.jpg",
-    "width": 2458,
-    "height": 1232,
-    "thumbWidth": 600,
-    "thumbHeight": 301,
-    "aspectRatio": 1.9951,
-    "thumbAspectRatio": 1.9934,
-    "discipline": "nfts",
-    "clients": [
-      "nickelodeon"
-    ],
-    "keywords": ["costume"],
-    "sort": 999
-  },
-  {
-    "file": "images/nft/costume/Zim_Molt.jpg",
-    "thumbnail": "thumbnails/nft/costume/Zim_Molt.jpg",
-    "placeholder": "gallery-blur-placeholders/nft/costume/Zim_Molt.jpg",
+    "file": "images/nfts/costume/SuperheroDib.jpg",
+    "thumbnail": "thumbnails/nfts/costume/SuperheroDib.jpg",
+    "placeholder": "gallery-blur-placeholders/nfts/costume/SuperheroDib.jpg",
     "width": 2458,
     "height": 1232,
     "thumbWidth": 600,
@@ -3292,9 +3241,60 @@
     "sort": 999
   },
   {
-    "file": "images/nft/mashup/CATDOG-BEAVERS.BarryWinslow.jpg",
-    "thumbnail": "thumbnails/nft/mashup/CATDOG-BEAVERS.BarryWinslow.jpg",
-    "placeholder": "gallery-blur-placeholders/nft/mashup/CATDOG-BEAVERS.BarryWinslow.jpg",
+    "file": "images/nfts/costume/TeddybearZim.jpg",
+    "thumbnail": "thumbnails/nfts/costume/TeddybearZim.jpg",
+    "placeholder": "gallery-blur-placeholders/nfts/costume/TeddybearZim.jpg",
+    "width": 2458,
+    "height": 1232,
+    "thumbWidth": 600,
+    "thumbHeight": 301,
+    "aspectRatio": 1.9951,
+    "thumbAspectRatio": 1.9934,
+    "discipline": "nfts",
+    "clients": [
+      "nickelodeon"
+    ],
+    "keywords": [],
+    "sort": 999
+  },
+  {
+    "file": "images/nfts/costume/WeaponFormGir.jpg",
+    "thumbnail": "thumbnails/nfts/costume/WeaponFormGir.jpg",
+    "placeholder": "gallery-blur-placeholders/nfts/costume/WeaponFormGir.jpg",
+    "width": 2458,
+    "height": 1232,
+    "thumbWidth": 600,
+    "thumbHeight": 301,
+    "aspectRatio": 1.9951,
+    "thumbAspectRatio": 1.9934,
+    "discipline": "nfts",
+    "clients": [
+      "nickelodeon"
+    ],
+    "keywords": ["costume"],
+    "sort": 999
+  },
+  {
+    "file": "images/nfts/costume/Zim_Molt.jpg",
+    "thumbnail": "thumbnails/nfts/costume/Zim_Molt.jpg",
+    "placeholder": "gallery-blur-placeholders/nfts/costume/Zim_Molt.jpg",
+    "width": 2458,
+    "height": 1232,
+    "thumbWidth": 600,
+    "thumbHeight": 301,
+    "aspectRatio": 1.9951,
+    "thumbAspectRatio": 1.9934,
+    "discipline": "nfts",
+    "clients": [
+      "nickelodeon"
+    ],
+    "keywords": ["costume"],
+    "sort": 999
+  },
+  {
+    "file": "images/nfts/mashup/CATDOG-BEAVERS.BarryWinslow.jpg",
+    "thumbnail": "thumbnails/nfts/mashup/CATDOG-BEAVERS.BarryWinslow.jpg",
+    "placeholder": "gallery-blur-placeholders/nfts/mashup/CATDOG-BEAVERS.BarryWinslow.jpg",
     "width": 2560,
     "height": 1533,
     "thumbWidth": 600,
@@ -3309,9 +3309,9 @@
     "sort": 999
   },
   {
-    "file": "images/nft/mashup/CATDOG-BEAVERS.CatBarry.jpg",
-    "thumbnail": "thumbnails/nft/mashup/CATDOG-BEAVERS.CatBarry.jpg",
-    "placeholder": "gallery-blur-placeholders/nft/mashup/CATDOG-BEAVERS.CatBarry.jpg",
+    "file": "images/nfts/mashup/CATDOG-BEAVERS.CatBarry.jpg",
+    "thumbnail": "thumbnails/nfts/mashup/CATDOG-BEAVERS.CatBarry.jpg",
+    "placeholder": "gallery-blur-placeholders/nfts/mashup/CATDOG-BEAVERS.CatBarry.jpg",
     "width": 2560,
     "height": 1533,
     "thumbWidth": 600,
@@ -3326,9 +3326,9 @@
     "sort": 999
   },
   {
-    "file": "images/nft/mashup/CATDOG-BEAVERS.CatBing.jpg",
-    "thumbnail": "thumbnails/nft/mashup/CATDOG-BEAVERS.CatBing.jpg",
-    "placeholder": "gallery-blur-placeholders/nft/mashup/CATDOG-BEAVERS.CatBing.jpg",
+    "file": "images/nfts/mashup/CATDOG-BEAVERS.CatBing.jpg",
+    "thumbnail": "thumbnails/nfts/mashup/CATDOG-BEAVERS.CatBing.jpg",
+    "placeholder": "gallery-blur-placeholders/nfts/mashup/CATDOG-BEAVERS.CatBing.jpg",
     "width": 2560,
     "height": 1533,
     "thumbWidth": 600,
@@ -3343,9 +3343,9 @@
     "sort": 999
   },
   {
-    "file": "images/nft/mashup/CATDOG-BEAVERS.DogBing.jpg",
-    "thumbnail": "thumbnails/nft/mashup/CATDOG-BEAVERS.DogBing.jpg",
-    "placeholder": "gallery-blur-placeholders/nft/mashup/CATDOG-BEAVERS.DogBing.jpg",
+    "file": "images/nfts/mashup/CATDOG-BEAVERS.DogBing.jpg",
+    "thumbnail": "thumbnails/nfts/mashup/CATDOG-BEAVERS.DogBing.jpg",
+    "placeholder": "gallery-blur-placeholders/nfts/mashup/CATDOG-BEAVERS.DogBing.jpg",
     "width": 2560,
     "height": 1533,
     "thumbWidth": 600,
@@ -3360,9 +3360,9 @@
     "sort": 999
   },
   {
-    "file": "images/nft/mashup/CATDOG-BEAVERS.DogNorbert.jpg",
-    "thumbnail": "thumbnails/nft/mashup/CATDOG-BEAVERS.DogNorbert.jpg",
-    "placeholder": "gallery-blur-placeholders/nft/mashup/CATDOG-BEAVERS.DogNorbert.jpg",
+    "file": "images/nfts/mashup/CATDOG-BEAVERS.DogNorbert.jpg",
+    "thumbnail": "thumbnails/nfts/mashup/CATDOG-BEAVERS.DogNorbert.jpg",
+    "placeholder": "gallery-blur-placeholders/nfts/mashup/CATDOG-BEAVERS.DogNorbert.jpg",
     "width": 2560,
     "height": 1533,
     "thumbWidth": 600,
@@ -3377,9 +3377,9 @@
     "sort": 999
   },
   {
-    "file": "images/nft/mashup/CATDOG-BEAVERS.ShriekNorbert.jpg",
-    "thumbnail": "thumbnails/nft/mashup/CATDOG-BEAVERS.ShriekNorbert.jpg",
-    "placeholder": "gallery-blur-placeholders/nft/mashup/CATDOG-BEAVERS.ShriekNorbert.jpg",
+    "file": "images/nfts/mashup/CATDOG-BEAVERS.ShriekNorbert.jpg",
+    "thumbnail": "thumbnails/nfts/mashup/CATDOG-BEAVERS.ShriekNorbert.jpg",
+    "placeholder": "gallery-blur-placeholders/nfts/mashup/CATDOG-BEAVERS.ShriekNorbert.jpg",
     "width": 2560,
     "height": 1533,
     "thumbWidth": 600,
@@ -3394,9 +3394,9 @@
     "sort": 999
   },
   {
-    "file": "images/nft/mashup/CATDOG-BEAVERS.ShriekTruckee.jpg",
-    "thumbnail": "thumbnails/nft/mashup/CATDOG-BEAVERS.ShriekTruckee.jpg",
-    "placeholder": "gallery-blur-placeholders/nft/mashup/CATDOG-BEAVERS.ShriekTruckee.jpg",
+    "file": "images/nfts/mashup/CATDOG-BEAVERS.ShriekTruckee.jpg",
+    "thumbnail": "thumbnails/nfts/mashup/CATDOG-BEAVERS.ShriekTruckee.jpg",
+    "placeholder": "gallery-blur-placeholders/nfts/mashup/CATDOG-BEAVERS.ShriekTruckee.jpg",
     "width": 2560,
     "height": 1533,
     "thumbWidth": 600,
@@ -3411,9 +3411,9 @@
     "sort": 999
   },
   {
-    "file": "images/nft/mashup/CATDOG-BEAVERS.WinslowDaggett.jpg",
-    "thumbnail": "thumbnails/nft/mashup/CATDOG-BEAVERS.WinslowDaggett.jpg",
-    "placeholder": "gallery-blur-placeholders/nft/mashup/CATDOG-BEAVERS.WinslowDaggett.jpg",
+    "file": "images/nfts/mashup/CATDOG-BEAVERS.WinslowDaggett.jpg",
+    "thumbnail": "thumbnails/nfts/mashup/CATDOG-BEAVERS.WinslowDaggett.jpg",
+    "placeholder": "gallery-blur-placeholders/nfts/mashup/CATDOG-BEAVERS.WinslowDaggett.jpg",
     "width": 2560,
     "height": 1533,
     "thumbWidth": 600,
@@ -3428,9 +3428,9 @@
     "sort": 999
   },
   {
-    "file": "images/nft/mashup/CATDOG-BEAVERS.WinslowTruckee.jpg",
-    "thumbnail": "thumbnails/nft/mashup/CATDOG-BEAVERS.WinslowTruckee.jpg",
-    "placeholder": "gallery-blur-placeholders/nft/mashup/CATDOG-BEAVERS.WinslowTruckee.jpg",
+    "file": "images/nfts/mashup/CATDOG-BEAVERS.WinslowTruckee.jpg",
+    "thumbnail": "thumbnails/nfts/mashup/CATDOG-BEAVERS.WinslowTruckee.jpg",
+    "placeholder": "gallery-blur-placeholders/nfts/mashup/CATDOG-BEAVERS.WinslowTruckee.jpg",
     "width": 2560,
     "height": 1533,
     "thumbWidth": 600,
@@ -3445,9 +3445,9 @@
     "sort": 999
   },
   {
-    "file": "images/nft/mashup/ZIM-MONSTERS.AlienZickis.jpg",
-    "thumbnail": "thumbnails/nft/mashup/ZIM-MONSTERS.AlienZickis.jpg",
-    "placeholder": "gallery-blur-placeholders/nft/mashup/ZIM-MONSTERS.AlienZickis.jpg",
+    "file": "images/nfts/mashup/ZIM-MONSTERS.AlienZickis.jpg",
+    "thumbnail": "thumbnails/nfts/mashup/ZIM-MONSTERS.AlienZickis.jpg",
+    "placeholder": "gallery-blur-placeholders/nfts/mashup/ZIM-MONSTERS.AlienZickis.jpg",
     "width": 2560,
     "height": 1533,
     "thumbWidth": 600,
@@ -3462,9 +3462,9 @@
     "sort": 999
   },
   {
-    "file": "images/nft/mashup/ZIM-MONSTERS.DogGerkis.jpg",
-    "thumbnail": "thumbnails/nft/mashup/ZIM-MONSTERS.DogGerkis.jpg",
-    "placeholder": "gallery-blur-placeholders/nft/mashup/ZIM-MONSTERS.DogGerkis.jpg",
+    "file": "images/nfts/mashup/ZIM-MONSTERS.DogGerkis.jpg",
+    "thumbnail": "thumbnails/nfts/mashup/ZIM-MONSTERS.DogGerkis.jpg",
+    "placeholder": "gallery-blur-placeholders/nfts/mashup/ZIM-MONSTERS.DogGerkis.jpg",
     "width": 2560,
     "height": 1533,
     "thumbWidth": 600,
@@ -3479,9 +3479,9 @@
     "sort": 999
   },
   {
-    "file": "images/nft/mashup/ZIM-MONSTERS.Dromble.jpg",
-    "thumbnail": "thumbnails/nft/mashup/ZIM-MONSTERS.Dromble.jpg",
-    "placeholder": "gallery-blur-placeholders/nft/mashup/ZIM-MONSTERS.Dromble.jpg",
+    "file": "images/nfts/mashup/ZIM-MONSTERS.Dromble.jpg",
+    "thumbnail": "thumbnails/nfts/mashup/ZIM-MONSTERS.Dromble.jpg",
+    "placeholder": "gallery-blur-placeholders/nfts/mashup/ZIM-MONSTERS.Dromble.jpg",
     "width": 2560,
     "height": 1533,
     "thumbWidth": 600,
@@ -3496,9 +3496,9 @@
     "sort": 999
   },
   {
-    "file": "images/nft/mashup/ZIM-MONSTERS.HumanZizzle.jpg",
-    "thumbnail": "thumbnails/nft/mashup/ZIM-MONSTERS.HumanZizzle.jpg",
-    "placeholder": "gallery-blur-placeholders/nft/mashup/ZIM-MONSTERS.HumanZizzle.jpg",
+    "file": "images/nfts/mashup/ZIM-MONSTERS.HumanZizzle.jpg",
+    "thumbnail": "thumbnails/nfts/mashup/ZIM-MONSTERS.HumanZizzle.jpg",
+    "placeholder": "gallery-blur-placeholders/nfts/mashup/ZIM-MONSTERS.HumanZizzle.jpg",
     "width": 2560,
     "height": 1533,
     "thumbWidth": 600,
@@ -3513,9 +3513,9 @@
     "sort": 999
   },
   {
-    "file": "images/nft/mashup/ZIM-MONSTERS.HumanZoblina.jpg",
-    "thumbnail": "thumbnails/nft/mashup/ZIM-MONSTERS.HumanZoblina.jpg",
-    "placeholder": "gallery-blur-placeholders/nft/mashup/ZIM-MONSTERS.HumanZoblina.jpg",
+    "file": "images/nfts/mashup/ZIM-MONSTERS.HumanZoblina.jpg",
+    "thumbnail": "thumbnails/nfts/mashup/ZIM-MONSTERS.HumanZoblina.jpg",
+    "placeholder": "gallery-blur-placeholders/nfts/mashup/ZIM-MONSTERS.HumanZoblina.jpg",
     "width": 2560,
     "height": 1533,
     "thumbWidth": 600,
@@ -3530,9 +3530,9 @@
     "sort": 999
   },
   {
-    "file": "images/nft/mashup/ZIM-MONSTERS.HumanZromble.jpg",
-    "thumbnail": "thumbnails/nft/mashup/ZIM-MONSTERS.HumanZromble.jpg",
-    "placeholder": "gallery-blur-placeholders/nft/mashup/ZIM-MONSTERS.HumanZromble.jpg",
+    "file": "images/nfts/mashup/ZIM-MONSTERS.HumanZromble.jpg",
+    "thumbnail": "thumbnails/nfts/mashup/ZIM-MONSTERS.HumanZromble.jpg",
+    "placeholder": "gallery-blur-placeholders/nfts/mashup/ZIM-MONSTERS.HumanZromble.jpg",
     "width": 2560,
     "height": 1533,
     "thumbWidth": 600,
@@ -3547,9 +3547,9 @@
     "sort": 999
   },
   {
-    "file": "images/nft/mashup/ZIM-MONSTERS.RobotGerkis.jpg",
-    "thumbnail": "thumbnails/nft/mashup/ZIM-MONSTERS.RobotGerkis.jpg",
-    "placeholder": "gallery-blur-placeholders/nft/mashup/ZIM-MONSTERS.RobotGerkis.jpg",
+    "file": "images/nfts/mashup/ZIM-MONSTERS.RobotGerkis.jpg",
+    "thumbnail": "thumbnails/nfts/mashup/ZIM-MONSTERS.RobotGerkis.jpg",
+    "placeholder": "gallery-blur-placeholders/nfts/mashup/ZIM-MONSTERS.RobotGerkis.jpg",
     "width": 2560,
     "height": 1533,
     "thumbWidth": 600,
@@ -3564,9 +3564,9 @@
     "sort": 999
   },
   {
-    "file": "images/nft/mashup/ZIM-MONSTERS.RobotGrumm.jpg",
-    "thumbnail": "thumbnails/nft/mashup/ZIM-MONSTERS.RobotGrumm.jpg",
-    "placeholder": "gallery-blur-placeholders/nft/mashup/ZIM-MONSTERS.RobotGrumm.jpg",
+    "file": "images/nfts/mashup/ZIM-MONSTERS.RobotGrumm.jpg",
+    "thumbnail": "thumbnails/nfts/mashup/ZIM-MONSTERS.RobotGrumm.jpg",
+    "placeholder": "gallery-blur-placeholders/nfts/mashup/ZIM-MONSTERS.RobotGrumm.jpg",
     "width": 2560,
     "height": 1533,
     "thumbWidth": 600,
@@ -3581,9 +3581,9 @@
     "sort": 999
   },
   {
-    "file": "images/nft/mashup/ZIM-MONSTERS.TheSnorb.jpg",
-    "thumbnail": "thumbnails/nft/mashup/ZIM-MONSTERS.TheSnorb.jpg",
-    "placeholder": "gallery-blur-placeholders/nft/mashup/ZIM-MONSTERS.TheSnorb.jpg",
+    "file": "images/nfts/mashup/ZIM-MONSTERS.TheSnorb.jpg",
+    "thumbnail": "thumbnails/nfts/mashup/ZIM-MONSTERS.TheSnorb.jpg",
+    "placeholder": "gallery-blur-placeholders/nfts/mashup/ZIM-MONSTERS.TheSnorb.jpg",
     "width": 2560,
     "height": 1533,
     "thumbWidth": 600,
@@ -3598,9 +3598,9 @@
     "sort": 999
   },
   {
-    "file": "images/nft/onesheet/BEAVERS.BarryBear.jpg",
-    "thumbnail": "thumbnails/nft/onesheet/BEAVERS.BarryBear.jpg",
-    "placeholder": "gallery-blur-placeholders/nft/onesheet/BEAVERS.BarryBear.jpg",
+    "file": "images/nfts/onesheet/BEAVERS.BarryBear.jpg",
+    "thumbnail": "thumbnails/nfts/onesheet/BEAVERS.BarryBear.jpg",
+    "placeholder": "gallery-blur-placeholders/nfts/onesheet/BEAVERS.BarryBear.jpg",
     "width": 2560,
     "height": 1703,
     "thumbWidth": 600,
@@ -3615,9 +3615,9 @@
     "sort": 999
   },
   {
-    "file": "images/nft/onesheet/BEAVERS.Bing.jpg",
-    "thumbnail": "thumbnails/nft/onesheet/BEAVERS.Bing.jpg",
-    "placeholder": "gallery-blur-placeholders/nft/onesheet/BEAVERS.Bing.jpg",
+    "file": "images/nfts/onesheet/BEAVERS.Bing.jpg",
+    "thumbnail": "thumbnails/nfts/onesheet/BEAVERS.Bing.jpg",
+    "placeholder": "gallery-blur-placeholders/nfts/onesheet/BEAVERS.Bing.jpg",
     "width": 2560,
     "height": 1703,
     "thumbWidth": 600,
@@ -3632,9 +3632,9 @@
     "sort": 999
   },
   {
-    "file": "images/nft/onesheet/BEAVERS.Daggett.jpg",
-    "thumbnail": "thumbnails/nft/onesheet/BEAVERS.Daggett.jpg",
-    "placeholder": "gallery-blur-placeholders/nft/onesheet/BEAVERS.Daggett.jpg",
+    "file": "images/nfts/onesheet/BEAVERS.Daggett.jpg",
+    "thumbnail": "thumbnails/nfts/onesheet/BEAVERS.Daggett.jpg",
+    "placeholder": "gallery-blur-placeholders/nfts/onesheet/BEAVERS.Daggett.jpg",
     "width": 2560,
     "height": 1703,
     "thumbWidth": 600,
@@ -3649,9 +3649,9 @@
     "sort": 999
   },
   {
-    "file": "images/nft/onesheet/BEAVERS.Norbert.jpg",
-    "thumbnail": "thumbnails/nft/onesheet/BEAVERS.Norbert.jpg",
-    "placeholder": "gallery-blur-placeholders/nft/onesheet/BEAVERS.Norbert.jpg",
+    "file": "images/nfts/onesheet/BEAVERS.Norbert.jpg",
+    "thumbnail": "thumbnails/nfts/onesheet/BEAVERS.Norbert.jpg",
+    "placeholder": "gallery-blur-placeholders/nfts/onesheet/BEAVERS.Norbert.jpg",
     "width": 2560,
     "height": 1703,
     "thumbWidth": 600,
@@ -3666,9 +3666,9 @@
     "sort": 999
   },
   {
-    "file": "images/nft/onesheet/BEAVERS.Treeflower.jpg",
-    "thumbnail": "thumbnails/nft/onesheet/BEAVERS.Treeflower.jpg",
-    "placeholder": "gallery-blur-placeholders/nft/onesheet/BEAVERS.Treeflower.jpg",
+    "file": "images/nfts/onesheet/BEAVERS.Treeflower.jpg",
+    "thumbnail": "thumbnails/nfts/onesheet/BEAVERS.Treeflower.jpg",
+    "placeholder": "gallery-blur-placeholders/nfts/onesheet/BEAVERS.Treeflower.jpg",
     "width": 2560,
     "height": 1703,
     "thumbWidth": 600,
@@ -3683,9 +3683,9 @@
     "sort": 999
   },
   {
-    "file": "images/nft/onesheet/BEAVERS.Truckee.jpg",
-    "thumbnail": "thumbnails/nft/onesheet/BEAVERS.Truckee.jpg",
-    "placeholder": "gallery-blur-placeholders/nft/onesheet/BEAVERS.Truckee.jpg",
+    "file": "images/nfts/onesheet/BEAVERS.Truckee.jpg",
+    "thumbnail": "thumbnails/nfts/onesheet/BEAVERS.Truckee.jpg",
+    "placeholder": "gallery-blur-placeholders/nfts/onesheet/BEAVERS.Truckee.jpg",
     "width": 2560,
     "height": 1703,
     "thumbWidth": 600,
@@ -3700,9 +3700,9 @@
     "sort": 999
   },
   {
-    "file": "images/nft/onesheet/Monsters.jpg",
-    "thumbnail": "thumbnails/nft/onesheet/Monsters.jpg",
-    "placeholder": "gallery-blur-placeholders/nft/onesheet/Monsters.jpg",
+    "file": "images/nfts/onesheet/Monsters.jpg",
+    "thumbnail": "thumbnails/nfts/onesheet/Monsters.jpg",
+    "placeholder": "gallery-blur-placeholders/nfts/onesheet/Monsters.jpg",
     "width": 2560,
     "height": 1703,
     "thumbWidth": 600,
@@ -3717,9 +3717,9 @@
     "sort": 999
   },
   {
-    "file": "images/nft/onesheet/ZIM.AlienZim.jpg",
-    "thumbnail": "thumbnails/nft/onesheet/ZIM.AlienZim.jpg",
-    "placeholder": "gallery-blur-placeholders/nft/onesheet/ZIM.AlienZim.jpg",
+    "file": "images/nfts/onesheet/ZIM.AlienZim.jpg",
+    "thumbnail": "thumbnails/nfts/onesheet/ZIM.AlienZim.jpg",
+    "placeholder": "gallery-blur-placeholders/nfts/onesheet/ZIM.AlienZim.jpg",
     "width": 2560,
     "height": 2538,
     "thumbWidth": 600,
@@ -3734,9 +3734,9 @@
     "sort": 999
   },
   {
-    "file": "images/nft/onesheet/ZIM.Dib.jpg",
-    "thumbnail": "thumbnails/nft/onesheet/ZIM.Dib.jpg",
-    "placeholder": "gallery-blur-placeholders/nft/onesheet/ZIM.Dib.jpg",
+    "file": "images/nfts/onesheet/ZIM.Dib.jpg",
+    "thumbnail": "thumbnails/nfts/onesheet/ZIM.Dib.jpg",
+    "placeholder": "gallery-blur-placeholders/nfts/onesheet/ZIM.Dib.jpg",
     "width": 2560,
     "height": 2538,
     "thumbWidth": 600,
@@ -3751,9 +3751,9 @@
     "sort": 999
   },
   {
-    "file": "images/nft/onesheet/ZIM.DogGir.jpg",
-    "thumbnail": "thumbnails/nft/onesheet/ZIM.DogGir.jpg",
-    "placeholder": "gallery-blur-placeholders/nft/onesheet/ZIM.DogGir.jpg",
+    "file": "images/nfts/onesheet/ZIM.DogGir.jpg",
+    "thumbnail": "thumbnails/nfts/onesheet/ZIM.DogGir.jpg",
+    "placeholder": "gallery-blur-placeholders/nfts/onesheet/ZIM.DogGir.jpg",
     "width": 2560,
     "height": 2538,
     "thumbWidth": 600,
@@ -3768,9 +3768,9 @@
     "sort": 999
   },
   {
-    "file": "images/nft/onesheet/ZIM.Gaz.jpg",
-    "thumbnail": "thumbnails/nft/onesheet/ZIM.Gaz.jpg",
-    "placeholder": "gallery-blur-placeholders/nft/onesheet/ZIM.Gaz.jpg",
+    "file": "images/nfts/onesheet/ZIM.Gaz.jpg",
+    "thumbnail": "thumbnails/nfts/onesheet/ZIM.Gaz.jpg",
+    "placeholder": "gallery-blur-placeholders/nfts/onesheet/ZIM.Gaz.jpg",
     "width": 2560,
     "height": 2538,
     "thumbWidth": 600,
@@ -3785,9 +3785,9 @@
     "sort": 999
   },
   {
-    "file": "images/nft/onesheet/ZIM.HumanZim.jpg",
-    "thumbnail": "thumbnails/nft/onesheet/ZIM.HumanZim.jpg",
-    "placeholder": "gallery-blur-placeholders/nft/onesheet/ZIM.HumanZim.jpg",
+    "file": "images/nfts/onesheet/ZIM.HumanZim.jpg",
+    "thumbnail": "thumbnails/nfts/onesheet/ZIM.HumanZim.jpg",
+    "placeholder": "gallery-blur-placeholders/nfts/onesheet/ZIM.HumanZim.jpg",
     "width": 2560,
     "height": 2538,
     "thumbWidth": 600,
@@ -3802,9 +3802,9 @@
     "sort": 999
   },
   {
-    "file": "images/nft/onesheet/ZIM.RobotGir.jpg",
-    "thumbnail": "thumbnails/nft/onesheet/ZIM.RobotGir.jpg",
-    "placeholder": "gallery-blur-placeholders/nft/onesheet/ZIM.RobotGir.jpg",
+    "file": "images/nfts/onesheet/ZIM.RobotGir.jpg",
+    "thumbnail": "thumbnails/nfts/onesheet/ZIM.RobotGir.jpg",
+    "placeholder": "gallery-blur-placeholders/nfts/onesheet/ZIM.RobotGir.jpg",
     "width": 2560,
     "height": 2538,
     "thumbWidth": 600,
