@@ -679,7 +679,7 @@ body {
 /* ── DISCIPLINE CARDS ── */
 .disc-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 280px);
   gap: 10px;
   justify-content: center;
 }
@@ -733,7 +733,7 @@ body {
 /* ── CLIENT CARDS ── */
 .client-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 180px));
   gap: 10px;
   justify-content: center;
 }
