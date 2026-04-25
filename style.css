@@ -721,7 +721,7 @@ body {
 /* ── DISCIPLINE CARDS ── */
 .disc-grid {
   display: grid;
-  grid-template-columns: repeat(3, 280px);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 10px;
   justify-content: center;
 }
@@ -775,18 +775,10 @@ body {
 /* ── CLIENT CARDS ── */
 .client-grid {
   display: grid;
-  grid-template-columns: repeat(5, 180px);
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 10px;
   justify-content: center;
 }
-/* Alternate fluid layout (commented out):
-.disc-grid {
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-}
-.client-grid {
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-}
-*/
 .client-card {
   border-radius: var(--radius);
   overflow: hidden;
@@ -884,8 +876,6 @@ body {
 }
 @media (max-width: 900px) {
   .gallery-grid { columns: 2; }
-  .disc-grid { grid-template-columns: repeat(2, 280px); }
-  .client-grid { grid-template-columns: repeat(2, 180px); }
 }
 @media (max-width: 768px) {
   .nav-wrap {
@@ -946,8 +936,8 @@ body {
     padding-top: 10px;
     justify-content: flex-start;
   }
-  .disc-grid { grid-template-columns: repeat(2, 280px); justify-content: center; }
-  .client-grid { grid-template-columns: repeat(2, 180px); justify-content: center; }
+  .disc-grid { justify-content: center; }
+  .client-grid { justify-content: center; }
   .hero-inner { height: 300px; }
   .dev-notes-grid { grid-template-columns: 1fr; }
 }
