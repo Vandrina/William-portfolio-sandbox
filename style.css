@@ -721,9 +721,9 @@ body {
 /* ── DISCIPLINE CARDS ── */
 .disc-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, 280px);
   gap: 10px;
-  align-items: stretch;
+  justify-content: center;
 }
 .disc-card {
   border-radius: var(--radius);
@@ -775,10 +775,18 @@ body {
 /* ── CLIENT CARDS ── */
 .client-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(5, 180px);
   gap: 10px;
-  align-items: stretch;
+  justify-content: center;
 }
+/* Alternate fluid layout (commented out):
+.disc-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+.client-grid {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+*/
 .client-card {
   border-radius: var(--radius);
   overflow: hidden;
@@ -873,13 +881,11 @@ body {
 /* ── RESPONSIVE ── */
 @media (max-width: 1200px) {
   .gallery-grid { columns: 3; }
-  .disc-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .client-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
 @media (max-width: 900px) {
   .gallery-grid { columns: 2; }
-  .disc-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .client-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .disc-grid { grid-template-columns: repeat(2, 280px); }
+  .client-grid { grid-template-columns: repeat(2, 180px); }
 }
 @media (max-width: 768px) {
   .nav-wrap {
@@ -940,8 +946,8 @@ body {
     padding-top: 10px;
     justify-content: flex-start;
   }
-  .disc-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .client-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .disc-grid { grid-template-columns: repeat(2, 280px); justify-content: center; }
+  .client-grid { grid-template-columns: repeat(2, 180px); justify-content: center; }
   .hero-inner { height: 300px; }
   .dev-notes-grid { grid-template-columns: 1fr; }
 }
