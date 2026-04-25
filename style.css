@@ -730,6 +730,7 @@ body {
   border: 1px solid var(--border);
   position: relative;
   aspect-ratio: 414/255;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -783,6 +784,7 @@ body {
   border: 1px solid var(--border);
   position: relative;
   aspect-ratio: 330/168;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
