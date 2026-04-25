@@ -730,7 +730,6 @@ body {
   border: 1px solid var(--border);
   position: relative;
   aspect-ratio: 414/255;
-  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -775,7 +774,7 @@ body {
 /* ── CLIENT CARDS ── */
 .client-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 207px);
+  grid-template-columns: repeat(auto-fit, minmax(180px, 207px));
   gap: 10px;
 }
 .client-card {
@@ -784,7 +783,6 @@ body {
   border: 1px solid var(--border);
   position: relative;
   aspect-ratio: 330/168;
-  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
