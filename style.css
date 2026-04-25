@@ -723,6 +723,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
+  justify-content: center;
 }
 .disc-card {
   border-radius: var(--radius);
@@ -776,6 +777,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 207px));
   gap: 10px;
+  justify-content: center;
 }
 .client-card {
   border-radius: var(--radius);
