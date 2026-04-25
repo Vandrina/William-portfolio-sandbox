@@ -266,48 +266,6 @@ body {
 .footer-link.gold { color: var(--accent-dim); }
 .footer-link.gold:hover { color: var(--accent); }
 
-/* ── DEV NOTES ── */
-.dev-notes {
-  background: #0c0c0e;
-  border-top: 1px solid #1a1a1e;
-  padding: 28px 32px;
-}
-.dev-notes-inner { max-width: var(--max); margin: 0 auto; }
-.dev-notes-title {
-  font-family: var(--font-mono);
-  font-size: 9px;
-  color: var(--muted);
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-}
-.dev-notes-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-.dev-note h4 {
-  font-family: var(--font-head);
-  font-size: 12px;
-  font-weight: 600;
-  color: #444448;
-  margin-bottom: 5px;
-}
-.dev-note p {
-  font-family: var(--font-body);
-  font-size: 11px;
-  color: #303036;
-  line-height: 1.7;
-}
-.dev-note code {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  background: #181818;
-  color: #404048;
-  padding: 1px 5px;
-  border-radius: 2px;
-}
-
 /* ── FILTER BAR (portfolio page) ── */
 .filter-wrap {
   background: var(--bg);
