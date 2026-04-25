@@ -688,7 +688,7 @@ body {
   overflow: hidden;
   border: 1px solid var(--border);
   position: relative;
-  height: 172px;
+  min-height: 172px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -742,7 +742,7 @@ body {
   overflow: hidden;
   border: 1px solid var(--border);
   position: relative;
-  height: 112px;
+  min-height: 112px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -902,6 +902,6 @@ body {
 @media (max-width: 480px) {
   .gallery-grid { columns: 1; }
   .page-title { font-size: 24px; }
-  .disc-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 280px)); }
-  .client-grid { grid-template-columns: repeat(auto-fit, minmax(180px, 180px)); }
+  .disc-grid { grid-template-columns: 1fr; }
+  .client-grid { grid-template-columns: 1fr; }
 }
