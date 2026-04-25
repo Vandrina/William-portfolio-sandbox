@@ -775,7 +775,7 @@ body {
 /* ── CLIENT CARDS ── */
 .client-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 207px));
+  grid-template-columns: repeat(5, 1fr);
   gap: 10px;
   justify-content: center;
 }
