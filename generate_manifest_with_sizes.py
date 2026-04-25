@@ -11,6 +11,7 @@ except ImportError:
 root = Path(__file__).resolve().parent
 images_root = root / 'images'
 thumbs_root = root / 'thumbnails'
+placeholders_root = root / 'gallery-blur-placeholders'
 manifest_path = root / 'data' / 'manifest.json'
 
 image_extensions = {'.jpg', '.jpeg', '.png', '.gif', '.webp'}
@@ -48,10 +49,13 @@ for image_path in sorted(images_root.rglob('*')):
 
     discipline = image_path.parent.name
     key = str(relative_path).replace('\\', '/')
+    placeholder_path = placeholders_root / image_path.relative_to(images_root)
+    placeholder_rel = str(placeholder_path.relative_to(root)).replace('\\', '/') if placeholder_path.exists() else None
     old_item = old_manifest.get(key, {})
     manifest.append({
         'file': key,
         'thumbnail': str(thumb_path.relative_to(root)).replace('\\', '/'),
+        'placeholder': placeholder_rel,
         'width': full_width,
         'height': full_height,
         'thumbWidth': thumb_width,

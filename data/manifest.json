@@ -2,6 +2,7 @@
   {
     "file": "images/backgrounds/1. AdAgency.SABI.ItzaZooGalleryScreen.jpg",
     "thumbnail": "thumbnails/backgrounds/1. AdAgency.SABI.ItzaZooGalleryScreen.jpg",
+    "placeholder": "gallery-blur-placeholders/backgrounds/1. AdAgency.SABI.ItzaZooGalleryScreen.jpg",
     "width": 2560,
     "height": 1585,
     "thumbWidth": 600,
@@ -18,6 +19,7 @@
   {
     "file": "images/backgrounds/2. AdAgency.SABI.ZooMap.jpg",
     "thumbnail": "thumbnails/backgrounds/2. AdAgency.SABI.ZooMap.jpg",
+    "placeholder": "gallery-blur-placeholders/backgrounds/2. AdAgency.SABI.ZooMap.jpg",
     "width": 2119,
     "height": 1517,
     "thumbWidth": 600,
@@ -34,6 +36,7 @@
   {
     "file": "images/backgrounds/3. TechSmartKids.WinterRunner.Portfolio.jpg",
     "thumbnail": "thumbnails/backgrounds/3. TechSmartKids.WinterRunner.Portfolio.jpg",
+    "placeholder": "gallery-blur-placeholders/backgrounds/3. TechSmartKids.WinterRunner.Portfolio.jpg",
     "width": 2460,
     "height": 900,
     "thumbWidth": 600,
@@ -50,6 +53,7 @@
   {
     "file": "images/backgrounds/4. AuthorDigital.GlampingCabins_Portfolio.jpg",
     "thumbnail": "thumbnails/backgrounds/4. AuthorDigital.GlampingCabins_Portfolio.jpg",
+    "placeholder": "gallery-blur-placeholders/backgrounds/4. AuthorDigital.GlampingCabins_Portfolio.jpg",
     "width": 905,
     "height": 2560,
     "thumbWidth": 212,
@@ -64,6 +68,7 @@
   {
     "file": "images/backgrounds/DreamboxLearning.Wallpapers_cabin.adj.jpg",
     "thumbnail": "thumbnails/backgrounds/DreamboxLearning.Wallpapers_cabin.adj.jpg",
+    "placeholder": "gallery-blur-placeholders/backgrounds/DreamboxLearning.Wallpapers_cabin.adj.jpg",
     "width": 2276,
     "height": 1536,
     "thumbWidth": 600,
@@ -80,6 +85,7 @@
   {
     "file": "images/backgrounds/DreamboxLearning.Wallpapers_cardinals.adj.jpg",
     "thumbnail": "thumbnails/backgrounds/DreamboxLearning.Wallpapers_cardinals.adj.jpg",
+    "placeholder": "gallery-blur-placeholders/backgrounds/DreamboxLearning.Wallpapers_cardinals.adj.jpg",
     "width": 2276,
     "height": 1536,
     "thumbWidth": 600,
@@ -96,6 +102,7 @@
   {
     "file": "images/backgrounds/DreamboxLearning.Wallpapers_fogmountains.adj.jpg",
     "thumbnail": "thumbnails/backgrounds/DreamboxLearning.Wallpapers_fogmountains.adj.jpg",
+    "placeholder": "gallery-blur-placeholders/backgrounds/DreamboxLearning.Wallpapers_fogmountains.adj.jpg",
     "width": 2276,
     "height": 1536,
     "thumbWidth": 600,
@@ -112,6 +119,7 @@
   {
     "file": "images/backgrounds/DreamboxLearning.Wallpapers_koi.adj.jpg",
     "thumbnail": "thumbnails/backgrounds/DreamboxLearning.Wallpapers_koi.adj.jpg",
+    "placeholder": "gallery-blur-placeholders/backgrounds/DreamboxLearning.Wallpapers_koi.adj.jpg",
     "width": 2276,
     "height": 1536,
     "thumbWidth": 600,
@@ -128,6 +136,7 @@
   {
     "file": "images/backgrounds/DreamboxLearning.Wallpapers_monsters.adj.jpg",
     "thumbnail": "thumbnails/backgrounds/DreamboxLearning.Wallpapers_monsters.adj.jpg",
+    "placeholder": "gallery-blur-placeholders/backgrounds/DreamboxLearning.Wallpapers_monsters.adj.jpg",
     "width": 2276,
     "height": 1536,
     "thumbWidth": 600,
@@ -144,6 +153,7 @@
   {
     "file": "images/backgrounds/DreamboxLearning.Wallpapers_snowtree.adj.jpg",
     "thumbnail": "thumbnails/backgrounds/DreamboxLearning.Wallpapers_snowtree.adj.jpg",
+    "placeholder": "gallery-blur-placeholders/backgrounds/DreamboxLearning.Wallpapers_snowtree.adj.jpg",
     "width": 2276,
     "height": 1536,
     "thumbWidth": 600,
@@ -160,6 +170,7 @@
   {
     "file": "images/backgrounds/DreamboxLearning.Wallpapers_ufo.adj.jpg",
     "thumbnail": "thumbnails/backgrounds/DreamboxLearning.Wallpapers_ufo.adj.jpg",
+    "placeholder": "gallery-blur-placeholders/backgrounds/DreamboxLearning.Wallpapers_ufo.adj.jpg",
     "width": 2276,
     "height": 1536,
     "thumbWidth": 600,
@@ -176,6 +187,7 @@
   {
     "file": "images/backgrounds/DreamboxLearning.Wallpapers_windowplants.adj.jpg",
     "thumbnail": "thumbnails/backgrounds/DreamboxLearning.Wallpapers_windowplants.adj.jpg",
+    "placeholder": "gallery-blur-placeholders/backgrounds/DreamboxLearning.Wallpapers_windowplants.adj.jpg",
     "width": 2276,
     "height": 1536,
     "thumbWidth": 600,
@@ -192,6 +204,7 @@
   {
     "file": "images/backgrounds/KnowWonder.Leapfrog.Background-Egypt.jpg",
     "thumbnail": "thumbnails/backgrounds/KnowWonder.Leapfrog.Background-Egypt.jpg",
+    "placeholder": "gallery-blur-placeholders/backgrounds/KnowWonder.Leapfrog.Background-Egypt.jpg",
     "width": 694,
     "height": 694,
     "thumbWidth": 600,
@@ -208,6 +221,7 @@
   {
     "file": "images/backgrounds/KnowWonder.Leapfrog.Background-Venice.jpg",
     "thumbnail": "thumbnails/backgrounds/KnowWonder.Leapfrog.Background-Venice.jpg",
+    "placeholder": "gallery-blur-placeholders/backgrounds/KnowWonder.Leapfrog.Background-Venice.jpg",
     "width": 694,
     "height": 694,
     "thumbWidth": 600,
@@ -224,6 +238,7 @@
   {
     "file": "images/books/001. StoneArchBooks.GrowingGooCover.jpg",
     "thumbnail": "thumbnails/books/001. StoneArchBooks.GrowingGooCover.jpg",
+    "placeholder": "gallery-blur-placeholders/books/001. StoneArchBooks.GrowingGooCover.jpg",
     "width": 548,
     "height": 803,
     "thumbWidth": 409,
@@ -240,6 +255,7 @@
   {
     "file": "images/books/002. StoneArchBooks.GrowingGooPages.jpg",
     "thumbnail": "thumbnails/books/002. StoneArchBooks.GrowingGooPages.jpg",
+    "placeholder": "gallery-blur-placeholders/books/002. StoneArchBooks.GrowingGooPages.jpg",
     "width": 1024,
     "height": 2390,
     "thumbWidth": 257,
@@ -256,6 +272,7 @@
   {
     "file": "images/books/003. StoneArchBooks.CaveCreaturesCover.jpg",
     "thumbnail": "thumbnails/books/003. StoneArchBooks.CaveCreaturesCover.jpg",
+    "placeholder": "gallery-blur-placeholders/books/003. StoneArchBooks.CaveCreaturesCover.jpg",
     "width": 548,
     "height": 803,
     "thumbWidth": 409,
@@ -272,6 +289,7 @@
   {
     "file": "images/books/004. StoneArchBooks.CaveCreaturesPages.jpg",
     "thumbnail": "thumbnails/books/004. StoneArchBooks.CaveCreaturesPages.jpg",
+    "placeholder": "gallery-blur-placeholders/books/004. StoneArchBooks.CaveCreaturesPages.jpg",
     "width": 1024,
     "height": 2390,
     "thumbWidth": 257,
@@ -288,6 +306,7 @@
   {
     "file": "images/books/005. StoneArchBooks.FastCarCover.jpg",
     "thumbnail": "thumbnails/books/005. StoneArchBooks.FastCarCover.jpg",
+    "placeholder": "gallery-blur-placeholders/books/005. StoneArchBooks.FastCarCover.jpg",
     "width": 548,
     "height": 803,
     "thumbWidth": 409,
@@ -304,6 +323,7 @@
   {
     "file": "images/books/006. StoneArchBooks.FastCarPages.jpg",
     "thumbnail": "thumbnails/books/006. StoneArchBooks.FastCarPages.jpg",
+    "placeholder": "gallery-blur-placeholders/books/006. StoneArchBooks.FastCarPages.jpg",
     "width": 1024,
     "height": 2390,
     "thumbWidth": 257,
@@ -320,6 +340,7 @@
   {
     "file": "images/books/007. StoneArchBooks.RaceToSchoolCover.jpg",
     "thumbnail": "thumbnails/books/007. StoneArchBooks.RaceToSchoolCover.jpg",
+    "placeholder": "gallery-blur-placeholders/books/007. StoneArchBooks.RaceToSchoolCover.jpg",
     "width": 548,
     "height": 803,
     "thumbWidth": 409,
@@ -336,6 +357,7 @@
   {
     "file": "images/books/008. StoneArchBooks.RaceToSchoolPages.jpg",
     "thumbnail": "thumbnails/books/008. StoneArchBooks.RaceToSchoolPages.jpg",
+    "placeholder": "gallery-blur-placeholders/books/008. StoneArchBooks.RaceToSchoolPages.jpg",
     "width": 1024,
     "height": 2390,
     "thumbWidth": 257,
@@ -352,6 +374,7 @@
   {
     "file": "images/books/009. StoneArchBooks.CoolCapCover.jpg",
     "thumbnail": "thumbnails/books/009. StoneArchBooks.CoolCapCover.jpg",
+    "placeholder": "gallery-blur-placeholders/books/009. StoneArchBooks.CoolCapCover.jpg",
     "width": 548,
     "height": 803,
     "thumbWidth": 409,
@@ -368,6 +391,7 @@
   {
     "file": "images/books/010. StoneArchBooks.CoolCapPages.jpg",
     "thumbnail": "thumbnails/books/010. StoneArchBooks.CoolCapPages.jpg",
+    "placeholder": "gallery-blur-placeholders/books/010. StoneArchBooks.CoolCapPages.jpg",
     "width": 1024,
     "height": 2390,
     "thumbWidth": 257,
@@ -384,6 +408,7 @@
   {
     "file": "images/books/011. StoneArchBooks.SpeedSecretCover.jpg",
     "thumbnail": "thumbnails/books/011. StoneArchBooks.SpeedSecretCover.jpg",
+    "placeholder": "gallery-blur-placeholders/books/011. StoneArchBooks.SpeedSecretCover.jpg",
     "width": 548,
     "height": 803,
     "thumbWidth": 409,
@@ -400,6 +425,7 @@
   {
     "file": "images/books/012. StoneArchBooks.SpeedSecretPages.jpg",
     "thumbnail": "thumbnails/books/012. StoneArchBooks.SpeedSecretPages.jpg",
+    "placeholder": "gallery-blur-placeholders/books/012. StoneArchBooks.SpeedSecretPages.jpg",
     "width": 1024,
     "height": 2390,
     "thumbWidth": 257,
@@ -416,6 +442,7 @@
   {
     "file": "images/books/013. StoneArchBooks.PuttPuttCover.jpg",
     "thumbnail": "thumbnails/books/013. StoneArchBooks.PuttPuttCover.jpg",
+    "placeholder": "gallery-blur-placeholders/books/013. StoneArchBooks.PuttPuttCover.jpg",
     "width": 548,
     "height": 803,
     "thumbWidth": 409,
@@ -432,6 +459,7 @@
   {
     "file": "images/books/014. StoneArchBooks.PuttPuttPages.jpg",
     "thumbnail": "thumbnails/books/014. StoneArchBooks.PuttPuttPages.jpg",
+    "placeholder": "gallery-blur-placeholders/books/014. StoneArchBooks.PuttPuttPages.jpg",
     "width": 1024,
     "height": 2390,
     "thumbWidth": 257,
@@ -448,6 +476,7 @@
   {
     "file": "images/books/015. StoneArchBooks.SpaceTripCover.jpg",
     "thumbnail": "thumbnails/books/015. StoneArchBooks.SpaceTripCover.jpg",
+    "placeholder": "gallery-blur-placeholders/books/015. StoneArchBooks.SpaceTripCover.jpg",
     "width": 548,
     "height": 803,
     "thumbWidth": 409,
@@ -464,6 +493,7 @@
   {
     "file": "images/books/016. StoneArchBooks.SpaceTripPages.jpg",
     "thumbnail": "thumbnails/books/016. StoneArchBooks.SpaceTripPages.jpg",
+    "placeholder": "gallery-blur-placeholders/books/016. StoneArchBooks.SpaceTripPages.jpg",
     "width": 1024,
     "height": 2390,
     "thumbWidth": 257,
@@ -480,6 +510,7 @@
   {
     "file": "images/concept-art/1. Bigfish.SquinionsCharSheet.jpg",
     "thumbnail": "thumbnails/concept-art/1. Bigfish.SquinionsCharSheet.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/1. Bigfish.SquinionsCharSheet.jpg",
     "width": 2560,
     "height": 1434,
     "thumbWidth": 600,
@@ -496,6 +527,7 @@
   {
     "file": "images/concept-art/10. ZettonCharSheet_w_turnaround.jpg",
     "thumbnail": "thumbnails/concept-art/10. ZettonCharSheet_w_turnaround.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/10. ZettonCharSheet_w_turnaround.jpg",
     "width": 2560,
     "height": 2470,
     "thumbWidth": 600,
@@ -510,6 +542,7 @@
   {
     "file": "images/concept-art/11. ElevatedGames.Baltan.jpg",
     "thumbnail": "thumbnails/concept-art/11. ElevatedGames.Baltan.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/11. ElevatedGames.Baltan.jpg",
     "width": 2560,
     "height": 1792,
     "thumbWidth": 600,
@@ -526,6 +559,7 @@
   {
     "file": "images/concept-art/12. ElevatedGames.BaltanCharSheet_w_turnaround.jpg",
     "thumbnail": "thumbnails/concept-art/12. ElevatedGames.BaltanCharSheet_w_turnaround.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/12. ElevatedGames.BaltanCharSheet_w_turnaround.jpg",
     "width": 2560,
     "height": 2220,
     "thumbWidth": 600,
@@ -542,6 +576,7 @@
   {
     "file": "images/concept-art/13. ElevatedGames.Gomora.jpg",
     "thumbnail": "thumbnails/concept-art/13. ElevatedGames.Gomora.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/13. ElevatedGames.Gomora.jpg",
     "width": 2560,
     "height": 1792,
     "thumbWidth": 600,
@@ -558,6 +593,7 @@
   {
     "file": "images/concept-art/14. ElevatedGames.GomoraCharSheet_w_turnaround.jpg",
     "thumbnail": "thumbnails/concept-art/14. ElevatedGames.GomoraCharSheet_w_turnaround.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/14. ElevatedGames.GomoraCharSheet_w_turnaround.jpg",
     "width": 2560,
     "height": 1616,
     "thumbWidth": 600,
@@ -574,6 +610,7 @@
   {
     "file": "images/concept-art/15. ElevatedGames.Aboras.jpg",
     "thumbnail": "thumbnails/concept-art/15. ElevatedGames.Aboras.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/15. ElevatedGames.Aboras.jpg",
     "width": 2560,
     "height": 1792,
     "thumbWidth": 600,
@@ -590,6 +627,7 @@
   {
     "file": "images/concept-art/16. ElevatedGames.AborasCharSheet_w_turnaround.jpg",
     "thumbnail": "thumbnails/concept-art/16. ElevatedGames.AborasCharSheet_w_turnaround.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/16. ElevatedGames.AborasCharSheet_w_turnaround.jpg",
     "width": 2560,
     "height": 2469,
     "thumbWidth": 600,
@@ -606,6 +644,7 @@
   {
     "file": "images/concept-art/17. ElevatedGames.BanilaCharSheet.jpg",
     "thumbnail": "thumbnails/concept-art/17. ElevatedGames.BanilaCharSheet.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/17. ElevatedGames.BanilaCharSheet.jpg",
     "width": 2560,
     "height": 1110,
     "thumbWidth": 600,
@@ -622,6 +661,7 @@
   {
     "file": "images/concept-art/18. Bigfish.HopeWeathers_posesheet.jpg",
     "thumbnail": "thumbnails/concept-art/18. Bigfish.HopeWeathers_posesheet.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/18. Bigfish.HopeWeathers_posesheet.jpg",
     "width": 2560,
     "height": 1498,
     "thumbWidth": 600,
@@ -638,6 +678,7 @@
   {
     "file": "images/concept-art/19. Bigfish.Bo_posesheet.jpg",
     "thumbnail": "thumbnails/concept-art/19. Bigfish.Bo_posesheet.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/19. Bigfish.Bo_posesheet.jpg",
     "width": 2560,
     "height": 1355,
     "thumbWidth": 600,
@@ -654,6 +695,7 @@
   {
     "file": "images/concept-art/2. ElevatedGames.UltramanSketches.jpg",
     "thumbnail": "thumbnails/concept-art/2. ElevatedGames.UltramanSketches.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/2. ElevatedGames.UltramanSketches.jpg",
     "width": 1215,
     "height": 2560,
     "thumbWidth": 285,
@@ -670,6 +712,7 @@
   {
     "file": "images/concept-art/20. Bigfish.Michael_posesheet.jpg",
     "thumbnail": "thumbnails/concept-art/20. Bigfish.Michael_posesheet.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/20. Bigfish.Michael_posesheet.jpg",
     "width": 2560,
     "height": 1290,
     "thumbWidth": 600,
@@ -686,6 +729,7 @@
   {
     "file": "images/concept-art/21. Bigfish.Tilly_posesheet.jpg",
     "thumbnail": "thumbnails/concept-art/21. Bigfish.Tilly_posesheet.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/21. Bigfish.Tilly_posesheet.jpg",
     "width": 2560,
     "height": 978,
     "thumbWidth": 600,
@@ -702,6 +746,7 @@
   {
     "file": "images/concept-art/22. Bigfish.WarrenVanDerKampf_posesheet.jpg",
     "thumbnail": "thumbnails/concept-art/22. Bigfish.WarrenVanDerKampf_posesheet.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/22. Bigfish.WarrenVanDerKampf_posesheet.jpg",
     "width": 2560,
     "height": 1411,
     "thumbWidth": 600,
@@ -718,6 +763,7 @@
   {
     "file": "images/concept-art/23. Bigfish.RoseVanDerKampf_posesheet.jpg",
     "thumbnail": "thumbnails/concept-art/23. Bigfish.RoseVanDerKampf_posesheet.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/23. Bigfish.RoseVanDerKampf_posesheet.jpg",
     "width": 2560,
     "height": 1050,
     "thumbWidth": 600,
@@ -734,6 +780,7 @@
   {
     "file": "images/concept-art/24. Bigfish.SimonVanDerKampf_posesheet.jpg",
     "thumbnail": "thumbnails/concept-art/24. Bigfish.SimonVanDerKampf_posesheet.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/24. Bigfish.SimonVanDerKampf_posesheet.jpg",
     "width": 2560,
     "height": 1398,
     "thumbWidth": 600,
@@ -750,6 +797,7 @@
   {
     "file": "images/concept-art/25. Bigfish.VanDerKampfFamilyPortrait.jpg",
     "thumbnail": "thumbnails/concept-art/25. Bigfish.VanDerKampfFamilyPortrait.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/25. Bigfish.VanDerKampfFamilyPortrait.jpg",
     "width": 2560,
     "height": 2559,
     "thumbWidth": 600,
@@ -766,6 +814,7 @@
   {
     "file": "images/concept-art/26. Bigfish.Quint_posesheet.jpg",
     "thumbnail": "thumbnails/concept-art/26. Bigfish.Quint_posesheet.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/26. Bigfish.Quint_posesheet.jpg",
     "width": 2560,
     "height": 1507,
     "thumbWidth": 600,
@@ -782,6 +831,7 @@
   {
     "file": "images/concept-art/27. Bigfish.PaulGibran_posesheet.jpg",
     "thumbnail": "thumbnails/concept-art/27. Bigfish.PaulGibran_posesheet.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/27. Bigfish.PaulGibran_posesheet.jpg",
     "width": 2560,
     "height": 1807,
     "thumbWidth": 600,
@@ -798,6 +848,7 @@
   {
     "file": "images/concept-art/28. Bigfish.Amy_posesheet.jpg",
     "thumbnail": "thumbnails/concept-art/28. Bigfish.Amy_posesheet.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/28. Bigfish.Amy_posesheet.jpg",
     "width": 2560,
     "height": 936,
     "thumbWidth": 600,
@@ -814,6 +865,7 @@
   {
     "file": "images/concept-art/29. Bigfish.EnochFabricant_posesheet.jpg",
     "thumbnail": "thumbnails/concept-art/29. Bigfish.EnochFabricant_posesheet.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/29. Bigfish.EnochFabricant_posesheet.jpg",
     "width": 2560,
     "height": 904,
     "thumbWidth": 600,
@@ -830,6 +882,7 @@
   {
     "file": "images/concept-art/3. ElevatedGames.Ultraman_powerlevelsketches.jpg",
     "thumbnail": "thumbnails/concept-art/3. ElevatedGames.Ultraman_powerlevelsketches.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/3. ElevatedGames.Ultraman_powerlevelsketches.jpg",
     "width": 2315,
     "height": 2560,
     "thumbWidth": 543,
@@ -846,6 +899,7 @@
   {
     "file": "images/concept-art/30. Bigfish.Krigor-Elsa_neutral_separate.jpg",
     "thumbnail": "thumbnails/concept-art/30. Bigfish.Krigor-Elsa_neutral_separate.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/30. Bigfish.Krigor-Elsa_neutral_separate.jpg",
     "width": 2560,
     "height": 2535,
     "thumbWidth": 600,
@@ -862,6 +916,7 @@
   {
     "file": "images/concept-art/31. Bigfish.Krigor-Elsa_all.jpg",
     "thumbnail": "thumbnails/concept-art/31. Bigfish.Krigor-Elsa_all.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/31. Bigfish.Krigor-Elsa_all.jpg",
     "width": 1691,
     "height": 2560,
     "thumbWidth": 396,
@@ -878,6 +933,7 @@
   {
     "file": "images/concept-art/32. Bigfish.MerylHathaway_all.jpg",
     "thumbnail": "thumbnails/concept-art/32. Bigfish.MerylHathaway_all.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/32. Bigfish.MerylHathaway_all.jpg",
     "width": 2024,
     "height": 2560,
     "thumbWidth": 474,
@@ -894,6 +950,7 @@
   {
     "file": "images/concept-art/33. ReflectiveGames.beekeeper1.jpg",
     "thumbnail": "thumbnails/concept-art/33. ReflectiveGames.beekeeper1.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/33. ReflectiveGames.beekeeper1.jpg",
     "width": 2560,
     "height": 2133,
     "thumbWidth": 600,
@@ -910,6 +967,7 @@
   {
     "file": "images/concept-art/34. ReflectiveGames.beekeeper2.jpg",
     "thumbnail": "thumbnails/concept-art/34. ReflectiveGames.beekeeper2.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/34. ReflectiveGames.beekeeper2.jpg",
     "width": 2560,
     "height": 2133,
     "thumbWidth": 600,
@@ -926,6 +984,7 @@
   {
     "file": "images/concept-art/35. ReflectiveGames.beekeeper3.jpg",
     "thumbnail": "thumbnails/concept-art/35. ReflectiveGames.beekeeper3.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/35. ReflectiveGames.beekeeper3.jpg",
     "width": 2560,
     "height": 2133,
     "thumbWidth": 600,
@@ -942,6 +1001,7 @@
   {
     "file": "images/concept-art/36. ReflectiveGames.bomber1.jpg",
     "thumbnail": "thumbnails/concept-art/36. ReflectiveGames.bomber1.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/36. ReflectiveGames.bomber1.jpg",
     "width": 2560,
     "height": 2133,
     "thumbWidth": 600,
@@ -958,6 +1018,7 @@
   {
     "file": "images/concept-art/37. ReflectiveGames.bomber2.jpg",
     "thumbnail": "thumbnails/concept-art/37. ReflectiveGames.bomber2.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/37. ReflectiveGames.bomber2.jpg",
     "width": 2560,
     "height": 2133,
     "thumbWidth": 600,
@@ -974,6 +1035,7 @@
   {
     "file": "images/concept-art/38. ReflectiveGames.bomber3.jpg",
     "thumbnail": "thumbnails/concept-art/38. ReflectiveGames.bomber3.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/38. ReflectiveGames.bomber3.jpg",
     "width": 2560,
     "height": 2133,
     "thumbWidth": 600,
@@ -990,6 +1052,7 @@
   {
     "file": "images/concept-art/39. ReflectiveGames.bomber4.jpg",
     "thumbnail": "thumbnails/concept-art/39. ReflectiveGames.bomber4.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/39. ReflectiveGames.bomber4.jpg",
     "width": 2560,
     "height": 2133,
     "thumbWidth": 600,
@@ -1006,6 +1069,7 @@
   {
     "file": "images/concept-art/4. ElevatedGames.FatherofUltra.jpg",
     "thumbnail": "thumbnails/concept-art/4. ElevatedGames.FatherofUltra.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/4. ElevatedGames.FatherofUltra.jpg",
     "width": 2560,
     "height": 1792,
     "thumbWidth": 600,
@@ -1022,6 +1086,7 @@
   {
     "file": "images/concept-art/40. ReflectiveGames.bomber5.jpg",
     "thumbnail": "thumbnails/concept-art/40. ReflectiveGames.bomber5.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/40. ReflectiveGames.bomber5.jpg",
     "width": 2560,
     "height": 2133,
     "thumbWidth": 600,
@@ -1038,6 +1103,7 @@
   {
     "file": "images/concept-art/41. ReflectiveGames.bomber6.jpg",
     "thumbnail": "thumbnails/concept-art/41. ReflectiveGames.bomber6.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/41. ReflectiveGames.bomber6.jpg",
     "width": 2560,
     "height": 2133,
     "thumbWidth": 600,
@@ -1054,6 +1120,7 @@
   {
     "file": "images/concept-art/42. ReflectiveGames.bomber7.jpg",
     "thumbnail": "thumbnails/concept-art/42. ReflectiveGames.bomber7.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/42. ReflectiveGames.bomber7.jpg",
     "width": 2560,
     "height": 2133,
     "thumbWidth": 600,
@@ -1070,6 +1137,7 @@
   {
     "file": "images/concept-art/43. ReflectiveGames.bomber8.jpg",
     "thumbnail": "thumbnails/concept-art/43. ReflectiveGames.bomber8.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/43. ReflectiveGames.bomber8.jpg",
     "width": 2560,
     "height": 2133,
     "thumbWidth": 600,
@@ -1086,6 +1154,7 @@
   {
     "file": "images/concept-art/44. ReflectiveGames.chomper1.jpg",
     "thumbnail": "thumbnails/concept-art/44. ReflectiveGames.chomper1.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/44. ReflectiveGames.chomper1.jpg",
     "width": 2560,
     "height": 2133,
     "thumbWidth": 600,
@@ -1102,6 +1171,7 @@
   {
     "file": "images/concept-art/45. ReflectiveGames.chomper2.jpg",
     "thumbnail": "thumbnails/concept-art/45. ReflectiveGames.chomper2.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/45. ReflectiveGames.chomper2.jpg",
     "width": 2560,
     "height": 2133,
     "thumbWidth": 600,
@@ -1118,6 +1188,7 @@
   {
     "file": "images/concept-art/46. ReflectiveGames.chomper3.jpg",
     "thumbnail": "thumbnails/concept-art/46. ReflectiveGames.chomper3.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/46. ReflectiveGames.chomper3.jpg",
     "width": 2560,
     "height": 2133,
     "thumbWidth": 600,
@@ -1134,6 +1205,7 @@
   {
     "file": "images/concept-art/47. ReflectiveGames.chomper4.jpg",
     "thumbnail": "thumbnails/concept-art/47. ReflectiveGames.chomper4.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/47. ReflectiveGames.chomper4.jpg",
     "width": 2560,
     "height": 2133,
     "thumbWidth": 600,
@@ -1150,6 +1222,7 @@
   {
     "file": "images/concept-art/48. ReflectiveGames.dartshooter1.jpg",
     "thumbnail": "thumbnails/concept-art/48. ReflectiveGames.dartshooter1.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/48. ReflectiveGames.dartshooter1.jpg",
     "width": 2560,
     "height": 2133,
     "thumbWidth": 600,
@@ -1166,6 +1239,7 @@
   {
     "file": "images/concept-art/49. ReflectiveGames.dartshooter2.jpg",
     "thumbnail": "thumbnails/concept-art/49. ReflectiveGames.dartshooter2.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/49. ReflectiveGames.dartshooter2.jpg",
     "width": 2560,
     "height": 2133,
     "thumbWidth": 600,
@@ -1182,6 +1256,7 @@
   {
     "file": "images/concept-art/5. ElevatedGames.FatherofUltraCharSheet_w_turnaround.jpg",
     "thumbnail": "thumbnails/concept-art/5. ElevatedGames.FatherofUltraCharSheet_w_turnaround.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/5. ElevatedGames.FatherofUltraCharSheet_w_turnaround.jpg",
     "width": 2083,
     "height": 2560,
     "thumbWidth": 488,
@@ -1198,6 +1273,7 @@
   {
     "file": "images/concept-art/50. ReflectiveGames.dartshooter3.jpg",
     "thumbnail": "thumbnails/concept-art/50. ReflectiveGames.dartshooter3.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/50. ReflectiveGames.dartshooter3.jpg",
     "width": 2560,
     "height": 2133,
     "thumbWidth": 600,
@@ -1214,6 +1290,7 @@
   {
     "file": "images/concept-art/51. ReflectiveGames.dartshooter4.jpg",
     "thumbnail": "thumbnails/concept-art/51. ReflectiveGames.dartshooter4.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/51. ReflectiveGames.dartshooter4.jpg",
     "width": 2560,
     "height": 2133,
     "thumbWidth": 600,
@@ -1230,6 +1307,7 @@
   {
     "file": "images/concept-art/52. ReflectiveGames.firedragon1.jpg",
     "thumbnail": "thumbnails/concept-art/52. ReflectiveGames.firedragon1.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/52. ReflectiveGames.firedragon1.jpg",
     "width": 2560,
     "height": 2133,
     "thumbWidth": 600,
@@ -1246,6 +1324,7 @@
   {
     "file": "images/concept-art/53. ReflectiveGames.firedragon2.jpg",
     "thumbnail": "thumbnails/concept-art/53. ReflectiveGames.firedragon2.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/53. ReflectiveGames.firedragon2.jpg",
     "width": 2560,
     "height": 2133,
     "thumbWidth": 600,
@@ -1262,6 +1341,7 @@
   {
     "file": "images/concept-art/54. ReflectiveGames.orc_rough1.jpg",
     "thumbnail": "thumbnails/concept-art/54. ReflectiveGames.orc_rough1.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/54. ReflectiveGames.orc_rough1.jpg",
     "width": 2560,
     "height": 2133,
     "thumbWidth": 600,
@@ -1278,6 +1358,7 @@
   {
     "file": "images/concept-art/55. ReflectiveGames.orc_rough3.jpg",
     "thumbnail": "thumbnails/concept-art/55. ReflectiveGames.orc_rough3.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/55. ReflectiveGames.orc_rough3.jpg",
     "width": 2560,
     "height": 2133,
     "thumbWidth": 600,
@@ -1294,6 +1375,7 @@
   {
     "file": "images/concept-art/56. ReflectiveGames.orc_rough4.jpg",
     "thumbnail": "thumbnails/concept-art/56. ReflectiveGames.orc_rough4.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/56. ReflectiveGames.orc_rough4.jpg",
     "width": 2560,
     "height": 2133,
     "thumbWidth": 600,
@@ -1310,6 +1392,7 @@
   {
     "file": "images/concept-art/57. ReflectiveGames.orc_rough5.jpg",
     "thumbnail": "thumbnails/concept-art/57. ReflectiveGames.orc_rough5.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/57. ReflectiveGames.orc_rough5.jpg",
     "width": 2560,
     "height": 2133,
     "thumbWidth": 600,
@@ -1326,6 +1409,7 @@
   {
     "file": "images/concept-art/58. ReflectiveGames.orc_rough6.png",
     "thumbnail": "thumbnails/concept-art/58. ReflectiveGames.orc_rough6.png",
+    "placeholder": "gallery-blur-placeholders/concept-art/58. ReflectiveGames.orc_rough6.png",
     "width": 3600,
     "height": 3000,
     "thumbWidth": 3600,
@@ -1342,6 +1426,7 @@
   {
     "file": "images/concept-art/59. ReflectiveGames.robots1.jpg",
     "thumbnail": "thumbnails/concept-art/59. ReflectiveGames.robots1.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/59. ReflectiveGames.robots1.jpg",
     "width": 2560,
     "height": 2133,
     "thumbWidth": 600,
@@ -1358,6 +1443,7 @@
   {
     "file": "images/concept-art/6. ElevatedGames.Yillian.jpg",
     "thumbnail": "thumbnails/concept-art/6. ElevatedGames.Yillian.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/6. ElevatedGames.Yillian.jpg",
     "width": 2560,
     "height": 1792,
     "thumbWidth": 600,
@@ -1374,6 +1460,7 @@
   {
     "file": "images/concept-art/60. ReflectiveGames.robots2.jpg",
     "thumbnail": "thumbnails/concept-art/60. ReflectiveGames.robots2.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/60. ReflectiveGames.robots2.jpg",
     "width": 2560,
     "height": 2133,
     "thumbWidth": 600,
@@ -1390,6 +1477,7 @@
   {
     "file": "images/concept-art/61. ReflectiveGames.robots3.jpg",
     "thumbnail": "thumbnails/concept-art/61. ReflectiveGames.robots3.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/61. ReflectiveGames.robots3.jpg",
     "width": 2560,
     "height": 2133,
     "thumbWidth": 600,
@@ -1406,6 +1494,7 @@
   {
     "file": "images/concept-art/62. ReflectiveGames.robots4.jpg",
     "thumbnail": "thumbnails/concept-art/62. ReflectiveGames.robots4.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/62. ReflectiveGames.robots4.jpg",
     "width": 2560,
     "height": 2133,
     "thumbWidth": 600,
@@ -1422,6 +1511,7 @@
   {
     "file": "images/concept-art/63. BillMcG.FelixFishSketches.jpg",
     "thumbnail": "thumbnails/concept-art/63. BillMcG.FelixFishSketches.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/63. BillMcG.FelixFishSketches.jpg",
     "width": 2560,
     "height": 1656,
     "thumbWidth": 600,
@@ -1438,6 +1528,7 @@
   {
     "file": "images/concept-art/64. Bigfish.gamejam pandas.png",
     "thumbnail": "thumbnails/concept-art/64. Bigfish.gamejam pandas.png",
+    "placeholder": "gallery-blur-placeholders/concept-art/64. Bigfish.gamejam pandas.png",
     "width": 1053,
     "height": 893,
     "thumbWidth": 1053,
@@ -1454,6 +1545,7 @@
   {
     "file": "images/concept-art/65. Amazon.BloodsportRally_conceptroughs_w_garage.jpg",
     "thumbnail": "thumbnails/concept-art/65. Amazon.BloodsportRally_conceptroughs_w_garage.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/65. Amazon.BloodsportRally_conceptroughs_w_garage.jpg",
     "width": 2314,
     "height": 2560,
     "thumbWidth": 542,
@@ -1470,6 +1562,7 @@
   {
     "file": "images/concept-art/66. Amazon.LivingClassics.Pirates.rough_to_final_comp.jpg",
     "thumbnail": "thumbnails/concept-art/66. Amazon.LivingClassics.Pirates.rough_to_final_comp.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/66. Amazon.LivingClassics.Pirates.rough_to_final_comp.jpg",
     "width": 1111,
     "height": 1708,
     "thumbWidth": 390,
@@ -1486,6 +1579,7 @@
   {
     "file": "images/concept-art/67. Amazon.FloOfTimeRoughs_portfolio.jpg",
     "thumbnail": "thumbnails/concept-art/67. Amazon.FloOfTimeRoughs_portfolio.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/67. Amazon.FloOfTimeRoughs_portfolio.jpg",
     "width": 2560,
     "height": 1360,
     "thumbWidth": 600,
@@ -1502,6 +1596,7 @@
   {
     "file": "images/concept-art/68. Frank_charactersheets.jpg",
     "thumbnail": "thumbnails/concept-art/68. Frank_charactersheets.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/68. Frank_charactersheets.jpg",
     "width": 982,
     "height": 1500,
     "thumbWidth": 393,
@@ -1516,6 +1611,7 @@
   {
     "file": "images/concept-art/69. Bigfish.FoodRoughs_portfolio.jpg",
     "thumbnail": "thumbnails/concept-art/69. Bigfish.FoodRoughs_portfolio.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/69. Bigfish.FoodRoughs_portfolio.jpg",
     "width": 2560,
     "height": 2407,
     "thumbWidth": 600,
@@ -1532,6 +1628,7 @@
   {
     "file": "images/concept-art/7. ElevatedGames.YullianCharSheet_w_turnaround.jpg",
     "thumbnail": "thumbnails/concept-art/7. ElevatedGames.YullianCharSheet_w_turnaround.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/7. ElevatedGames.YullianCharSheet_w_turnaround.jpg",
     "width": 2226,
     "height": 2560,
     "thumbWidth": 522,
@@ -1548,6 +1645,7 @@
   {
     "file": "images/concept-art/70. Bigfish.FoodColorRoughs1_portfolio.jpg",
     "thumbnail": "thumbnails/concept-art/70. Bigfish.FoodColorRoughs1_portfolio.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/70. Bigfish.FoodColorRoughs1_portfolio.jpg",
     "width": 1946,
     "height": 2560,
     "thumbWidth": 456,
@@ -1564,6 +1662,7 @@
   {
     "file": "images/concept-art/71. Bigfish.FoodColorRoughs2_portfolio.jpg",
     "thumbnail": "thumbnails/concept-art/71. Bigfish.FoodColorRoughs2_portfolio.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/71. Bigfish.FoodColorRoughs2_portfolio.jpg",
     "width": 1715,
     "height": 2560,
     "thumbWidth": 402,
@@ -1580,6 +1679,7 @@
   {
     "file": "images/concept-art/72. Microsoft.Zipie-Zoe_CharSheet_all.jpg",
     "thumbnail": "thumbnails/concept-art/72. Microsoft.Zipie-Zoe_CharSheet_all.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/72. Microsoft.Zipie-Zoe_CharSheet_all.jpg",
     "width": 2560,
     "height": 1758,
     "thumbWidth": 600,
@@ -1596,6 +1696,7 @@
   {
     "file": "images/concept-art/73. AdAgency.AllCreatures.jpg",
     "thumbnail": "thumbnails/concept-art/73. AdAgency.AllCreatures.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/73. AdAgency.AllCreatures.jpg",
     "width": 2251,
     "height": 2104,
     "thumbWidth": 600,
@@ -1612,6 +1713,7 @@
   {
     "file": "images/concept-art/74. Microsoft.allcritters2.jpg",
     "thumbnail": "thumbnails/concept-art/74. Microsoft.allcritters2.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/74. Microsoft.allcritters2.jpg",
     "width": 2560,
     "height": 2442,
     "thumbWidth": 600,
@@ -1628,6 +1730,7 @@
   {
     "file": "images/concept-art/75. Amazon.Holmes_char_sketches.jpg",
     "thumbnail": "thumbnails/concept-art/75. Amazon.Holmes_char_sketches.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/75. Amazon.Holmes_char_sketches.jpg",
     "width": 2560,
     "height": 2414,
     "thumbWidth": 600,
@@ -1644,6 +1747,7 @@
   {
     "file": "images/concept-art/76. Microsoft.LittleCritters.png",
     "thumbnail": "thumbnails/concept-art/76. Microsoft.LittleCritters.png",
+    "placeholder": "gallery-blur-placeholders/concept-art/76. Microsoft.LittleCritters.png",
     "width": 867,
     "height": 848,
     "thumbWidth": 867,
@@ -1660,6 +1764,7 @@
   {
     "file": "images/concept-art/77. Nordstroms_Beegirls.jpg",
     "thumbnail": "thumbnails/concept-art/77. Nordstroms_Beegirls.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/77. Nordstroms_Beegirls.jpg",
     "width": 2560,
     "height": 1353,
     "thumbWidth": 600,
@@ -1676,6 +1781,7 @@
   {
     "file": "images/concept-art/78. Amazon.Frankenstein.png",
     "thumbnail": "thumbnails/concept-art/78. Amazon.Frankenstein.png",
+    "placeholder": "gallery-blur-placeholders/concept-art/78. Amazon.Frankenstein.png",
     "width": 897,
     "height": 733,
     "thumbWidth": 897,
@@ -1692,6 +1798,7 @@
   {
     "file": "images/concept-art/79. AdAgency.meansinkoptions2.jpg",
     "thumbnail": "thumbnails/concept-art/79. AdAgency.meansinkoptions2.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/79. AdAgency.meansinkoptions2.jpg",
     "width": 872,
     "height": 626,
     "thumbWidth": 600,
@@ -1708,6 +1815,7 @@
   {
     "file": "images/concept-art/8. ElevatedGames.Ultraseven.2.jpg",
     "thumbnail": "thumbnails/concept-art/8. ElevatedGames.Ultraseven.2.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/8. ElevatedGames.Ultraseven.2.jpg",
     "width": 2560,
     "height": 1792,
     "thumbWidth": 600,
@@ -1724,6 +1832,7 @@
   {
     "file": "images/concept-art/80. AdAgency.Wayans.thugaboosketch.jpg",
     "thumbnail": "thumbnails/concept-art/80. AdAgency.Wayans.thugaboosketch.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/80. AdAgency.Wayans.thugaboosketch.jpg",
     "width": 1500,
     "height": 1052,
     "thumbWidth": 600,
@@ -1740,6 +1849,7 @@
   {
     "file": "images/concept-art/81. TechSmartKids.ProfessorPugsworth.forPortfolio1.png",
     "thumbnail": "thumbnails/concept-art/81. TechSmartKids.ProfessorPugsworth.forPortfolio1.png",
+    "placeholder": "gallery-blur-placeholders/concept-art/81. TechSmartKids.ProfessorPugsworth.forPortfolio1.png",
     "width": 480,
     "height": 680,
     "thumbWidth": 480,
@@ -1756,6 +1866,7 @@
   {
     "file": "images/concept-art/82. TechSmartKids.WinterRunner.Portfolio.jpg",
     "thumbnail": "thumbnails/concept-art/82. TechSmartKids.WinterRunner.Portfolio.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/82. TechSmartKids.WinterRunner.Portfolio.jpg",
     "width": 2460,
     "height": 900,
     "thumbWidth": 600,
@@ -1772,6 +1883,7 @@
   {
     "file": "images/concept-art/83. TechSmartKids.ButterflyCatcherComp.png",
     "thumbnail": "thumbnails/concept-art/83. TechSmartKids.ButterflyCatcherComp.png",
+    "placeholder": "gallery-blur-placeholders/concept-art/83. TechSmartKids.ButterflyCatcherComp.png",
     "width": 500,
     "height": 500,
     "thumbWidth": 500,
@@ -1788,6 +1900,7 @@
   {
     "file": "images/concept-art/84. TechSmartKids.UnityDemoStill.png",
     "thumbnail": "thumbnails/concept-art/84. TechSmartKids.UnityDemoStill.png",
+    "placeholder": "gallery-blur-placeholders/concept-art/84. TechSmartKids.UnityDemoStill.png",
     "width": 1536,
     "height": 2048,
     "thumbWidth": 1536,
@@ -1804,6 +1917,7 @@
   {
     "file": "images/concept-art/9. ElevatedGames.Zetton1.jpg",
     "thumbnail": "thumbnails/concept-art/9. ElevatedGames.Zetton1.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/9. ElevatedGames.Zetton1.jpg",
     "width": 2560,
     "height": 1792,
     "thumbWidth": 600,
@@ -1820,6 +1934,7 @@
   {
     "file": "images/concept-art/Amazon.DungeonRobber_Portfolio.jpg",
     "thumbnail": "thumbnails/concept-art/Amazon.DungeonRobber_Portfolio.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/Amazon.DungeonRobber_Portfolio.jpg",
     "width": 2560,
     "height": 997,
     "thumbWidth": 600,
@@ -1836,6 +1951,7 @@
   {
     "file": "images/concept-art/Bigfish.Bo.v.Michael_bodyoptions.jpg",
     "thumbnail": "thumbnails/concept-art/Bigfish.Bo.v.Michael_bodyoptions.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/Bigfish.Bo.v.Michael_bodyoptions.jpg",
     "width": 2560,
     "height": 1656,
     "thumbWidth": 600,
@@ -1852,6 +1968,7 @@
   {
     "file": "images/concept-art/Bigfish.Bo.v.Michael_headoptions.jpg",
     "thumbnail": "thumbnails/concept-art/Bigfish.Bo.v.Michael_headoptions.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/Bigfish.Bo.v.Michael_headoptions.jpg",
     "width": 2403,
     "height": 2560,
     "thumbWidth": 563,
@@ -1868,6 +1985,7 @@
   {
     "file": "images/concept-art/CaptainPike.jpg",
     "thumbnail": "thumbnails/concept-art/CaptainPike.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/CaptainPike.jpg",
     "width": 1707,
     "height": 2560,
     "thumbWidth": 400,
@@ -1884,6 +2002,7 @@
   {
     "file": "images/concept-art/MysterySociety_Clowns_Portfolio.jpg",
     "thumbnail": "thumbnails/concept-art/MysterySociety_Clowns_Portfolio.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/MysterySociety_Clowns_Portfolio.jpg",
     "width": 1291,
     "height": 2560,
     "thumbWidth": 303,
@@ -1900,6 +2019,7 @@
   {
     "file": "images/concept-art/MysterySociety_OtherCostumes_Portfolio.jpg",
     "thumbnail": "thumbnails/concept-art/MysterySociety_OtherCostumes_Portfolio.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/MysterySociety_OtherCostumes_Portfolio.jpg",
     "width": 2560,
     "height": 2163,
     "thumbWidth": 600,
@@ -1916,6 +2036,7 @@
   {
     "file": "images/concept-art/MysterySociety_witches_Portfolio.jpg",
     "thumbnail": "thumbnails/concept-art/MysterySociety_witches_Portfolio.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/MysterySociety_witches_Portfolio.jpg",
     "width": 1341,
     "height": 2560,
     "thumbWidth": 314,
@@ -1932,6 +2053,7 @@
   {
     "file": "images/concept-art/PitchAgency.SGo_gym_Portfolio.jpg",
     "thumbnail": "thumbnails/concept-art/PitchAgency.SGo_gym_Portfolio.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/PitchAgency.SGo_gym_Portfolio.jpg",
     "width": 1206,
     "height": 957,
     "thumbWidth": 600,
@@ -1948,6 +2070,7 @@
   {
     "file": "images/concept-art/PitchAgency.SShmoranges_Portfolio2.jpg",
     "thumbnail": "thumbnails/concept-art/PitchAgency.SShmoranges_Portfolio2.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/PitchAgency.SShmoranges_Portfolio2.jpg",
     "width": 1540,
     "height": 2560,
     "thumbWidth": 361,
@@ -1964,6 +2087,7 @@
   {
     "file": "images/concept-art/PitchAgency.SShmoranges_Portfolio3.jpg",
     "thumbnail": "thumbnails/concept-art/PitchAgency.SShmoranges_Portfolio3.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/PitchAgency.SShmoranges_Portfolio3.jpg",
     "width": 1540,
     "height": 2560,
     "thumbWidth": 361,
@@ -1980,6 +2104,7 @@
   {
     "file": "images/concept-art/PitchAgency.Shmoranges_Portfolio1.jpg",
     "thumbnail": "thumbnails/concept-art/PitchAgency.Shmoranges_Portfolio1.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/PitchAgency.Shmoranges_Portfolio1.jpg",
     "width": 1540,
     "height": 2560,
     "thumbWidth": 361,
@@ -1996,6 +2121,7 @@
   {
     "file": "images/concept-art/Trek_vulcan_female_hair.jpg",
     "thumbnail": "thumbnails/concept-art/Trek_vulcan_female_hair.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/Trek_vulcan_female_hair.jpg",
     "width": 2560,
     "height": 1274,
     "thumbWidth": 600,
@@ -2012,6 +2138,7 @@
   {
     "file": "images/concept-art/Trek_vulcan_male_hair.jpg",
     "thumbnail": "thumbnails/concept-art/Trek_vulcan_male_hair.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/Trek_vulcan_male_hair.jpg",
     "width": 2560,
     "height": 1274,
     "thumbWidth": 600,
@@ -2028,6 +2155,7 @@
   {
     "file": "images/concept-art/VulcanEngineer.jpg",
     "thumbnail": "thumbnails/concept-art/VulcanEngineer.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/VulcanEngineer.jpg",
     "width": 2560,
     "height": 2339,
     "thumbWidth": 600,
@@ -2044,6 +2172,7 @@
   {
     "file": "images/concept-art/VulcanEngineer_hair.jpg",
     "thumbnail": "thumbnails/concept-art/VulcanEngineer_hair.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/VulcanEngineer_hair.jpg",
     "width": 2560,
     "height": 1179,
     "thumbWidth": 600,
@@ -2060,6 +2189,7 @@
   {
     "file": "images/concept-art/VulcanEngineerpose.jpg",
     "thumbnail": "thumbnails/concept-art/VulcanEngineerpose.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/VulcanEngineerpose.jpg",
     "width": 2560,
     "height": 1064,
     "thumbWidth": 600,
@@ -2076,6 +2206,7 @@
   {
     "file": "images/concept-art/bodytypes_female.jpg",
     "thumbnail": "thumbnails/concept-art/bodytypes_female.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/bodytypes_female.jpg",
     "width": 2560,
     "height": 1614,
     "thumbWidth": 600,
@@ -2092,6 +2223,7 @@
   {
     "file": "images/concept-art/bodytypes_male.jpg",
     "thumbnail": "thumbnails/concept-art/bodytypes_male.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/bodytypes_male.jpg",
     "width": 2560,
     "height": 1247,
     "thumbWidth": 600,
@@ -2108,6 +2240,7 @@
   {
     "file": "images/concept-art/headtypes_female.jpg",
     "thumbnail": "thumbnails/concept-art/headtypes_female.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/headtypes_female.jpg",
     "width": 2560,
     "height": 1427,
     "thumbWidth": 600,
@@ -2124,6 +2257,7 @@
   {
     "file": "images/concept-art/headtypes_male.jpg",
     "thumbnail": "thumbnails/concept-art/headtypes_male.jpg",
+    "placeholder": "gallery-blur-placeholders/concept-art/headtypes_male.jpg",
     "width": 2560,
     "height": 1374,
     "thumbWidth": 600,
@@ -2140,6 +2274,7 @@
   {
     "file": "images/illustration/001. ECCC.SUPERHEROES.SPIDEY.11x17.jpg",
     "thumbnail": "thumbnails/illustration/001. ECCC.SUPERHEROES.SPIDEY.11x17.jpg",
+    "placeholder": "gallery-blur-placeholders/illustration/001. ECCC.SUPERHEROES.SPIDEY.11x17.jpg",
     "width": 1656,
     "height": 2560,
     "thumbWidth": 388,
@@ -2156,6 +2291,7 @@
   {
     "file": "images/illustration/002. ECCC.SUPERHEROES.GWEN.11x17.jpg",
     "thumbnail": "thumbnails/illustration/002. ECCC.SUPERHEROES.GWEN.11x17.jpg",
+    "placeholder": "gallery-blur-placeholders/illustration/002. ECCC.SUPERHEROES.GWEN.11x17.jpg",
     "width": 1656,
     "height": 2560,
     "thumbWidth": 388,
@@ -2172,6 +2308,7 @@
   {
     "file": "images/illustration/003. ECCC.SUPERHEROES.BATMAN.11x17.jpg",
     "thumbnail": "thumbnails/illustration/003. ECCC.SUPERHEROES.BATMAN.11x17.jpg",
+    "placeholder": "gallery-blur-placeholders/illustration/003. ECCC.SUPERHEROES.BATMAN.11x17.jpg",
     "width": 1656,
     "height": 2560,
     "thumbWidth": 388,
@@ -2188,6 +2325,7 @@
   {
     "file": "images/illustration/004. ECCC.SUPERHEROES.CAP.11x17.jpg",
     "thumbnail": "thumbnails/illustration/004. ECCC.SUPERHEROES.CAP.11x17.jpg",
+    "placeholder": "gallery-blur-placeholders/illustration/004. ECCC.SUPERHEROES.CAP.11x17.jpg",
     "width": 1656,
     "height": 2560,
     "thumbWidth": 388,
@@ -2204,6 +2342,7 @@
   {
     "file": "images/illustration/005. ECCC.SUPERHEROES.DOOM.11x17.jpg",
     "thumbnail": "thumbnails/illustration/005. ECCC.SUPERHEROES.DOOM.11x17.jpg",
+    "placeholder": "gallery-blur-placeholders/illustration/005. ECCC.SUPERHEROES.DOOM.11x17.jpg",
     "width": 1656,
     "height": 2560,
     "thumbWidth": 388,
@@ -2220,6 +2359,7 @@
   {
     "file": "images/illustration/006. ECCC.SUPERHEROES.HULK.11x17.jpg",
     "thumbnail": "thumbnails/illustration/006. ECCC.SUPERHEROES.HULK.11x17.jpg",
+    "placeholder": "gallery-blur-placeholders/illustration/006. ECCC.SUPERHEROES.HULK.11x17.jpg",
     "width": 1656,
     "height": 2560,
     "thumbWidth": 388,
@@ -2236,6 +2376,7 @@
   {
     "file": "images/illustration/006. ECCC.TMNT.11*17.jpg",
     "thumbnail": "thumbnails/illustration/006. ECCC.TMNT.11*17.jpg",
+    "placeholder": "gallery-blur-placeholders/illustration/006. ECCC.TMNT.11*17.jpg",
     "width": 1656,
     "height": 2560,
     "thumbWidth": 388,
@@ -2252,6 +2393,7 @@
   {
     "file": "images/illustration/007. ECCC.FamilyPortraitMonsters142.jpg",
     "thumbnail": "thumbnails/illustration/007. ECCC.FamilyPortraitMonsters142.jpg",
+    "placeholder": "gallery-blur-placeholders/illustration/007. ECCC.FamilyPortraitMonsters142.jpg",
     "width": 2048,
     "height": 2560,
     "thumbWidth": 480,
@@ -2268,6 +2410,7 @@
   {
     "file": "images/illustration/008. ECCC.Personal.Hellgirl.11*14.jpg",
     "thumbnail": "thumbnails/illustration/008. ECCC.Personal.Hellgirl.11*14.jpg",
+    "placeholder": "gallery-blur-placeholders/illustration/008. ECCC.Personal.Hellgirl.11*14.jpg",
     "width": 1656,
     "height": 2560,
     "thumbWidth": 388,
@@ -2284,6 +2427,7 @@
   {
     "file": "images/illustration/009. ECCC.Personal.MonsterClosetGirl.jpg",
     "thumbnail": "thumbnails/illustration/009. ECCC.Personal.MonsterClosetGirl.jpg",
+    "placeholder": "gallery-blur-placeholders/illustration/009. ECCC.Personal.MonsterClosetGirl.jpg",
     "width": 1833,
     "height": 2560,
     "thumbWidth": 430,
@@ -2300,6 +2444,7 @@
   {
     "file": "images/illustration/011. Personal.Viking-FatKid2.jpg",
     "thumbnail": "thumbnails/illustration/011. Personal.Viking-FatKid2.jpg",
+    "placeholder": "gallery-blur-placeholders/illustration/011. Personal.Viking-FatKid2.jpg",
     "width": 2483,
     "height": 1973,
     "thumbWidth": 600,
@@ -2316,6 +2461,7 @@
   {
     "file": "images/illustration/012. Nick and Tilly.jpg",
     "thumbnail": "thumbnails/illustration/012. Nick and Tilly.jpg",
+    "placeholder": "gallery-blur-placeholders/illustration/012. Nick and Tilly.jpg",
     "width": 2560,
     "height": 2427,
     "thumbWidth": 600,
@@ -2332,6 +2478,7 @@
   {
     "file": "images/illustration/013. ECCC.Marvel Villains.11*14.jpg",
     "thumbnail": "thumbnails/illustration/013. ECCC.Marvel Villains.11*14.jpg",
+    "placeholder": "gallery-blur-placeholders/illustration/013. ECCC.Marvel Villains.11*14.jpg",
     "width": 2011,
     "height": 2560,
     "thumbWidth": 471,
@@ -2348,6 +2495,7 @@
   {
     "file": "images/illustration/014. ECCC.DC Villains11*14adj.jpg",
     "thumbnail": "thumbnails/illustration/014. ECCC.DC Villains11*14adj.jpg",
+    "placeholder": "gallery-blur-placeholders/illustration/014. ECCC.DC Villains11*14adj.jpg",
     "width": 2011,
     "height": 2560,
     "thumbWidth": 471,
@@ -2364,6 +2512,7 @@
   {
     "file": "images/illustration/015. ECCC.CartoonVillains.11*14.jpg",
     "thumbnail": "thumbnails/illustration/015. ECCC.CartoonVillains.11*14.jpg",
+    "placeholder": "gallery-blur-placeholders/illustration/015. ECCC.CartoonVillains.11*14.jpg",
     "width": 2011,
     "height": 2560,
     "thumbWidth": 471,
@@ -2380,6 +2529,7 @@
   {
     "file": "images/illustration/016. ECCC.Bert-ErnieDolphin.11*14adj.jpg",
     "thumbnail": "thumbnails/illustration/016. ECCC.Bert-ErnieDolphin.11*14adj.jpg",
+    "placeholder": "gallery-blur-placeholders/illustration/016. ECCC.Bert-ErnieDolphin.11*14adj.jpg",
     "width": 1889,
     "height": 2560,
     "thumbWidth": 443,
@@ -2396,6 +2546,7 @@
   {
     "file": "images/illustration/017. ECCC.Wolverine.11*14adj.jpg",
     "thumbnail": "thumbnails/illustration/017. ECCC.Wolverine.11*14adj.jpg",
+    "placeholder": "gallery-blur-placeholders/illustration/017. ECCC.Wolverine.11*14adj.jpg",
     "width": 2560,
     "height": 2491,
     "thumbWidth": 600,
@@ -2412,6 +2563,7 @@
   {
     "file": "images/illustration/018. ECCC.Shazam.11*14.jpg",
     "thumbnail": "thumbnails/illustration/018. ECCC.Shazam.11*14.jpg",
+    "placeholder": "gallery-blur-placeholders/illustration/018. ECCC.Shazam.11*14.jpg",
     "width": 2015,
     "height": 2560,
     "thumbWidth": 472,
@@ -2428,6 +2580,7 @@
   {
     "file": "images/illustration/019. Personal.Inktober.Gatorchase2.jpg",
     "thumbnail": "thumbnails/illustration/019. Personal.Inktober.Gatorchase2.jpg",
+    "placeholder": "gallery-blur-placeholders/illustration/019. Personal.Inktober.Gatorchase2.jpg",
     "width": 2560,
     "height": 1875,
     "thumbWidth": 600,
@@ -2444,6 +2597,7 @@
   {
     "file": "images/illustration/020. Bigfish.SixteenCandles 2.jpg",
     "thumbnail": "thumbnails/illustration/020. Bigfish.SixteenCandles 2.jpg",
+    "placeholder": "gallery-blur-placeholders/illustration/020. Bigfish.SixteenCandles 2.jpg",
     "width": 2560,
     "height": 1442,
     "thumbWidth": 600,
@@ -2460,6 +2614,7 @@
   {
     "file": "images/illustration/021. Bigfish.McDivot_All_for portfolio.jpg",
     "thumbnail": "thumbnails/illustration/021. Bigfish.McDivot_All_for portfolio.jpg",
+    "placeholder": "gallery-blur-placeholders/illustration/021. Bigfish.McDivot_All_for portfolio.jpg",
     "width": 1950,
     "height": 1599,
     "thumbWidth": 600,
@@ -2476,6 +2631,7 @@
   {
     "file": "images/illustration/022. StoneArchBooks.pp18-19.jpg",
     "thumbnail": "thumbnails/illustration/022. StoneArchBooks.pp18-19.jpg",
+    "placeholder": "gallery-blur-placeholders/illustration/022. StoneArchBooks.pp18-19.jpg",
     "width": 891,
     "height": 1388,
     "thumbWidth": 385,
@@ -2492,6 +2648,7 @@
   {
     "file": "images/illustration/023. Bigfish.Waterpark_PoolChairs2.jpg",
     "thumbnail": "thumbnails/illustration/023. Bigfish.Waterpark_PoolChairs2.jpg",
+    "placeholder": "gallery-blur-placeholders/illustration/023. Bigfish.Waterpark_PoolChairs2.jpg",
     "width": 2560,
     "height": 1486,
     "thumbWidth": 600,
@@ -2508,6 +2665,7 @@
   {
     "file": "images/illustration/024. Bigfish.Waterpark_Waterslides.jpg",
     "thumbnail": "thumbnails/illustration/024. Bigfish.Waterpark_Waterslides.jpg",
+    "placeholder": "gallery-blur-placeholders/illustration/024. Bigfish.Waterpark_Waterslides.jpg",
     "width": 2560,
     "height": 1500,
     "thumbWidth": 600,
@@ -2524,6 +2682,7 @@
   {
     "file": "images/illustration/025. Bigfish.Waterpark_BigWave.jpg",
     "thumbnail": "thumbnails/illustration/025. Bigfish.Waterpark_BigWave.jpg",
+    "placeholder": "gallery-blur-placeholders/illustration/025. Bigfish.Waterpark_BigWave.jpg",
     "width": 2560,
     "height": 1500,
     "thumbWidth": 600,
@@ -2540,6 +2699,7 @@
   {
     "file": "images/illustration/026. BillMcGuire.MonstersandDames.submission1.jpg",
     "thumbnail": "thumbnails/illustration/026. BillMcGuire.MonstersandDames.submission1.jpg",
+    "placeholder": "gallery-blur-placeholders/illustration/026. BillMcGuire.MonstersandDames.submission1.jpg",
     "width": 1316,
     "height": 1838,
     "thumbWidth": 430,
@@ -2556,6 +2716,7 @@
   {
     "file": "images/illustration/027. AdAgency.Fox.Crab1.jpg",
     "thumbnail": "thumbnails/illustration/027. AdAgency.Fox.Crab1.jpg",
+    "placeholder": "gallery-blur-placeholders/illustration/027. AdAgency.Fox.Crab1.jpg",
     "width": 2560,
     "height": 1624,
     "thumbWidth": 600,
@@ -2572,6 +2733,7 @@
   {
     "file": "images/illustration/028. AdAgency.Fox.Crab2.jpg",
     "thumbnail": "thumbnails/illustration/028. AdAgency.Fox.Crab2.jpg",
+    "placeholder": "gallery-blur-placeholders/illustration/028. AdAgency.Fox.Crab2.jpg",
     "width": 2560,
     "height": 1624,
     "thumbWidth": 600,
@@ -2588,6 +2750,7 @@
   {
     "file": "images/illustration/029. Personal.doberman.png",
     "thumbnail": "thumbnails/illustration/029. Personal.doberman.png",
+    "placeholder": "gallery-blur-placeholders/illustration/029. Personal.doberman.png",
     "width": 875,
     "height": 2100,
     "thumbWidth": 875,
@@ -2604,6 +2767,7 @@
   {
     "file": "images/illustration/030. Personal.lint.jpg",
     "thumbnail": "thumbnails/illustration/030. Personal.lint.jpg",
+    "placeholder": "gallery-blur-placeholders/illustration/030. Personal.lint.jpg",
     "width": 2560,
     "height": 2440,
     "thumbWidth": 600,
@@ -2620,6 +2784,7 @@
   {
     "file": "images/illustration/031. Personal.GeezerTour_w_text.jpg",
     "thumbnail": "thumbnails/illustration/031. Personal.GeezerTour_w_text.jpg",
+    "placeholder": "gallery-blur-placeholders/illustration/031. Personal.GeezerTour_w_text.jpg",
     "width": 2048,
     "height": 2008,
     "thumbWidth": 600,
@@ -2636,6 +2801,7 @@
   {
     "file": "images/illustration/032. Personal.Inktober.DeadSherriff.jpg",
     "thumbnail": "thumbnails/illustration/032. Personal.Inktober.DeadSherriff.jpg",
+    "placeholder": "gallery-blur-placeholders/illustration/032. Personal.Inktober.DeadSherriff.jpg",
     "width": 2391,
     "height": 2560,
     "thumbWidth": 560,
@@ -2652,6 +2818,7 @@
   {
     "file": "images/illustration/033. Personal.Inktober.Alligator.jpg",
     "thumbnail": "thumbnails/illustration/033. Personal.Inktober.Alligator.jpg",
+    "placeholder": "gallery-blur-placeholders/illustration/033. Personal.Inktober.Alligator.jpg",
     "width": 2560,
     "height": 2133,
     "thumbWidth": 600,
@@ -2668,6 +2835,7 @@
   {
     "file": "images/illustration/034. Personal.Inktober.Pumpkinhead.jpg",
     "thumbnail": "thumbnails/illustration/034. Personal.Inktober.Pumpkinhead.jpg",
+    "placeholder": "gallery-blur-placeholders/illustration/034. Personal.Inktober.Pumpkinhead.jpg",
     "width": 2560,
     "height": 1868,
     "thumbWidth": 600,
@@ -2684,6 +2852,7 @@
   {
     "file": "images/illustration/035. Personal.Inktober.BigwheelFrankenstein.jpg",
     "thumbnail": "thumbnails/illustration/035. Personal.Inktober.BigwheelFrankenstein.jpg",
+    "placeholder": "gallery-blur-placeholders/illustration/035. Personal.Inktober.BigwheelFrankenstein.jpg",
     "width": 2069,
     "height": 2560,
     "thumbWidth": 485,
@@ -2700,6 +2869,7 @@
   {
     "file": "images/illustration/036. Personal.Inktober.Spacekitten.jpg",
     "thumbnail": "thumbnails/illustration/036. Personal.Inktober.Spacekitten.jpg",
+    "placeholder": "gallery-blur-placeholders/illustration/036. Personal.Inktober.Spacekitten.jpg",
     "width": 2560,
     "height": 2483,
     "thumbWidth": 600,
@@ -2716,6 +2886,7 @@
   {
     "file": "images/illustration/037. Personal.pigandchicken2.jpg",
     "thumbnail": "thumbnails/illustration/037. Personal.pigandchicken2.jpg",
+    "placeholder": "gallery-blur-placeholders/illustration/037. Personal.pigandchicken2.jpg",
     "width": 2299,
     "height": 2560,
     "thumbWidth": 539,
@@ -2732,6 +2903,7 @@
   {
     "file": "images/illustration/038. Personal.Styracosaurus2.jpg",
     "thumbnail": "thumbnails/illustration/038. Personal.Styracosaurus2.jpg",
+    "placeholder": "gallery-blur-placeholders/illustration/038. Personal.Styracosaurus2.jpg",
     "width": 2560,
     "height": 2435,
     "thumbWidth": 600,
@@ -2748,6 +2920,7 @@
   {
     "file": "images/illustration/039. AdAgency.NPR.Click:Clack-Colored.jpg",
     "thumbnail": "thumbnails/illustration/039. AdAgency.NPR.Click:Clack-Colored.jpg",
+    "placeholder": "gallery-blur-placeholders/illustration/039. AdAgency.NPR.Click:Clack-Colored.jpg",
     "width": 1020,
     "height": 724,
     "thumbWidth": 600,
@@ -2764,6 +2937,7 @@
   {
     "file": "images/illustration/040. AdAgency.WeeklyReader.LiteraryLineupFinal.jpg",
     "thumbnail": "thumbnails/illustration/040. AdAgency.WeeklyReader.LiteraryLineupFinal.jpg",
+    "placeholder": "gallery-blur-placeholders/illustration/040. AdAgency.WeeklyReader.LiteraryLineupFinal.jpg",
     "width": 2250,
     "height": 1586,
     "thumbWidth": 600,
@@ -2780,6 +2954,7 @@
   {
     "file": "images/illustration/041. Personal.ManMirror.jpg",
     "thumbnail": "thumbnails/illustration/041. Personal.ManMirror.jpg",
+    "placeholder": "gallery-blur-placeholders/illustration/041. Personal.ManMirror.jpg",
     "width": 1000,
     "height": 1000,
     "thumbWidth": 600,
@@ -2796,6 +2971,7 @@
   {
     "file": "images/illustration/042. Personal.firemen.jpg",
     "thumbnail": "thumbnails/illustration/042. Personal.firemen.jpg",
+    "placeholder": "gallery-blur-placeholders/illustration/042. Personal.firemen.jpg",
     "width": 2043,
     "height": 1200,
     "thumbWidth": 600,
@@ -2812,6 +2988,7 @@
   {
     "file": "images/illustration/043. Personal.monkeys.png",
     "thumbnail": "thumbnails/illustration/043. Personal.monkeys.png",
+    "placeholder": "gallery-blur-placeholders/illustration/043. Personal.monkeys.png",
     "width": 2024,
     "height": 1110,
     "thumbWidth": 2024,
@@ -2828,6 +3005,7 @@
   {
     "file": "images/illustration/10. ECCC.Grammaandthemonster.final.jpg",
     "thumbnail": "thumbnails/illustration/10. ECCC.Grammaandthemonster.final.jpg",
+    "placeholder": "gallery-blur-placeholders/illustration/10. ECCC.Grammaandthemonster.final.jpg",
     "width": 1833,
     "height": 2560,
     "thumbWidth": 430,
@@ -2844,6 +3022,7 @@
   {
     "file": "images/illustration/AdAgency.PiggybankMug_Portfolio.jpg",
     "thumbnail": "thumbnails/illustration/AdAgency.PiggybankMug_Portfolio.jpg",
+    "placeholder": "gallery-blur-placeholders/illustration/AdAgency.PiggybankMug_Portfolio.jpg",
     "width": 1240,
     "height": 979,
     "thumbWidth": 600,
@@ -2860,6 +3039,7 @@
   {
     "file": "images/illustration/MysterySociety.Icons_Portfolio.jpg",
     "thumbnail": "thumbnails/illustration/MysterySociety.Icons_Portfolio.jpg",
+    "placeholder": "gallery-blur-placeholders/illustration/MysterySociety.Icons_Portfolio.jpg",
     "width": 1950,
     "height": 2560,
     "thumbWidth": 457,
@@ -2876,6 +3056,7 @@
   {
     "file": "images/nft/costume/BabyZim.jpg",
     "thumbnail": "thumbnails/nft/costume/BabyZim.jpg",
+    "placeholder": "gallery-blur-placeholders/nft/costume/BabyZim.jpg",
     "width": 2458,
     "height": 1232,
     "thumbWidth": 600,
@@ -2892,6 +3073,7 @@
   {
     "file": "images/nft/costume/BattleDib.jpg",
     "thumbnail": "thumbnails/nft/costume/BattleDib.jpg",
+    "placeholder": "gallery-blur-placeholders/nft/costume/BattleDib.jpg",
     "width": 2458,
     "height": 1232,
     "thumbWidth": 600,
@@ -2908,6 +3090,7 @@
   {
     "file": "images/nft/costume/BolognaZim.jpg",
     "thumbnail": "thumbnails/nft/costume/BolognaZim.jpg",
+    "placeholder": "gallery-blur-placeholders/nft/costume/BolognaZim.jpg",
     "width": 2458,
     "height": 1232,
     "thumbWidth": 600,
@@ -2924,6 +3107,7 @@
   {
     "file": "images/nft/costume/BoyCostumeGir.jpg",
     "thumbnail": "thumbnails/nft/costume/BoyCostumeGir.jpg",
+    "placeholder": "gallery-blur-placeholders/nft/costume/BoyCostumeGir.jpg",
     "width": 2458,
     "height": 1232,
     "thumbWidth": 600,
@@ -2940,6 +3124,7 @@
   {
     "file": "images/nft/costume/CapturedZim.jpg",
     "thumbnail": "thumbnails/nft/costume/CapturedZim.jpg",
+    "placeholder": "gallery-blur-placeholders/nft/costume/CapturedZim.jpg",
     "width": 2458,
     "height": 1232,
     "thumbWidth": 600,
@@ -2956,6 +3141,7 @@
   {
     "file": "images/nft/costume/CatGir.jpg",
     "thumbnail": "thumbnails/nft/costume/CatGir.jpg",
+    "placeholder": "gallery-blur-placeholders/nft/costume/CatGir.jpg",
     "width": 2458,
     "height": 1232,
     "thumbWidth": 600,
@@ -2972,6 +3158,7 @@
   {
     "file": "images/nft/costume/GermfighterZim.jpg",
     "thumbnail": "thumbnails/nft/costume/GermfighterZim.jpg",
+    "placeholder": "gallery-blur-placeholders/nft/costume/GermfighterZim.jpg",
     "width": 2458,
     "height": 1232,
     "thumbWidth": 600,
@@ -2988,6 +3175,7 @@
   {
     "file": "images/nft/costume/OldManZim.jpg",
     "thumbnail": "thumbnails/nft/costume/OldManZim.jpg",
+    "placeholder": "gallery-blur-placeholders/nft/costume/OldManZim.jpg",
     "width": 2458,
     "height": 1232,
     "thumbWidth": 600,
@@ -3004,6 +3192,7 @@
   {
     "file": "images/nft/costume/OrganStealerZim.jpg",
     "thumbnail": "thumbnails/nft/costume/OrganStealerZim.jpg",
+    "placeholder": "gallery-blur-placeholders/nft/costume/OrganStealerZim.jpg",
     "width": 2458,
     "height": 1232,
     "thumbWidth": 600,
@@ -3020,6 +3209,7 @@
   {
     "file": "images/nft/costume/ProjectorGir.jpg",
     "thumbnail": "thumbnails/nft/costume/ProjectorGir.jpg",
+    "placeholder": "gallery-blur-placeholders/nft/costume/ProjectorGir.jpg",
     "width": 2458,
     "height": 1232,
     "thumbWidth": 600,
@@ -3036,6 +3226,7 @@
   {
     "file": "images/nft/costume/SuperheroDib.jpg",
     "thumbnail": "thumbnails/nft/costume/SuperheroDib.jpg",
+    "placeholder": "gallery-blur-placeholders/nft/costume/SuperheroDib.jpg",
     "width": 2458,
     "height": 1232,
     "thumbWidth": 600,
@@ -3052,6 +3243,7 @@
   {
     "file": "images/nft/costume/TeddybearZim.jpg",
     "thumbnail": "thumbnails/nft/costume/TeddybearZim.jpg",
+    "placeholder": "gallery-blur-placeholders/nft/costume/TeddybearZim.jpg",
     "width": 2458,
     "height": 1232,
     "thumbWidth": 600,
@@ -3068,6 +3260,7 @@
   {
     "file": "images/nft/costume/WeaponFormGir.jpg",
     "thumbnail": "thumbnails/nft/costume/WeaponFormGir.jpg",
+    "placeholder": "gallery-blur-placeholders/nft/costume/WeaponFormGir.jpg",
     "width": 2458,
     "height": 1232,
     "thumbWidth": 600,
@@ -3084,6 +3277,7 @@
   {
     "file": "images/nft/costume/Zim_Molt.jpg",
     "thumbnail": "thumbnails/nft/costume/Zim_Molt.jpg",
+    "placeholder": "gallery-blur-placeholders/nft/costume/Zim_Molt.jpg",
     "width": 2458,
     "height": 1232,
     "thumbWidth": 600,
@@ -3100,6 +3294,7 @@
   {
     "file": "images/nft/mashup/CATDOG-BEAVERS.BarryWinslow.jpg",
     "thumbnail": "thumbnails/nft/mashup/CATDOG-BEAVERS.BarryWinslow.jpg",
+    "placeholder": "gallery-blur-placeholders/nft/mashup/CATDOG-BEAVERS.BarryWinslow.jpg",
     "width": 2560,
     "height": 1533,
     "thumbWidth": 600,
@@ -3116,6 +3311,7 @@
   {
     "file": "images/nft/mashup/CATDOG-BEAVERS.CatBarry.jpg",
     "thumbnail": "thumbnails/nft/mashup/CATDOG-BEAVERS.CatBarry.jpg",
+    "placeholder": "gallery-blur-placeholders/nft/mashup/CATDOG-BEAVERS.CatBarry.jpg",
     "width": 2560,
     "height": 1533,
     "thumbWidth": 600,
@@ -3132,6 +3328,7 @@
   {
     "file": "images/nft/mashup/CATDOG-BEAVERS.CatBing.jpg",
     "thumbnail": "thumbnails/nft/mashup/CATDOG-BEAVERS.CatBing.jpg",
+    "placeholder": "gallery-blur-placeholders/nft/mashup/CATDOG-BEAVERS.CatBing.jpg",
     "width": 2560,
     "height": 1533,
     "thumbWidth": 600,
@@ -3148,6 +3345,7 @@
   {
     "file": "images/nft/mashup/CATDOG-BEAVERS.DogBing.jpg",
     "thumbnail": "thumbnails/nft/mashup/CATDOG-BEAVERS.DogBing.jpg",
+    "placeholder": "gallery-blur-placeholders/nft/mashup/CATDOG-BEAVERS.DogBing.jpg",
     "width": 2560,
     "height": 1533,
     "thumbWidth": 600,
@@ -3164,6 +3362,7 @@
   {
     "file": "images/nft/mashup/CATDOG-BEAVERS.DogNorbert.jpg",
     "thumbnail": "thumbnails/nft/mashup/CATDOG-BEAVERS.DogNorbert.jpg",
+    "placeholder": "gallery-blur-placeholders/nft/mashup/CATDOG-BEAVERS.DogNorbert.jpg",
     "width": 2560,
     "height": 1533,
     "thumbWidth": 600,
@@ -3180,6 +3379,7 @@
   {
     "file": "images/nft/mashup/CATDOG-BEAVERS.ShriekNorbert.jpg",
     "thumbnail": "thumbnails/nft/mashup/CATDOG-BEAVERS.ShriekNorbert.jpg",
+    "placeholder": "gallery-blur-placeholders/nft/mashup/CATDOG-BEAVERS.ShriekNorbert.jpg",
     "width": 2560,
     "height": 1533,
     "thumbWidth": 600,
@@ -3196,6 +3396,7 @@
   {
     "file": "images/nft/mashup/CATDOG-BEAVERS.ShriekTruckee.jpg",
     "thumbnail": "thumbnails/nft/mashup/CATDOG-BEAVERS.ShriekTruckee.jpg",
+    "placeholder": "gallery-blur-placeholders/nft/mashup/CATDOG-BEAVERS.ShriekTruckee.jpg",
     "width": 2560,
     "height": 1533,
     "thumbWidth": 600,
@@ -3212,6 +3413,7 @@
   {
     "file": "images/nft/mashup/CATDOG-BEAVERS.WinslowDaggett.jpg",
     "thumbnail": "thumbnails/nft/mashup/CATDOG-BEAVERS.WinslowDaggett.jpg",
+    "placeholder": "gallery-blur-placeholders/nft/mashup/CATDOG-BEAVERS.WinslowDaggett.jpg",
     "width": 2560,
     "height": 1533,
     "thumbWidth": 600,
@@ -3228,6 +3430,7 @@
   {
     "file": "images/nft/mashup/CATDOG-BEAVERS.WinslowTruckee.jpg",
     "thumbnail": "thumbnails/nft/mashup/CATDOG-BEAVERS.WinslowTruckee.jpg",
+    "placeholder": "gallery-blur-placeholders/nft/mashup/CATDOG-BEAVERS.WinslowTruckee.jpg",
     "width": 2560,
     "height": 1533,
     "thumbWidth": 600,
@@ -3244,6 +3447,7 @@
   {
     "file": "images/nft/mashup/ZIM-MONSTERS.AlienZickis.jpg",
     "thumbnail": "thumbnails/nft/mashup/ZIM-MONSTERS.AlienZickis.jpg",
+    "placeholder": "gallery-blur-placeholders/nft/mashup/ZIM-MONSTERS.AlienZickis.jpg",
     "width": 2560,
     "height": 1533,
     "thumbWidth": 600,
@@ -3260,6 +3464,7 @@
   {
     "file": "images/nft/mashup/ZIM-MONSTERS.DogGerkis.jpg",
     "thumbnail": "thumbnails/nft/mashup/ZIM-MONSTERS.DogGerkis.jpg",
+    "placeholder": "gallery-blur-placeholders/nft/mashup/ZIM-MONSTERS.DogGerkis.jpg",
     "width": 2560,
     "height": 1533,
     "thumbWidth": 600,
@@ -3276,6 +3481,7 @@
   {
     "file": "images/nft/mashup/ZIM-MONSTERS.Dromble.jpg",
     "thumbnail": "thumbnails/nft/mashup/ZIM-MONSTERS.Dromble.jpg",
+    "placeholder": "gallery-blur-placeholders/nft/mashup/ZIM-MONSTERS.Dromble.jpg",
     "width": 2560,
     "height": 1533,
     "thumbWidth": 600,
@@ -3292,6 +3498,7 @@
   {
     "file": "images/nft/mashup/ZIM-MONSTERS.HumanZizzle.jpg",
     "thumbnail": "thumbnails/nft/mashup/ZIM-MONSTERS.HumanZizzle.jpg",
+    "placeholder": "gallery-blur-placeholders/nft/mashup/ZIM-MONSTERS.HumanZizzle.jpg",
     "width": 2560,
     "height": 1533,
     "thumbWidth": 600,
@@ -3308,6 +3515,7 @@
   {
     "file": "images/nft/mashup/ZIM-MONSTERS.HumanZoblina.jpg",
     "thumbnail": "thumbnails/nft/mashup/ZIM-MONSTERS.HumanZoblina.jpg",
+    "placeholder": "gallery-blur-placeholders/nft/mashup/ZIM-MONSTERS.HumanZoblina.jpg",
     "width": 2560,
     "height": 1533,
     "thumbWidth": 600,
@@ -3324,6 +3532,7 @@
   {
     "file": "images/nft/mashup/ZIM-MONSTERS.HumanZromble.jpg",
     "thumbnail": "thumbnails/nft/mashup/ZIM-MONSTERS.HumanZromble.jpg",
+    "placeholder": "gallery-blur-placeholders/nft/mashup/ZIM-MONSTERS.HumanZromble.jpg",
     "width": 2560,
     "height": 1533,
     "thumbWidth": 600,
@@ -3340,6 +3549,7 @@
   {
     "file": "images/nft/mashup/ZIM-MONSTERS.RobotGerkis.jpg",
     "thumbnail": "thumbnails/nft/mashup/ZIM-MONSTERS.RobotGerkis.jpg",
+    "placeholder": "gallery-blur-placeholders/nft/mashup/ZIM-MONSTERS.RobotGerkis.jpg",
     "width": 2560,
     "height": 1533,
     "thumbWidth": 600,
@@ -3356,6 +3566,7 @@
   {
     "file": "images/nft/mashup/ZIM-MONSTERS.RobotGrumm.jpg",
     "thumbnail": "thumbnails/nft/mashup/ZIM-MONSTERS.RobotGrumm.jpg",
+    "placeholder": "gallery-blur-placeholders/nft/mashup/ZIM-MONSTERS.RobotGrumm.jpg",
     "width": 2560,
     "height": 1533,
     "thumbWidth": 600,
@@ -3372,6 +3583,7 @@
   {
     "file": "images/nft/mashup/ZIM-MONSTERS.TheSnorb.jpg",
     "thumbnail": "thumbnails/nft/mashup/ZIM-MONSTERS.TheSnorb.jpg",
+    "placeholder": "gallery-blur-placeholders/nft/mashup/ZIM-MONSTERS.TheSnorb.jpg",
     "width": 2560,
     "height": 1533,
     "thumbWidth": 600,
@@ -3388,6 +3600,7 @@
   {
     "file": "images/nft/onesheet/BEAVERS.BarryBear.jpg",
     "thumbnail": "thumbnails/nft/onesheet/BEAVERS.BarryBear.jpg",
+    "placeholder": "gallery-blur-placeholders/nft/onesheet/BEAVERS.BarryBear.jpg",
     "width": 2560,
     "height": 1703,
     "thumbWidth": 600,
@@ -3404,6 +3617,7 @@
   {
     "file": "images/nft/onesheet/BEAVERS.Bing.jpg",
     "thumbnail": "thumbnails/nft/onesheet/BEAVERS.Bing.jpg",
+    "placeholder": "gallery-blur-placeholders/nft/onesheet/BEAVERS.Bing.jpg",
     "width": 2560,
     "height": 1703,
     "thumbWidth": 600,
@@ -3420,6 +3634,7 @@
   {
     "file": "images/nft/onesheet/BEAVERS.Daggett.jpg",
     "thumbnail": "thumbnails/nft/onesheet/BEAVERS.Daggett.jpg",
+    "placeholder": "gallery-blur-placeholders/nft/onesheet/BEAVERS.Daggett.jpg",
     "width": 2560,
     "height": 1703,
     "thumbWidth": 600,
@@ -3436,6 +3651,7 @@
   {
     "file": "images/nft/onesheet/BEAVERS.Norbert.jpg",
     "thumbnail": "thumbnails/nft/onesheet/BEAVERS.Norbert.jpg",
+    "placeholder": "gallery-blur-placeholders/nft/onesheet/BEAVERS.Norbert.jpg",
     "width": 2560,
     "height": 1703,
     "thumbWidth": 600,
@@ -3452,6 +3668,7 @@
   {
     "file": "images/nft/onesheet/BEAVERS.Treeflower.jpg",
     "thumbnail": "thumbnails/nft/onesheet/BEAVERS.Treeflower.jpg",
+    "placeholder": "gallery-blur-placeholders/nft/onesheet/BEAVERS.Treeflower.jpg",
     "width": 2560,
     "height": 1703,
     "thumbWidth": 600,
@@ -3468,6 +3685,7 @@
   {
     "file": "images/nft/onesheet/BEAVERS.Truckee.jpg",
     "thumbnail": "thumbnails/nft/onesheet/BEAVERS.Truckee.jpg",
+    "placeholder": "gallery-blur-placeholders/nft/onesheet/BEAVERS.Truckee.jpg",
     "width": 2560,
     "height": 1703,
     "thumbWidth": 600,
@@ -3484,6 +3702,7 @@
   {
     "file": "images/nft/onesheet/Monsters.jpg",
     "thumbnail": "thumbnails/nft/onesheet/Monsters.jpg",
+    "placeholder": "gallery-blur-placeholders/nft/onesheet/Monsters.jpg",
     "width": 2560,
     "height": 1703,
     "thumbWidth": 600,
@@ -3500,6 +3719,7 @@
   {
     "file": "images/nft/onesheet/ZIM.AlienZim.jpg",
     "thumbnail": "thumbnails/nft/onesheet/ZIM.AlienZim.jpg",
+    "placeholder": "gallery-blur-placeholders/nft/onesheet/ZIM.AlienZim.jpg",
     "width": 2560,
     "height": 2538,
     "thumbWidth": 600,
@@ -3516,6 +3736,7 @@
   {
     "file": "images/nft/onesheet/ZIM.Dib.jpg",
     "thumbnail": "thumbnails/nft/onesheet/ZIM.Dib.jpg",
+    "placeholder": "gallery-blur-placeholders/nft/onesheet/ZIM.Dib.jpg",
     "width": 2560,
     "height": 2538,
     "thumbWidth": 600,
@@ -3532,6 +3753,7 @@
   {
     "file": "images/nft/onesheet/ZIM.DogGir.jpg",
     "thumbnail": "thumbnails/nft/onesheet/ZIM.DogGir.jpg",
+    "placeholder": "gallery-blur-placeholders/nft/onesheet/ZIM.DogGir.jpg",
     "width": 2560,
     "height": 2538,
     "thumbWidth": 600,
@@ -3548,6 +3770,7 @@
   {
     "file": "images/nft/onesheet/ZIM.Gaz.jpg",
     "thumbnail": "thumbnails/nft/onesheet/ZIM.Gaz.jpg",
+    "placeholder": "gallery-blur-placeholders/nft/onesheet/ZIM.Gaz.jpg",
     "width": 2560,
     "height": 2538,
     "thumbWidth": 600,
@@ -3564,6 +3787,7 @@
   {
     "file": "images/nft/onesheet/ZIM.HumanZim.jpg",
     "thumbnail": "thumbnails/nft/onesheet/ZIM.HumanZim.jpg",
+    "placeholder": "gallery-blur-placeholders/nft/onesheet/ZIM.HumanZim.jpg",
     "width": 2560,
     "height": 2538,
     "thumbWidth": 600,
@@ -3580,6 +3804,7 @@
   {
     "file": "images/nft/onesheet/ZIM.RobotGir.jpg",
     "thumbnail": "thumbnails/nft/onesheet/ZIM.RobotGir.jpg",
+    "placeholder": "gallery-blur-placeholders/nft/onesheet/ZIM.RobotGir.jpg",
     "width": 2560,
     "height": 2538,
     "thumbWidth": 600,
@@ -3596,6 +3821,7 @@
   {
     "file": "images/toy-design/001. DeLorean3.png",
     "thumbnail": "thumbnails/toy-design/001. DeLorean3.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/001. DeLorean3.png",
     "width": 2560,
     "height": 1042,
     "thumbWidth": 600,
@@ -3612,6 +3838,7 @@
   {
     "file": "images/toy-design/002. TMNT_DONATELLO.png",
     "thumbnail": "thumbnails/toy-design/002. TMNT_DONATELLO.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/002. TMNT_DONATELLO.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -3628,6 +3855,7 @@
   {
     "file": "images/toy-design/003. TMNT_LEONARDO.png",
     "thumbnail": "thumbnails/toy-design/003. TMNT_LEONARDO.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/003. TMNT_LEONARDO.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -3644,6 +3872,7 @@
   {
     "file": "images/toy-design/004. TMNT_MICHAELANGELO.png",
     "thumbnail": "thumbnails/toy-design/004. TMNT_MICHAELANGELO.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/004. TMNT_MICHAELANGELO.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -3660,6 +3889,7 @@
   {
     "file": "images/toy-design/005. TMNT_RAPHAEL.png",
     "thumbnail": "thumbnails/toy-design/005. TMNT_RAPHAEL.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/005. TMNT_RAPHAEL.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -3676,6 +3906,7 @@
   {
     "file": "images/toy-design/006. TMNT_SPLINTER.png",
     "thumbnail": "thumbnails/toy-design/006. TMNT_SPLINTER.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/006. TMNT_SPLINTER.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -3692,6 +3923,7 @@
   {
     "file": "images/toy-design/007. TMNT_VAN.png",
     "thumbnail": "thumbnails/toy-design/007. TMNT_VAN.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/007. TMNT_VAN.png",
     "width": 2560,
     "height": 1683,
     "thumbWidth": 600,
@@ -3708,6 +3940,7 @@
   {
     "file": "images/toy-design/008. TMNT_RAPHAEL_MICRO.png",
     "thumbnail": "thumbnails/toy-design/008. TMNT_RAPHAEL_MICRO.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/008. TMNT_RAPHAEL_MICRO.png",
     "width": 2560,
     "height": 1163,
     "thumbWidth": 600,
@@ -3724,6 +3957,7 @@
   {
     "file": "images/toy-design/009. DEMOGORGON.png",
     "thumbnail": "thumbnails/toy-design/009. DEMOGORGON.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/009. DEMOGORGON.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -3740,6 +3974,7 @@
   {
     "file": "images/toy-design/010. DEMOGORGON_glow2.png",
     "thumbnail": "thumbnails/toy-design/010. DEMOGORGON_glow2.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/010. DEMOGORGON_glow2.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -3756,6 +3991,7 @@
   {
     "file": "images/toy-design/011. DUSTIN.png",
     "thumbnail": "thumbnails/toy-design/011. DUSTIN.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/011. DUSTIN.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -3772,6 +4008,7 @@
   {
     "file": "images/toy-design/012. PIKACHU.png",
     "thumbnail": "thumbnails/toy-design/012. PIKACHU.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/012. PIKACHU.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -3788,6 +4025,7 @@
   {
     "file": "images/toy-design/013. Spiderman.png",
     "thumbnail": "thumbnails/toy-design/013. Spiderman.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/013. Spiderman.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -3804,6 +4042,7 @@
   {
     "file": "images/toy-design/014. GREEN LANTERN.png",
     "thumbnail": "thumbnails/toy-design/014. GREEN LANTERN.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/014. GREEN LANTERN.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -3820,6 +4059,7 @@
   {
     "file": "images/toy-design/015. AQUAMAN.png",
     "thumbnail": "thumbnails/toy-design/015. AQUAMAN.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/015. AQUAMAN.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -3836,6 +4076,7 @@
   {
     "file": "images/toy-design/016. Batman.png",
     "thumbnail": "thumbnails/toy-design/016. Batman.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/016. Batman.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -3852,6 +4093,7 @@
   {
     "file": "images/toy-design/017. Batgirl.png",
     "thumbnail": "thumbnails/toy-design/017. Batgirl.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/017. Batgirl.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -3868,6 +4110,7 @@
   {
     "file": "images/toy-design/018. BATMOBILE.png",
     "thumbnail": "thumbnails/toy-design/018. BATMOBILE.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/018. BATMOBILE.png",
     "width": 2560,
     "height": 1031,
     "thumbWidth": 600,
@@ -3884,6 +4127,7 @@
   {
     "file": "images/toy-design/019. Joker.png",
     "thumbnail": "thumbnails/toy-design/019. Joker.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/019. Joker.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -3900,6 +4144,7 @@
   {
     "file": "images/toy-design/020. Catwoman3.png",
     "thumbnail": "thumbnails/toy-design/020. Catwoman3.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/020. Catwoman3.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -3916,6 +4161,7 @@
   {
     "file": "images/toy-design/021. Penguin2.png",
     "thumbnail": "thumbnails/toy-design/021. Penguin2.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/021. Penguin2.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -3932,6 +4178,7 @@
   {
     "file": "images/toy-design/022. Riddler.png",
     "thumbnail": "thumbnails/toy-design/022. Riddler.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/022. Riddler.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -3948,6 +4195,7 @@
   {
     "file": "images/toy-design/023. Peacemaker.png",
     "thumbnail": "thumbnails/toy-design/023. Peacemaker.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/023. Peacemaker.png",
     "width": 2560,
     "height": 1076,
     "thumbWidth": 600,
@@ -3964,6 +4212,7 @@
   {
     "file": "images/toy-design/024. Eagley_Micro.png",
     "thumbnail": "thumbnails/toy-design/024. Eagley_Micro.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/024. Eagley_Micro.png",
     "width": 2560,
     "height": 1346,
     "thumbWidth": 600,
@@ -3980,6 +4229,7 @@
   {
     "file": "images/toy-design/025. PETER.png",
     "thumbnail": "thumbnails/toy-design/025. PETER.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/025. PETER.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -3996,6 +4246,7 @@
   {
     "file": "images/toy-design/026. LOIS.png",
     "thumbnail": "thumbnails/toy-design/026. LOIS.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/026. LOIS.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -4012,6 +4263,7 @@
   {
     "file": "images/toy-design/027. CHRIS.png",
     "thumbnail": "thumbnails/toy-design/027. CHRIS.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/027. CHRIS.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -4028,6 +4280,7 @@
   {
     "file": "images/toy-design/028. STEWIE.png",
     "thumbnail": "thumbnails/toy-design/028. STEWIE.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/028. STEWIE.png",
     "width": 2560,
     "height": 863,
     "thumbWidth": 600,
@@ -4044,6 +4297,7 @@
   {
     "file": "images/toy-design/029. Michael4.png",
     "thumbnail": "thumbnails/toy-design/029. Michael4.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/029. Michael4.png",
     "width": 2560,
     "height": 1076,
     "thumbWidth": 600,
@@ -4060,6 +4314,7 @@
   {
     "file": "images/toy-design/030. Dwight4.png",
     "thumbnail": "thumbnails/toy-design/030. Dwight4.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/030. Dwight4.png",
     "width": 2560,
     "height": 1076,
     "thumbWidth": 600,
@@ -4076,6 +4331,7 @@
   {
     "file": "images/toy-design/031. Jim4.png",
     "thumbnail": "thumbnails/toy-design/031. Jim4.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/031. Jim4.png",
     "width": 2560,
     "height": 1076,
     "thumbWidth": 600,
@@ -4092,6 +4348,7 @@
   {
     "file": "images/toy-design/032. Pam3.png",
     "thumbnail": "thumbnails/toy-design/032. Pam3.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/032. Pam3.png",
     "width": 2560,
     "height": 1076,
     "thumbWidth": 600,
@@ -4108,6 +4365,7 @@
   {
     "file": "images/toy-design/033. SONIC7.png",
     "thumbnail": "thumbnails/toy-design/033. SONIC7.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/033. SONIC7.png",
     "width": 2560,
     "height": 986,
     "thumbWidth": 600,
@@ -4124,6 +4382,7 @@
   {
     "file": "images/toy-design/034. KNUCKLES9.png",
     "thumbnail": "thumbnails/toy-design/034. KNUCKLES9.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/034. KNUCKLES9.png",
     "width": 2560,
     "height": 673,
     "thumbWidth": 600,
@@ -4140,6 +4399,7 @@
   {
     "file": "images/toy-design/035. SHADOW7.png",
     "thumbnail": "thumbnails/toy-design/035. SHADOW7.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/035. SHADOW7.png",
     "width": 2560,
     "height": 993,
     "thumbWidth": 600,
@@ -4156,6 +4416,7 @@
   {
     "file": "images/toy-design/036. SPONGEBOB.png",
     "thumbnail": "thumbnails/toy-design/036. SPONGEBOB.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/036. SPONGEBOB.png",
     "width": 2560,
     "height": 1060,
     "thumbWidth": 600,
@@ -4172,6 +4433,7 @@
   {
     "file": "images/toy-design/037. PATRICK2.png",
     "thumbnail": "thumbnails/toy-design/037. PATRICK2.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/037. PATRICK2.png",
     "width": 2560,
     "height": 1165,
     "thumbWidth": 600,
@@ -4188,6 +4450,7 @@
   {
     "file": "images/toy-design/038. SQUIDWARD.png",
     "thumbnail": "thumbnails/toy-design/038. SQUIDWARD.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/038. SQUIDWARD.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -4204,6 +4467,7 @@
   {
     "file": "images/toy-design/039. SANDY2.png",
     "thumbnail": "thumbnails/toy-design/039. SANDY2.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/039. SANDY2.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -4220,6 +4484,7 @@
   {
     "file": "images/toy-design/040. WinnieThePoo_micro2.png",
     "thumbnail": "thumbnails/toy-design/040. WinnieThePoo_micro2.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/040. WinnieThePoo_micro2.png",
     "width": 2560,
     "height": 1464,
     "thumbWidth": 600,
@@ -4236,6 +4501,7 @@
   {
     "file": "images/toy-design/041. Tigger3.png",
     "thumbnail": "thumbnails/toy-design/041. Tigger3.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/041. Tigger3.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -4252,6 +4518,7 @@
   {
     "file": "images/toy-design/042. SQUID_GAME_SQUARE_GUARD_MICRO2.jpg",
     "thumbnail": "thumbnails/toy-design/042. SQUID_GAME_SQUARE_GUARD_MICRO2.jpg",
+    "placeholder": "gallery-blur-placeholders/toy-design/042. SQUID_GAME_SQUARE_GUARD_MICRO2.jpg",
     "width": 2560,
     "height": 1375,
     "thumbWidth": 600,
@@ -4268,6 +4535,7 @@
   {
     "file": "images/toy-design/043. SQUIDGAMES_DOLL2.png",
     "thumbnail": "thumbnails/toy-design/043. SQUIDGAMES_DOLL2.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/043. SQUIDGAMES_DOLL2.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -4284,6 +4552,7 @@
   {
     "file": "images/toy-design/044. SQUID_GAME_DOLL_MICRO.png",
     "thumbnail": "thumbnails/toy-design/044. SQUID_GAME_DOLL_MICRO.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/044. SQUID_GAME_DOLL_MICRO.png",
     "width": 2560,
     "height": 1375,
     "thumbWidth": 600,
@@ -4300,6 +4569,7 @@
   {
     "file": "images/toy-design/045. BUTTHEAD2.jpg",
     "thumbnail": "thumbnails/toy-design/045. BUTTHEAD2.jpg",
+    "placeholder": "gallery-blur-placeholders/toy-design/045. BUTTHEAD2.jpg",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -4316,6 +4586,7 @@
   {
     "file": "images/toy-design/046. BEAVIS2.jpg",
     "thumbnail": "thumbnails/toy-design/046. BEAVIS2.jpg",
+    "placeholder": "gallery-blur-placeholders/toy-design/046. BEAVIS2.jpg",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -4332,6 +4603,7 @@
   {
     "file": "images/toy-design/047. DRACULA3.png",
     "thumbnail": "thumbnails/toy-design/047. DRACULA3.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/047. DRACULA3.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -4348,6 +4620,7 @@
   {
     "file": "images/toy-design/048. WOLFMAN2.png",
     "thumbnail": "thumbnails/toy-design/048. WOLFMAN2.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/048. WOLFMAN2.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -4364,6 +4637,7 @@
   {
     "file": "images/toy-design/049. FRANKENSTEIN2.png",
     "thumbnail": "thumbnails/toy-design/049. FRANKENSTEIN2.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/049. FRANKENSTEIN2.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -4380,6 +4654,7 @@
   {
     "file": "images/toy-design/050. FRANKENSTEIN_MICRO.png",
     "thumbnail": "thumbnails/toy-design/050. FRANKENSTEIN_MICRO.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/050. FRANKENSTEIN_MICRO.png",
     "width": 2560,
     "height": 1189,
     "thumbWidth": 600,
@@ -4396,6 +4671,7 @@
   {
     "file": "images/toy-design/051. CREATURE_FROM_THE_BLACK_LAGOON2.png",
     "thumbnail": "thumbnails/toy-design/051. CREATURE_FROM_THE_BLACK_LAGOON2.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/051. CREATURE_FROM_THE_BLACK_LAGOON2.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -4412,6 +4688,7 @@
   {
     "file": "images/toy-design/052. INVISIBLE_MAN.png",
     "thumbnail": "thumbnails/toy-design/052. INVISIBLE_MAN.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/052. INVISIBLE_MAN.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -4428,6 +4705,7 @@
   {
     "file": "images/toy-design/053. MUMMY3.png",
     "thumbnail": "thumbnails/toy-design/053. MUMMY3.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/053. MUMMY3.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -4444,6 +4722,7 @@
   {
     "file": "images/toy-design/054. MECHAGODZILLA_metallicsilver.png",
     "thumbnail": "thumbnails/toy-design/054. MECHAGODZILLA_metallicsilver.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/054. MECHAGODZILLA_metallicsilver.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -4460,6 +4739,7 @@
   {
     "file": "images/toy-design/055. REGANMACNEIL_vomit_glow_blood.png",
     "thumbnail": "thumbnails/toy-design/055. REGANMACNEIL_vomit_glow_blood.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/055. REGANMACNEIL_vomit_glow_blood.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -4476,6 +4756,7 @@
   {
     "file": "images/toy-design/056. MichaelMyers.png",
     "thumbnail": "thumbnails/toy-design/056. MichaelMyers.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/056. MichaelMyers.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -4492,6 +4773,7 @@
   {
     "file": "images/toy-design/057. MIKE_MYERS_micro.png",
     "thumbnail": "thumbnails/toy-design/057. MIKE_MYERS_micro.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/057. MIKE_MYERS_micro.png",
     "width": 2560,
     "height": 1464,
     "thumbWidth": 600,
@@ -4508,6 +4790,7 @@
   {
     "file": "images/toy-design/058. GEORGIE3.png",
     "thumbnail": "thumbnails/toy-design/058. GEORGIE3.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/058. GEORGIE3.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -4524,6 +4807,7 @@
   {
     "file": "images/toy-design/059. GoodGuyChucky3.png",
     "thumbnail": "thumbnails/toy-design/059. GoodGuyChucky3.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/059. GoodGuyChucky3.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -4540,6 +4824,7 @@
   {
     "file": "images/toy-design/060. Chuckie3.png",
     "thumbnail": "thumbnails/toy-design/060. Chuckie3.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/060. Chuckie3.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -4556,6 +4841,7 @@
   {
     "file": "images/toy-design/061. Chuckie2_bloodspatter.png",
     "thumbnail": "thumbnails/toy-design/061. Chuckie2_bloodspatter.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/061. Chuckie2_bloodspatter.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -4572,6 +4858,7 @@
   {
     "file": "images/toy-design/062. Tiffany3.png",
     "thumbnail": "thumbnails/toy-design/062. Tiffany3.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/062. Tiffany3.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -4588,6 +4875,7 @@
   {
     "file": "images/toy-design/063. Elvira_red dress.png",
     "thumbnail": "thumbnails/toy-design/063. Elvira_red dress.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/063. Elvira_red dress.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -4604,6 +4892,7 @@
   {
     "file": "images/toy-design/064. BILLY.png",
     "thumbnail": "thumbnails/toy-design/064. BILLY.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/064. BILLY.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -4620,6 +4909,7 @@
   {
     "file": "images/toy-design/065. JACK TORRANCE.png",
     "thumbnail": "thumbnails/toy-design/065. JACK TORRANCE.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/065. JACK TORRANCE.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -4636,6 +4926,7 @@
   {
     "file": "images/toy-design/066. JACK TORRANCE_frozen.png",
     "thumbnail": "thumbnails/toy-design/066. JACK TORRANCE_frozen.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/066. JACK TORRANCE_frozen.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -4652,6 +4943,7 @@
   {
     "file": "images/toy-design/067. JACK TORRANCE_micro.png",
     "thumbnail": "thumbnails/toy-design/067. JACK TORRANCE_micro.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/067. JACK TORRANCE_micro.png",
     "width": 2560,
     "height": 1464,
     "thumbWidth": 600,
@@ -4668,6 +4960,7 @@
   {
     "file": "images/toy-design/068. MEGAN4.png",
     "thumbnail": "thumbnails/toy-design/068. MEGAN4.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/068. MEGAN4.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -4684,6 +4977,7 @@
   {
     "file": "images/toy-design/069. Tarman_w_hl.png",
     "thumbnail": "thumbnails/toy-design/069. Tarman_w_hl.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/069. Tarman_w_hl.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -4700,6 +4994,7 @@
   {
     "file": "images/toy-design/070. Trash.png",
     "thumbnail": "thumbnails/toy-design/070. Trash.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/070. Trash.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -4716,6 +5011,7 @@
   {
     "file": "images/toy-design/071.png",
     "thumbnail": "thumbnails/toy-design/071.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/071.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -4732,6 +5028,7 @@
   {
     "file": "images/toy-design/072. GrampaSawyer3.png",
     "thumbnail": "thumbnails/toy-design/072. GrampaSawyer3.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/072. GrampaSawyer3.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -4748,6 +5045,7 @@
   {
     "file": "images/toy-design/073. SAM3.png",
     "thumbnail": "thumbnails/toy-design/073. SAM3.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/073. SAM3.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -4764,6 +5062,7 @@
   {
     "file": "images/toy-design/074. SAM_NO_HOOD.png",
     "thumbnail": "thumbnails/toy-design/074. SAM_NO_HOOD.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/074. SAM_NO_HOOD.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -4780,6 +5079,7 @@
   {
     "file": "images/toy-design/075. BIGTOP.png",
     "thumbnail": "thumbnails/toy-design/075. BIGTOP.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/075. BIGTOP.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -4796,6 +5096,7 @@
   {
     "file": "images/toy-design/076. KLOWN TRUCK2.png",
     "thumbnail": "thumbnails/toy-design/076. KLOWN TRUCK2.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/076. KLOWN TRUCK2.png",
     "width": 2560,
     "height": 863,
     "thumbWidth": 600,
@@ -4812,6 +5113,7 @@
   {
     "file": "images/toy-design/077. Slim.png",
     "thumbnail": "thumbnails/toy-design/077. Slim.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/077. Slim.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -4828,6 +5130,7 @@
   {
     "file": "images/toy-design/078. Rudy.png",
     "thumbnail": "thumbnails/toy-design/078. Rudy.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/078. Rudy.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -4844,6 +5147,7 @@
   {
     "file": "images/toy-design/079. Daisy.png",
     "thumbnail": "thumbnails/toy-design/079. Daisy.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/079. Daisy.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -4860,6 +5164,7 @@
   {
     "file": "images/toy-design/080. Rosebud.png",
     "thumbnail": "thumbnails/toy-design/080. Rosebud.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/080. Rosebud.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -4876,6 +5181,7 @@
   {
     "file": "images/toy-design/081. KLOWNBABIES.png",
     "thumbnail": "thumbnails/toy-design/081. KLOWNBABIES.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/081. KLOWNBABIES.png",
     "width": 2560,
     "height": 895,
     "thumbWidth": 600,
@@ -4892,6 +5198,7 @@
   {
     "file": "images/toy-design/082. OFFICER_MOONEY_PUPPET.png",
     "thumbnail": "thumbnails/toy-design/082. OFFICER_MOONEY_PUPPET.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/082. OFFICER_MOONEY_PUPPET.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -4908,6 +5215,7 @@
   {
     "file": "images/toy-design/083. CHUBBY_MICRO.png",
     "thumbnail": "thumbnails/toy-design/083. CHUBBY_MICRO.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/083. CHUBBY_MICRO.png",
     "width": 2560,
     "height": 1158,
     "thumbWidth": 600,
@@ -4924,6 +5232,7 @@
   {
     "file": "images/toy-design/084. WALKING_DEAD_RICK 2.png",
     "thumbnail": "thumbnails/toy-design/084. WALKING_DEAD_RICK 2.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/084. WALKING_DEAD_RICK 2.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -4940,6 +5249,7 @@
   {
     "file": "images/toy-design/086. WALKING_DEAD_MICHONNE.png",
     "thumbnail": "thumbnails/toy-design/086. WALKING_DEAD_MICHONNE.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/086. WALKING_DEAD_MICHONNE.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -4956,6 +5266,7 @@
   {
     "file": "images/toy-design/087. DARYL_DIXON2.png",
     "thumbnail": "thumbnails/toy-design/087. DARYL_DIXON2.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/087. DARYL_DIXON2.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -4972,6 +5283,7 @@
   {
     "file": "images/toy-design/088. Dog4.png",
     "thumbnail": "thumbnails/toy-design/088. Dog4.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/088. Dog4.png",
     "width": 2560,
     "height": 1114,
     "thumbWidth": 600,
@@ -4988,6 +5300,7 @@
   {
     "file": "images/toy-design/089. LiquidDeath.png",
     "thumbnail": "thumbnails/toy-design/089. LiquidDeath.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/089. LiquidDeath.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -5004,6 +5317,7 @@
   {
     "file": "images/toy-design/090. RAIDEN3.png",
     "thumbnail": "thumbnails/toy-design/090. RAIDEN3.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/090. RAIDEN3.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -5020,6 +5334,7 @@
   {
     "file": "images/toy-design/091. SCORPION2.png",
     "thumbnail": "thumbnails/toy-design/091. SCORPION2.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/091. SCORPION2.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -5036,6 +5351,7 @@
   {
     "file": "images/toy-design/092. SUBZERO.png",
     "thumbnail": "thumbnails/toy-design/092. SUBZERO.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/092. SUBZERO.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -5052,6 +5368,7 @@
   {
     "file": "images/toy-design/093. GORO.png",
     "thumbnail": "thumbnails/toy-design/093. GORO.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/093. GORO.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -5068,6 +5385,7 @@
   {
     "file": "images/toy-design/094. EMILY4.png",
     "thumbnail": "thumbnails/toy-design/094. EMILY4.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/094. EMILY4.png",
     "width": 2560,
     "height": 789,
     "thumbWidth": 600,
@@ -5084,6 +5402,7 @@
   {
     "file": "images/toy-design/096. VICTOR.png",
     "thumbnail": "thumbnails/toy-design/096. VICTOR.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/096. VICTOR.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -5100,6 +5419,7 @@
   {
     "file": "images/toy-design/097. EMILY_MICRO.png",
     "thumbnail": "thumbnails/toy-design/097. EMILY_MICRO.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/097. EMILY_MICRO.png",
     "width": 2560,
     "height": 911,
     "thumbWidth": 600,
@@ -5116,6 +5436,7 @@
   {
     "file": "images/toy-design/098. VICTOR_MICRO.png",
     "thumbnail": "thumbnails/toy-design/098. VICTOR_MICRO.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/098. VICTOR_MICRO.png",
     "width": 2560,
     "height": 1337,
     "thumbWidth": 600,
@@ -5132,6 +5453,7 @@
   {
     "file": "images/toy-design/099. RV2.png",
     "thumbnail": "thumbnails/toy-design/099. RV2.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/099. RV2.png",
     "width": 2560,
     "height": 1287,
     "thumbWidth": 600,
@@ -5148,6 +5470,7 @@
   {
     "file": "images/toy-design/100. CLARK.png",
     "thumbnail": "thumbnails/toy-design/100. CLARK.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/100. CLARK.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -5164,6 +5487,7 @@
   {
     "file": "images/toy-design/101. COUSIN_EDDIE.png",
     "thumbnail": "thumbnails/toy-design/101. COUSIN_EDDIE.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/101. COUSIN_EDDIE.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -5180,6 +5504,7 @@
   {
     "file": "images/toy-design/102. Kermit.png",
     "thumbnail": "thumbnails/toy-design/102. Kermit.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/102. Kermit.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -5196,6 +5521,7 @@
   {
     "file": "images/toy-design/103. MIssPiggy.png",
     "thumbnail": "thumbnails/toy-design/103. MIssPiggy.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/103. MIssPiggy.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -5212,6 +5538,7 @@
   {
     "file": "images/toy-design/104. OptimusPrime.png",
     "thumbnail": "thumbnails/toy-design/104. OptimusPrime.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/104. OptimusPrime.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -5228,6 +5555,7 @@
   {
     "file": "images/toy-design/105. VOLTRON.png",
     "thumbnail": "thumbnails/toy-design/105. VOLTRON.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/105. VOLTRON.png",
     "width": 2560,
     "height": 952,
     "thumbWidth": 600,
@@ -5244,6 +5572,7 @@
   {
     "file": "images/toy-design/106. BUC-EE_MICRO.png",
     "thumbnail": "thumbnails/toy-design/106. BUC-EE_MICRO.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/106. BUC-EE_MICRO.png",
     "width": 2560,
     "height": 1349,
     "thumbWidth": 600,
@@ -5260,6 +5589,7 @@
   {
     "file": "images/toy-design/107. BUC-EE3.png",
     "thumbnail": "thumbnails/toy-design/107. BUC-EE3.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/107. BUC-EE3.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -5276,6 +5606,7 @@
   {
     "file": "images/toy-design/108. BUC-EE_STANDUP.png",
     "thumbnail": "thumbnails/toy-design/108. BUC-EE_STANDUP.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/108. BUC-EE_STANDUP.png",
     "width": 2560,
     "height": 990,
     "thumbWidth": 600,
@@ -5292,6 +5623,7 @@
   {
     "file": "images/toy-design/109. Lil_Whip.png",
     "thumbnail": "thumbnails/toy-design/109. Lil_Whip.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/109. Lil_Whip.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -5308,6 +5640,7 @@
   {
     "file": "images/toy-design/110. CAT_WHEEL_LOADER.png",
     "thumbnail": "thumbnails/toy-design/110. CAT_WHEEL_LOADER.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/110. CAT_WHEEL_LOADER.png",
     "width": 2560,
     "height": 1453,
     "thumbWidth": 600,
@@ -5324,6 +5657,7 @@
   {
     "file": "images/toy-design/111. CAT_EXCAVATOR.png",
     "thumbnail": "thumbnails/toy-design/111. CAT_EXCAVATOR.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/111. CAT_EXCAVATOR.png",
     "width": 2560,
     "height": 1458,
     "thumbWidth": 600,
@@ -5340,6 +5674,7 @@
   {
     "file": "images/toy-design/112. 1925_MACHINE_b:w.png",
     "thumbnail": "thumbnails/toy-design/112. 1925_MACHINE_b:w.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/112. 1925_MACHINE_b:w.png",
     "width": 2560,
     "height": 1399,
     "thumbWidth": 600,
@@ -5356,6 +5691,7 @@
   {
     "file": "images/toy-design/113. FEDEX_TRUCK2.png",
     "thumbnail": "thumbnails/toy-design/113. FEDEX_TRUCK2.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/113. FEDEX_TRUCK2.png",
     "width": 2560,
     "height": 1659,
     "thumbWidth": 600,
@@ -5372,6 +5708,7 @@
   {
     "file": "images/toy-design/114. GIANT_COSTCO_BEAR.png",
     "thumbnail": "thumbnails/toy-design/114. GIANT_COSTCO_BEAR.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/114. GIANT_COSTCO_BEAR.png",
     "width": 2560,
     "height": 903,
     "thumbWidth": 600,
@@ -5388,6 +5725,7 @@
   {
     "file": "images/toy-design/115. TAYTO4.png",
     "thumbnail": "thumbnails/toy-design/115. TAYTO4.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/115. TAYTO4.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -5404,6 +5742,7 @@
   {
     "file": "images/toy-design/116. SLUGGERRR3_w_foot.png",
     "thumbnail": "thumbnails/toy-design/116. SLUGGERRR3_w_foot.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/116. SLUGGERRR3_w_foot.png",
     "width": 2560,
     "height": 1021,
     "thumbWidth": 600,
@@ -5420,6 +5759,7 @@
   {
     "file": "images/toy-design/117. FREDBIRD.png",
     "thumbnail": "thumbnails/toy-design/117. FREDBIRD.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/117. FREDBIRD.png",
     "width": 2560,
     "height": 1331,
     "thumbWidth": 600,
@@ -5436,6 +5776,7 @@
   {
     "file": "images/toy-design/118. FREDBIRD_MICRO.png",
     "thumbnail": "thumbnails/toy-design/118. FREDBIRD_MICRO.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/118. FREDBIRD_MICRO.png",
     "width": 2560,
     "height": 1466,
     "thumbWidth": 600,
@@ -5452,6 +5793,7 @@
   {
     "file": "images/toy-design/119. DANHOUSEN.png",
     "thumbnail": "thumbnails/toy-design/119. DANHOUSEN.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/119. DANHOUSEN.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,
@@ -5468,6 +5810,7 @@
   {
     "file": "images/toy-design/120. H\u00c9LIO CASTRONEVES.png",
     "thumbnail": "thumbnails/toy-design/120. H\u00c9LIO CASTRONEVES.png",
+    "placeholder": "gallery-blur-placeholders/toy-design/120. H\u00c9LIO CASTRONEVES.png",
     "width": 2560,
     "height": 1082,
     "thumbWidth": 600,

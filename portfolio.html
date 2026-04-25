@@ -84,6 +84,11 @@
     opacity: 0;
     transition: opacity 0.3s ease;
   }
+  .gal-item img.placeholder {
+    opacity: 1;
+    filter: none;
+    transform: none;
+  }
   .gal-item img.loading {
     opacity: 1;
     filter: blur(10px);
@@ -335,17 +340,19 @@
       if (!img.dataset.src) return;
       var src = img.dataset.src;
       img.removeAttribute('data-src');
-      // Show blurry immediately when loading starts
-      img.classList.add('loading');
-      img.src = src;
+      var hadPlaceholder = img.classList.contains('placeholder');
+      if (!hadPlaceholder) img.classList.add('loading');
       img.onload = function() {
         img.classList.remove('loading');
+        img.classList.remove('placeholder');
         img.classList.add('loaded');
       };
       img.onerror = function() {
         img.classList.remove('loading');
+        img.classList.remove('placeholder');
         img.classList.add('loaded');
       };
+      img.src = src;
       lazyObserver.unobserve(img);
     });
   }, { rootMargin: '0px 0px' });
@@ -379,15 +386,19 @@
       el.dataset.discipline = item.discipline;
       el.dataset.clients    = (item.clients || []).join(',');
       el.dataset.full       = item.file;
-      if (item.thumbAspectRatio || item.aspectRatio) {
+      if (item.thumbWidth && item.thumbHeight) {
+        el.style.aspectRatio = item.thumbWidth + '/' + item.thumbHeight;
+      } else if (item.thumbAspectRatio || item.aspectRatio) {
         el.style.aspectRatio = item.thumbAspectRatio || item.aspectRatio;
       }
 
-      var thumbSrc    = item.thumbnail || item.file.replace(/^images\//, 'thumbnails/');
+      var thumbSrc       = item.thumbnail || item.file.replace(/^images\//, 'thumbnails/');
+      var placeholderSrc = item.placeholder || '';
       var clientLabel = (item.clients || []).map(formatLabel).join(', ');
 
       el.innerHTML =
-        '<img data-src="' + thumbSrc + '" width="' + (item.thumbWidth || 1) + '" height="' + (item.thumbHeight || 1) + '" alt="' + formatLabel(item.discipline) + (clientLabel ? ' — ' + clientLabel : '') + '">' +
+        '<img' + (placeholderSrc ? ' src="' + placeholderSrc + '" class="placeholder"' : '') +
+        ' data-src="' + thumbSrc + '" width="' + (item.thumbWidth || 1) + '" height="' + (item.thumbHeight || 1) + '" alt="' + formatLabel(item.discipline) + (clientLabel ? ' — ' + clientLabel : '') + '">' +
         '<div class="gal-overlay">' +
           '<div class="gal-overlay-discipline">' + formatLabel(item.discipline) + '</div>' +
           (clientLabel ? '<div class="gal-overlay-client">' + clientLabel + '</div>' : '') +
