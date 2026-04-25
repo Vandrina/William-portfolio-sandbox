@@ -721,7 +721,7 @@ body {
 /* ── DISCIPLINE CARDS ── */
 .disc-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 380px));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 380px));
   gap: 10px;
 }
 .disc-card {
