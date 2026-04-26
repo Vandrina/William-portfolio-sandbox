@@ -831,13 +831,13 @@ body {
 /* ── SCROLL TO TOP ── */
 .scroll-top {
   position: fixed;
-  bottom: 28px;
+  bottom: 50px;
   right: 28px;
   width: 40px;
   height: 40px;
   background: var(--surface);
   border: 1px solid var(--border-mid);
-  border-radius: 50%;
+  border-radius: var(--radius);
   display: flex;
   align-items: center;
   justify-content: center;
