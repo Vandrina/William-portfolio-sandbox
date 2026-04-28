@@ -646,6 +646,8 @@ body {
   transition: background 0.2s, color 0.2s;
 }
 .hero-arrow:hover { background: rgba(20,20,22,0.95); color: var(--bright); }
+
+/*
 .hero-counter {
   position: absolute;
   top: 14px;
@@ -657,7 +659,8 @@ body {
   padding: 3px 8px;
   border-radius: 3px;
   z-index: 10;
-}
+} 
+*/
 
 .hero-dots {
   position: absolute;
