@@ -927,7 +927,6 @@ body {
   .client-grid { grid-template-columns: repeat(3, 1fr); }
   .hero-inner {
     aspect-ratio: 16/9;
-    max-height: 300px;
     } 
   .dev-notes-grid { grid-template-columns: 1fr; }
 }
@@ -937,8 +936,9 @@ body {
   .disc-grid { grid-template-columns: repeat(1, 1fr); }
   .client-grid { grid-template-columns: repeat(1, 1fr); }
 }
-/* ── SCROLL TO TOP ── */
+/* ── MOBILE SCROLL TO TOP ── */
 .scroll-top {
+  @media (max-width: 480px) {
   position: fixed;
   bottom: 28px;
   right: 28px;
@@ -963,3 +963,4 @@ body {
   pointer-events: all;
 }
 .scroll-top:hover { border-color: var(--accent); color: var(--accent); }
+}
