@@ -923,7 +923,6 @@ body {
   .footer-legal {
     justify-content: center;
   }
-}
   .filter-mobile-toggle { display: flex; }
   .filter-groups { display: none; }
   .filter-groups.mobile-open { display: grid; margin-top: 12px; }
@@ -942,6 +941,7 @@ body {
     aspect-ratio: 16/9;
     } 
   .dev-notes-grid { grid-template-columns: 1fr; }
+}
 @media (max-width: 480px) {
   .gallery-grid { columns: 1; }
   .page-title { font-size: 24px; }
