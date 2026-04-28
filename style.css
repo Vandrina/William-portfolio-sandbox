@@ -837,7 +837,7 @@ body {
   height: 40px;
   background: var(--surface);
   border: 1px solid var(--border-mid);
-  border-radius: var(--radius);
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
