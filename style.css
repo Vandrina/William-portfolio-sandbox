@@ -597,9 +597,9 @@ body {
 .section-disc { background: var(--bg); }
 .section-clients { background: var(--bg-2); }
 .hero-inner {
-  max-width: var(--max);
+  max-width: 960px; 
   margin: 0 auto;
-  border-radius: 8px 8px 0 0;
+  border-radius: 0;
   overflow: hidden;
   border: 1px solid var(--border);
   border-bottom: none;
@@ -687,6 +687,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   justify-content: center;
+  max-width: 960px; margin: 0 auto;
 }
 .disc-card {
   border-radius: var(--radius);
@@ -741,6 +742,7 @@ body {
   grid-template-columns: repeat(5, 1fr);
   gap: 10px;
   justify-content: center;
+  max-width: 960px; margin: 0 auto;
 }
 .client-card {
   border-radius: var(--radius);
