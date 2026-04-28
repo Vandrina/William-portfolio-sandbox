@@ -703,7 +703,7 @@ body {
   inset: 0;
   z-index: 0;
 }
-.disc-card-bg img { width: 100%; height: 100%; object-fit: cover; }
+.disc-card-bg img { width: 100%; height: 100%; object-fit: contain; }
 .disc-card-grad {
   position: absolute;
   inset: 0;
@@ -757,7 +757,7 @@ body {
   inset: 0;
   z-index: 0;
 }
-.client-card-bg img { width: 100%; height: 100%; object-fit: cover; }
+.client-card-bg img { width: 100%; height: 100%; object-fit: contain; }
 .client-card-grad {
   position: absolute;
   inset: 0;
