@@ -605,7 +605,7 @@ body {
   border-bottom: none;
   position: relative;
   aspect-ratio: 16/9;
-  max-height: 500px;
+  /* max-height: 500px; */
 }
 .hero-slide {
   position: absolute;
