@@ -12,21 +12,35 @@
   html, body { height: 100%; }
   body { display: flex; flex-direction: column; }
   .contact-wrap { flex: 1; padding: 64px 32px; }
-  .contact-inner { max-width: 640px; margin: 0 auto; }
+  .contact-inner { max-width: 900px; margin: 0 auto; }
 
   .contact-eyebrow { font-family: var(--font-mono); font-size: 9px; color: var(--muted); letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 12px; }
   .contact-title { font-family: var(--font-head); font-size: 38px; font-weight: 700; color: var(--bright); letter-spacing: -0.02em; margin-bottom: 16px; }
   .contact-intro { font-family: var(--font-body); font-size: 15px; line-height: 1.8; color: var(--text); margin-bottom: 40px; }
 
+  .contact-cols {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    height: 232px;
+    margin-bottom: 16px;
+    max-width: 640px;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
   .contact-methods {
-    display: flex; flex-direction: column;
-    align-items: center; gap: 10px; margin-bottom: 36px;
+    flex: 0 0 auto;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
   .contact-method {
-    display: flex; align-items: center; justify-content: center; gap: 14px;
+    display: flex; align-items: center; justify-content: flex-start; gap: 14px;
     padding: 14px 20px; background: var(--surface);
     border: 1px solid var(--border); border-radius: var(--radius);
-    text-decoration: none; width: 52%; min-width: 260px;
+    text-decoration: none; width: 100%;
     transition: border-color 0.2s, background 0.2s;
   }
   .contact-method:hover { border-color: var(--accent-dim); background: var(--bg-3); }
@@ -36,37 +50,41 @@
     color: var(--accent); border: 1px solid var(--accent-dim);
     border-radius: 4px; font-family: var(--font-mono); font-size: 16px; font-weight: 700;
   }
-  .contact-method-text { display: flex; flex-direction: column; align-items: center; }
-  .contact-method-label { font-family: var(--font-mono); font-size: 9px; color: var(--muted); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 3px; text-align: center; }
-  .contact-method-value { font-family: var(--font-head); font-size: 13px; font-weight: 600; color: var(--bright); text-align: center; }
+  .contact-method-text { display: flex; flex-direction: column; align-items: flex-start; }
+  .contact-method-label { font-family: var(--font-mono); font-size: 9px; color: var(--muted); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 3px; }
+  .contact-method-value { font-family: var(--font-head); font-size: 13px; font-weight: 600; color: var(--bright); }
 
-  .contact-note { font-family: var(--font-body); font-size: 13px; color: var(--muted); line-height: 1.7; text-align: center; margin-bottom: 48px; }
+  .contact-note { font-family: var(--font-body); font-size: 13px; color: var(--muted); line-height: 1.7; text-align: center; margin-top: 16px; }
 
-  /* Placeholder image — horizontal, centered */
-  /* NOTE: Future option: left-justify buttons + vertical image right-justified center */
   .contact-img {
-    width: 100%;
-    aspect-ratio: 16/9;
+    aspect-ratio: 3/4;
+    max-height: 100%;
+    max-width: 100%;
+    flex-shrink: 0;
+    align-self: flex-start;
     background: var(--bg-3);
     border-radius: var(--radius);
     border: 1px solid var(--border);
     overflow: hidden;
     display: flex; align-items: center; justify-content: center;
   }
-  .contact-img img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .contact-img img { display: block; width: 100%; height: 100%; object-fit: contain; }
   .contact-img-placeholder {
     font-family: var(--font-mono); font-size: 10px;
     color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase;
+    text-align: center; padding: 16px;
   }
 
   @media (max-width: 768px) {
     .contact-wrap { padding: 40px 20px; }
     .contact-title { font-size: 28px; }
-    .contact-method { width: 100%; min-width: 0; }
+    .contact-cols { flex-direction: column; max-height: none; overflow: visible; }
+    .contact-img { aspect-ratio: 3/4; height: auto; width: 60%; align-self: center; }
   }
 </style>
 </head>
 <body>
+
 <div class="nav-wrap">
   <nav class="nav">
     <a href="index.html" class="nav-id">
@@ -76,7 +94,7 @@
     <div class="nav-links">
       <a href="portfolio.html" class="nav-item">Portfolio</a>
       <a href="about.html" class="nav-item">About</a>
-      <a href="contact.html" class="nav-item">Contact</a>
+      <a href="contact.html" class="nav-item active">Contact</a>
       <a href="shop.html" class="nav-shop nav-item">Shop ↗</a>
     </div>
     <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
@@ -86,49 +104,52 @@
   <div class="nav-mobile-menu" id="navMobileMenu">
     <a href="portfolio.html">Portfolio</a>
     <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="active">Contact</a>
     <a href="shop.html" class="shop">Shop ↗</a>
   </div>
 </div>
 
-
 <div class="contact-wrap">
   <div class="contact-inner">
+
     <div class="contact-eyebrow">Get in touch</div>
     <h1 class="contact-title">Let's Work Together</h1>
     <p class="contact-intro">Available for contract, freelance, and full-time opportunities across illustration, concept art, toy design, and animation.</p>
 
-    <div class="contact-methods">
-      <a href="mailto:nwillustrator@yahoo.com" class="contact-method">
-        <div class="contact-method-icon">✉</div>
-        <div class="contact-method-text">
-          <div class="contact-method-label">Email</div>
-          <div class="contact-method-value">nwillustrator@yahoo.com</div>
-        </div>
-      </a>
-      <a href="https://linkedin.com/in/billmcguire" target="_blank" class="contact-method">
-        <div class="contact-method-icon">in</div>
-        <div class="contact-method-text">
-          <div class="contact-method-label">LinkedIn</div>
-          <div class="contact-method-value">linkedin.com/in/billmcguire</div>
-        </div>
-      </a>
-      <a href="https://instagram.com/bill.mcguire" target="_blank" class="contact-method">
-        <div class="contact-method-icon">◎</div>
-        <div class="contact-method-text">
-          <div class="contact-method-label">Instagram</div>
-          <div class="contact-method-value">@bill.mcguire</div>
-        </div>
-      </a>
+    <div class="contact-cols">
+
+      <div class="contact-methods">
+        <a href="mailto:nwillustrator@yahoo.com" class="contact-method">
+          <div class="contact-method-icon">✉</div>
+          <div class="contact-method-text">
+            <div class="contact-method-label">Email</div>
+            <div class="contact-method-value">nwillustrator@yahoo.com</div>
+          </div>
+        </a>
+        <a href="https://linkedin.com/in/billmcguire" target="_blank" class="contact-method">
+          <div class="contact-method-icon">in</div>
+          <div class="contact-method-text">
+            <div class="contact-method-label">LinkedIn</div>
+            <div class="contact-method-value">linkedin.com/in/billmcguire</div>
+          </div>
+        </a>
+        <a href="https://instagram.com/bill.mcguire" target="_blank" class="contact-method">
+          <div class="contact-method-icon">◎</div>
+          <div class="contact-method-text">
+            <div class="contact-method-label">Instagram</div>
+            <div class="contact-method-value">@bill.mcguire</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="contact-img">
+        <!-- Replace with: <img src="images/CHOSEN_FILE.jpg" alt="Work sample"> -->
+        <div class="contact-img-placeholder">Image placeholder — 450 × 600px (3:4)</div>
+      </div>
+
     </div>
 
     <p class="contact-note">Response time is typically within 48 hours. For time-sensitive projects please note your deadline in your message.</p>
-
-    <!-- Placeholder image — William to choose a horizontal piece -->
-    <!-- Replace with: <img src="images/CHOSEN_FILE.jpg" alt="Work sample"> -->
-    <div class="contact-img">
-      <div class="contact-img-placeholder">Image placeholder — choose a horizontal piece</div>
-    </div>
 
   </div>
 </div>
@@ -136,8 +157,8 @@
 <footer class="footer">
   <div class="footer-main">
     <div class="footer-brand">
-    <div class="footer-name">William McGuire</div>
-    <div class="footer-tagline">Illustrator · Concept Artist · Animator</div>
+      <div class="footer-name">William McGuire</div>
+      <div class="footer-tagline">Illustrator · Concept Artist · Animator</div>
     </div>
     <div class="footer-nav">
       <a href="portfolio.html" class="footer-link">Portfolio</a>
@@ -146,7 +167,6 @@
       <a href="shop.html" class="footer-link gold">Shop ↗</a>
     </div>
   </div>
-
   <div class="footer-secondary">
     <div class="footer-left">
       <div class="footer-copy">© william mcguire — williammcguire.net</div>
@@ -155,8 +175,8 @@
         <a href="terms.html" class="footer-legal-link">Terms</a>
       </div>
     </div>
+  </div>
 </footer>
-
 
 <script>
 (function() {
