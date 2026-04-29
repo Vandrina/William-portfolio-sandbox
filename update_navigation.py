@@ -4,14 +4,14 @@ import re
 from pathlib import Path
 
 # Path to the navigation component
-nav_file = Path('components/navigation')
+nav_file = Path('components/navigation.html')
 
 # Read the navigation content
 nav_content = nav_file.read_text()
 
-# Regex to match the existing header block from nav-wrap through nav-mobile-menu
+# Regex to match the existing nav block
 nav_block_pattern = re.compile(
-    r'<div class="nav-wrap">.*?<div class="nav-mobile-menu".*?</div>\s*',
+    r'<div class="nav-wrap">.*?</div>\s*</div>',
     re.DOTALL,
 )
 
@@ -29,4 +29,4 @@ for html_file in html_files:
     else:
         print(f'No navigation block found in {html_file}')
 
-print('Navigation inclusion complete.')
+print('Navigation update complete.')
