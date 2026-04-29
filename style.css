@@ -889,7 +889,7 @@ body {
   .gallery-grid { columns: 2; }
   .results-bar { padding: 10px 20px; }
   
-  /*Contact Page mid width */
+  /*Contact Page */
   .contact-wrap { padding: 40px 20px; }
   .contact-title { font-size: 28px; }
   .contact-cols { 
@@ -906,6 +906,7 @@ body {
     height: auto;
     max-height: none;
   }
+  
   
 /* FOOTER MOBILE */
   .footer { 
@@ -994,4 +995,9 @@ body {
   pointer-events: all;
 }
 .scroll-top:hover { border-color: var(--accent); color: var(--accent); }
+}
+@media (max-width: 480px) {
+  .contact-title { font-size: 24px; }
+  .contact-cols { width: 100%; }
+  .contact-img { width: 80%; }
 }
