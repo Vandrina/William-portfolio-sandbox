@@ -42,17 +42,11 @@
   .contact-method {
     display: flex; align-items: center; justify-content: flex-start; gap: 14px;
     padding: 14px 20px; background: var(--surface);
-    border: 1px solid var(--accent-dim); border-radius: var(--radius);
+    border: 1px solid var(--border); border-radius: var(--radius);
     text-decoration: none; width: 100%;
-    transition: border-color 0.2s;
+    transition: border-color 0.2s, background 0.2s;
   }
-  .contact-method:hover { 
-    background: var(--bg-3); }
-
-  .contact-method:hover .contact-method-icon img {
-  opacity: 1;
-}
-  
+  .contact-method:hover { border-color: var(--accent-dim); background: var(--bg-3); }
   .contact-method-icon {
     width: 42px; height: 42px; flex-shrink: 0;
     display: flex; align-items: center; justify-content: center;
@@ -61,32 +55,30 @@
   }
 
   .contact-method-icon img {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
-    filter: brightness(0) saturate(100%) invert(79%) sepia(12%) saturate(1189%) hue-rotate(359deg) brightness(92%) contrast(83%);
-    position: absolute;
-    opacity: 0.7;
-    transitioin: opacity 0.2s;
-  }
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(79%) sepia(12%) saturate(1189%) hue-rotate(359deg) brightness(92%) contrast(83%);
+  position: absolute;
+}
 
-  .icon-glyph {
-    font-size: 36px;
-    line-height: 5;
-    display: flex;
-   align-items: center;
-    justify-content: center;
-    padding: 0 0 7px 2px;
-  }
+.icon-glyph {
+  font-size: 36px;
+  line-height: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0 7px 2px;
+}
 
-  .contact-method-icon img + * {
-    display: none;
-  }
+.contact-method-icon img + * {
+  display: none;
+}
 
-  .contact-method-icon:has(img[src=""]) *:not(img),
-  .contact-method-icon img[alt] {
-    display: flex;
-  }
+.contact-method-icon:has(img[src=""]) *:not(img),
+.contact-method-icon img[alt] {
+  display: flex;
+}
 
   .contact-method-text { display: flex; flex-direction: column; align-items: flex-start; }
   .contact-method-label { font-family: var(--font-mono); font-size: 9px; color: var(--muted); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 3px; }
@@ -162,28 +154,28 @@
 
       <div class="contact-methods">
         <a href="mailto:nwillustrator@yahoo.com" class="contact-method">
-          <div class="contact-method-icon"><img src="page-images/contact/Icons/mail.png" alt=""><span class="icon-glyph">✉</span></div>
+          <div class="contact-method-icon"><span class="icon-glyph">✉</span></div>
           <div class="contact-method-text">
             <div class="contact-method-label">Email</div>
             <div class="contact-method-value">nwillustrator@yahoo.com</div>
           </div>
         </a>
         <a href="https://linkedin.com/in/billmcguire" target="_blank" class="contact-method">
-          <div class="contact-method-icon"><img src="page-images/contact/Icons/linkedin.png" alt=""><span class="icon-glyph">in</span></div>
+          <div class="contact-method-icon">in</div>
           <div class="contact-method-text">
             <div class="contact-method-label">LinkedIn</div>
             <div class="contact-method-value">linkedin.com/in/billmcguire</div>
           </div>
         </a>
         <a href="tel:206-434-5401" class="contact-method">
-          <div class="contact-method-icon"><img src="page-images/contact/Icons/phone.png" alt=""><span class="icon-glyph">✆</span></div>
+          <div class="contact-method-icon"><span class="icon-glyph">✆</span></div>
           <div class="contact-method-text">
             <div class="contact-method-label">Phone</div>
             <div class="contact-method-value">206-434-5401</div>
           </div>
         </a>
         <a href="https://instagram.com/bill.mcguire" target="_blank" class="contact-method">
-          <div class="contact-method-icon"><img src="page-images/contact/Icons/inst.png" alt=""><span class="icon-glyph">◎</span></div>
+          <div class="contact-method-icon"><span class="icon-glyph">◎</span></div>
           <div class="contact-method-text">
             <div class="contact-method-label">Instagram</div>
             <div class="contact-method-value">@bill.mcguire</div>
