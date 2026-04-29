@@ -14,14 +14,14 @@
 <style>
   html, body { height: 100%; }
   body { display: flex; flex-direction: column; }
-  .shop-wrap { flex: 1; padding: 80px 32px; display: flex; align-items: center; justify-content: center; }
+  .shop-wrap { display: flex; align-items: center; justify-content: center; }
   .shop-inner { max-width: 480px; text-align: center; }
   .shop-eyebrow { font-family: var(--font-mono); font-size: 9px; color: var(--accent); letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 20px; }
   .shop-title { font-family: var(--font-head); font-size: 36px; font-weight: 700; color: var(--bright); letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 24px; }
   .shop-divider { width: 40px; height: 1px; background: var(--accent-dim); margin: 0 auto 28px; }
   .shop-desc { font-family: var(--font-body); font-size: 15px; line-height: 1.8; color: var(--text); margin-bottom: 40px; }
   .shop-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-  @media (max-width: 768px) { .shop-wrap { padding: 60px 20px; } .shop-title { font-size: 28px; } }
+  @media (max-width: 768px) { .shop-title { font-size: 28px; } }
 </style>
 </head>
 <body>
@@ -50,7 +50,7 @@
 </div>
 
 
-<div class="shop-wrap">
+<div class="shop-wrap page-wrap">
   <div class="shop-inner">
     <div class="shop-eyebrow">Coming Soon</div>
     <h1 class="shop-title">The Shop is on its way.</h1>
