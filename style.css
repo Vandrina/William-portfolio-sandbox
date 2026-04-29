@@ -888,7 +888,26 @@ body {
   .gallery-wrap { padding: 20px 20px 48px; }
   .gallery-grid { columns: 2; }
   .results-bar { padding: 10px 20px; }
-  /* FOOTER MOBILE */
+  
+  /*Contact Page mid width */
+  .contact-wrap { padding: 40px 20px; }
+  .contact-title { font-size: 28px; }
+  .contact-cols { 
+    flex-direction: column; 
+    height: auto; 
+    width: 100%;
+    align-items: center;  }
+  .contact-methods {
+    width: 100%;
+    flex: 0 0 auto;
+  }
+  .contact-img { 
+    width: 60%; 
+    height: auto;
+    max-height: none;
+  }
+  
+/* FOOTER MOBILE */
   .footer { 
     padding: 0 20px; 
   }
