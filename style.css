@@ -276,7 +276,7 @@ body {
 .footer-legal-link:hover { color: var(--muted); }
 
 
-/* ── FILTER BAR (portfolio page) ── */
+/* ── FILTER BAR (gallery page) ── */
 .filter-wrap {
   background: var(--bg);
   border-bottom: 1px solid var(--border);
