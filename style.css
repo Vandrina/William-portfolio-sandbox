@@ -884,7 +884,7 @@ body {
   body {
     padding-top: 72px;
   }
-  .nav { padding: 18 20px; }
+  .nav { padding: 18px 20px; }
   .nav-links .nav-item { display: none; }
   .nav-hamburger { display: flex; }
   .page-head { padding: 24px 20px 20px; }
