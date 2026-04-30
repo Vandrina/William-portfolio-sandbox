@@ -416,33 +416,20 @@
     });
     if (currentRow.length) rows.push(currentRow);
  
-    // Step 2: lookahead — for each row, scan up to 6 items ahead across subsequent rows to find one that pulls the row height into range
+    // Step 2: post-process — pull first item from next row if it improves fill and keeps rowHeight within the clamped range
     var minH = 230, maxH = 250;
     for (var r = 0; r < rows.length - 1; r++) {
       var row = rows[r];
-      var gaps = (row.length - 1) * gap;
-      var natW = row.reduce(function(s, x) { return s + x.naturalWidth; }, 0);
-      var currentH = Math.floor(targetHeight * (containerWidth - gaps) / natW);
-      if (currentH <= maxH) continue;
- 
-      var pool = [];
-      for (var rr = r + 1; rr < rows.length && pool.length < 6; rr++) {
-        for (var ii = 0; ii < rows[rr].length && pool.length < 6; ii++) {
-          pool.push({ rIdx: rr, iIdx: ii, item: rows[rr][ii] });
-        }
-      }
- 
-      for (var p = 0; p < pool.length; p++) {
-        var ref = pool[p];
-        var newGaps = gaps + gap;
-        var newNatW = natW + ref.item.naturalWidth;
-        var newH = Math.floor(targetHeight * (containerWidth - newGaps) / newNatW);
-        if (newH >= minH && newH <= maxH) {
-          rows[ref.rIdx].splice(ref.iIdx, 1);
-          if (rows[ref.rIdx].length === 0) rows.splice(ref.rIdx, 1);
-          row.push(ref.item);
-          break;
-        }
+      var next = rows[r + 1];
+      if (!next || !next.length) continue;
+      var gaps    = (row.length - 1) * gap;
+      var natW    = row.reduce(function(s, x) { return s + x.naturalWidth; }, 0);
+      var newGaps = gaps + gap;
+      var newNatW = natW + next[0].naturalWidth;
+      var newH    = Math.floor(targetHeight * (containerWidth - newGaps) / newNatW);
+      if (newH >= minH && newH <= maxH) {
+        row.push(next.shift());
+        if (next.length === 0) rows.splice(r + 1, 1);
       }
     }
 
