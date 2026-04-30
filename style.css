@@ -103,7 +103,11 @@ body {
   transition: color 0.2s, background 0.2s;
 }
 .nav-item:hover { color: var(--text); background: var(--bg-2); }
-.nav-item.active { color: var(--bright); background: var(--bg-3); }
+.nav-item.active { 
+  text-decoration: underline;
+  text-decoration-color: var(--accent-dim);
+  text-underline-offset: 4px;; 
+}
 .nav-shop {
   margin-left: 10px;
   padding: 7px 15px;
@@ -244,11 +248,12 @@ body {
 }
 .sec-title {
   font-family: var(--font-head);
-  font-size: 26px;
-  font-weight: 700;
-  color: var(--bright);
+  font-size: 23px;
+  font-weight: 600;
+  color: var(--mid);
   letter-spacing: -0.02em;
   margin-bottom: 24px;
+  text-align: center;
 }
 @media (max-width: 768px) {
   .section { padding: 36px 20px; }
