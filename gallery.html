@@ -408,7 +408,7 @@
 
     items.forEach(function(el) {
       var ratio = parseFloat(el.dataset.ratio) || 1;
-      var naturalWidth = ratio * targetHeight;
+      var naturalWidth = Math.min(ratio * targetHeight, containerWidth * 0.45);
       var gapBefore = currentRow.length > 0 ? gap : 0;
 
       if (currentRow.length > 0 && currentRowNaturalWidth + gapBefore + naturalWidth > containerWidth) {
