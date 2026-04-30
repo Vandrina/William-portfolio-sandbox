@@ -131,7 +131,7 @@ body {
   }
   .nav { 
     padding: 18px 20px; 
-    height: var(--nav-heigh-tablet);}
+    height: var(--nav-height-tablet);}
   .nav-links .nav-item { display: none; }
   .nav-hamburger { display: flex; }
 }
@@ -600,7 +600,10 @@ body {
 @media (max-width: 768px) {
 .results-bar { padding: 10px 20px; }
 }
-/* ── GALLERY GRID ── */
+
+
+/* TESTING ROW LAYOUT INLINE
+/* ── GALLERY GRID - COLUMNS ── 
 .gallery-wrap { padding: 28px 32px 64px; }
 .gallery-inner { max-width: var(--max); margin: 0 auto; }
 .gallery-grid { columns: 4; column-gap: 12px; }
@@ -671,6 +674,40 @@ body {
 @media (max-width: 480px) {
   .gallery-grid { columns: 1; }
 }
+END OF GALLERY FOR INLINE TESTING */
+
+/* Blur-up: visible blurry state first, then sharpens */
+  .gal-item img {
+    display: block; width: 100%; height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .gal-item img.placeholder {
+    opacity: 1;
+    filter: none;
+    transform: none;
+  }
+  .gal-item img.loading {
+    opacity: 1;
+    filter: blur(10px);
+    transform: scale(1.02);
+    transition: filter 0.6s ease, transform 0.6s ease, opacity 0.2s ease;
+  }
+  .gal-item img.loaded {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+  }
+
+/* HOVER: Shine effect */
+  .gal-item::after {
+    content: ''; position: absolute; top: 0; left: -100%;
+    width: 60%; height: 100%;
+    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.04) 30%, rgba(255,255,255,0.10) 50%, rgba(255,255,255,0.04) 70%, transparent 100%);
+    transform: skewX(-20deg); z-index: 4; pointer-events: none; transition: left 0s;
+  }
+  .gal-item:hover::after { left: 150%; transition: left 0.5s ease; }
+
 
 /* ── LIGHTBOX ── */
 .lightbox {
