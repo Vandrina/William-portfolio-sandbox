@@ -137,3 +137,23 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+images/2d-animation/001. 2D Reel_sm.mov
+images/2d-animation/001. 2D Reel_sm.mov
+images/2d-animation/002. AdAgency.OxygenNetwork.SPE-Screening-1.mp4
+images/2d-animation/003. AdAgency.OxygenNetwork.SPE-Selecting-1.mp4
+images/2d-animation/004. AdAgency.OxygenNetwork.SPE-Interviewing-1.mp4
+images/2d-animation/005. FootballGuysRunCycles_Portfolio.mp4
+images/2d-animation/006. Splainers.HUC001_MAIN_1.2.mp4
+images/2d-animation/007. Microsoft.astral_all_horiz_480.mov
+images/2d-animation/009. Microsoft.metal_all_horiz_480.mov
+images/2d-animation/010. Microsoft.energy_all_horiz_480.mov
+images/2d-animation/011. Microsoft.water_all_horiz_480.mov
+images/2d-animation/012. Microsoft.earth_all_horiz_480.mov
+images/2d-animation/013. Microsoft.fire_all_horiz_480.mov
+images/2d-animation/014. Microsoft.wood_all_horiz_480.mov
+images/2d-animation/015. Microsoft.air_all_horiz_480.mov
+.gitignore
+images/3d-animation/001. 3D Reel_sm.mov
+images/3d-animation/002. smashrun.mov
+images/3d-animation/003. rockfall.mov
+images/3d-animation/004. ElevatedGames.Trailer_KaijuKombat.mp4
