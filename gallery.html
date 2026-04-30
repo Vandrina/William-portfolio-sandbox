@@ -398,37 +398,19 @@
     var currentRow = [];
     var currentRowNaturalWidth = 0;
 
-    var queue = items.map(function(el) {
+    items.forEach(function(el) {
       var ratio = parseFloat(el.dataset.ratio) || 1;
-      return { el: el, ratio: ratio, naturalWidth: ratio * targetHeight };
-    });
- 
-    var i = 0;
-    while (i < queue.length) {
-      var item = queue[i];
-      var fits = currentRow.length === 0 || currentRowNaturalWidth + gap + item.naturalWidth <= containerWidth;
- 
-      if (!fits) {
-        // Scan up to 6 ahead for something that fills the remaining gap
-        var remaining = containerWidth - currentRowNaturalWidth - gap;
-        for (var j = i + 1; j <= Math.min(i + 8, queue.length - 1); j++) {
-          if (queue[j].naturalWidth <= remaining) {
-            var pulled = queue.splice(j, 1)[0];
-            currentRow.push(pulled);
-            currentRowNaturalWidth += gap + pulled.naturalWidth;
-            break;
-          }
-        }
-        // Commit row; item at i starts the next one
+      var naturalWidth = ratio * targetHeight;
+      var gapBefore = currentRow.length > 0 ? gap : 0;
+
+      if (currentRow.length > 0 && currentRowNaturalWidth + gapBefore + naturalWidth > containerWidth) {
         rows.push(currentRow);
         currentRow = [];
         currentRowNaturalWidth = 0;
-      } else {
-        currentRow.push(item);
-        currentRowNaturalWidth += currentRow.length > 1 ? gap + item.naturalWidth : item.naturalWidth;
-        i++;
       }
-    }
+      currentRow.push({ el: el, ratio: ratio, naturalWidth: naturalWidth });
+      currentRowNaturalWidth += (currentRow.length > 1 ? gap : 0) + naturalWidth;
+    });
     if (currentRow.length) rows.push(currentRow);
 
     rows.forEach(function(row, rowIndex) {
