@@ -73,8 +73,8 @@
   .gal-item::after {
     content: ''; position: absolute; top: 0; left: -100%;
     width: 60%; height: 100%;
-    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.03) 30%, rgba(255,255,255,0.07) 50%, rgba(255,255,255,0.03) 70%, transparent 100%);
-    transform: skewX(-20deg); z-index: 3; pointer-events: none; transition: left 0s;
+    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.04) 30%, rgba(255,255,255,0.10) 50%, rgba(255,255,255,0.04) 70%, transparent 100%);
+    transform: skewX(-20deg); z-index: 4; pointer-events: none; transition: left 0s;
   }
   .gal-item:hover::after { left: 150%; transition: left 0.5s ease; }
 
@@ -193,12 +193,12 @@
           <button class="filter-btn" data-type="discipline" data-value="illustration">Illustration</button>
           <button class="filter-btn" data-type="discipline" data-value="concept-art">Concept Art</button>
           <button class="filter-btn" data-type="discipline" data-value="toy-design">Toy Design</button>
-          <button class="filter-btn" data-type="discipline" data-value="backgrounds">Backgrounds</button>
-          <button class="filter-btn" data-type="discipline" data-value="books">Books</button>
-          <button class="filter-btn" data-type="discipline" data-value="nfts">NFTs</button>
+          <button class="filter-btn" data-type="discipline" data-value="backgrounds">Background</button>
+          <button class="filter-btn" data-type="discipline" data-value="books">Book</button>
+          <button class="filter-btn" data-type="discipline" data-value="nfts">NFT</button>
         </div>
         <div class="filter-group">
-          <span class="filter-group-label">Client</span>
+          <span class="filter-group-label">Clients</span>
           <button class="filter-btn" data-type="client" data-value="microsoft">Microsoft</button>
           <button class="filter-btn" data-type="client" data-value="amazon">Amazon</button>
           <button class="filter-btn" data-type="client" data-value="big-fish">Big Fish</button>
@@ -383,7 +383,7 @@
       var el = document.createElement('div');
       el.className = 'gal-item';
       el.dataset.index      = index;
-      el.dataset.discipline = item.discipline;
+      el.dataset.discipline = (item.discipline || []).join(',');
       el.dataset.clients    = (item.clients || []).join(',');
       el.dataset.full       = item.file;
       if (item.thumbWidth && item.thumbHeight) {
@@ -394,13 +394,14 @@
 
       var thumbSrc       = item.thumbnail || item.file.replace(/^images\//, 'thumbnails/');
       var placeholderSrc = item.placeholder || '';
-      var clientLabel = (item.clients || []).map(formatLabel).join(', ');
+      var disciplineLabel = (item.discipline || []).map(formatLabel).join(' · ');
+      var clientLabel = (item.clients || []).map(formatLabel).join(' · ');
 
       el.innerHTML =
         '<img' + (placeholderSrc ? ' src="' + placeholderSrc + '" class="placeholder"' : '') +
-        ' data-src="' + thumbSrc + '" width="' + (item.thumbWidth || 1) + '" height="' + (item.thumbHeight || 1) + '" alt="' + formatLabel(item.discipline) + (clientLabel ? ' — ' + clientLabel : '') + '">' +
+        ' data-src="' + thumbSrc + '" width="' + (item.thumbWidth || 1) + '" height="' + (item.thumbHeight || 1) + '" alt="' + discliplineLabel + (clientLabel ? ' — ' + clientLabel : '') + '">' +
         '<div class="gal-overlay">' +
-          '<div class="gal-overlay-discipline">' + formatLabel(item.discipline) + '</div>' +
+          '<div class="gal-overlay-discipline">' + disciplineLabel + '</div>' +
           (clientLabel ? '<div class="gal-overlay-client">' + clientLabel + '</div>' : '') +
         '</div>';
 
@@ -425,7 +426,7 @@
     items.forEach(function(el) {
       var index       = parseInt(el.dataset.index);
       var item        = manifest[index];
-      var itemDisc    = item.discipline;
+      var itemDiscs    = item.discipline || [];
       var itemClients = item.clients || [];
       var show;
 
@@ -434,12 +435,24 @@
       } else if (sameTypeConflict) {
         show = false;
       } else if (filterLogic === 'or') {
-        var dHit = selDisc.length > 0   && selDisc.indexOf(itemDisc) !== -1;
-        var cHit = selClient.length > 0 && itemClients.some(function(c) { return selClient.indexOf(c) !== -1; });
+        // Check if ANY selected discipline matches ANY of this item's disciplines
+        var dHit = selDisc.length > 0 && itemDiscs.some(function(d) { 
+          return selDisc.indexOf(d) !== -1; 
+        });
+        // Check if ANY selected client matches ANY of this item's clients  
+        var cHit = selClient.length > 0 && itemClients.some(function(c) { 
+          return selClient.indexOf(c) !== -1; 
+        });
         show = dHit || cHit;
       } else {
-        var dOk = selDisc.length === 0   || selDisc.indexOf(itemDisc) !== -1;
-        var cOk = selClient.length === 0  || itemClients.some(function(c) { return selClient.indexOf(c) !== -1; });
+        // In AND mode: item must have at least one matching discipline (if any selected)
+        // and at least one matching client (if any selected)
+        var dOk = selDisc.length === 0 || itemDiscs.some(function(d) { 
+          return selDisc.indexOf(d) !== -1; 
+        });
+        var cOk = selClient.length === 0 || itemClients.some(function(c) { 
+          return selClient.indexOf(c) !== -1; 
+        });
         show = dOk && cOk;
       }
 
@@ -558,9 +571,9 @@
     var item  = manifest[index];
     var el    = grid.querySelector('.gal-item[data-index="'+index+'"]');
     lightboxImg.src = el ? el.dataset.full : item.file;
-    lightboxImg.alt = formatLabel(item.discipline);
-    lightboxDiscipline.textContent = formatLabel(item.discipline);
-    lightboxClient.textContent = (item.clients||[]).map(formatLabel).join(', ');
+    lightboxImg.alt = (item.discipline || []).map(formatLabel).join(' · ');
+lightboxDiscipline.textContent = (item.discipline || []).map(formatLabel).join(' · ');
+    lightboxClient.textContent = (item.clients||[]).map(formatLabel).join(' · ');
   }
 
   function closeLightbox() {
