@@ -387,6 +387,7 @@
       el.dataset.discipline = (item.discipline || []).join(',');
       el.dataset.clients    = (item.clients || []).join(',');
       el.dataset.full       = item.file;
+      var ratio = 1; // fallback: square
       if (item.thumbWidth && item.thumbHeight) {
         ratio = item.thumbWidth / item.thumbHeight;
       } else if (item.thumbAspectRatio || item.aspectRatio) {
@@ -394,7 +395,6 @@
         ratio = parts.length === 2 ? parseFloat(parts[0]) / parseFloat(parts[1]) : parseFloat(parts[0]);
       }
       el.style.flexBasis = Math.round(ratio * 280) + 'px';
-
       var thumbSrc       = item.thumbnail || item.file.replace(/^images\//, 'thumbnails/');
       var placeholderSrc = item.placeholder || '';
       var disciplineLabel = (item.discipline || []).map(formatLabel).join(' · ');
