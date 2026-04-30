@@ -390,7 +390,7 @@
     if (!containerWidth) return;
     var gap = 12;
     // Read target height from CSS custom property set by media queries, fallback 280
-    var targetHeight = parseInt(getComputedStyle(grid).getPropertyValue('--row-target')) || 280;
+    var targetHeight = parseInt(getComputedStyle(grid).getPropertyValue('--row-target')) || 200;
     var items = Array.from(grid.querySelectorAll('.gal-item:not(.hidden)'));
     if (!items.length) return;
 
@@ -426,7 +426,7 @@
         rowHeight = Math.floor(targetHeight * (containerWidth - totalGaps) / totalNaturalWidth);
       }
 
-      if (row.length === 1) rowHeight = Math.min(rowHeight, 300);
+      Math.min(rowHeight, 300);
 
       row.forEach(function(item) {
         item.el.style.width  = Math.floor(item.ratio * rowHeight) + 'px';
