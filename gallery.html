@@ -13,7 +13,11 @@
   .gallery-wrap { padding: 28px 32px 64px; }
   .gallery-inner { max-width: var(--max); margin: 0 auto; }
   .gallery-grid {
-    display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-start; justify-content: center;
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 12px; align-items: 
+    flex-start; 
+    justify-content: center;
   }
   .gal-item {
     flex-shrink: 0; flex-grow: 0;
@@ -408,7 +412,7 @@
 
     items.forEach(function(el) {
       var ratio = parseFloat(el.dataset.ratio) || 1;
-      var naturalWidth = Math.min(ratio * targetHeight, containerWidth * 0.45);
+      var naturalWidth = ratio * targetHeight;
       var gapBefore = currentRow.length > 0 ? gap : 0;
 
       if (currentRow.length > 0 && currentRowNaturalWidth + gapBefore + naturalWidth > containerWidth) {
