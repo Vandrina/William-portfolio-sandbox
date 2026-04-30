@@ -193,7 +193,7 @@
           <button class="filter-btn" data-type="discipline" data-value="illustration">Illustration</button>
           <button class="filter-btn" data-type="discipline" data-value="concept-art">Concept Art</button>
           <button class="filter-btn" data-type="discipline" data-value="toy-design">Toy Design</button>
-          <button class="filter-btn" data-type="discipline" data-value="background">Background</button>
+          <button class="filter-btn" data-type="discipline" data-value="backgrounds">Background</button>
           <button class="filter-btn" data-type="discipline" data-value="books">Book</button>
           <button class="filter-btn" data-type="discipline" data-value="nfts">NFT</button>
         </div>
@@ -594,9 +594,24 @@ lightboxDiscipline.textContent = (item.discipline || []).map(formatLabel).join('
   });
 
   function formatLabel(slug) {
-    if (!slug) return '';
-    return slug.split('-').map(function(w) { return w.charAt(0).toUpperCase()+w.slice(1); }).join(' ');
-  }
+  if (!slug) return '';
+  
+  // Singular label mappings + special cases
+  var labelMap = {
+    'backgrounds': 'Background',
+    'books': 'Book',
+    'nfts': 'NFT',
+    'nft': 'NFT'
+  };
+  
+  // Check if we have a custom mapping
+  if (labelMap[slug]) return labelMap[slug];
+  
+  // Otherwise, capitalize normally (for illustration, concept-art, etc.)
+  return slug.split('-').map(function(w) { 
+    return w.charAt(0).toUpperCase() + w.slice(1); 
+  }).join(' ');
+}
 })();
 </script>
 </body>
