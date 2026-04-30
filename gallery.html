@@ -411,7 +411,7 @@
       if (!fits) {
         // Scan up to 6 ahead for something that fills the remaining gap
         var remaining = containerWidth - currentRowNaturalWidth - gap;
-        for (var j = i + 1; j <= Math.min(i + 6, queue.length - 1); j++) {
+        for (var j = i + 1; j <= Math.min(i + 8, queue.length - 1); j++) {
           if (queue[j].naturalWidth <= remaining) {
             var pulled = queue.splice(j, 1)[0];
             currentRow.push(pulled);
