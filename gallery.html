@@ -398,19 +398,52 @@
     var currentRow = [];
     var currentRowNaturalWidth = 0;
 
-    items.forEach(function(el) {
+    var queue = items.map(function(el) {
       var ratio = parseFloat(el.dataset.ratio) || 1;
-      var naturalWidth = ratio * targetHeight;
+      return { el: el, ratio: ratio, naturalWidth: ratio * targetHeight };
+    });
+ 
+    var lookahead = 5; // how many items ahead to scan for a better fit
+    var i = 0;
+    while (i < queue.length) {
+      var item = queue[i];
       var gapBefore = currentRow.length > 0 ? gap : 0;
-
-      if (currentRow.length > 0 && currentRowNaturalWidth + gapBefore + naturalWidth > containerWidth) {
+      var wouldFit = currentRowNaturalWidth + gapBefore + item.naturalWidth <= containerWidth;
+ 
+      if (!wouldFit && currentRow.length > 0) {
+        // Scan ahead for a better-fitting item
+        var remaining = containerWidth - currentRowNaturalWidth - gap;
+        var swapped = false;
+        for (var j = i + 1; j < Math.min(i + lookahead + 1, queue.length); j++) {
+          if (queue[j].naturalWidth <= remaining) {
+            // This one fits — swap it into the current row
+            var fit = queue.splice(j, 1)[0];
+            currentRow.push(fit);
+            currentRowNaturalWidth += gap + fit.naturalWidth;
+            swapped = true;
+            break;
+          }
+        }
+        if (!swapped) {
+          // Nothing fits — commit the row and start fresh
+          rows.push(currentRow);
+          currentRow = [];
+          currentRowNaturalWidth = 0;
+          continue; // don't advance i — re-evaluate current item for new row
+        }
+      } else {
+        currentRow.push(item);
+        currentRowNaturalWidth += (currentRow.length > 1 ? gap : 0) + item.naturalWidth;
+        i++;
+      }
+ 
+      // Commit row if it's now full enough
+      if (currentRowNaturalWidth >= containerWidth * 0.92) {
         rows.push(currentRow);
         currentRow = [];
         currentRowNaturalWidth = 0;
       }
-      currentRow.push({ el: el, ratio: ratio, naturalWidth: naturalWidth });
-      currentRowNaturalWidth += (currentRow.length > 1 ? gap : 0) + naturalWidth;
-    });
+    }
     if (currentRow.length) rows.push(currentRow);
 
     rows.forEach(function(row, rowIndex) {
