@@ -58,10 +58,11 @@
 
   .gallery-wrap { padding: 28px 32px 64px; }
   .gallery-inner { max-width: var(--max); margin: 0 auto; }
-  .gallery-grid {display: flex; flex-wrap: wrap; gap: 12px;}
-
+  .gallery-grid {
+    display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-start;
+  }
   .gal-item {
-    flex-grow: 1; flex-shrink: 0; min-width: 150px;
+    flex-shrink: 0; flex-grow: 0;
     border-radius: var(--radius); overflow: hidden;
     border: 1px solid var(--border); position: relative; cursor: pointer;
     background: var(--surface);
@@ -81,7 +82,7 @@
 
   /* Blur-up: visible blurry state first, then sharpens */
   .gal-item img {
-    display: block; width: 100%; height: auto;
+    display: block; width: 100%; height: 100%;
     opacity: 0;
     transition: opacity 0.3s ease;
   }
@@ -131,11 +132,11 @@
   .lightbox-prev { left: 24px; }
   .lightbox-next { right: 24px; }
 
-  @media (max-width: 1024px) { .gal-item { min-width: 180px; } }
+  @media (max-width: 1024px) { .gallery-grid { --row-target: 220px; } }
   @media (max-width: 768px) {
     .filter-wrap { padding: 14px 20px; }
     .gallery-wrap { padding: 20px 20px 48px; }
-    .gal-item { min-width: 220px; }
+    .gallery-grid { --row-target: 160px; }
     .results-bar { padding: 10px 20px; }
     .filter-mobile-toggle { display: flex; }
     .filter-groups { display: none; }
@@ -143,7 +144,7 @@
     .filter-groups { grid-template-columns: 1fr; }
     .filter-all-wrap { flex-direction: row; border-left: none; border-top: 1px solid var(--border); padding-left: 0; padding-top: 10px; justify-content: flex-start; }
   }
-  @media (max-width: 480px) { .gal-item { min-width: 100%; } }
+  @media (max-width: 480px) { .gallery-grid { --row-target: 120px; } }
 </style>
 </head>
 <body>
@@ -387,14 +388,15 @@
       el.dataset.discipline = (item.discipline || []).join(',');
       el.dataset.clients    = (item.clients || []).join(',');
       el.dataset.full       = item.file;
-      var ratio = 1; // fallback: square
+      var ratio = 1;
       if (item.thumbWidth && item.thumbHeight) {
         ratio = item.thumbWidth / item.thumbHeight;
       } else if (item.thumbAspectRatio || item.aspectRatio) {
         var parts = (item.thumbAspectRatio || item.aspectRatio).toString().split('/');
         ratio = parts.length === 2 ? parseFloat(parts[0]) / parseFloat(parts[1]) : parseFloat(parts[0]);
       }
-      el.style.flexBasis = Math.round(ratio * 280) + 'px';
+      el.dataset.ratio = ratio.toFixed(6);
+
       var thumbSrc       = item.thumbnail || item.file.replace(/^images\//, 'thumbnails/');
       var placeholderSrc = item.placeholder || '';
       var disciplineLabel = (item.discipline || []).map(formatLabel).join(' · ');
@@ -478,7 +480,62 @@
     emptyState.classList.toggle('visible', visibleItems.length === 0 && !noFilters);
     updateActiveSummary();
     updateUrl();
+    justifiedLayout();
   }
+
+  function justifiedLayout() {
+    var containerWidth = grid.clientWidth;
+    if (!containerWidth) return;
+    var gap = 12;
+    // Read target height from CSS custom property set by media queries, fallback 280
+    var targetHeight = parseInt(getComputedStyle(grid).getPropertyValue('--row-target')) || 280;
+    var items = Array.from(grid.querySelectorAll('.gal-item:not(.hidden)'));
+    if (!items.length) return;
+
+    var rows = [];
+    var currentRow = [];
+    var currentRowNaturalWidth = 0;
+
+    items.forEach(function(el) {
+      var ratio = parseFloat(el.dataset.ratio) || 1;
+      var naturalWidth = ratio * targetHeight;
+      var gapBefore = currentRow.length > 0 ? gap : 0;
+
+      if (currentRow.length > 0 && currentRowNaturalWidth + gapBefore + naturalWidth > containerWidth) {
+        rows.push(currentRow);
+        currentRow = [];
+        currentRowNaturalWidth = 0;
+      }
+      currentRow.push({ el: el, ratio: ratio, naturalWidth: naturalWidth });
+      currentRowNaturalWidth += (currentRow.length > 1 ? gap : 0) + naturalWidth;
+    });
+    if (currentRow.length) rows.push(currentRow);
+
+    rows.forEach(function(row, rowIndex) {
+      var isLastRow = rowIndex === rows.length - 1;
+      var totalGaps = (row.length - 1) * gap;
+      var totalNaturalWidth = row.reduce(function(sum, item) { return sum + item.naturalWidth; }, 0);
+      var rowHeight;
+
+      if (isLastRow && totalNaturalWidth + totalGaps < containerWidth * 0.65) {
+        // Short last row — don't stretch; keep target height
+        rowHeight = targetHeight;
+      } else {
+        rowHeight = Math.floor(targetHeight * (containerWidth - totalGaps) / totalNaturalWidth);
+      }
+
+      row.forEach(function(item) {
+        item.el.style.width  = Math.floor(item.ratio * rowHeight) + 'px';
+        item.el.style.height = rowHeight + 'px';
+      });
+    });
+  }
+
+  var resizeTimer;
+  window.addEventListener('resize', function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(justifiedLayout, 120);
+  });
 
   document.querySelectorAll('.filter-btn').forEach(function(btn) {
     btn.addEventListener('click', function() {
