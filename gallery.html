@@ -426,7 +426,7 @@
         rowHeight = Math.floor(targetHeight * (containerWidth - totalGaps) / totalNaturalWidth);
       }
 
-      Math.min(rowHeight, 300);
+      if (row.length === 1) rowHeight = Math.min(rowHeight, 300);
 
       row.forEach(function(item) {
         item.el.style.width  = Math.floor(item.ratio * rowHeight) + 'px';
