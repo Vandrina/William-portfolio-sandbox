@@ -118,24 +118,6 @@ body {
 }
 .nav-shop:hover { border-color: var(--accent); color: var(--accent-light); }
 
-@media (max-width: 768px) {
-  .nav-wrap {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-  }
-  body {
-    padding-top: var(--nav-height-tablet);
-  }
-  .nav { 
-    padding: 18px 20px; 
-    height: var(--nav-height-tablet);}
-  .nav-links .nav-item { display: none; }
-  .nav-hamburger { display: flex; }
-}
-
 /* ── HAMBURGER NAV ── */
 .nav-hamburger {
   display: none;
@@ -187,6 +169,26 @@ body {
 .nav-mobile-menu a:hover,
 .nav-mobile-menu a.active { color: var(--bright); }
 .nav-mobile-menu a.shop { color: var(--accent); }
+
+@media (max-width: 768px) {
+  .nav-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+  body {
+    padding-top: var(--nav-height-tablet);
+  }
+  .nav { 
+    padding: 18px 20px; 
+    height: var(--nav-height-tablet);}
+  .nav-links .nav-item { display: none; }
+  .nav-hamburger { display: flex; }
+}
+
+
 
 /* ── PAGE HEADER ── */
 .page-head {
