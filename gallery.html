@@ -59,7 +59,7 @@
   .gallery-wrap { padding: 28px 32px 64px; }
   .gallery-inner { max-width: var(--max); margin: 0 auto; }
   .gallery-grid {
-    display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-start;
+    display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-start; 
   }
   .gal-item {
     flex-shrink: 0; flex-grow: 0;
@@ -523,6 +523,8 @@
       } else {
         rowHeight = Math.floor(targetHeight * (containerWidth - totalGaps) / totalNaturalWidth);
       }
+
+      rowHeight = Math.min(rowHeight, 300);
 
       row.forEach(function(item) {
         item.el.style.width  = Math.floor(item.ratio * rowHeight) + 'px';
