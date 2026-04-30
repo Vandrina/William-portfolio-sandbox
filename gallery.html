@@ -265,10 +265,18 @@
     .then(function(r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
     .then(function(data) {
       manifest = data;
-      /* Display order:
+      
+      // Display order 
       // manifest.sort(function() { return Math.random() - 0.5; });
       // manifest.sort(function(a,b) { return (a.sort||999)-(b.sort||999); });
-      */
+      manifest.sort(function(a, b) {
+        var sortDiff = (a.sort || 999) - (b.sort || 999);
+        if (sortDiff !== 0) return sortDiff;
+        var aName = (a.file || '').split('/').pop();
+        var bName = (b.file || '').split('/').pop();
+        return aName.localeCompare(bName);
+      });
+      
       totalCount.textContent = manifest.length;
       buildGallery(true);
       readUrlParams();
