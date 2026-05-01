@@ -664,9 +664,6 @@ body {
     max-width: 75%;
     margin: 0 auto;
   }
-  .client-card { 
-    flex: 0 1 100%;
-   }
 }
 
 
