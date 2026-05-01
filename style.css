@@ -1019,7 +1019,7 @@ END OF GALLERY FOR INLINE TESTING */
 /* ── CLIENT CARDS ── */
 .client-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   justify-content: center;
   max-width: 960px; margin: 0 auto;
@@ -1029,7 +1029,7 @@ END OF GALLERY FOR INLINE TESTING */
   overflow: hidden;
   border: 1px solid var(--border);
   position: relative;
-  aspect-ratio: 330/168;
+  aspect-ratio: 330/200;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
