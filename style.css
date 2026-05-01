@@ -665,7 +665,7 @@ body {
     margin: 0 auto;
   }
   .client-card {
-    min-width: 45%;
+    min-width: 0 0 45%;
   }
 }
 
