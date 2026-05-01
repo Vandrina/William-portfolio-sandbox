@@ -660,10 +660,14 @@ body {
 }
 
 @media (max-width: 480px) {
-  .client-grid { 
+  .client-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     max-width: 86%;
     margin: 0 auto;
   }
+}
+
   .client-card {
     min-width: 0 0 45%;
   }
