@@ -12,49 +12,7 @@
   .sec-title {
     margin-bottom: 0;
   }
-
-  /* Row Gallery Style */
-  .gallery-wrap { padding: 28px 32px 64px; }
-  .gallery-inner { max-width: var(--max); margin: 0 auto; }
-  .gallery-grid {
-    display: flex; 
-    flex-wrap: wrap; 
-    gap: 12px; align-items: 
-    flex-start; 
-    justify-content: center;
-  }
-  .gal-item {
-    flex-shrink: 0; flex-grow: 0;
-    border-radius: var(--radius); overflow: hidden;
-    border: 1px solid var(--border); position: relative; cursor: pointer;
-    background: var(--surface);
-    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
-  }
-  .gal-item:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.45); border-color: var(--border-mid); }
-  .gal-item.hidden { display: none; }
-
-
-  .gal-overlay {
-    position: absolute; inset: 0; z-index: 2;
-    background: linear-gradient(to top, rgba(10,10,12,0.88) 0%, rgba(10,10,12,0.2) 50%, transparent 100%);
-    opacity: 0; transition: opacity 0.2s ease;
-    display: flex; flex-direction: column; justify-content: flex-end; padding: 14px;
-  }
-  .gal-item:hover .gal-overlay { opacity: 1; }
-  .gal-overlay-discipline { font-family: var(--font-mono); font-size: 9px; color: var(--accent); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 3px; }
-  .gal-overlay-client { font-family: var(--font-head); font-size: 13px; font-weight: 600; color: var(--bright); }
-
-  .gallery-empty { display: none; padding: 80px 32px; text-align: center; }
-  .gallery-empty.visible { display: block; }
-  .gallery-empty-title { font-family: var(--font-head); font-size: 18px; font-weight: 600; color: var(--mid); margin-bottom: 8px; }
-  .gallery-empty-desc { font-family: var(--font-body); font-size: 13px; color: var(--muted); }
-
-  @media (max-width: 1024px) { .gallery-grid { --row-target: 220px; } }
-  @media (max-width: 768px) {
-    .gallery-wrap { padding: 20px 20px 48px; }
-    .gallery-grid { --row-target: 160px; }
-  }
-  @media (max-width: 480px) { .gallery-grid { --row-target: 120px; } }
+  
 </style>
 </head>
 <body>
