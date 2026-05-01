@@ -293,7 +293,7 @@
         var aPrefix = parseInt((a.file || '').split('/').pop().substring(0, 3)) || 999;
         var bPrefix = parseInt((b.file || '').split('/').pop().substring(0, 3)) || 999;
         if (aPrefix !== bPrefix) return aPrefix - bPrefix;
-        var disciplineOrder = { 'concept-art': 1, 'illustration': 2, 'toy-design': 3, 'toy-design': 4, 'nfts': 5, 'backgrounds' 6, 'books'};
+        var disciplineOrder = { 'concept-art': 1, 'illustration': 2, 'toy-design': 3, 'toy-design': 4, 'nfts': 5, 'backgrounds': 6, 'books': 7 };
         var aD = disciplineOrder[a.type] || 99;
         var bD = disciplineOrder[b.type] || 99;
         return aD - bD;
