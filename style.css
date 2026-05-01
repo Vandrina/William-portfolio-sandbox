@@ -671,7 +671,6 @@ body {
   .client-card {
     min-width: 0 0 45%;
   }
-}
 
 
 .disc-card::after, .client-card::after {
