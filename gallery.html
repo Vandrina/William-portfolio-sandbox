@@ -276,12 +276,27 @@
       // Display order 
       // manifest.sort(function() { return Math.random() - 0.5; });
       // manifest.sort(function(a,b) { return (a.sort||999)-(b.sort||999); });
+      /* manifest sort by sort and name
       manifest.sort(function(a, b) {
         var sortDiff = (a.sort || 999) - (b.sort || 999);
         if (sortDiff !== 0) return sortDiff;
         var aName = (a.file || '').split('/').pop();
         var bName = (b.file || '').split('/').pop();
         return aName.localeCompare(bName);
+      });
+      */
+      // manifest by weight, first three of name, then category
+      
+      manifest.sort(function(a, b) {
+        var sortDiff = (a.sort || 999) - (b.sort || 999);
+        if (sortDiff !== 0) return sortDiff;
+        var aPrefix = parseInt((a.file || '').split('/').pop().substring(0, 3)) || 999;
+        var bPrefix = parseInt((b.file || '').split('/').pop().substring(0, 3)) || 999;
+        if (aPrefix !== bPrefix) return aPrefix - bPrefix;
+        var disciplineOrder = { 'concept-art': 1, 'illustration': 2, 'toy-design': 3, 'toy-design': 4, 'nfts': 5, 'backgrounds' 6, 'books'};
+        var aD = disciplineOrder[a.type] || 99;
+        var bD = disciplineOrder[b.type] || 99;
+        return aD - bD;
       });
       
       totalCount.textContent = manifest.length;
