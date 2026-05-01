@@ -589,7 +589,7 @@ body {
 @media (max-width: 768px) {
   .disc-grid { 
     grid-template-columns: repeat(1, 1fr); 
-    max-width: 75%;
+    max-width: 80%;
     margin: 0 auto;
   }
 }
@@ -661,7 +661,7 @@ body {
 
 @media (max-width: 480px) {
   .client-grid { 
-    max-width: 75%;
+    max-width: 80%;
     margin: 0 auto;
   }
 }
