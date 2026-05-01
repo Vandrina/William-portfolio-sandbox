@@ -664,6 +664,9 @@ body {
     max-width: 86%;
     margin: 0 auto;
   }
+  .client-card {
+    min-width: 45%;
+  }
 }
 
 
