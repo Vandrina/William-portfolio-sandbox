@@ -587,7 +587,11 @@ body {
 
 
 @media (max-width: 768px) {
-  .disc-grid { grid-template-columns: repeat(2, 1fr); }
+  .disc-grid { 
+    grid-template-columns: repeat(1, 1fr); 
+    max-width: 75%;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 480px) {
@@ -653,6 +657,16 @@ body {
   font-weight: 600;
   color: var(--bright);
   letter-spacing: -0.01em;
+}
+
+@media (max-width: 480px) {
+  .client-grid { 
+    max-width: 75%;
+    margin: 0 auto;
+  }
+  .client-card { 
+    flex: 0 1 100%;
+   }
 }
 
 
