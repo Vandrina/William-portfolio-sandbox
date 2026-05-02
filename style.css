@@ -247,7 +247,6 @@ body {
   border-bottom: 1px solid var(--border);
 }
 .section.alt-bg { background: var(--bg-2); }
-.section-inner { max-width: var(--max); margin: 0 auto; }
 .sec-eyebrow {
   font-family: var(--font-mono);
   font-size: 9px;
@@ -1167,9 +1166,8 @@ END OF GALLERY FOR INLINE TESTING */
 
 
 /* ── CONTACT PAGE ── */
-.contact-inner { max-width: 900px; margin: 0 auto; }
 
-  .contact-cols {
+.contact-cols {
     display: flex;
     flex-direction: row;
     gap: 32px;
@@ -1180,7 +1178,7 @@ END OF GALLERY FOR INLINE TESTING */
     align-items: center;
 }
 
-  .contact-methods {
+.contact-methods {
     flex: 0 0 auto;
     display: flex;
     flex-direction: column;
@@ -1189,55 +1187,56 @@ END OF GALLERY FOR INLINE TESTING */
     height: 450px;
     padding: 20px 0;
     justify-content: space-between;
-  }
-  .contact-method {
+}
+.contact-method {
     display: flex; align-items: center; justify-content: flex-start; gap: 14px;
     padding: 14px 20px; background: var(--surface);
     border: 1px solid var(--accent-dim); border-radius: var(--radius);
     text-decoration: none; width: 100%;
     transition: border-color 0.2s;
-  }
-  .contact-method:hover { 
-    background: var(--bg-3); }
+}
+.contact-method:hover { 
+    background: var(--bg-3); 
+}
 
-  .contact-method:hover .contact-method-icon img {
+.contact-method:hover .contact-method-icon img {
   opacity: 1;
 }
   
-  .contact-method-icon {
+.contact-method-icon {
     width: 42px; height: 42px; flex-shrink: 0;
     display: flex; align-items: center; justify-content: center;
     color: var(--accent); border: 1px solid var(--accent-dim);
     border-radius: 4px; font-family: var(--font-mono); font-size: 20px; font-weight: 700; position:relative;
-  }
+}
 
-  .contact-method-icon img {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
-    filter: brightness(0) saturate(100%) invert(79%) sepia(12%) saturate(1189%) hue-rotate(359deg) brightness(92%) contrast(83%);
-    position: absolute;
-    opacity: 0.7;
-    transition: opacity 0.2s;
-  }
+.contact-method-icon img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(79%) sepia(12%) saturate(1189%) hue-rotate(359deg) brightness(92%) contrast(83%);
+  position: absolute;
+   opacity: 0.7;
+  transition: opacity 0.2s;
+}
 
-  .icon-glyph {
-    font-size: 36px;
-    line-height: 5;
-    display: flex;
-   align-items: center;
-    justify-content: center;
-    padding: 0 0 7px 2px;
-  }
+.icon-glyph {
+  font-size: 36px;
+  line-height: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0 7px 2px;
+}
 
-  .contact-method-icon img + * {
+.contact-method-icon img + * {
     display: none;
-  }
+}
 
-  .contact-method-icon:has(img[src=""]) *:not(img),
-  .contact-method-icon img[alt] {
-    display: flex;
-  }
+.contact-method-icon:has(img[src=""]) *:not(img),
+.contact-method-icon img[alt] {
+  display: flex;
+}
 
   .contact-method-text { display: flex; flex-direction: column; align-items: flex-start; }
   .contact-method-label { font-family: var(--font-mono); font-size: 9px; color: var(--muted); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 3px; }
@@ -1289,7 +1288,6 @@ END OF GALLERY FOR INLINE TESTING */
 }
 
 /* ── ABOUT PAGE ── */
-  .about-inner { max-width: 820px; margin: 0 auto; }
   .about-header { text-align: center; margin-bottom: 44px; }
   .about-eyebrow { font-family: var(--font-mono); font-size: 9px; color: var(--muted); letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 10px; }
   .about-img { float: left; width: 220px; margin: 4px 36px 20px 0; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); }
@@ -1305,9 +1303,9 @@ END OF GALLERY FOR INLINE TESTING */
     .about-name { font-size: 22px; }
   }
 
-  /* --- SHOP PAGE --- */
+
+/* --- SHOP PAGE --- */
   /*also used by 404*/
-  .shop-inner { max-width: 480px; text-align: center; }
   .shop-eyebrow { font-family: var(--font-mono); font-size: 9px; color: var(--accent); letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 20px; }
   .shop-title { font-family: var(--font-head); font-size: 36px; font-weight: 700; color: var(--bright); letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 24px; }
   .shop-divider { width: 40px; height: 1px; background: var(--accent-dim); margin: 0 auto 28px; }
@@ -1316,7 +1314,6 @@ END OF GALLERY FOR INLINE TESTING */
   @media (max-width: 768px) { .shop-title { font-size: 28px; } }
 
   /* --- LEGAL: PRIVACY POLICY & TERMS OF SERVICE --- */
-  .policy-inner { max-width: 680px; margin: 0 auto; }
   .policy-eyebrow { font-family: var(--font-mono); font-size: 9px; color: var(--muted); letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 12px; }
   .policy-title { font-family: var(--font-head); font-size: 32px; font-weight: 700; color: var(--bright); letter-spacing: -0.02em; margin-bottom: 8px; }
   .policy-date { font-family: var(--font-mono); font-size: 11px; color: var(--muted); margin-bottom: 40px; }
