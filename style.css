@@ -1613,7 +1613,7 @@ END OF GALLERY FOR INLINE TESTING */
   width: 40px;
   height: 40px;
   background: rgba(36, 36, 38, 0.8);
-  border: 1px solid var(--border-mid);
+  border: 1px solid var(--accent-dim);
   border-radius: 50%;
   display: flex;
   align-items: center;
