@@ -258,7 +258,7 @@ body {
   font-weight: 600;
   color: var(--mid);
   letter-spacing: -0.02em;
-  margin-bottom: 24px;
+  margin-bottom: 40px;
   text-align: center;
 }
 @media (max-width: 768px) {
