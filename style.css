@@ -112,6 +112,11 @@ body {
   margin: 0 auto 28px;
 }
 
+/* Spacers */
+.spacer-sm { height: 10px; }
+.spacer-md { height: 25px; }
+.spacer-lg { height: 50px; }
+
 /* ── NAV ── */
 .nav-wrap {
   position: sticky;
@@ -371,7 +376,7 @@ body {
   font-weight: 600;
   color: var(--mid);
   letter-spacing: -0.02em;
-  margin-bottom: 12px;
+  margin: 12px 0;
   text-align: center;
 }
 
