@@ -85,7 +85,7 @@ body {
   text-align: center;
   max-width: 480px;
 }
-.page-inner.section {
+.page-inner.max {
   max-width: var(--max);
 }
 
@@ -358,7 +358,7 @@ body {
 /* ── SECTION BLOCKS ── */
 .section {
   padding: 20px 32px;
-  
+  border-bottom: 1px solid var(--border);
 }
 
 .section.alt-bg {
