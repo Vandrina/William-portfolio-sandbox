@@ -805,11 +805,9 @@ body {
   text-transform: uppercase;
 }
 
-
-
 @media (max-width: 768px) {
   .disc-grid {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     max-width: 86%;
     margin: 0 auto;
   }
