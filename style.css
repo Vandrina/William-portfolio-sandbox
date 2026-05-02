@@ -362,7 +362,7 @@ body {
 
 /* ── SECTION BLOCKS ── */
 .section {
-  padding: 20px 32px;
+  padding: 20px 32px 40px;
   border-bottom: 1px solid var(--border);
 }
 
