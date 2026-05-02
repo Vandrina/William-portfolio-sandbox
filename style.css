@@ -1608,8 +1608,8 @@ END OF GALLERY FOR INLINE TESTING */
 /* ── SCROLL TO TOP ── */
 .scroll-top {
   position: fixed;
-  bottom: 50px;
-  right: 28px;
+  bottom: 45px;
+  right: 35px;
   width: 40px;
   height: 40px;
   background: rgba(36, 36, 38, 0.8);
@@ -1621,7 +1621,8 @@ END OF GALLERY FOR INLINE TESTING */
   cursor: pointer;
   color: var(--accent);
   font-size: 20px;
-  font-weight: 800;
+  font-weight: 900;
+  line-height: 1;
   z-index: 80;
   opacity: 0;
   pointer-events: none;
