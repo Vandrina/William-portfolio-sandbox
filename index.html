@@ -1,224 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>William McGuire — Illustrator, Concept Artist, Animator</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500&family=Space+Mono:wght@400;700&display=optional">
-<link rel="stylesheet" href="style.css">
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-<!-- GoatCounter analytics - replace ACCOUNT with your goatcounter account name -->
-<!-- <script data-goatcounter="https://ACCOUNT.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script> -->
-<style>
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>William McGuire — Illustrator, Concept Artist, Animator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500&family=Space+Mono:wght@400;700&display=optional">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- GoatCounter analytics - replace ACCOUNT with your goatcounter account name -->
+  <!-- <script data-goatcounter="https://ACCOUNT.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script> -->
+  <style>
+  </style>
 </head>
+
 <body>
 
-<div class="nav-wrap">
-  <nav class="nav">
-    <a href="index.html" class="nav-id">
-      <div class="nav-name">William McGuire</div>
-      <div class="nav-sub">Illustration <span>·</span> Concept Art <span>·</span> Animation</div>
-    </a>
-    <div class="nav-links">
-      <a href="gallery.html" class="nav-item">Gallery</a>
-      <a href="about.html" class="nav-item">About</a>
-      <a href="contact.html" class="nav-item">Contact</a>
-      <a href="shop.html" class="nav-shop nav-item">Shop ↗</a>
-    </div>
-    <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
-  <div class="nav-mobile-menu" id="navMobileMenu">
-    <a href="gallery.html">Gallery</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a href="shop.html" class="shop">Shop ↗</a>
-  </div>
-</div>
-
-
-</div>
-
-<!-- HERO GALLERY — lighter bg-2 -->
-<div class="hero-wrap">
-  <div class="hero-inner" id="heroInner">
-    <div class="hero-slide active hero-slide-1"><img src="page-images/index/hero-horizontal/HeroGallery1.jpg" alt=""></div>
-    <div class="hero-slide hero-slide-2"><img src="page-images/index/hero-horizontal/HeroGallery3.jpg" alt=""></div>
-    <div class="hero-slide hero-slide-3"><img src="page-images/index/hero-horizontal/HeroGallery2.jpg" alt=""></div>
-    <div class="hero-slide active hero-slide-4"><img src="page-images/index/hero-horizontal/HeroGallery5.jpg" alt=""></div>
-    <div class="hero-slide hero-slide-5"><img src="page-images/index/hero-horizontal/HeroGallery10.jpg" alt=""></div>
-    <div class="hero-slide hero-slide-6"><img src="page-images/index/hero-horizontal/HeroGallery6.jpg" alt=""></div>
-    <!-- hero counter disabled <div class="hero-counter" id="heroCounter">1 / 3</div> -->
-    <div class="hero-arrows">
-      <button class="hero-arrow" id="heroPrev">‹</button>
-      <button class="hero-arrow" id="heroNext">›</button>
-    </div>
-    <div class="hero-dots" id="heroDots">
-      <div class="hero-dot active" data-index="0"></div>
-      <div class="hero-dot" data-index="1"></div>
-      <div class="hero-dot" data-index="2"></div>
-      <div class="hero-dot" data-index="3"></div>
-      <div class="hero-dot" data-index="4"></div>
-      <div class="hero-dot" data-index="5"></div>
-    </div>
-  </div>
-</div>
-
-<!-- DISCIPLINES — darker base bg -->
-<div class="section section-disc">
-  <div class="page-inner section">
-    <div class="sec-title">Disciplines</div>
-    <div class="disc-grid">
-      <a href="gallery.html?view=illustration" class="disc-card">
-        <div class="disc-card-bg dc-illus"><img src="page-images/index/cards/IllustrationThumbnail.png" alt="Illustration"></div>
-        <div class="disc-card-grad"></div>
-        <div class="disc-card-body"><div class="disc-card-name">Illustration</div></div>
+  <div class="nav-wrap">
+    <nav class="nav">
+      <a href="index.html" class="nav-id">
+        <div class="nav-name">William McGuire</div>
+        <div class="nav-sub">Illustration <span>·</span> Concept Art <span>·</span> Animation</div>
       </a>
-      <a href="gallery.html?view=concept-art" class="disc-card">
-        <div class="disc-card-bg dc-conc"><img src="page-images/index/cards/ConceptArtThumbnail.png" alt="Concept Art"></div>
-        <div class="disc-card-grad"></div>
-        <div class="disc-card-body"><div class="disc-card-name">Concept Art</div></div>
-      </a>
-      <a href="gallery.html?view=backgrounds" class="disc-card">
-        <div class="disc-card-bg dc-bg"><img src="page-images/index/cards/BackgroundsThumbnail.png" alt="Backgrounds"></div>
-        <div class="disc-card-grad"></div>
-        <div class="disc-card-body"><div class="disc-card-name">Backgrounds</div></div>
-      </a>
-      <a href="gallery.html?view=toy-design" class="disc-card">
-        <div class="disc-card-bg dc-toy"><img src="page-images/index/cards/ToyDesignThumbnail.png" alt="Toy Design"></div>
-        <div class="disc-card-grad"></div>
-        <div class="disc-card-body"><div class="disc-card-name">Toy Design</div></div>
-      </a>
-      <a href="gallery.html?view=books" class="disc-card">
-        <div class="disc-card-bg dc-books"><img src="page-images/index/cards/BooksThumbnail.png" alt="Books"></div>
-        <div class="disc-card-grad"></div>
-        <div class="disc-card-body"><div class="disc-card-name">Books</div></div>
-      </a>
-      <a href="gallery.html?view=nfts" class="disc-card">
-        <div class="disc-card-bg dc-nfts"><img src="page-images/index/cards/NFTsThumbnail.png" alt="NFTs"></div>
-        <div class="disc-card-grad"></div>
-        <div class="disc-card-body"><div class="disc-card-name">NFTs</div></div>
-      </a>
-    </div>
-  </div>
-</div>
-
-<!-- CLIENTS — lighter bg-2 -->
-<div class="section section-clients">
-  <div class="section-inner">
-    <div class="sec-title">Clients</div>
-    <div class="client-grid">
-      <a href="gallery.html?client=microsoft" class="client-card">
-        <div class="client-card-bg cc-ms"><img src="page-images/index/cards/MicrosoftThumbnail.png" alt="Microsoft"></div>
-        <div class="client-card-grad"></div>
-        <div class="client-card-body"><div class="client-card-name">Microsoft</div></div>
-      </a>
-      <a href="gallery.html?client=amazon" class="client-card">
-        <div class="client-card-bg cc-az"><img src="page-images/index/cards/AmazonThumbnail.png" alt="Amazon"></div>
-        <div class="client-card-grad"></div>
-        <div class="client-card-body"><div class="client-card-name">Amazon</div></div>
-      </a>
-      <a href="gallery.html?client=big-fish" class="client-card">
-        <div class="client-card-bg cc-bf"><img src="page-images/index/cards/BigFishThumbnail.png" alt="Big Fish"></div>
-        <div class="client-card-grad"></div>
-        <div class="client-card-body"><div class="client-card-name">Big Fish</div></div>
-      </a>
-      <a href="gallery.html?client=elevated-games" class="client-card">
-        <div class="client-card-bg cc-eg"><img src="page-images/index/cards/ElevatedGamesThumbnail.png" alt="Elevated Games"></div>
-        <div class="client-card-grad"></div>
-        <div class="client-card-body"><div class="client-card-name">Elevated Games</div></div>
-      </a>
-      <a href="gallery.html?client=reflective-games" class="client-card">
-        <div class="client-card-bg cc-rg"><img src="page-images/index/cards/ReflectiveGamesThumbnail.png" alt="Reflective Games"></div>
-        <div class="client-card-grad"></div>
-        <div class="client-card-body"><div class="client-card-name">Reflective Games</div></div>
-      </a>
-      <a href="gallery.html?client=dreambox-learning" class="client-card">
-        <div class="client-card-bg cc-dl"><img src="page-images/index/cards/DreamboxThumbnail.png" alt="Dreambox Learning"></div>
-        <div class="client-card-grad"></div>
-        <div class="client-card-body"><div class="client-card-name">Dreambox Learning</div></div>
-      </a>
-      <a href="gallery.html?client=leapfrog" class="client-card">
-        <div class="client-card-bg cc-lf"><img src="page-images/index/cards/LeapfrogThumbnail.png" alt="LeapFrog"></div>
-        <div class="client-card-grad"></div>
-        <div class="client-card-body"><div class="client-card-name">LeapFrog</div></div>
-      </a>
-      <a href="gallery.html?client=paramount" class="client-card">
-        <div class="client-card-bg cc-pm"><img src="page-images/index/cards/ParamountThumbnail.png" alt="Paramount"></div> 
-        <div class="client-card-grad"></div>
-        <div class="client-card-body"><div class="client-card-name">Paramount</div></div>
-      </a>
-      <a href="gallery.html?client=handmade-by-robots" class="client-card">
-        <div class="client-card-bg cc-hbr"><img src="page-images/index/cards/HMBRThumbnail.png" alt="Handmade by Robots"></div>
-        <div class="client-card-grad"></div>
-        <div class="client-card-body"><div class="client-card-name">Handmade by Robots</div></div>
-      </a>
-      <a href="gallery.html?client=mystery-society" class="client-card">
-        <div class="client-card-bg cc-ms2"><img src="page-images/index/cards/GBBTThumbnail.png" alt="Mystery Society"></div>
-        <div class="client-card-grad"></div>
-        <div class="client-card-body"><div class="client-card-name">Mystery Society</div></div>
-      </a>
-    </div>
-  </div>
-</div>
-
-<footer class="footer">
-  <div class="footer-main">
-    <div class="footer-brand">
-    <div class="footer-name">William McGuire</div>
-    <div class="footer-tagline">Illustrator · Concept Artist · Animator</div>
-    </div>
-    <div class="footer-nav">
-      <a href="gallery.html" class="footer-link">Gallery</a>
-      <a href="about.html" class="footer-link">About</a>
-      <a href="contact.html" class="footer-link">Contact</a>
-      <a href="shop.html" class="footer-link gold">Shop ↗</a>
+      <div class="nav-links">
+        <a href="gallery.html" class="nav-item">Gallery</a>
+        <a href="about.html" class="nav-item">About</a>
+        <a href="contact.html" class="nav-item">Contact</a>
+        <a href="shop.html" class="nav-shop nav-item">Shop ↗</a>
+      </div>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="nav-mobile-menu" id="navMobileMenu">
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="shop.html" class="shop">Shop ↗</a>
     </div>
   </div>
 
-  <div class="footer-secondary">
-    <div class="footer-left">
-      <div class="footer-copy">© william mcguire — williammcguire.net</div>
-      <div class="footer-legal">
-        <a href="privacy.html" class="footer-legal-link">Privacy</a>
-        <a href="terms.html" class="footer-legal-link">Terms</a>
+
+  </div>
+
+  <!-- HERO GALLERY — lighter bg-2 -->
+  <div class="hero-wrap">
+    <div class="hero-inner" id="heroInner">
+      <div class="hero-slide active hero-slide-1"><img src="page-images/index/hero-horizontal/HeroGallery1.jpg" alt="">
+      </div>
+      <div class="hero-slide hero-slide-2"><img src="page-images/index/hero-horizontal/HeroGallery3.jpg" alt=""></div>
+      <div class="hero-slide hero-slide-3"><img src="page-images/index/hero-horizontal/HeroGallery2.jpg" alt=""></div>
+      <div class="hero-slide active hero-slide-4"><img src="page-images/index/hero-horizontal/HeroGallery5.jpg" alt="">
+      </div>
+      <div class="hero-slide hero-slide-5"><img src="page-images/index/hero-horizontal/HeroGallery10.jpg" alt=""></div>
+      <div class="hero-slide hero-slide-6"><img src="page-images/index/hero-horizontal/HeroGallery6.jpg" alt=""></div>
+      <!-- hero counter disabled <div class="hero-counter" id="heroCounter">1 / 3</div> -->
+      <div class="hero-arrows">
+        <button class="hero-arrow" id="heroPrev">‹</button>
+        <button class="hero-arrow" id="heroNext">›</button>
+      </div>
+      <div class="hero-dots" id="heroDots">
+        <div class="hero-dot active" data-index="0"></div>
+        <div class="hero-dot" data-index="1"></div>
+        <div class="hero-dot" data-index="2"></div>
+        <div class="hero-dot" data-index="3"></div>
+        <div class="hero-dot" data-index="4"></div>
+        <div class="hero-dot" data-index="5"></div>
       </div>
     </div>
-</footer>
+  </div>
+
+  <!-- DISCIPLINES — darker base bg -->
+  <div class="section section-disc">
+    <div class="page-inner section">
+      <div class="sec-title">Disciplines</div>
+      <div class="disc-grid">
+        <a href="gallery.html?view=illustration" class="disc-card">
+          <div class="disc-card-bg dc-illus"><img src="page-images/index/cards/IllustrationThumbnail.png"
+              alt="Illustration"></div>
+          <div class="disc-card-grad"></div>
+          <div class="disc-card-body">
+            <div class="disc-card-name">Illustration</div>
+          </div>
+        </a>
+        <a href="gallery.html?view=concept-art" class="disc-card">
+          <div class="disc-card-bg dc-conc"><img src="page-images/index/cards/ConceptArtThumbnail.png"
+              alt="Concept Art"></div>
+          <div class="disc-card-grad"></div>
+          <div class="disc-card-body">
+            <div class="disc-card-name">Concept Art</div>
+          </div>
+        </a>
+        <a href="gallery.html?view=backgrounds" class="disc-card">
+          <div class="disc-card-bg dc-bg"><img src="page-images/index/cards/BackgroundsThumbnail.png" alt="Backgrounds">
+          </div>
+          <div class="disc-card-grad"></div>
+          <div class="disc-card-body">
+            <div class="disc-card-name">Backgrounds</div>
+          </div>
+        </a>
+        <a href="gallery.html?view=toy-design" class="disc-card">
+          <div class="disc-card-bg dc-toy"><img src="page-images/index/cards/ToyDesignThumbnail.png" alt="Toy Design">
+          </div>
+          <div class="disc-card-grad"></div>
+          <div class="disc-card-body">
+            <div class="disc-card-name">Toy Design</div>
+          </div>
+        </a>
+        <a href="gallery.html?view=books" class="disc-card">
+          <div class="disc-card-bg dc-books"><img src="page-images/index/cards/BooksThumbnail.png" alt="Books"></div>
+          <div class="disc-card-grad"></div>
+          <div class="disc-card-body">
+            <div class="disc-card-name">Books</div>
+          </div>
+        </a>
+        <a href="gallery.html?view=nfts" class="disc-card">
+          <div class="disc-card-bg dc-nfts"><img src="page-images/index/cards/NFTsThumbnail.png" alt="NFTs"></div>
+          <div class="disc-card-grad"></div>
+          <div class="disc-card-body">
+            <div class="disc-card-name">NFTs</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CLIENTS — lighter bg-2 -->
+  <div class="section section-clients">
+    <div class="section-inner">
+      <div class="sec-title">Clients</div>
+      <div class="client-grid">
+        <a href="gallery.html?client=microsoft" class="client-card">
+          <div class="client-card-bg cc-ms"><img src="page-images/index/cards/MicrosoftThumbnail.png" alt="Microsoft">
+          </div>
+          <div class="client-card-grad"></div>
+          <div class="client-card-body">
+            <div class="client-card-name">Microsoft</div>
+          </div>
+        </a>
+        <a href="gallery.html?client=amazon" class="client-card">
+          <div class="client-card-bg cc-az"><img src="page-images/index/cards/AmazonThumbnail.png" alt="Amazon"></div>
+          <div class="client-card-grad"></div>
+          <div class="client-card-body">
+            <div class="client-card-name">Amazon</div>
+          </div>
+        </a>
+        <a href="gallery.html?client=big-fish" class="client-card">
+          <div class="client-card-bg cc-bf"><img src="page-images/index/cards/BigFishThumbnail.png" alt="Big Fish">
+          </div>
+          <div class="client-card-grad"></div>
+          <div class="client-card-body">
+            <div class="client-card-name">Big Fish</div>
+          </div>
+        </a>
+        <a href="gallery.html?client=elevated-games" class="client-card">
+          <div class="client-card-bg cc-eg"><img src="page-images/index/cards/ElevatedGamesThumbnail.png"
+              alt="Elevated Games"></div>
+          <div class="client-card-grad"></div>
+          <div class="client-card-body">
+            <div class="client-card-name">Elevated Games</div>
+          </div>
+        </a>
+        <a href="gallery.html?client=reflective-games" class="client-card">
+          <div class="client-card-bg cc-rg"><img src="page-images/index/cards/ReflectiveGamesThumbnail.png"
+              alt="Reflective Games"></div>
+          <div class="client-card-grad"></div>
+          <div class="client-card-body">
+            <div class="client-card-name">Reflective Games</div>
+          </div>
+        </a>
+        <a href="gallery.html?client=dreambox-learning" class="client-card">
+          <div class="client-card-bg cc-dl"><img src="page-images/index/cards/DreamboxThumbnail.png"
+              alt="Dreambox Learning"></div>
+          <div class="client-card-grad"></div>
+          <div class="client-card-body">
+            <div class="client-card-name">Dreambox Learning</div>
+          </div>
+        </a>
+        <a href="gallery.html?client=leapfrog" class="client-card">
+          <div class="client-card-bg cc-lf"><img src="page-images/index/cards/LeapfrogThumbnail.png" alt="LeapFrog">
+          </div>
+          <div class="client-card-grad"></div>
+          <div class="client-card-body">
+            <div class="client-card-name">LeapFrog</div>
+          </div>
+        </a>
+        <a href="gallery.html?client=paramount" class="client-card">
+          <div class="client-card-bg cc-pm"><img src="page-images/index/cards/ParamountThumbnail.png" alt="Paramount">
+          </div>
+          <div class="client-card-grad"></div>
+          <div class="client-card-body">
+            <div class="client-card-name">Paramount</div>
+          </div>
+        </a>
+        <a href="gallery.html?client=handmade-by-robots" class="client-card">
+          <div class="client-card-bg cc-hbr"><img src="page-images/index/cards/HMBRThumbnail.png"
+              alt="Handmade by Robots"></div>
+          <div class="client-card-grad"></div>
+          <div class="client-card-body">
+            <div class="client-card-name">Handmade by Robots</div>
+          </div>
+        </a>
+        <a href="gallery.html?client=mystery-society" class="client-card">
+          <div class="client-card-bg cc-ms2"><img src="page-images/index/cards/GBBTThumbnail.png" alt="Mystery Society">
+          </div>
+          <div class="client-card-grad"></div>
+          <div class="client-card-body">
+            <div class="client-card-name">Mystery Society</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <div class="footer-name">William McGuire</div>
+        <div class="footer-tagline">Illustrator · Concept Artist · Animator</div>
+      </div>
+      <div class="footer-nav">
+        <a href="gallery.html" class="footer-link">Gallery</a>
+        <a href="about.html" class="footer-link">About</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+        <a href="shop.html" class="footer-link gold">Shop ↗</a>
+      </div>
+    </div>
+
+    <div class="footer-secondary">
+      <div class="footer-left">
+        <div class="footer-copy">© william mcguire — williammcguire.net</div>
+        <div class="footer-legal">
+          <a href="privacy.html" class="footer-legal-link">Privacy</a>
+          <a href="terms.html" class="footer-legal-link">Terms</a>
+        </div>
+      </div>
+  </footer>
 
 
-<script>
-(function() {
-  // Hamburger
-  var btn = document.getElementById('navHamburger');
-  var menu = document.getElementById('navMobileMenu');
-  if (btn && menu) {
-    btn.addEventListener('click', function() { menu.classList.toggle('open'); });
-    document.addEventListener('click', function(e) {
-      if (!btn.contains(e.target) && !menu.contains(e.target)) menu.classList.remove('open');
-    });
-  }
-  // Hero
-  var slides = document.querySelectorAll('.hero-slide');
-  var dots   = document.querySelectorAll('.hero-dot');
-  /* var counter = document.getElementById('heroCounter'); */
-  var current = 0, timer;
-  function goTo(i) {
-    slides[current].classList.remove('active'); dots[current].classList.remove('active');
-    current = (i + slides.length) % slides.length;
-    slides[current].classList.add('active'); dots[current].classList.add('active');
-    /* counter.textContent = (current + 1) + ' / ' + slides.length; */
-  }
-  function startTimer() { clearInterval(timer); timer = setInterval(function() { goTo(current + 1); }, 5000); }
-  document.getElementById('heroPrev').addEventListener('click', function() { goTo(current - 1); startTimer(); });
-  document.getElementById('heroNext').addEventListener('click', function() { goTo(current + 1); startTimer(); });
-  dots.forEach(function(d) { d.addEventListener('click', function() { goTo(parseInt(d.dataset.index)); startTimer(); }); });
-  startTimer();
-})();
-</script>
+  <script>
+    (function () {
+      // Hamburger
+      var btn = document.getElementById('navHamburger');
+      var menu = document.getElementById('navMobileMenu');
+      if (btn && menu) {
+        btn.addEventListener('click', function () { menu.classList.toggle('open'); });
+        document.addEventListener('click', function (e) {
+          if (!btn.contains(e.target) && !menu.contains(e.target)) menu.classList.remove('open');
+        });
+      }
+      // Hero
+      var slides = document.querySelectorAll('.hero-slide');
+      var dots = document.querySelectorAll('.hero-dot');
+      /* var counter = document.getElementById('heroCounter'); */
+      var current = 0, timer;
+      function goTo(i) {
+        slides[current].classList.remove('active'); dots[current].classList.remove('active');
+        current = (i + slides.length) % slides.length;
+        slides[current].classList.add('active'); dots[current].classList.add('active');
+        /* counter.textContent = (current + 1) + ' / ' + slides.length; */
+      }
+      function startTimer() { clearInterval(timer); timer = setInterval(function () { goTo(current + 1); }, 5000); }
+      document.getElementById('heroPrev').addEventListener('click', function () { goTo(current - 1); startTimer(); });
+      document.getElementById('heroNext').addEventListener('click', function () { goTo(current + 1); startTimer(); });
+      dots.forEach(function (d) { d.addEventListener('click', function () { goTo(parseInt(d.dataset.index)); startTimer(); }); });
+      startTimer();
+    })();
+  </script>
 </body>
+
 </html>

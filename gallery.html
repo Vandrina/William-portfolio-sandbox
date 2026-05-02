@@ -1,567 +1,572 @@
 <!DOCTYPE html>
 <html lang="en" style="background:#1c1c1e">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gallery  — William McGuire</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500&family=Space+Mono:wght@400;700&display=optional">
-<link rel="stylesheet" href="style.css">
-<style>
-  
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — William McGuire</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500&family=Space+Mono:wght@400;700&display=optional">
+  <link rel="stylesheet" href="style.css">
+  <style>
+
+  </style>
 </head>
+
 <body>
 
-<div class="nav-wrap">
-  <nav class="nav">
-    <a href="index.html" class="nav-id">
-      <div class="nav-name">William McGuire</div>
-      <div class="nav-sub">Illustration <span>·</span> Concept Art <span>·</span> Animation</div>
-    </a>
-    <div class="nav-links">
-      <a href="gallery.html" class="nav-item active">Gallery</a>
-      <a href="about.html" class="nav-item">About</a>
-      <a href="contact.html" class="nav-item">Contact</a>
-      <a href="shop.html" class="nav-shop nav-item">Shop ↗</a>
+  <div class="nav-wrap">
+    <nav class="nav">
+      <a href="index.html" class="nav-id">
+        <div class="nav-name">William McGuire</div>
+        <div class="nav-sub">Illustration <span>·</span> Concept Art <span>·</span> Animation</div>
+      </a>
+      <div class="nav-links">
+        <a href="gallery.html" class="nav-item active">Gallery</a>
+        <a href="about.html" class="nav-item">About</a>
+        <a href="contact.html" class="nav-item">Contact</a>
+        <a href="shop.html" class="nav-shop nav-item">Shop ↗</a>
+      </div>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="nav-mobile-menu" id="navMobileMenu">
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="shop.html" class="shop">Shop ↗</a>
     </div>
-    <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
-  <div class="nav-mobile-menu" id="navMobileMenu">
-    <a href="gallery.html">Gallery</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a href="shop.html" class="shop">Shop ↗</a>
   </div>
-</div>
 
 
-</div>
-
-
-<div class="page-head">
-  <div class="page-head-inner">
-    <div class="sec-title">Gallery</div>
   </div>
-</div>
-<div class="filter-wrap">
-  <div class="filter-inner">
-    <button class="filter-mobile-toggle" id="filterToggle">
-      <span>Filter</span><span id="filterToggleIcon">↓</span>
-    </button>
-    <div class="filter-groups" id="filterGroups">
-      <div class="filter-left">
-        <div class="filter-group">
-          <span class="filter-group-label">Disciplines</span>
-          <button class="filter-btn" data-type="discipline" data-value="illustration">Illustration</button>
-          <button class="filter-btn" data-type="discipline" data-value="concept-art">Concept Art</button>
-          <button class="filter-btn" data-type="discipline" data-value="toy-design">Toy Design</button>
-          <button class="filter-btn" data-type="discipline" data-value="backgrounds">Background</button>
-          <button class="filter-btn" data-type="discipline" data-value="books">Book</button>
-          <button class="filter-btn" data-type="discipline" data-value="nfts">NFT</button>
+
+
+  <div class="page-head">
+    <div class="page-head-inner">
+      <div class="sec-title">Gallery</div>
+    </div>
+  </div>
+  <div class="filter-wrap">
+    <div class="filter-inner">
+      <button class="filter-mobile-toggle" id="filterToggle">
+        <span>Filter</span><span id="filterToggleIcon">↓</span>
+      </button>
+      <div class="filter-groups" id="filterGroups">
+        <div class="filter-left">
+          <div class="filter-group">
+            <span class="filter-group-label">Disciplines</span>
+            <button class="filter-btn" data-type="discipline" data-value="illustration">Illustration</button>
+            <button class="filter-btn" data-type="discipline" data-value="concept-art">Concept Art</button>
+            <button class="filter-btn" data-type="discipline" data-value="toy-design">Toy Design</button>
+            <button class="filter-btn" data-type="discipline" data-value="backgrounds">Background</button>
+            <button class="filter-btn" data-type="discipline" data-value="books">Book</button>
+            <button class="filter-btn" data-type="discipline" data-value="nfts">NFT</button>
+          </div>
+          <div class="filter-group">
+            <span class="filter-group-label">Clients</span>
+            <button class="filter-btn" data-type="client" data-value="microsoft">Microsoft</button>
+            <button class="filter-btn" data-type="client" data-value="amazon">Amazon</button>
+            <button class="filter-btn" data-type="client" data-value="big-fish">Big Fish</button>
+            <button class="filter-btn" data-type="client" data-value="elevated-games">Elevated Games</button>
+            <button class="filter-btn" data-type="client" data-value="reflective-games">Reflective Games</button>
+            <button class="filter-btn" data-type="client" data-value="dreambox-learning">Dreambox Learning</button>
+            <button class="filter-btn" data-type="client" data-value="leapfrog">LeapFrog</button>
+            <button class="filter-btn" data-type="client" data-value="paramount">Paramount</button>
+            <button class="filter-btn" data-type="client" data-value="handmade-by-robots">Handmade by Robots</button>
+            <button class="filter-btn" data-type="client" data-value="mystery-society">Mystery Society</button>
+            <button class="filter-btn" data-type="client" data-value="nordstrom">Nordstrom</button>
+            <button class="filter-btn" data-type="client" data-value="nickelodeon">Nickelodeon</button>
+            <button class="filter-btn" data-type="client" data-value="stone-arch-books">Stone Arch Books</button>
+            <button class="filter-btn" data-type="client" data-value="tech-smart-kids">Tech Smart Kids</button>
+            <button class="filter-btn" data-type="client" data-value="agency">Agency</button>
+          </div>
         </div>
-        <div class="filter-group">
-          <span class="filter-group-label">Clients</span>
-          <button class="filter-btn" data-type="client" data-value="microsoft">Microsoft</button>
-          <button class="filter-btn" data-type="client" data-value="amazon">Amazon</button>
-          <button class="filter-btn" data-type="client" data-value="big-fish">Big Fish</button>
-          <button class="filter-btn" data-type="client" data-value="elevated-games">Elevated Games</button>
-          <button class="filter-btn" data-type="client" data-value="reflective-games">Reflective Games</button>
-          <button class="filter-btn" data-type="client" data-value="dreambox-learning">Dreambox Learning</button>
-          <button class="filter-btn" data-type="client" data-value="leapfrog">LeapFrog</button>
-          <button class="filter-btn" data-type="client" data-value="paramount">Paramount</button>
-          <button class="filter-btn" data-type="client" data-value="handmade-by-robots">Handmade by Robots</button>
-          <button class="filter-btn" data-type="client" data-value="mystery-society">Mystery Society</button>
-          <button class="filter-btn" data-type="client" data-value="nordstrom">Nordstrom</button>
-          <button class="filter-btn" data-type="client" data-value="nickelodeon">Nickelodeon</button>
-          <button class="filter-btn" data-type="client" data-value="stone-arch-books">Stone Arch Books</button>
-          <button class="filter-btn" data-type="client" data-value="tech-smart-kids">Tech Smart Kids</button>
-          <button class="filter-btn" data-type="client" data-value="agency">Agency</button>
+        <div class="filter-all-wrap">
+          <button class="filter-btn-all active" id="filterAll">View All</button>
+          <div class="logic-toggle">
+            <button class="logic-btn active" data-logic="or">OR</button>
+            <button class="logic-btn" data-logic="and">AND</button>
+          </div>
         </div>
       </div>
-      <div class="filter-all-wrap">
-        <button class="filter-btn-all active" id="filterAll">View All</button>
-        <div class="logic-toggle">
-          <button class="logic-btn active" data-logic="or">OR</button>
-          <button class="logic-btn" data-logic="and">AND</button>
+      <div class="active-summary" id="activeSummary" style="display:none;">
+        <span class="active-summary-label">Active</span>
+        <div id="activeTags"></div>
+        <button class="clear-btn" id="clearAll">CLEAR</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="results-bar">
+    <div class="results-inner">
+      <div class="results-count">Showing <strong id="visibleCount">0</strong> of <strong id="totalCount">0</strong>
+        pieces</div>
+    </div>
+  </div>
+
+  <div class="gallery-wrap">
+    <div class="gallery-inner">
+      <div class="gallery-grid" id="galleryGrid"></div>
+      <div class="gallery-empty" id="galleryEmpty">
+        <div class="gallery-empty-title" id="galleryEmptyTitle">No pieces match that filter combination.</div>
+        <div class="gallery-empty-desc" id="galleryEmptyDesc">Try adjusting or clearing your filters.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top" id="scrollTop" aria-label="Back to top">↑</button>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">✕</button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev">‹</button>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext">›</button>
+    <div class="lightbox-inner">
+      <img class="lightbox-img" id="lightboxImg" src="" alt="">
+      <div class="lightbox-meta">
+        <span class="lightbox-discipline" id="lightboxDiscipline"></span>
+        <span class="lightbox-client" id="lightboxClient"></span>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <div class="footer-name">William McGuire</div>
+        <div class="footer-tagline">Illustrator · Concept Artist · Animator</div>
+      </div>
+      <div class="footer-nav">
+        <a href="gallery.html" class="footer-link">Gallery</a>
+        <a href="about.html" class="footer-link">About</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+        <a href="shop.html" class="footer-link gold">Shop ↗</a>
+      </div>
+    </div>
+
+    <div class="footer-secondary">
+      <div class="footer-left">
+        <div class="footer-copy">© william mcguire — williammcguire.net</div>
+        <div class="footer-legal">
+          <a href="privacy.html" class="footer-legal-link">Privacy</a>
+          <a href="terms.html" class="footer-legal-link">Terms</a>
         </div>
       </div>
-    </div>
-    <div class="active-summary" id="activeSummary" style="display:none;">
-      <span class="active-summary-label">Active</span>
-      <div id="activeTags"></div>
-      <button class="clear-btn" id="clearAll">CLEAR</button>
-    </div>
-  </div>
-</div>
-
-<div class="results-bar">
-  <div class="results-inner">
-    <div class="results-count">Showing <strong id="visibleCount">0</strong> of <strong id="totalCount">0</strong> pieces</div>
-  </div>
-</div>
-
-<div class="gallery-wrap">
-  <div class="gallery-inner">
-    <div class="gallery-grid" id="galleryGrid"></div>
-    <div class="gallery-empty" id="galleryEmpty">
-      <div class="gallery-empty-title" id="galleryEmptyTitle">No pieces match that filter combination.</div>
-      <div class="gallery-empty-desc" id="galleryEmptyDesc">Try adjusting or clearing your filters.</div>
-    </div>
-  </div>
-</div>
-
-<!-- Scroll to top -->
-<button class="scroll-top" id="scrollTop" aria-label="Back to top">↑</button>
-
-<div class="lightbox" id="lightbox">
-  <button class="lightbox-close" id="lightboxClose">✕</button>
-  <button class="lightbox-nav lightbox-prev" id="lightboxPrev">‹</button>
-  <button class="lightbox-nav lightbox-next" id="lightboxNext">›</button>
-  <div class="lightbox-inner">
-    <img class="lightbox-img" id="lightboxImg" src="" alt="">
-    <div class="lightbox-meta">
-      <span class="lightbox-discipline" id="lightboxDiscipline"></span>
-      <span class="lightbox-client" id="lightboxClient"></span>
-    </div>
-  </div>
-</div>
-
-<footer class="footer">
-  <div class="footer-main">
-    <div class="footer-brand">
-    <div class="footer-name">William McGuire</div>
-    <div class="footer-tagline">Illustrator · Concept Artist · Animator</div>
-    </div>
-    <div class="footer-nav">
-      <a href="gallery.html" class="footer-link">Gallery</a>
-      <a href="about.html" class="footer-link">About</a>
-      <a href="contact.html" class="footer-link">Contact</a>
-      <a href="shop.html" class="footer-link gold">Shop ↗</a>
-    </div>
-  </div>
-
-  <div class="footer-secondary">
-    <div class="footer-left">
-      <div class="footer-copy">© william mcguire — williammcguire.net</div>
-      <div class="footer-legal">
-        <a href="privacy.html" class="footer-legal-link">Privacy</a>
-        <a href="terms.html" class="footer-legal-link">Terms</a>
-      </div>
-    </div>
-</footer>
+  </footer>
 
 
-<script>
-(function() {
-  'use strict';
+  <script>
+    (function () {
+      'use strict';
 
-  // Hamburger
-  var hbtn = document.getElementById('navHamburger'), hmenu = document.getElementById('navMobileMenu');
-  if (hbtn && hmenu) {
-    hbtn.addEventListener('click', function() { hmenu.classList.toggle('open'); });
-    document.addEventListener('click', function(e) { if (!hbtn.contains(e.target) && !hmenu.contains(e.target)) hmenu.classList.remove('open'); });
-  }
+      // Hamburger
+      var hbtn = document.getElementById('navHamburger'), hmenu = document.getElementById('navMobileMenu');
+      if (hbtn && hmenu) {
+        hbtn.addEventListener('click', function () { hmenu.classList.toggle('open'); });
+        document.addEventListener('click', function (e) { if (!hbtn.contains(e.target) && !hmenu.contains(e.target)) hmenu.classList.remove('open'); });
+      }
 
-  // Scroll to top — show when page title scrolls out of view
-  var scrollTopBtn = document.getElementById('scrollTop');
-  var pageHead = document.querySelector('.page-head');
-  var scrollObserver = new IntersectionObserver(function(entries) {
-    scrollTopBtn.classList.toggle('visible', !entries[0].isIntersecting);
-  }, { threshold: 0 });
-  if (pageHead) scrollObserver.observe(pageHead);
-  scrollTopBtn.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+      // Scroll to top — show when page title scrolls out of view
+      var scrollTopBtn = document.getElementById('scrollTop');
+      var pageHead = document.querySelector('.page-head');
+      var scrollObserver = new IntersectionObserver(function (entries) {
+        scrollTopBtn.classList.toggle('visible', !entries[0].isIntersecting);
+      }, { threshold: 0 });
+      if (pageHead) scrollObserver.observe(pageHead);
+      scrollTopBtn.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
 
-  var manifest = [];
-  var activeFilters = { discipline: new Set(), client: new Set() };
-  var filterLogic = 'or';
-  var visibleItems = [];
-  var lightboxIndex = 0;
+      var manifest = [];
+      var activeFilters = { discipline: new Set(), client: new Set() };
+      var filterLogic = 'or';
+      var visibleItems = [];
+      var lightboxIndex = 0;
 
-  var grid = document.getElementById('galleryGrid');
-  var emptyState = document.getElementById('galleryEmpty');
-  var emptyTitle = document.getElementById('galleryEmptyTitle');
-  var emptyDesc  = document.getElementById('galleryEmptyDesc');
-  var visibleCount = document.getElementById('visibleCount');
-  var totalCount   = document.getElementById('totalCount');
-  var activeSummary = document.getElementById('activeSummary');
-  var activeTags    = document.getElementById('activeTags');
-  var filterToggle  = document.getElementById('filterToggle');
-  var filterToggleIcon = document.getElementById('filterToggleIcon');
-  var filterGroups  = document.getElementById('filterGroups');
-  var lightbox = document.getElementById('lightbox');
-  var lightboxImg  = document.getElementById('lightboxImg');
-  var lightboxDiscipline = document.getElementById('lightboxDiscipline');
-  var lightboxClient     = document.getElementById('lightboxClient');
+      var grid = document.getElementById('galleryGrid');
+      var emptyState = document.getElementById('galleryEmpty');
+      var emptyTitle = document.getElementById('galleryEmptyTitle');
+      var emptyDesc = document.getElementById('galleryEmptyDesc');
+      var visibleCount = document.getElementById('visibleCount');
+      var totalCount = document.getElementById('totalCount');
+      var activeSummary = document.getElementById('activeSummary');
+      var activeTags = document.getElementById('activeTags');
+      var filterToggle = document.getElementById('filterToggle');
+      var filterToggleIcon = document.getElementById('filterToggleIcon');
+      var filterGroups = document.getElementById('filterGroups');
+      var lightbox = document.getElementById('lightbox');
+      var lightboxImg = document.getElementById('lightboxImg');
+      var lightboxDiscipline = document.getElementById('lightboxDiscipline');
+      var lightboxClient = document.getElementById('lightboxClient');
 
-  // Lazy load with visible blur effect
-  // rootMargin 0px: images only load when entering viewport, so blur is visible
-  var lazyObserver = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-      if (!entry.isIntersecting) return;
-      var img = entry.target;
-      if (!img.dataset.src) return;
-      var src = img.dataset.src;
-      img.removeAttribute('data-src');
-      var hadPlaceholder = img.classList.contains('placeholder');
-      if (!hadPlaceholder) img.classList.add('loading');
-      img.onload = function() {
-        img.classList.remove('loading');
-        img.classList.remove('placeholder');
-        img.classList.add('loaded');
-      };
-      img.onerror = function() {
-        img.classList.remove('loading');
-        img.classList.remove('placeholder');
-        img.classList.add('loaded');
-      };
-      img.src = src;
-      lazyObserver.unobserve(img);
-    });
-  }, { rootMargin: '0px 0px' });
+      // Lazy load with visible blur effect
+      // rootMargin 0px: images only load when entering viewport, so blur is visible
+      var lazyObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          var img = entry.target;
+          if (!img.dataset.src) return;
+          var src = img.dataset.src;
+          img.removeAttribute('data-src');
+          var hadPlaceholder = img.classList.contains('placeholder');
+          if (!hadPlaceholder) img.classList.add('loading');
+          img.onload = function () {
+            img.classList.remove('loading');
+            img.classList.remove('placeholder');
+            img.classList.add('loaded');
+          };
+          img.onerror = function () {
+            img.classList.remove('loading');
+            img.classList.remove('placeholder');
+            img.classList.add('loaded');
+          };
+          img.src = src;
+          lazyObserver.unobserve(img);
+        });
+      }, { rootMargin: '0px 0px' });
 
-  fetch('./data/manifest.json')
-    .then(function(r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
-    .then(function(data) {
-      manifest = data;
-      
-      // Display order 
-      // manifest.sort(function() { return Math.random() - 0.5; });
-      // manifest.sort(function(a,b) { return (a.sort||999)-(b.sort||999); });
-      /* manifest sort by sort and name
-      manifest.sort(function(a, b) {
-        var sortDiff = (a.sort || 999) - (b.sort || 999);
-        if (sortDiff !== 0) return sortDiff;
-        var aName = (a.file || '').split('/').pop();
-        var bName = (b.file || '').split('/').pop();
-        return aName.localeCompare(bName);
+      fetch('./data/manifest.json')
+        .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+        .then(function (data) {
+          manifest = data;
+
+          // Display order 
+          // manifest.sort(function() { return Math.random() - 0.5; });
+          // manifest.sort(function(a,b) { return (a.sort||999)-(b.sort||999); });
+          /* manifest sort by sort and name
+          manifest.sort(function(a, b) {
+            var sortDiff = (a.sort || 999) - (b.sort || 999);
+            if (sortDiff !== 0) return sortDiff;
+            var aName = (a.file || '').split('/').pop();
+            var bName = (b.file || '').split('/').pop();
+            return aName.localeCompare(bName);
+          });
+          */
+          // manifest by weight, first three of name, then category
+
+          manifest.sort(function (a, b) {
+            var sortDiff = (a.sort || 999) - (b.sort || 999);
+            if (sortDiff !== 0) return sortDiff;
+            var aPrefix = parseInt((a.file || '').split('/').pop()) || 999;
+            var bPrefix = parseInt((b.file || '').split('/').pop()) || 999;
+            if (aPrefix !== bPrefix) return aPrefix - bPrefix;
+            var disciplineOrder = { 'concept-art': 1, 'illustration': 2, 'toy-design': 3, 'nfts': 4, 'backgrounds': 5, 'books': 6 };
+            var aD = disciplineOrder[(a.discipline || [])[0]] || 99;
+            var bD = disciplineOrder[(b.discipline || [])[0]] || 99;
+            return aD - bD;
+          });
+
+          totalCount.textContent = manifest.length;
+          buildGallery(true);
+          readUrlParams();
+          requestAnimationFrame(function () { filterGallery(); });
+        })
+        .catch(function (err) {
+          console.error('Manifest failed:', err);
+          emptyTitle.textContent = 'Could not load gallery.';
+          emptyDesc.textContent = 'Please try refreshing the page.';
+          emptyState.classList.add('visible');
+        });
+
+      function buildGallery(skipFilter) {
+        grid.innerHTML = '';
+        manifest.forEach(function (item, index) {
+          var el = document.createElement('div');
+          el.className = 'gal-item';
+          el.dataset.index = index;
+          el.dataset.discipline = (item.discipline || []).join(',');
+          el.dataset.clients = (item.clients || []).join(',');
+          el.dataset.full = item.file;
+          var ratio = 1;
+          if (item.thumbWidth && item.thumbHeight) {
+            ratio = item.thumbWidth / item.thumbHeight;
+          } else if (item.thumbAspectRatio || item.aspectRatio) {
+            var parts = (item.thumbAspectRatio || item.aspectRatio).toString().split('/');
+            ratio = parts.length === 2 ? parseFloat(parts[0]) / parseFloat(parts[1]) : parseFloat(parts[0]);
+          }
+          el.dataset.ratio = ratio.toFixed(6);
+
+          var thumbSrc = item.thumbnail || item.file.replace(/^images\//, 'thumbnails/');
+          var placeholderSrc = item.placeholder || '';
+          var disciplineLabel = (item.discipline || []).map(formatLabel).join(' · ');
+          var clientLabel = (item.clients || []).map(formatLabel).join(' · ');
+
+          el.innerHTML =
+            '<img' + (placeholderSrc ? ' src="' + placeholderSrc + '" class="placeholder"' : '') +
+            ' data-src="' + thumbSrc + '" width="' + (item.thumbWidth || 1) + '" height="' + (item.thumbHeight || 1) + '" alt="' + disciplineLabel + (clientLabel ? ' — ' + clientLabel : '') + '">' +
+            '<div class="gal-overlay">' +
+            '<div class="gal-overlay-discipline">' + disciplineLabel + '</div>' +
+            (clientLabel ? '<div class="gal-overlay-client">' + clientLabel + '</div>' : '') +
+            '</div>';
+
+          lazyObserver.observe(el.querySelector('img'));
+          el.addEventListener('click', (function (i) { return function () { openLightbox(i); }; })(index));
+          grid.appendChild(el);
+        });
+        if (!skipFilter) filterGallery();
+      }
+
+      function filterGallery() {
+        var items = grid.querySelectorAll('.gal-item');
+        var selDisc = Array.from(activeFilters.discipline);
+        var selClient = Array.from(activeFilters.client);
+        var noFilters = selDisc.length === 0 && selClient.length === 0;
+        var sameTypeConflict = filterLogic === 'and' && (
+          (selDisc.length > 1 && selClient.length === 0) ||
+          (selClient.length > 1 && selDisc.length === 0)
+        );
+
+        visibleItems = [];
+        items.forEach(function (el) {
+          var index = parseInt(el.dataset.index);
+          var item = manifest[index];
+          var itemDiscs = item.discipline || [];
+          var itemClients = item.clients || [];
+          var show;
+
+          if (noFilters) {
+            show = true;
+          } else if (sameTypeConflict) {
+            show = false;
+          } else if (filterLogic === 'or') {
+            // Check if ANY selected discipline matches ANY of this item's disciplines
+            var dHit = selDisc.length > 0 && itemDiscs.some(function (d) {
+              return selDisc.indexOf(d) !== -1;
+            });
+            // Check if ANY selected client matches ANY of this item's clients  
+            var cHit = selClient.length > 0 && itemClients.some(function (c) {
+              return selClient.indexOf(c) !== -1;
+            });
+            show = dHit || cHit;
+          } else {
+            // In AND mode: item must have at least one matching discipline (if any selected)
+            // and at least one matching client (if any selected)
+            var dOk = selDisc.length === 0 || itemDiscs.some(function (d) {
+              return selDisc.indexOf(d) !== -1;
+            });
+            var cOk = selClient.length === 0 || itemClients.some(function (c) {
+              return selClient.indexOf(c) !== -1;
+            });
+            show = dOk && cOk;
+          }
+
+          el.classList.toggle('hidden', !show);
+          if (show) visibleItems.push(index);
+        });
+
+        visibleCount.textContent = visibleItems.length;
+
+        if (sameTypeConflict) {
+          emptyTitle.textContent = 'AND works across disciplines and clients.';
+          emptyDesc.textContent = selDisc.length > 1
+            ? 'Select one discipline, then add a client to narrow results.'
+            : 'Select one client, then add a discipline to narrow results.';
+        } else {
+          emptyTitle.textContent = 'No pieces match that filter combination.';
+          emptyDesc.textContent = 'Try adjusting or clearing your filters.';
+        }
+
+        emptyState.classList.toggle('visible', visibleItems.length === 0 && !noFilters);
+        updateActiveSummary();
+        updateUrl();
+        justifiedLayout();
+      }
+
+      function justifiedLayout() {
+        var containerWidth = grid.clientWidth;
+        if (!containerWidth) return;
+        var gap = 12;
+        // Read target height from CSS custom property set by media queries, fallback 280
+        var targetHeight = parseInt(getComputedStyle(grid).getPropertyValue('--row-target')) || 200;
+        var items = Array.from(grid.querySelectorAll('.gal-item:not(.hidden)'));
+        if (!items.length) return;
+
+        var rows = [];
+        var currentRow = [];
+        var currentRowNaturalWidth = 0;
+
+        items.forEach(function (el) {
+          var ratio = parseFloat(el.dataset.ratio) || 1;
+          var naturalWidth = ratio * targetHeight;
+          var gapBefore = currentRow.length > 0 ? gap : 0;
+
+          if (currentRow.length > 0 && currentRowNaturalWidth + gapBefore + naturalWidth > containerWidth) {
+            rows.push(currentRow);
+            currentRow = [];
+            currentRowNaturalWidth = 0;
+          }
+          currentRow.push({ el: el, ratio: ratio, naturalWidth: naturalWidth });
+          currentRowNaturalWidth += (currentRow.length > 1 ? gap : 0) + naturalWidth;
+        });
+        if (currentRow.length) rows.push(currentRow);
+
+        rows.forEach(function (row, rowIndex) {
+          var isLastRow = rowIndex === rows.length - 1;
+          var totalGaps = (row.length - 1) * gap;
+          var totalNaturalWidth = row.reduce(function (sum, item) { return sum + item.naturalWidth; }, 0);
+          var rowHeight;
+
+          if (isLastRow && totalNaturalWidth + totalGaps < containerWidth * 0.65) {
+            // Short last row — don't stretch; keep target height
+            rowHeight = targetHeight;
+          } else {
+            rowHeight = Math.floor(targetHeight * (containerWidth - totalGaps) / totalNaturalWidth);
+          }
+
+          // rowHeight = Math.min(Math.max(rowHeight, 200), 275);
+
+          row.forEach(function (item) {
+            item.el.style.width = Math.floor(item.ratio * rowHeight) + 'px';
+            item.el.style.height = rowHeight + 'px';
+          });
+        });
+      }
+
+      var resizeTimer;
+      window.addEventListener('resize', function () {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(justifiedLayout, 120);
       });
-      */
-      // manifest by weight, first three of name, then category
-      
-      manifest.sort(function(a, b) {
-  var sortDiff = (a.sort || 999) - (b.sort || 999);
-  if (sortDiff !== 0) return sortDiff;
-  var aPrefix = parseInt((a.file || '').split('/').pop()) || 999;
-  var bPrefix = parseInt((b.file || '').split('/').pop()) || 999;
-  if (aPrefix !== bPrefix) return aPrefix - bPrefix;
-  var disciplineOrder = { 'concept-art': 1, 'illustration': 2, 'toy-design': 3, 'nfts': 4, 'backgrounds': 5, 'books': 6 };
-  var aD = disciplineOrder[(a.discipline || [])[0]] || 99;
-  var bD = disciplineOrder[(b.discipline || [])[0]] || 99;
-  return aD - bD;
-});
-      
-      totalCount.textContent = manifest.length;
-      buildGallery(true);
-      readUrlParams();
-      requestAnimationFrame(function() { filterGallery(); });
-    })
-    .catch(function(err) {
-      console.error('Manifest failed:', err);
-      emptyTitle.textContent = 'Could not load gallery.';
-      emptyDesc.textContent  = 'Please try refreshing the page.';
-      emptyState.classList.add('visible');
-    });
 
-  function buildGallery(skipFilter) {
-    grid.innerHTML = '';
-    manifest.forEach(function(item, index) {
-      var el = document.createElement('div');
-      el.className = 'gal-item';
-      el.dataset.index      = index;
-      el.dataset.discipline = (item.discipline || []).join(',');
-      el.dataset.clients    = (item.clients || []).join(',');
-      el.dataset.full       = item.file;
-      var ratio = 1;
-      if (item.thumbWidth && item.thumbHeight) {
-        ratio = item.thumbWidth / item.thumbHeight;
-      } else if (item.thumbAspectRatio || item.aspectRatio) {
-        var parts = (item.thumbAspectRatio || item.aspectRatio).toString().split('/');
-        ratio = parts.length === 2 ? parseFloat(parts[0]) / parseFloat(parts[1]) : parseFloat(parts[0]);
-      }
-      el.dataset.ratio = ratio.toFixed(6);
-
-      var thumbSrc       = item.thumbnail || item.file.replace(/^images\//, 'thumbnails/');
-      var placeholderSrc = item.placeholder || '';
-      var disciplineLabel = (item.discipline || []).map(formatLabel).join(' · ');
-      var clientLabel = (item.clients || []).map(formatLabel).join(' · ');
-
-      el.innerHTML =
-        '<img' + (placeholderSrc ? ' src="' + placeholderSrc + '" class="placeholder"' : '') +
-        ' data-src="' + thumbSrc + '" width="' + (item.thumbWidth || 1) + '" height="' + (item.thumbHeight || 1) + '" alt="' + disciplineLabel + (clientLabel ? ' — ' + clientLabel : '') + '">' +
-        '<div class="gal-overlay">' +
-          '<div class="gal-overlay-discipline">' + disciplineLabel + '</div>' +
-          (clientLabel ? '<div class="gal-overlay-client">' + clientLabel + '</div>' : '') +
-        '</div>';
-
-      lazyObserver.observe(el.querySelector('img'));
-      el.addEventListener('click', (function(i) { return function() { openLightbox(i); }; })(index));
-      grid.appendChild(el);
-    });
-    if (!skipFilter) filterGallery();
-  }
-
-  function filterGallery() {
-    var items     = grid.querySelectorAll('.gal-item');
-    var selDisc   = Array.from(activeFilters.discipline);
-    var selClient = Array.from(activeFilters.client);
-    var noFilters = selDisc.length === 0 && selClient.length === 0;
-    var sameTypeConflict = filterLogic === 'and' && (
-      (selDisc.length > 1 && selClient.length === 0) ||
-      (selClient.length > 1 && selDisc.length === 0)
-    );
-
-    visibleItems = [];
-    items.forEach(function(el) {
-      var index       = parseInt(el.dataset.index);
-      var item        = manifest[index];
-      var itemDiscs    = item.discipline || [];
-      var itemClients = item.clients || [];
-      var show;
-
-      if (noFilters) {
-        show = true;
-      } else if (sameTypeConflict) {
-        show = false;
-      } else if (filterLogic === 'or') {
-        // Check if ANY selected discipline matches ANY of this item's disciplines
-        var dHit = selDisc.length > 0 && itemDiscs.some(function(d) { 
-          return selDisc.indexOf(d) !== -1; 
+      document.querySelectorAll('.filter-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var type = btn.dataset.type, value = btn.dataset.value;
+          if (activeFilters[type].has(value)) { activeFilters[type].delete(value); btn.classList.remove('active'); }
+          else { activeFilters[type].add(value); btn.classList.add('active'); }
+          updateAllButton(); filterGallery();
         });
-        // Check if ANY selected client matches ANY of this item's clients  
-        var cHit = selClient.length > 0 && itemClients.some(function(c) { 
-          return selClient.indexOf(c) !== -1; 
-        });
-        show = dHit || cHit;
-      } else {
-        // In AND mode: item must have at least one matching discipline (if any selected)
-        // and at least one matching client (if any selected)
-        var dOk = selDisc.length === 0 || itemDiscs.some(function(d) { 
-          return selDisc.indexOf(d) !== -1; 
-        });
-        var cOk = selClient.length === 0 || itemClients.some(function(c) { 
-          return selClient.indexOf(c) !== -1; 
-        });
-        show = dOk && cOk;
-      }
-
-      el.classList.toggle('hidden', !show);
-      if (show) visibleItems.push(index);
-    });
-
-    visibleCount.textContent = visibleItems.length;
-
-    if (sameTypeConflict) {
-      emptyTitle.textContent = 'AND works across disciplines and clients.';
-      emptyDesc.textContent  = selDisc.length > 1
-        ? 'Select one discipline, then add a client to narrow results.'
-        : 'Select one client, then add a discipline to narrow results.';
-    } else {
-      emptyTitle.textContent = 'No pieces match that filter combination.';
-      emptyDesc.textContent  = 'Try adjusting or clearing your filters.';
-    }
-
-    emptyState.classList.toggle('visible', visibleItems.length === 0 && !noFilters);
-    updateActiveSummary();
-    updateUrl();
-    justifiedLayout();
-  }
-
-  function justifiedLayout() {
-    var containerWidth = grid.clientWidth;
-    if (!containerWidth) return;
-    var gap = 12;
-    // Read target height from CSS custom property set by media queries, fallback 280
-    var targetHeight = parseInt(getComputedStyle(grid).getPropertyValue('--row-target')) || 200;
-    var items = Array.from(grid.querySelectorAll('.gal-item:not(.hidden)'));
-    if (!items.length) return;
-
-    var rows = [];
-    var currentRow = [];
-    var currentRowNaturalWidth = 0;
-
-    items.forEach(function(el) {
-      var ratio = parseFloat(el.dataset.ratio) || 1;
-      var naturalWidth = ratio * targetHeight;
-      var gapBefore = currentRow.length > 0 ? gap : 0;
-
-      if (currentRow.length > 0 && currentRowNaturalWidth + gapBefore + naturalWidth > containerWidth) {
-        rows.push(currentRow);
-        currentRow = [];
-        currentRowNaturalWidth = 0;
-      }
-      currentRow.push({ el: el, ratio: ratio, naturalWidth: naturalWidth });
-      currentRowNaturalWidth += (currentRow.length > 1 ? gap : 0) + naturalWidth;
-    });
-    if (currentRow.length) rows.push(currentRow);
-
-    rows.forEach(function(row, rowIndex) {
-      var isLastRow = rowIndex === rows.length - 1;
-      var totalGaps = (row.length - 1) * gap;
-      var totalNaturalWidth = row.reduce(function(sum, item) { return sum + item.naturalWidth; }, 0);
-      var rowHeight;
-
-      if (isLastRow && totalNaturalWidth + totalGaps < containerWidth * 0.65) {
-        // Short last row — don't stretch; keep target height
-        rowHeight = targetHeight;
-      } else {
-        rowHeight = Math.floor(targetHeight * (containerWidth - totalGaps) / totalNaturalWidth);
-      }
-
-      // rowHeight = Math.min(Math.max(rowHeight, 200), 275);
-
-      row.forEach(function(item) {
-        item.el.style.width  = Math.floor(item.ratio * rowHeight) + 'px';
-        item.el.style.height = rowHeight + 'px';
       });
-    });
-  }
 
-  var resizeTimer;
-  window.addEventListener('resize', function() {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(justifiedLayout, 120);
-  });
+      document.getElementById('filterAll').addEventListener('click', clearAllFilters);
+      document.getElementById('clearAll').addEventListener('click', clearAllFilters);
 
-  document.querySelectorAll('.filter-btn').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      var type = btn.dataset.type, value = btn.dataset.value;
-      if (activeFilters[type].has(value)) { activeFilters[type].delete(value); btn.classList.remove('active'); }
-      else { activeFilters[type].add(value); btn.classList.add('active'); }
-      updateAllButton(); filterGallery();
-    });
-  });
+      function clearAllFilters() {
+        activeFilters.discipline.clear(); activeFilters.client.clear();
+        document.querySelectorAll('.filter-btn.active').forEach(function (b) { b.classList.remove('active'); });
+        updateAllButton(); filterGallery();
+      }
 
-  document.getElementById('filterAll').addEventListener('click', clearAllFilters);
-  document.getElementById('clearAll').addEventListener('click', clearAllFilters);
+      function updateAllButton() {
+        document.getElementById('filterAll').classList.toggle('active', activeFilters.discipline.size === 0 && activeFilters.client.size === 0);
+      }
 
-  function clearAllFilters() {
-    activeFilters.discipline.clear(); activeFilters.client.clear();
-    document.querySelectorAll('.filter-btn.active').forEach(function(b) { b.classList.remove('active'); });
-    updateAllButton(); filterGallery();
-  }
+      document.querySelectorAll('.logic-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          filterLogic = btn.dataset.logic;
+          document.querySelectorAll('.logic-btn').forEach(function (b) { b.classList.remove('active'); });
+          btn.classList.add('active'); filterGallery();
+        });
+      });
 
-  function updateAllButton() {
-    document.getElementById('filterAll').classList.toggle('active', activeFilters.discipline.size === 0 && activeFilters.client.size === 0);
-  }
+      filterToggle.addEventListener('click', function () {
+        var open = filterGroups.classList.toggle('mobile-open');
+        filterToggleIcon.textContent = open ? '↑' : '↓';
+      });
 
-  document.querySelectorAll('.logic-btn').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      filterLogic = btn.dataset.logic;
-      document.querySelectorAll('.logic-btn').forEach(function(b) { b.classList.remove('active'); });
-      btn.classList.add('active'); filterGallery();
-    });
-  });
+      function updateActiveSummary() {
+        var hasAny = activeFilters.discipline.size > 0 || activeFilters.client.size > 0;
+        activeSummary.style.display = hasAny ? 'flex' : 'none';
+        activeTags.innerHTML = '';
+        Array.from(activeFilters.discipline).forEach(function (v) { activeTags.appendChild(makeTag(v, 'discipline')); });
+        Array.from(activeFilters.client).forEach(function (v) { activeTags.appendChild(makeTag(v, 'client')); });
+      }
 
-  filterToggle.addEventListener('click', function() {
-    var open = filterGroups.classList.toggle('mobile-open');
-    filterToggleIcon.textContent = open ? '↑' : '↓';
-  });
+      function makeTag(value, type) {
+        var tag = document.createElement('div');
+        tag.className = 'active-tag';
+        tag.innerHTML = formatLabel(value) + ' <span class="active-tag-remove">×</span>';
+        tag.querySelector('.active-tag-remove').addEventListener('click', function () {
+          activeFilters[type].delete(value);
+          var btn = document.querySelector('.filter-btn[data-type="' + type + '"][data-value="' + value + '"]');
+          if (btn) btn.classList.remove('active');
+          updateAllButton(); filterGallery();
+        });
+        return tag;
+      }
 
-  function updateActiveSummary() {
-    var hasAny = activeFilters.discipline.size > 0 || activeFilters.client.size > 0;
-    activeSummary.style.display = hasAny ? 'flex' : 'none';
-    activeTags.innerHTML = '';
-    Array.from(activeFilters.discipline).forEach(function(v) { activeTags.appendChild(makeTag(v,'discipline')); });
-    Array.from(activeFilters.client).forEach(function(v) { activeTags.appendChild(makeTag(v,'client')); });
-  }
+      function updateUrl() {
+        var params = new URLSearchParams();
+        if (activeFilters.discipline.size > 0) params.set('view', Array.from(activeFilters.discipline).join(','));
+        if (activeFilters.client.size > 0) params.set('client', Array.from(activeFilters.client).join(','));
+        window.history.replaceState({}, '', params.toString() ? window.location.pathname + '?' + params.toString() : window.location.pathname);
+      }
 
-  function makeTag(value, type) {
-    var tag = document.createElement('div');
-    tag.className = 'active-tag';
-    tag.innerHTML = formatLabel(value) + ' <span class="active-tag-remove">×</span>';
-    tag.querySelector('.active-tag-remove').addEventListener('click', function() {
-      activeFilters[type].delete(value);
-      var btn = document.querySelector('.filter-btn[data-type="'+type+'"][data-value="'+value+'"]');
-      if (btn) btn.classList.remove('active');
-      updateAllButton(); filterGallery();
-    });
-    return tag;
-  }
+      function readUrlParams() {
+        var params = new URLSearchParams(window.location.search);
+        var view = params.get('view'), client = params.get('client');
+        if (view) view.split(',').forEach(function (v) {
+          v = v.trim().toLowerCase(); if (!v) return;
+          activeFilters.discipline.add(v);
+          var b = document.querySelector('.filter-btn[data-type="discipline"][data-value="' + v + '"]');
+          if (b) b.classList.add('active');
+        });
+        if (client) client.split(',').forEach(function (c) {
+          c = c.trim().toLowerCase(); if (!c) return;
+          activeFilters.client.add(c);
+          var b = document.querySelector('.filter-btn[data-type="client"][data-value="' + c + '"]');
+          if (b) b.classList.add('active');
+        });
+        if (view || client) updateAllButton();
+      }
 
-  function updateUrl() {
-    var params = new URLSearchParams();
-    if (activeFilters.discipline.size > 0) params.set('view',   Array.from(activeFilters.discipline).join(','));
-    if (activeFilters.client.size > 0)     params.set('client', Array.from(activeFilters.client).join(','));
-    window.history.replaceState({}, '', params.toString() ? window.location.pathname+'?'+params.toString() : window.location.pathname);
-  }
+      function openLightbox(index) {
+        lightboxIndex = visibleItems.indexOf(index);
+        if (lightboxIndex === -1) lightboxIndex = 0;
+        showLightboxItem();
+        lightbox.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
 
-  function readUrlParams() {
-    var params = new URLSearchParams(window.location.search);
-    var view = params.get('view'), client = params.get('client');
-    if (view) view.split(',').forEach(function(v) {
-      v = v.trim().toLowerCase(); if (!v) return;
-      activeFilters.discipline.add(v);
-      var b = document.querySelector('.filter-btn[data-type="discipline"][data-value="'+v+'"]');
-      if (b) b.classList.add('active');
-    });
-    if (client) client.split(',').forEach(function(c) {
-      c = c.trim().toLowerCase(); if (!c) return;
-      activeFilters.client.add(c);
-      var b = document.querySelector('.filter-btn[data-type="client"][data-value="'+c+'"]');
-      if (b) b.classList.add('active');
-    });
-    if (view || client) updateAllButton();
-  }
+      function showLightboxItem() {
+        var index = visibleItems[lightboxIndex];
+        var item = manifest[index];
+        var el = grid.querySelector('.gal-item[data-index="' + index + '"]');
+        lightboxImg.src = el ? el.dataset.full : item.file;
+        lightboxImg.alt = (item.discipline || []).map(formatLabel).join(' · ');
+        lightboxDiscipline.textContent = (item.discipline || []).map(formatLabel).join(' · ');
+        lightboxClient.textContent = (item.clients || []).map(formatLabel).join(' · ');
+      }
 
-  function openLightbox(index) {
-    lightboxIndex = visibleItems.indexOf(index);
-    if (lightboxIndex === -1) lightboxIndex = 0;
-    showLightboxItem();
-    lightbox.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
+      function closeLightbox() {
+        lightbox.classList.remove('open');
+        document.body.style.overflow = '';
+        lightboxImg.src = '';
+      }
 
-  function showLightboxItem() {
-    var index = visibleItems[lightboxIndex];
-    var item  = manifest[index];
-    var el    = grid.querySelector('.gal-item[data-index="'+index+'"]');
-    lightboxImg.src = el ? el.dataset.full : item.file;
-    lightboxImg.alt = (item.discipline || []).map(formatLabel).join(' · ');
-lightboxDiscipline.textContent = (item.discipline || []).map(formatLabel).join(' · ');
-    lightboxClient.textContent = (item.clients||[]).map(formatLabel).join(' · ');
-  }
+      document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', function (e) { if (e.target === lightbox) closeLightbox(); });
+      document.getElementById('lightboxPrev').addEventListener('click', function () { lightboxIndex = (lightboxIndex - 1 + visibleItems.length) % visibleItems.length; showLightboxItem(); });
+      document.getElementById('lightboxNext').addEventListener('click', function () { lightboxIndex = (lightboxIndex + 1) % visibleItems.length; showLightboxItem(); });
+      document.addEventListener('keydown', function (e) {
+        if (!lightbox.classList.contains('open')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') { lightboxIndex = (lightboxIndex - 1 + visibleItems.length) % visibleItems.length; showLightboxItem(); }
+        if (e.key === 'ArrowRight') { lightboxIndex = (lightboxIndex + 1) % visibleItems.length; showLightboxItem(); }
+      });
 
-  function closeLightbox() {
-    lightbox.classList.remove('open');
-    document.body.style.overflow = '';
-    lightboxImg.src = '';
-  }
+      function formatLabel(slug) {
+        if (!slug) return '';
 
-  document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
-  lightbox.addEventListener('click', function(e) { if (e.target === lightbox) closeLightbox(); });
-  document.getElementById('lightboxPrev').addEventListener('click', function() { lightboxIndex=(lightboxIndex-1+visibleItems.length)%visibleItems.length; showLightboxItem(); });
-  document.getElementById('lightboxNext').addEventListener('click', function() { lightboxIndex=(lightboxIndex+1)%visibleItems.length; showLightboxItem(); });
-  document.addEventListener('keydown', function(e) {
-    if (!lightbox.classList.contains('open')) return;
-    if (e.key==='Escape') closeLightbox();
-    if (e.key==='ArrowLeft') { lightboxIndex=(lightboxIndex-1+visibleItems.length)%visibleItems.length; showLightboxItem(); }
-    if (e.key==='ArrowRight') { lightboxIndex=(lightboxIndex+1)%visibleItems.length; showLightboxItem(); }
-  });
+        // Singular label mappings + special cases
+        var labelMap = {
+          'backgrounds': 'Background',
+          'books': 'Book',
+          'nfts': 'NFT',
+          'nft': 'NFT'
+        };
 
-  function formatLabel(slug) {
-  if (!slug) return '';
-  
-  // Singular label mappings + special cases
-  var labelMap = {
-    'backgrounds': 'Background',
-    'books': 'Book',
-    'nfts': 'NFT',
-    'nft': 'NFT'
-  };
-  
-  // Check if we have a custom mapping
-  if (labelMap[slug]) return labelMap[slug];
-  
-  // Otherwise, capitalize normally (for illustration, concept-art, etc.)
-  return slug.split('-').map(function(w) { 
-    return w.charAt(0).toUpperCase() + w.slice(1); 
-  }).join(' ');
-}
-})();
-</script>
+        // Check if we have a custom mapping
+        if (labelMap[slug]) return labelMap[slug];
+
+        // Otherwise, capitalize normally (for illustration, concept-art, etc.)
+        return slug.split('-').map(function (w) {
+          return w.charAt(0).toUpperCase() + w.slice(1);
+        }).join(' ');
+      }
+    })();
+  </script>
 </body>
+
 </html>
