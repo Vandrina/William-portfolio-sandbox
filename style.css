@@ -1621,8 +1621,8 @@ END OF GALLERY FOR INLINE TESTING */
   cursor: pointer;
   color: var(--accent);
   font-size: 32px;
-  font-weight: 200;
-  padding-top: 10px;
+  font-weight: 250;
+  padding-top: 11px;
   z-index: 80;
   opacity: 0;
   pointer-events: none;
