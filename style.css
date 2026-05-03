@@ -1642,22 +1642,11 @@ END OF GALLERY FOR INLINE TESTING */
 
 @media (max-width: 480px) {
   .scroll-top {
-    bottom: 28px;
+    bottom: 25px;
     right: 28px;
     width: 42px;
     height: 42px;
     z-index: 50;
-    opacity: 0;
-  }
-
-  .scroll-top.visible {
-    opacity: 1;
-    pointer-events: all;
-  }
-
-  .scroll-top:hover {
-    border-color: var(--accent);
-    color: var(--accent);
   }
 }
 
