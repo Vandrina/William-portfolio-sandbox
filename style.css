@@ -454,7 +454,7 @@ body {
   font-family: var(--font-head);
   font-size: 15px;
   font-weight: 700;
-  color: var(--bright);
+  color: var(--text);
   letter-spacing: -0.01em;
 }
 
@@ -521,6 +521,10 @@ body {
   color: var(--muted);
 }
 
+  .footer-divider {
+  display: none;
+}
+
 @media (max-width: 768px) {
 
   /* FOOTER MOBILE */
@@ -543,6 +547,10 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     gap: 12px;
+  }
+
+.footer-divider {
+    display: block;
   }
 
   .footer-secondary {
