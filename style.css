@@ -1619,7 +1619,7 @@ END OF GALLERY FOR INLINE TESTING */
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: var(--accent);
+  color: var(--accent-dim);
   font-size: 32px;
   font-weight: 250;
   padding-top: 11px;
