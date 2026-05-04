@@ -1044,7 +1044,6 @@ body {
   font-size: 13px;
   padding: 6px 13px;
   font-weight: 500;
-  border: 2px solid var(--mid);
 }
 
 .filter-btn:hover {
