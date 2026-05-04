@@ -1038,6 +1038,12 @@ body {
   user-select: none;
 }
 
+.disciplines-group .filter-btn {
+  font-size: 13px;
+  padding: 6px 13px;
+  font-weight: 600;
+}
+
 .filter-btn:hover {
   border-color: var(--accent);
   color: var(--accent);
