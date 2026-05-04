@@ -1009,6 +1009,7 @@ body {
   flex-wrap: wrap;
   align-items: center;
   gap: 6px;
+  justify-content: center;
 }
 
 .filter-group-label {
@@ -1038,10 +1039,12 @@ body {
   user-select: none;
 }
 
+
 .disciplines-group .filter-btn {
   font-size: 13px;
   padding: 6px 13px;
-  font-weight: 600;
+  font-weight: 500;
+  border: 2px solid var(--mid);
 }
 
 .filter-btn:hover {
