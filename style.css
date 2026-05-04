@@ -362,7 +362,7 @@ body {
 
 /* ── SECTION BLOCKS ── */
 .section {
-  padding: 20px 32px 40px;
+  padding: 40px 32px;
   border-bottom: 1px solid var(--border);
 }
 
@@ -692,6 +692,7 @@ body {
 } 
 */
 
+/*
 .hero-dots {
   position: absolute;
   bottom: 16px;
@@ -716,6 +717,7 @@ body {
   border-radius: 3px;
   background: var(--accent);
 }
+*/
 
 @media (max-width: 768px) {
   .hero-inner {
