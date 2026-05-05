@@ -6,10 +6,10 @@
     </div>
     <div class="page-divider centered footer-divider"></div>
     <div class="footer-nav">
-      <a href="gallery" class="footer-link">Gallery</a>
-      <a href="about" class="footer-link">About</a>
-      <a href="contact" class="footer-link">Contact</a>
-      <a href="shop" class="footer-link gold">Shop ↗</a>
+      <a href="/gallery" class="footer-link">Gallery</a>
+      <a href="/about" class="footer-link">About</a>
+      <a href="/contact" class="footer-link">Contact</a>
+      <a href="/shop" class="footer-link gold">Shop ↗</a>
     </div>
   </div>
 
@@ -17,8 +17,8 @@
     <div class="footer-left">
       <div class="footer-copy">© william mcguire — williammcguire.net</div>
       <div class="footer-legal">
-        <a href="privacy" class="footer-legal-link">Privacy</a>
-        <a href="terms" class="footer-legal-link">Terms</a>
+        <a href="/privacy" class="footer-legal-link">Privacy</a>
+        <a href="/terms" class="footer-legal-link">Terms</a>
       </div>
     </div>
 </footer>

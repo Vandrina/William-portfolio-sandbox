@@ -1,36 +1,34 @@
 
-
-
-#Static Pages
-/index                  /index.html         200
-/about                  /about.html         200
-/contact                /contact.html       200
-/gallery                /gallery.html       200
-/privacy                /privacy.html       200
-/shop                   /shop.html          200
-/terms                  /terms.html         200
+# Static Pages
+/index                  /index.html                             200
+/about                  /about.html                             200
+/contact                /contact.html                           200
+/gallery                /gallery.html                           200
+/privacy                /privacy.html                           200
+/shop                   /shop.html                              200
+/terms                  /terms.html                             200
 
 # Discipline filters
-/illustration           /gallery.html       200
-/concept-art            /gallery.html       200
-/toy-design             /gallery.html       200
-/backgrounds            /gallery.html       200
-/books                  /gallery.html       200
-/nfts                   /gallery.html       200
+/illustration           /gallery.html?view=illustration         200
+/concept-art            /gallery.html?view=concept-art          200
+/toy-design             /gallery.html?view=toy-design           200
+/backgrounds            /gallery.html?view=backgrounds          200
+/books                  /gallery.html?view=books                200
+/nfts                   /gallery.html?view=nfts                 200
 
 # Client filters
-/microsoft              /gallery.html       200
-/amazon                 /gallery.html       200
-/big-fish               /gallery.html       200
-/elevated-games         /gallery.html       200
-/reflective-games       /gallery.html       200
-/dreambox-learning      /gallery.html       200
-/leapfrog               /gallery.html       200
-/paramount              /gallery.html       200
-/handmade-by-robots     /gallery.html       200
-/mystery-society        /gallery.html       200
-/nordstrom              /gallery.html       200
-/nickelodeon            /gallery.html       200
-/stone-arch-books       /gallery.html       200
-/tech-smart-kids        /gallery.html       200
-/agency                 /gallery.html       200
+/microsoft              /gallery.html?client=microsoft          200
+/amazon                 /gallery.html?client=amazon             200
+/big-fish               /gallery.html?client=big-fish           200
+/elevated-games         /gallery.html?client=elevated-games     200
+/reflective-games       /gallery.html?client=reflective-games   200
+/dreambox-learning      /gallery.html?client=dreambox-learning  200
+/leapfrog               /gallery.html?client=leapfrog           200
+/paramount              /gallery.html?client=paramount          200
+/handmade-by-robots     /gallery.html?client=handmade-by-robots 200
+/mystery-society        /gallery.html?client=mystery-society    200
+/nordstrom              /gallery.html?client=nordstrom          200
+/nickelodeon            /gallery.html?client=nickelodeon        200
+/stone-arch-books       /gallery.html?client=stone-arch-books   200
+/tech-smart-kids        /gallery.html?client=tech-smart-kids    200
+/agency                 /gallery.html?client=agency             200
