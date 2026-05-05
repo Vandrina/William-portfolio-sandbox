@@ -18,34 +18,29 @@
 <body>
 
   <div class="nav-wrap">
-  <nav class="nav">
-    <a href="/index" class="nav-id">
-      <div class="nav-name">William McGuire</div>
-      <div class="nav-sub">Illustration <span>·</span> Concept Art <span>·</span> Animation</div>
-    </a>
-    <div class="nav-links">
-      <a href="/gallery" class="nav-item">Gallery</a>
-      <a href="/about" class="nav-item">About</a>
-      <a href="/contact" class="nav-item">Contact</a>
-      <a href="/shop" class="nav-shop nav-item">Shop ↗</a>
+    <nav class="nav">
+      <a href="index.html" class="nav-id">
+        <div class="nav-name">William McGuire</div>
+        <div class="nav-sub">Illustration <span>·</span> Concept Art <span>·</span> Animation</div>
+      </a>
+      <div class="nav-links">
+        <a href="gallery.html" class="nav-item active">Gallery</a>
+        <a href="about.html" class="nav-item">About</a>
+        <a href="contact.html" class="nav-item">Contact</a>
+        <a href="shop.html" class="nav-shop nav-item">Shop ↗</a>
+      </div>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="nav-mobile-menu" id="navMobileMenu">
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="shop.html" class="shop">Shop ↗</a>
     </div>
-    <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
-  <div class="nav-mobile-menu" id="navMobileMenu">
-    <a href="/gallery">Gallery</a>
-    <a href="/about">About</a>
-    <a href="/contact">Contact</a>
-    <a href="/shop" class="shop">Shop ↗</a>
   </div>
-</div>
 
-
-</div>
-
-
-</div>
 
   </div>
   <div class="filter-wrap">
@@ -105,7 +100,7 @@
         pieces</div>
     </div>
   </div>
--->
+  -->
 
   <div class="gallery-wrap">
     <div class="gallery-inner">
@@ -141,10 +136,10 @@
     </div>
     <div class="page-divider centered footer-divider"></div>
     <div class="footer-nav">
-      <a href="/gallery" class="footer-link">Gallery</a>
-      <a href="/about" class="footer-link">About</a>
-      <a href="/contact" class="footer-link">Contact</a>
-      <a href="/shop" class="footer-link gold">Shop ↗</a>
+      <a href="gallery.html" class="footer-link">Gallery</a>
+      <a href="about.html" class="footer-link">About</a>
+      <a href="contact.html" class="footer-link">Contact</a>
+      <a href="shop.html" class="footer-link gold">Shop ↗</a>
     </div>
   </div>
 
@@ -152,8 +147,8 @@
     <div class="footer-left">
       <div class="footer-copy">© william mcguire — williammcguire.net</div>
       <div class="footer-legal">
-        <a href="/privacy" class="footer-legal-link">Privacy</a>
-        <a href="/terms" class="footer-legal-link">Terms</a>
+        <a href="privacy.html" class="footer-legal-link">Privacy</a>
+        <a href="terms.html" class="footer-legal-link">Terms</a>
       </div>
     </div>
 </footer>
@@ -227,7 +222,7 @@
         });
       }, { rootMargin: '0px 0px' });
 
-      fetch('/data/manifest.json')
+      fetch('./data/manifest.json')
         .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
         .then(function (data) {
           manifest = data;
@@ -490,87 +485,30 @@
         return tag;
       }
 
-function updateUrl() {
-  console.log('updateUrl called, path:', window.location.pathname);
-  var path = window.location.pathname.replace(/^\/+|\/+$/g, '').toLowerCase();
-  console.log('cleaned path:', path);
-  var path = window.location.pathname.replace(/^\/+|\/+$/g, '').toLowerCase();
-  var disciplines = Array.from(activeFilters.discipline);
-  var clients = Array.from(activeFilters.client);
-  
-  // If we're on a clean filter path (like /microsoft), don't change the URL
-  var validSlugs = ['illustration', 'concept-art', 'toy-design', 'backgrounds', 'books', 'nfts',
-                    'microsoft', 'amazon', 'big-fish', 'elevated-games', 'reflective-games',
-                    'dreambox-learning', 'leapfrog', 'paramount', 'handmade-by-robots',
-                    'mystery-society', 'nordstrom', 'nickelodeon', 'stone-arch-books',
-                    'tech-smart-kids', 'agency'];
-  
-  if (validSlugs.indexOf(path) !== -1) {
-    // We're on a clean URL, don't modify it
-    return;
-  }
-  
-  // Otherwise, use query string format
-  var params = new URLSearchParams();
-  if (disciplines.length > 0) params.set('view', disciplines.join(','));
-  if (clients.length > 0) params.set('client', clients.join(','));
-  window.history.replaceState({}, '', params.toString() ? '/gallery?' + params.toString() : '/gallery');
-}
+      function updateUrl() {
+        var params = new URLSearchParams();
+        if (activeFilters.discipline.size > 0) params.set('view', Array.from(activeFilters.discipline).join(','));
+        if (activeFilters.client.size > 0) params.set('client', Array.from(activeFilters.client).join(','));
+        window.history.replaceState({}, '', params.toString() ? window.location.pathname + '?' + params.toString() : window.location.pathname);
+      }
 
-function readUrlParams() {
-  console.log('readUrlParams called, path:', window.location.pathname);
-  const path = window.location.pathname.replace(/^\/+|\/+$/g, '').toLowerCase();
-  console.log('cleaned path:', path);
-  // --- NEW: path-based parsing ---
-  const path = window.location.pathname.replace(/^\/+|\/+$/g, '').toLowerCase();
-
-  if (path && path !== 'gallery' && path !== 'index.html') {
-    const slug = path;
-
-    let matched = false;
-
-    // try discipline
-    const discBtn = document.querySelector('.filter-btn[data-type="discipline"][data-value="' + slug + '"]');
-    if (discBtn) {
-      activeFilters.discipline.add(slug);
-      discBtn.classList.add('active');
-      matched = true;
-    }
-
-    // try client
-    const clientBtn = document.querySelector('.filter-btn[data-type="client"][data-value="' + slug + '"]');
-    if (clientBtn) {
-      activeFilters.client.add(slug);
-      clientBtn.classList.add('active');
-      matched = true;
-    }
-
-    if (matched) {
-      updateAllButton();
-      return; // IMPORTANT: stop here if path worked
-    }
-  }
-
-  // --- OLD: query param fallback ---
-  var params = new URLSearchParams(window.location.search);
-  var view = params.get('view'), client = params.get('client');
-
-  if (view) view.split(',').forEach(function (v) {
-    v = v.trim().toLowerCase(); if (!v) return;
-    activeFilters.discipline.add(v);
-    var b = document.querySelector('.filter-btn[data-type="discipline"][data-value="' + v + '"]');
-    if (b) b.classList.add('active');
-  });
-
-  if (client) client.split(',').forEach(function (c) {
-    c = c.trim().toLowerCase(); if (!c) return;
-    activeFilters.client.add(c);
-    var b = document.querySelector('.filter-btn[data-type="client"][data-value="' + c + '"]');
-    if (b) b.classList.add('active');
-  });
-
-  if (view || client) updateAllButton();
-}
+      function readUrlParams() {
+        var params = new URLSearchParams(window.location.search);
+        var view = params.get('view'), client = params.get('client');
+        if (view) view.split(',').forEach(function (v) {
+          v = v.trim().toLowerCase(); if (!v) return;
+          activeFilters.discipline.add(v);
+          var b = document.querySelector('.filter-btn[data-type="discipline"][data-value="' + v + '"]');
+          if (b) b.classList.add('active');
+        });
+        if (client) client.split(',').forEach(function (c) {
+          c = c.trim().toLowerCase(); if (!c) return;
+          activeFilters.client.add(c);
+          var b = document.querySelector('.filter-btn[data-type="client"][data-value="' + c + '"]');
+          if (b) b.classList.add('active');
+        });
+        if (view || client) updateAllButton();
+      }
 
       function openLightbox(index) {
         lightboxIndex = visibleItems.indexOf(index);

@@ -1,23 +1,23 @@
 <div class="nav-wrap">
   <nav class="nav">
-    <a href="index" class="nav-id">
+    <a href="index.html" class="nav-id">
       <div class="nav-name">William McGuire</div>
       <div class="nav-sub">Illustration <span>·</span> Concept Art <span>·</span> Animation</div>
     </a>
     <div class="nav-links">
-      <a href="/gallery" class="nav-item">Gallery</a>
-      <a href="/about" class="nav-item">About</a>
-      <a href="/contact" class="nav-item">Contact</a>
-      <a href="/shop" class="nav-shop nav-item">Shop ↗</a>
+      <a href="gallery.html" class="nav-item">Gallery</a>
+      <a href="about.html" class="nav-item">About</a>
+      <a href="contact.html" class="nav-item">Contact</a>
+      <a href="shop.html" class="nav-shop nav-item">Shop ↗</a>
     </div>
     <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
   </nav>
   <div class="nav-mobile-menu" id="navMobileMenu">
-    <a href="/gallery">Gallery</a>
-    <a href="/about">About</a>
-    <a href="/contact">Contact</a>
-    <a href="/shop" class="shop">Shop ↗</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="shop.html" class="shop">Shop ↗</a>
   </div>
 </div>
