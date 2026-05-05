@@ -588,38 +588,57 @@ body {
 .hero-wrap {
   background: var(--bg-2);
   border-bottom: 1px solid var(--border);
-  padding: 28px 32px 28px;
+  padding: 28px 0 28px;
+  overflow: hidden;
 }
 
 .hero-inner {
   max-width: 960px;
   margin: 0 auto;
   border-radius: 0;
-  overflow: hidden;
   border: 1px solid var(--border);
   border-bottom: none;
   position: relative;
   aspect-ratio: 16/9;
-  /* max-height: 500px; */
+  overflow: visible;
+}
+
+.hero-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.4, 0.0, 0.2, 1);
+  position: relative;
+  left: 50%;
 }
 
 .hero-slide {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  transition: opacity 0.8s ease;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 960px;
+  height: 100%;
+  position: relative;
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  opacity: 1;
+  transition: opacity 0.4s ease;
 }
 
-.hero-slide.active {
-  opacity: 1;
+.hero-slide:first-child {
+  border-left: none;
+}
+
+.hero-slide:last-child {
+  border-right: none;
 }
 
 .hero-slide img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  display: block;
 }
 
+/* Gradient backgrounds for each slide */
 .hero-slide-1 {
   background: linear-gradient(145deg, #1a1828 0%, #24182c 40%, #181e20 100%);
 }
@@ -642,6 +661,11 @@ body {
 
 .hero-slide-6 {
   background: linear-gradient(145deg, #28181e 0%, #181828 40%, #1e2018 100%);
+}
+
+/* Fade out non-active slides slightly */
+.hero-slide:not(.active) {
+  opacity: 0.3;
 }
 
 .hero-arrows {
@@ -677,22 +701,6 @@ body {
   color: var(--bright);
 }
 
-/*
-.hero-counter {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  font-family: var(--font-mono);
-  font-size: 10px;
-  color: var(--muted);
-  background: rgba(20,20,22,0.7);
-  padding: 3px 8px;
-  border-radius: 3px;
-  z-index: 10;
-} 
-*/
-
-/*
 .hero-dots {
   position: absolute;
   bottom: 16px;
@@ -717,11 +725,74 @@ body {
   border-radius: 3px;
   background: var(--accent);
 }
-*/
 
+/* Tablet breakpoint */
+@media (max-width: 1024px) {
+  .hero-wrap {
+    padding: 24px 0 24px;
+  }
+  
+  .hero-inner {
+    max-width: 720px;
+  }
+  
+  .hero-slide {
+    max-width: 720px;
+  }
+}
+
+/* Mobile breakpoint */
 @media (max-width: 768px) {
+  .hero-wrap {
+    padding: 20px 0 20px;
+  }
+  
   .hero-inner {
     aspect-ratio: 16/9;
+    max-width: 90%;
+  }
+  
+  .hero-slide {
+    max-width: 90vw;
+  }
+  
+  .hero-arrows {
+    padding: 0 12px;
+  }
+  
+  .hero-arrow {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+  
+  .hero-dots {
+    bottom: 12px;
+    gap: 5px;
+  }
+  
+  .hero-dot {
+    width: 5px;
+    height: 5px;
+  }
+  
+  .hero-dot.active {
+    width: 16px;
+  }
+}
+
+/* Small mobile breakpoint */
+@media (max-width: 480px) {
+  .hero-wrap {
+    padding: 16px 0 16px;
+  }
+  
+  .hero-inner {
+    max-width: 95%;
+  }
+  
+  .hero-slide {
+    max-width: 95vw;
   }
 }
 
