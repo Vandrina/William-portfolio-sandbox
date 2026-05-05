@@ -491,6 +491,9 @@
       }
 
 function updateUrl() {
+  console.log('updateUrl called, path:', window.location.pathname);
+  var path = window.location.pathname.replace(/^\/+|\/+$/g, '').toLowerCase();
+  console.log('cleaned path:', path);
   var path = window.location.pathname.replace(/^\/+|\/+$/g, '').toLowerCase();
   var disciplines = Array.from(activeFilters.discipline);
   var clients = Array.from(activeFilters.client);
@@ -515,6 +518,9 @@ function updateUrl() {
 }
 
 function readUrlParams() {
+  console.log('readUrlParams called, path:', window.location.pathname);
+  const path = window.location.pathname.replace(/^\/+|\/+$/g, '').toLowerCase();
+  console.log('cleaned path:', path);
   // --- NEW: path-based parsing ---
   const path = window.location.pathname.replace(/^\/+|\/+$/g, '').toLowerCase();
 
