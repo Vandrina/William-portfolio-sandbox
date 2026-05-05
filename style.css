@@ -584,7 +584,157 @@ body {
   background: var(--bg-2);
 }
 
-/* ── HERO (homepage) ── */
+
+/* ── HERO CAROUSEL (homepage) ── */
+.hero-wrap {
+  background: var(--bg-2);
+  border-bottom: 1px solid var(--border);
+  padding: 28px 32px 28px;
+}
+ 
+.hero-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+  aspect-ratio: 16/9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+ 
+/* Container for all slides - holds positioning context */
+.hero-carousel-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+ 
+/* Individual slide containers */
+.hero-slide {
+  position: absolute;
+  height: 100%;
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+}
+ 
+/* Center (active) slide */
+.hero-slide.active {
+  position: relative;
+  width: 62%;
+  opacity: 1;
+  pointer-events: auto;
+  cursor: default;
+  z-index: 3;
+  border: 1px solid var(--border);
+}
+ 
+/* Previous slide (left preview) */
+.hero-slide.prev {
+  left: 0;
+  width: 18%;
+  opacity: 0.5;
+  pointer-events: auto;
+  z-index: 2;
+  border: 1px solid transparent;
+}
+ 
+.hero-slide.prev:hover {
+  opacity: 0.8;
+  border-color: var(--border-mid);
+}
+ 
+/* Next slide (right preview) */
+.hero-slide.next {
+  right: 0;
+  width: 18%;
+  opacity: 0.5;
+  pointer-events: auto;
+  z-index: 2;
+  border: 1px solid transparent;
+}
+ 
+.hero-slide.next:hover {
+  opacity: 0.8;
+  border-color: var(--border-mid);
+}
+ 
+/* Slide images */
+.hero-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+ 
+/* Slide backgrounds */
+.hero-slide-1 {
+  background: linear-gradient(145deg, #1a1828 0%, #24182c 40%, #181e20 100%);
+}
+ 
+.hero-slide-2 {
+  background: linear-gradient(145deg, #1e2818 0%, #18281e 40%, #201e14 100%);
+}
+ 
+.hero-slide-3 {
+  background: linear-gradient(145deg, #28181e 0%, #181828 40%, #1e2018 100%);
+}
+ 
+.hero-slide-4 {
+  background: linear-gradient(145deg, #1a1828 0%, #24182c 40%, #181e20 100%);
+}
+ 
+.hero-slide-5 {
+  background: linear-gradient(145deg, #1e2818 0%, #18281e 40%, #201e14 100%);
+}
+ 
+.hero-slide-6 {
+  background: linear-gradient(145deg, #28181e 0%, #181828 40%, #1e2018 100%);
+}
+ 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-inner {
+    aspect-ratio: 16/9;
+  }
+  
+  .hero-slide.active {
+    width: 68%;
+  }
+  
+  .hero-slide.prev,
+  .hero-slide.next {
+    width: 15%;
+  }
+}
+ 
+@media (max-width: 480px) {
+  .hero-carousel-track {
+    gap: 6px;
+  }
+  
+  .hero-slide.active {
+    width: 70%;
+  }
+  
+  .hero-slide.prev,
+  .hero-slide.next {
+    width: 14%;
+  }
+}
+
+
+
+/* HERO GALLERY ORIG
+/* ── HERO (homepage) ── 
 .hero-wrap {
   background: var(--bg-2);
   border-bottom: 1px solid var(--border);
@@ -601,8 +751,8 @@ body {
   position: relative;
   aspect-ratio: 16/9;
   /* max-height: 500px; */
-}
-
+/* } */
+/*
 .hero-slide {
   position: absolute;
   inset: 0;
@@ -676,8 +826,8 @@ body {
   background: rgba(20, 20, 22, 0.95);
   color: var(--bright);
 }
-
-/*
+*/
+/* /*
 .hero-counter {
   position: absolute;
   top: 14px;
@@ -690,9 +840,9 @@ body {
   border-radius: 3px;
   z-index: 10;
 } 
-*/
+*/ */
 
-/*
+/* /*
 .hero-dots {
   position: absolute;
   bottom: 16px;
@@ -717,13 +867,18 @@ body {
   border-radius: 3px;
   background: var(--accent);
 }
-*/
-
+*/ */
+ /* 
 @media (max-width: 768px) {
   .hero-inner {
     aspect-ratio: 16/9;
   }
 }
+
+
+*/
+
+
 
 /* ── DISCIPLINE CARDS ── */
 .disc-grid {
