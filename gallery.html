@@ -486,10 +486,23 @@
       }
 
       function updateUrl() {
-        var params = new URLSearchParams();
-        if (activeFilters.discipline.size > 0) params.set('view', Array.from(activeFilters.discipline).join(','));
-        if (activeFilters.client.size > 0) params.set('client', Array.from(activeFilters.client).join(','));
-        window.history.replaceState({}, '', params.toString() ? window.location.pathname + '?' + params.toString() : window.location.pathname);
+        // For single filters, use clean URL; for multiple/complex, fall back to query string
+        var disciplines = Array.from(activeFilters.discipline);
+        var clients = Array.from(activeFilters.client);
+  
+        if (disciplines.length === 1 && clients.length === 0) {
+          window.history.replaceState({}, '', '/' + disciplines[0]);
+        } else if (clients.length === 1 && disciplines.length === 0) {
+          window.history.replaceState({}, '', '/' + clients[0]);
+        } else if (disciplines.length === 0 && clients.length === 0) {
+          window.history.replaceState({}, '', '/gallery.html');
+        } else {
+          // Multiple filters - use query string format
+          var params = new URLSearchParams();
+          if (disciplines.length > 0) params.set('view', disciplines.join(','));
+          if (clients.length > 0) params.set('client', clients.join(','));
+          window.history.replaceState({}, '', '/gallery.html?' + params.toString());
+        }
       }
 
       function readUrlParams() {
