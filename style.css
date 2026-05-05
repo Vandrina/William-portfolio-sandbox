@@ -1193,7 +1193,7 @@ body {
 
 .active-summary {
   margin-top: 10px;
-  display: flex;
+  display: none;
   align-items: center;
   gap: 8px;
   flex-wrap: wrap;
@@ -1205,6 +1205,12 @@ body {
   color: var(--muted);
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .active-summary {
+    display: flex; /* Visible on mobile */
+  }
 }
 
 .active-tag {
