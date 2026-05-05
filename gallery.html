@@ -485,33 +485,69 @@
         return tag;
       }
 
-      // Modified gallery.html JavaScript functions for clean URL support
-// Replace the existing updateUrl() and readUrlParams() functions with these
-
 function updateUrl() {
-  var params = new URLSearchParams();
-  if (activeFilters.discipline.size > 0) params.set('view', Array.from(activeFilters.discipline).join(','));
-  if (activeFilters.client.size > 0) params.set('client', Array.from(activeFilters.client).join(','));
-  window.history.replaceState({}, '', params.toString() ? window.location.pathname + '?' + params.toString() : window.location.pathname);
+  const disc = Array.from(activeFilters.discipline);
+  const client = Array.from(activeFilters.client);
+
+  // only support single filter for now (your current constraint)
+  const slug = disc[0] || client[0] || '';
+
+  const newPath = slug ? '/' + slug : '/gallery';
+
+  window.history.replaceState({}, '', newPath);
 }
 
 function readUrlParams() {
-        var params = new URLSearchParams(window.location.search);
-        var view = params.get('view'), client = params.get('client');
-        if (view) view.split(',').forEach(function (v) {
-          v = v.trim().toLowerCase(); if (!v) return;
-          activeFilters.discipline.add(v);
-          var b = document.querySelector('.filter-btn[data-type="discipline"][data-value="' + v + '"]');
-          if (b) b.classList.add('active');
-        });
-        if (client) client.split(',').forEach(function (c) {
-          c = c.trim().toLowerCase(); if (!c) return;
-          activeFilters.client.add(c);
-          var b = document.querySelector('.filter-btn[data-type="client"][data-value="' + c + '"]');
-          if (b) b.classList.add('active');
-        });
-        if (view || client) updateAllButton();
-      }
+  // --- NEW: path-based parsing ---
+  const path = window.location.pathname.replace(/^\/+|\/+$/g, '').toLowerCase();
+
+  if (path && path !== 'gallery' && path !== 'index.html') {
+    const slug = path;
+
+    let matched = false;
+
+    // try discipline
+    const discBtn = document.querySelector('.filter-btn[data-type="discipline"][data-value="' + slug + '"]');
+    if (discBtn) {
+      activeFilters.discipline.add(slug);
+      discBtn.classList.add('active');
+      matched = true;
+    }
+
+    // try client
+    const clientBtn = document.querySelector('.filter-btn[data-type="client"][data-value="' + slug + '"]');
+    if (clientBtn) {
+      activeFilters.client.add(slug);
+      clientBtn.classList.add('active');
+      matched = true;
+    }
+
+    if (matched) {
+      updateAllButton();
+      return; // IMPORTANT: stop here if path worked
+    }
+  }
+
+  // --- OLD: query param fallback ---
+  var params = new URLSearchParams(window.location.search);
+  var view = params.get('view'), client = params.get('client');
+
+  if (view) view.split(',').forEach(function (v) {
+    v = v.trim().toLowerCase(); if (!v) return;
+    activeFilters.discipline.add(v);
+    var b = document.querySelector('.filter-btn[data-type="discipline"][data-value="' + v + '"]');
+    if (b) b.classList.add('active');
+  });
+
+  if (client) client.split(',').forEach(function (c) {
+    c = c.trim().toLowerCase(); if (!c) return;
+    activeFilters.client.add(c);
+    var b = document.querySelector('.filter-btn[data-type="client"][data-value="' + c + '"]');
+    if (b) b.classList.add('active');
+  });
+
+  if (view || client) updateAllButton();
+}
 
       function openLightbox(index) {
         lightboxIndex = visibleItems.indexOf(index);
