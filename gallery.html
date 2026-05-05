@@ -3,7 +3,6 @@
 
 <head>
   <meta charset="UTF-8">
-  <base href="/William-portfolio-sandbox/">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gallery — William McGuire</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -490,65 +489,29 @@
 // Replace the existing updateUrl() and readUrlParams() functions with these
 
 function updateUrl() {
-  var disciplines = Array.from(activeFilters.discipline);
-  var clients = Array.from(activeFilters.client);
-  
-  // Single filter = clean URL
-  if (disciplines.length === 1 && clients.length === 0) {
-    window.history.replaceState({}, '', '/' + disciplines[0]);
-  } else if (clients.length === 1 && disciplines.length === 0) {
-    window.history.replaceState({}, '', '/' + clients[0]);
-  } else if (disciplines.length === 0 && clients.length === 0) {
-    window.history.replaceState({}, '', '/gallery.html');
-  } else {
-    // Multiple filters = query string
-    var params = new URLSearchParams();
-    if (disciplines.length > 0) params.set('view', disciplines.join(','));
-    if (clients.length > 0) params.set('client', clients.join(','));
-    window.history.replaceState({}, '', '/gallery.html?' + params.toString());
-  }
+  var params = new URLSearchParams();
+  if (activeFilters.discipline.size > 0) params.set('view', Array.from(activeFilters.discipline).join(','));
+  if (activeFilters.client.size > 0) params.set('client', Array.from(activeFilters.client).join(','));
+  window.history.replaceState({}, '', params.toString() ? window.location.pathname + '?' + params.toString() : window.location.pathname);
 }
 
 function readUrlParams() {
-  var params = new URLSearchParams(window.location.search);
-  var view = params.get('view');
-  var client = params.get('client');
-  var fromCleanUrl = params.get('from_clean_url');
-  
-  // Parse discipline filters
-  if (view) {
-    view.split(',').forEach(function (v) {
-      v = v.trim().toLowerCase();
-      if (!v) return;
-      activeFilters.discipline.add(v);
-      var b = document.querySelector('.filter-btn[data-type="discipline"][data-value="' + v + '"]');
-      if (b) b.classList.add('active');
-    });
-  }
-  
-  // Parse client filters
-  if (client) {
-    client.split(',').forEach(function (c) {
-      c = c.trim().toLowerCase();
-      if (!c) return;
-      activeFilters.client.add(c);
-      var b = document.querySelector('.filter-btn[data-type="client"][data-value="' + c + '"]');
-      if (b) b.classList.add('active');
-    });
-  }
-  
-  if (view || client) {
-    updateAllButton();
-    
-    // If this came from a clean URL (via 404 router), update address bar to show clean URL
-    if (fromCleanUrl === '1') {
-      // Remove the from_clean_url param and update to clean URL
-      setTimeout(function() {
-        updateUrl();
-      }, 0);
-    }
-  }
-}
+        var params = new URLSearchParams(window.location.search);
+        var view = params.get('view'), client = params.get('client');
+        if (view) view.split(',').forEach(function (v) {
+          v = v.trim().toLowerCase(); if (!v) return;
+          activeFilters.discipline.add(v);
+          var b = document.querySelector('.filter-btn[data-type="discipline"][data-value="' + v + '"]');
+          if (b) b.classList.add('active');
+        });
+        if (client) client.split(',').forEach(function (c) {
+          c = c.trim().toLowerCase(); if (!c) return;
+          activeFilters.client.add(c);
+          var b = document.querySelector('.filter-btn[data-type="client"][data-value="' + c + '"]');
+          if (b) b.classList.add('active');
+        });
+        if (view || client) updateAllButton();
+      }
 
       function openLightbox(index) {
         lightboxIndex = visibleItems.indexOf(index);

@@ -91,40 +91,6 @@
 
 
 <script>
-  // Clean URL routing - check if this is a valid filter request
-  (function() {
-    var path = window.location.pathname;
-    var pathSegments = path.split('/').filter(function(s) { return s.length > 0; });
-      
-    // List of valid filter slugs
-    var disciplines = ['illustration', 'concept-art', 'toy-design', 'backgrounds', 'books', 'nfts'];
-    var clients = ['microsoft', 'amazon', 'big-fish', 'elevated-games', 'reflective-games', 
-                     'dreambox-learning', 'leapfrog', 'paramount', 'handmade-by-robots', 
-                     'mystery-society', 'nordstrom', 'nickelodeon', 'stone-arch-books', 
-                     'tech-smart-kids', 'agency'];
-      
-    // Check if this is a single filter request
-    if (pathSegments.length === 1) {
-      var slug = pathSegments[0];
-        
-      // Remove any .html extension if present
-      slug = slug.replace(/\.html$/, '');
-        
-      if (disciplines.indexOf(slug) !== -1) {
-        // It's a discipline filter - redirect to gallery with view param
-        window.location.replace('/gallery.html?view=' + slug + '&from_clean_url=1');
-        return;
-       } else if (clients.indexOf(slug) !== -1) {
-        // It's a client filter - redirect to gallery with client param
-        window.location.replace('/gallery.html?client=' + slug + '&from_clean_url=1');
-        return;
-      }
-    }
-      
-    // If we get here, it's a real 404 - show the error page (code continues below)
-  })();
- 
-    // Navigation hamburger menu
     (function () {
       var btn = document.getElementById('navHamburger'), menu = document.getElementById('navMobileMenu');
       if (btn && menu) {
