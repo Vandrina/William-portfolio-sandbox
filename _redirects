@@ -1,24 +1,24 @@
-# Discipline filters - using 302 redirects
-/illustration           /gallery.html?view=illustration         302
-/concept-art            /gallery.html?view=concept-art          302
-/toy-design             /gallery.html?view=toy-design           302
-/backgrounds            /gallery.html?view=backgrounds          302
-/books                  /gallery.html?view=books                302
-/nfts                   /gallery.html?view=nfts                 302
+# Discipline filters only
+/illustration           /gallery.html?view=illustration         200
+/concept-art            /gallery.html?view=concept-art          200
+/toy-design             /gallery.html?view=toy-design           200
+/backgrounds            /gallery.html?view=backgrounds          200
+/books                  /gallery.html?view=books                200
+/nfts                   /gallery.html?view=nfts                 200
 
-# Client filters - using 302 redirects
-/microsoft              /gallery.html?client=microsoft          302
-/amazon                 /gallery.html?client=amazon             302
-/big-fish               /gallery.html?client=big-fish           302
-/elevated-games         /gallery.html?client=elevated-games     302
-/reflective-games       /gallery.html?client=reflective-games   302
-/dreambox-learning      /gallery.html?client=dreambox-learning  302
-/leapfrog               /gallery.html?client=leapfrog           302
-/paramount              /gallery.html?client=paramount          302
-/handmade-by-robots     /gallery.html?client=handmade-by-robots 302
-/mystery-society        /gallery.html?client=mystery-society    302
-/nordstrom              /gallery.html?client=nordstrom          302
-/nickelodeon            /gallery.html?client=nickelodeon        302
-/stone-arch-books       /gallery.html?client=stone-arch-books   302
-/tech-smart-kids        /gallery.html?client=tech-smart-kids    302
-/agency                 /gallery.html?client=agency             302
+# Client filters only
+/microsoft              /gallery.html?client=microsoft          200
+/amazon                 /gallery.html?client=amazon             200
+/big-fish               /gallery.html?client=big-fish           200
+/elevated-games         /gallery.html?client=elevated-games     200
+/reflective-games       /gallery.html?client=reflective-games   200
+/dreambox-learning      /gallery.html?client=dreambox-learning  200
+/leapfrog               /gallery.html?client=leapfrog           200
+/paramount              /gallery.html?client=paramount          200
+/handmade-by-robots     /gallery.html?client=handmade-by-robots 200
+/mystery-society        /gallery.html?client=mystery-society    200
+/nordstrom              /gallery.html?client=nordstrom          200
+/nickelodeon            /gallery.html?client=nickelodeon        200
+/stone-arch-books       /gallery.html?client=stone-arch-books   200
+/tech-smart-kids        /gallery.html?client=tech-smart-kids    200
+/agency                 /gallery.html?client=agency             200
