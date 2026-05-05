@@ -167,7 +167,7 @@
 
       // Scroll to top — show when page title scrolls out of view
       var scrollTopBtn = document.getElementById('scrollTop');
-      var pageHead = document.querySelector('.page-head');
+      var pageHead = document.querySelector('.gallery-grid');
       var scrollObserver = new IntersectionObserver(function (entries) {
         scrollTopBtn.classList.toggle('visible', !entries[0].isIntersecting);
       }, { threshold: 0 });
