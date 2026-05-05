@@ -667,11 +667,15 @@ body {
   background: linear-gradient(145deg, #28181e 0%, #181828 40%, #1e2018 100%);
 }
 
+.hero-slide-7 {
+  background: linear-gradient(145deg, #1a1828 0%, #24182c 40%, #181e20 100%);
+}
+
 /* Controls container below carousel */
 .hero-controls {
   max-width: 960px;
   margin: 0 auto;
-  padding: 20px 32px 0;
+  padding: 18px 32px 0;
   display: flex;
   align-items: center;
   justify-content: center;
