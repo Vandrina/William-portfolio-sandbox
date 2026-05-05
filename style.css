@@ -690,14 +690,13 @@ body {
   justify-content: center;
   padding-bottom: 4px;
   font-size: 18px;
-  color: var(--accent);
+  color: var(--accent-dim);
   cursor: pointer;
   transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
 
 .hero-arrow:hover {
-  background: rgba(200, 164, 110, 0.08);
-  color: var(--accent-light);
+  color: var(--accent);
   border-color: var(--accent);
 }
 
@@ -719,7 +718,7 @@ body {
 .hero-dot.active {
   width: 10px;
   border-radius: 3px;
-  background: var(--accent);
+  background: var(--accent-dim);
 }
 
 /* Tablet breakpoint */
