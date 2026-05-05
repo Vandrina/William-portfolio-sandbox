@@ -16,7 +16,7 @@
 </head>
 
 <body>
-
+  <div class="page-wrap"
   <div class="nav-wrap">
     <nav class="nav">
       <a href="index.html" class="nav-id">
@@ -40,6 +40,7 @@
       <a href="shop.html" class="shop">Shop ↗</a>
     </div>
   </div>
+</div>
 
 
   </div>
@@ -167,7 +168,7 @@
 
       // Scroll to top — show when page title scrolls out of view
       var scrollTopBtn = document.getElementById('scrollTop');
-      var pageHead = document.querySelector('.gallery-grid');
+      var pageHead = document.querySelector('.page-head');
       var scrollObserver = new IntersectionObserver(function (entries) {
         scrollTopBtn.classList.toggle('visible', !entries[0].isIntersecting);
       }, { threshold: 0 });
