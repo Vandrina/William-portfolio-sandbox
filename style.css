@@ -1207,9 +1207,9 @@ body {
   text-transform: uppercase;
 }
 
-@media (max-width: 768px) {
+@@media (min-width: 769px) {
   .active-summary {
-    display: flex; /* Visible on mobile */
+    display: none !important; /* Hide on desktop, overriding JS inline style */
   }
 }
 
