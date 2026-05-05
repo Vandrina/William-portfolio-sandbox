@@ -93,13 +93,14 @@
     </div>
   </div>
 
-  /* Showing number of results
+  <!-- Results Bar
   <div class="results-bar">
     <div class="results-inner">
       <div class="results-count">Showing <strong id="visibleCount">0</strong> of <strong id="totalCount">0</strong>
         pieces</div>
     </div>
   </div>
+  -->
 
   <div class="gallery-wrap">
     <div class="gallery-inner">
@@ -252,7 +253,9 @@
             return aD - bD;
           });
 
-          totalCount.textContent = manifest.length;
+          if (totalCount) {
+            totalCount.textContent = manifest.length;
+          }
           buildGallery(true);
           readUrlParams();
           requestAnimationFrame(function () { filterGallery(); });
@@ -350,7 +353,9 @@
           if (show) visibleItems.push(index);
         });
 
-        visibleCount.textContent = visibleItems.length;
+        if (visibleCount) {
+          visibleCount.textContent = visibleItems.length;
+        }
 
         if (sameTypeConflict) {
           emptyTitle.textContent = 'AND works across disciplines and clients.';

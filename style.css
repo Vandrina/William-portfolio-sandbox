@@ -979,7 +979,7 @@ body {
 
 /* FILTER BAR (gallery page) */
 .filter-wrap {
-  background: var(--bg);
+  background: var(--bg-2);
   border-bottom: 1px solid var(--border);
   padding: 18px 32px;
   position: sticky;
