@@ -1207,7 +1207,7 @@ body {
   text-transform: uppercase;
 }
 
-@@media (min-width: 769px) {
+@media (min-width: 769px) {
   .active-summary {
     display: none !important; /* Hide on desktop, overriding JS inline style */
   }
