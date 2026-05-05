@@ -46,7 +46,7 @@
 
   </div>
 
-  <!-- HERO GALLERY — lighter bg-2 -->
+<!-- HERO GALLERY — lighter bg-2 -->
 <div class="hero-wrap">
   <div class="hero-inner" id="heroInner">
     <div class="hero-track" id="heroTrack">
@@ -61,14 +61,14 @@
       <button class="hero-arrow" id="heroPrev">‹</button>
       <button class="hero-arrow" id="heroNext">›</button>
     </div>
-    <div class="hero-dots" id="heroDots">
-      <div class="hero-dot active" data-index="0"></div>
-      <div class="hero-dot" data-index="1"></div>
-      <div class="hero-dot" data-index="2"></div>
-      <div class="hero-dot" data-index="3"></div>
-      <div class="hero-dot" data-index="4"></div>
-      <div class="hero-dot" data-index="5"></div>
-    </div>
+  </div>
+  <div class="hero-dots" id="heroDots">
+    <div class="hero-dot" data-index="0"></div>
+    <div class="hero-dot" data-index="1"></div>
+    <div class="hero-dot" data-index="2"></div>
+    <div class="hero-dot" data-index="3"></div>
+    <div class="hero-dot" data-index="4"></div>
+    <div class="hero-dot" data-index="5"></div>
   </div>
 </div>
 
@@ -257,15 +257,25 @@
     var dots = document.querySelectorAll('.hero-dot');
     var current = 0;
     var timer;
-    var slideWidth = slides[0] ? slides[0].offsetWidth : 960;
+    var slideWidth = 960;
     
     function updateSlideWidth() {
-      slideWidth = slides[0] ? slides[0].offsetWidth : 960;
+      if (slides[0]) {
+        slideWidth = slides[0].offsetWidth;
+      }
     }
     
-    function goTo(i) {
-      // Update current index
+    function goTo(i, instant) {
+      var prev = current;
       current = (i + slides.length) % slides.length;
+      
+      // Handle wrapping: if jumping from end to start or start to end, do it instantly
+      var isWrapping = (prev === slides.length - 1 && current === 0) || 
+                       (prev === 0 && current === slides.length - 1);
+      
+      if (instant || isWrapping) {
+        track.style.transition = 'none';
+      }
       
       // Update active states
       slides.forEach(function(slide, index) {
@@ -276,8 +286,16 @@
       });
       
       // Calculate and apply transform
-      var offset = -(current * slideWidth) + (slideWidth / 2);
+      // Formula: move left by (current index * slide width) + half a slide width
+      var offset = -(current * slideWidth + slideWidth / 2);
       track.style.transform = 'translateX(' + offset + 'px)';
+      
+      // Re-enable transition after instant jump
+      if (instant || isWrapping) {
+        setTimeout(function() {
+          track.style.transition = 'transform 0.6s cubic-bezier(0.4, 0.0, 0.2, 1)';
+        }, 50);
+      }
     }
     
     function startTimer() {
@@ -308,12 +326,12 @@
     // Handle window resize
     window.addEventListener('resize', function() {
       updateSlideWidth();
-      goTo(current); // Recalculate position
+      goTo(current, true); // Recalculate position instantly
     });
     
     // Initialize
     updateSlideWidth();
-    goTo(0);
+    goTo(0, true);
     startTimer();
   })();
 </script>
