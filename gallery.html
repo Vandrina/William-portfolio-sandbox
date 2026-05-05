@@ -100,7 +100,7 @@
         pieces</div>
     </div>
   </div>
-  -->
+-->
 
   <div class="gallery-wrap">
     <div class="gallery-inner">
@@ -485,43 +485,69 @@
         return tag;
       }
 
-      function updateUrl() {
-        // For single filters, use clean URL; for multiple/complex, fall back to query string
-        var disciplines = Array.from(activeFilters.discipline);
-        var clients = Array.from(activeFilters.client);
-  
-        if (disciplines.length === 1 && clients.length === 0) {
-          window.history.replaceState({}, '', '/' + disciplines[0]);
-        } else if (clients.length === 1 && disciplines.length === 0) {
-          window.history.replaceState({}, '', '/' + clients[0]);
-        } else if (disciplines.length === 0 && clients.length === 0) {
-          window.history.replaceState({}, '', '/gallery.html');
-        } else {
-          // Multiple filters - use query string format
-          var params = new URLSearchParams();
-          if (disciplines.length > 0) params.set('view', disciplines.join(','));
-          if (clients.length > 0) params.set('client', clients.join(','));
-          window.history.replaceState({}, '', '/gallery.html?' + params.toString());
-        }
-      }
+      // Modified gallery.html JavaScript functions for clean URL support
+// Replace the existing updateUrl() and readUrlParams() functions with these
 
-      function readUrlParams() {
-        var params = new URLSearchParams(window.location.search);
-        var view = params.get('view'), client = params.get('client');
-        if (view) view.split(',').forEach(function (v) {
-          v = v.trim().toLowerCase(); if (!v) return;
-          activeFilters.discipline.add(v);
-          var b = document.querySelector('.filter-btn[data-type="discipline"][data-value="' + v + '"]');
-          if (b) b.classList.add('active');
-        });
-        if (client) client.split(',').forEach(function (c) {
-          c = c.trim().toLowerCase(); if (!c) return;
-          activeFilters.client.add(c);
-          var b = document.querySelector('.filter-btn[data-type="client"][data-value="' + c + '"]');
-          if (b) b.classList.add('active');
-        });
-        if (view || client) updateAllButton();
-      }
+function updateUrl() {
+  var disciplines = Array.from(activeFilters.discipline);
+  var clients = Array.from(activeFilters.client);
+  
+  // Single filter = clean URL
+  if (disciplines.length === 1 && clients.length === 0) {
+    window.history.replaceState({}, '', '/' + disciplines[0]);
+  } else if (clients.length === 1 && disciplines.length === 0) {
+    window.history.replaceState({}, '', '/' + clients[0]);
+  } else if (disciplines.length === 0 && clients.length === 0) {
+    window.history.replaceState({}, '', '/gallery.html');
+  } else {
+    // Multiple filters = query string
+    var params = new URLSearchParams();
+    if (disciplines.length > 0) params.set('view', disciplines.join(','));
+    if (clients.length > 0) params.set('client', clients.join(','));
+    window.history.replaceState({}, '', '/gallery.html?' + params.toString());
+  }
+}
+
+function readUrlParams() {
+  var params = new URLSearchParams(window.location.search);
+  var view = params.get('view');
+  var client = params.get('client');
+  var fromCleanUrl = params.get('from_clean_url');
+  
+  // Parse discipline filters
+  if (view) {
+    view.split(',').forEach(function (v) {
+      v = v.trim().toLowerCase();
+      if (!v) return;
+      activeFilters.discipline.add(v);
+      var b = document.querySelector('.filter-btn[data-type="discipline"][data-value="' + v + '"]');
+      if (b) b.classList.add('active');
+    });
+  }
+  
+  // Parse client filters
+  if (client) {
+    client.split(',').forEach(function (c) {
+      c = c.trim().toLowerCase();
+      if (!c) return;
+      activeFilters.client.add(c);
+      var b = document.querySelector('.filter-btn[data-type="client"][data-value="' + c + '"]');
+      if (b) b.classList.add('active');
+    });
+  }
+  
+  if (view || client) {
+    updateAllButton();
+    
+    // If this came from a clean URL (via 404 router), update address bar to show clean URL
+    if (fromCleanUrl === '1') {
+      // Remove the from_clean_url param and update to clean URL
+      setTimeout(function() {
+        updateUrl();
+      }, 0);
+    }
+  }
+}
 
       function openLightbox(index) {
         lightboxIndex = visibleItems.indexOf(index);
