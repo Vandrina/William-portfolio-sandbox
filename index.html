@@ -64,18 +64,20 @@
       <!-- Clone of first slide for infinite loop -->
       <div class="hero-slide hero-slide-1 hero-clone" data-index="6"><img src="page-images/index/hero-horizontal/HeroGallery1.jpg" alt=""></div>
     </div>
+  </div>
+  <div class="hero-controls">
     <div class="hero-arrows">
       <button class="hero-arrow" id="heroPrev">‹</button>
       <button class="hero-arrow" id="heroNext">›</button>
     </div>
-  </div>
-  <div class="hero-dots" id="heroDots">
-    <div class="hero-dot" data-index="0"></div>
-    <div class="hero-dot" data-index="1"></div>
-    <div class="hero-dot" data-index="2"></div>
-    <div class="hero-dot" data-index="3"></div>
-    <div class="hero-dot" data-index="4"></div>
-    <div class="hero-dot" data-index="5"></div>
+    <div class="hero-dots" id="heroDots">
+      <div class="hero-dot" data-index="0"></div>
+      <div class="hero-dot" data-index="1"></div>
+      <div class="hero-dot" data-index="2"></div>
+      <div class="hero-dot" data-index="3"></div>
+      <div class="hero-dot" data-index="4"></div>
+      <div class="hero-dot" data-index="5"></div>
+    </div>
   </div>
 </div>
 
@@ -262,37 +264,45 @@
     var track = document.getElementById('heroTrack');
     var allSlides = document.querySelectorAll('.hero-slide');
     var dots = document.querySelectorAll('.hero-dot');
-    var realSlideCount = 6; // Number of actual slides (excluding clones)
-    var current = 1; // Start at first real slide (index 1, since clone is at 0)
+    var realSlideCount = 6;
+    var current = 1;
     var timer;
     var slideWidth = 960;
+    var gap = 12;
     var isTransitioning = false;
     
     function updateSlideWidth() {
       if (allSlides[0]) {
         slideWidth = allSlides[0].offsetWidth;
       }
+      // Update gap based on screen size
+      if (window.innerWidth <= 480) {
+        gap = 6;
+      } else if (window.innerWidth <= 768) {
+        gap = 8;
+      } else {
+        gap = 12;
+      }
     }
     
     function updatePosition(index, animate) {
       if (animate) {
-        track.style.transition = 'transform 0.6s cubic-bezier(0.4, 0.0, 0.2, 1)';
+        track.style.transition = 'transform 0.8s cubic-bezier(0.45, 0.05, 0.55, 0.95)';
       } else {
         track.style.transition = 'none';
       }
       
-      var offset = -(index * slideWidth + slideWidth / 2);
+      // Account for gap in offset calculation
+      var offset = -(index * (slideWidth + gap) + slideWidth / 2);
       track.style.transform = 'translateX(' + offset + 'px)';
     }
     
     function updateActiveStates(realIndex) {
-      // Update slide active states
       allSlides.forEach(function(slide, index) {
         var slideRealIndex = parseInt(slide.dataset.index);
         slide.classList.toggle('active', slideRealIndex === realIndex);
       });
       
-      // Update dot active states
       dots.forEach(function(dot, index) {
         dot.classList.toggle('active', index === realIndex);
       });
@@ -306,35 +316,33 @@
         current++;
         updatePosition(current, true);
         
-        // If we're at the clone (last position), jump to real first slide
         if (current === realSlideCount + 1) {
           setTimeout(function() {
             current = 1;
             updatePosition(current, false);
             updateActiveStates(0);
             setTimeout(function() { isTransitioning = false; }, 50);
-          }, 600); // Wait for transition to complete
-          updateActiveStates(0); // Update dots during animation
+          }, 800);
+          updateActiveStates(0);
         } else {
           updateActiveStates(current - 1);
-          setTimeout(function() { isTransitioning = false; }, 600);
+          setTimeout(function() { isTransitioning = false; }, 800);
         }
       } else {
         current--;
         updatePosition(current, true);
         
-        // If we're at the clone (first position), jump to real last slide
         if (current === 0) {
           setTimeout(function() {
             current = realSlideCount;
             updatePosition(current, false);
             updateActiveStates(realSlideCount - 1);
             setTimeout(function() { isTransitioning = false; }, 50);
-          }, 600); // Wait for transition to complete
-          updateActiveStates(realSlideCount - 1); // Update dots during animation
+          }, 800);
+          updateActiveStates(realSlideCount - 1);
         } else {
           updateActiveStates(current - 1);
-          setTimeout(function() { isTransitioning = false; }, 600);
+          setTimeout(function() { isTransitioning = false; }, 800);
         }
       }
     }
@@ -343,17 +351,17 @@
       if (isTransitioning) return;
       isTransitioning = true;
       
-      current = realIndex + 1; // +1 because of leading clone
+      current = realIndex + 1;
       updatePosition(current, true);
       updateActiveStates(realIndex);
-      setTimeout(function() { isTransitioning = false; }, 600);
+      setTimeout(function() { isTransitioning = false; }, 800);
     }
     
     function startTimer() {
       clearInterval(timer);
       timer = setInterval(function () {
         goTo('next');
-      }, 5000);
+      }, 4000);
     }
     
     // Event listeners
@@ -374,7 +382,6 @@
       });
     });
     
-    // Handle window resize
     window.addEventListener('resize', function() {
       updateSlideWidth();
       updatePosition(current, false);
@@ -382,7 +389,7 @@
     
     // Initialize
     updateSlideWidth();
-    updatePosition(current, false); // Start at first real slide
+    updatePosition(current, false);
     updateActiveStates(0);
     startTimer();
   })();

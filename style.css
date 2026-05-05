@@ -588,7 +588,7 @@ body {
 .hero-wrap {
   background: var(--bg-2);
   border-bottom: 1px solid var(--border);
-  padding: 28px 0 28px;
+  padding: 28px 0 20px;
   overflow: hidden;
 }
 
@@ -605,8 +605,9 @@ body {
 
 .hero-track {
   display: flex;
+  gap: 12px;
   height: 100%;
-  transition: transform 0.6s cubic-bezier(0.4, 0.0, 0.2, 1);
+  transition: transform 0.8s cubic-bezier(0.45, 0.05, 0.55, 0.95);
   position: relative;
   left: 50%;
 }
@@ -620,7 +621,8 @@ body {
   border-left: 1px solid var(--border);
   border-right: 1px solid var(--border);
   opacity: 0.3;
-  transition: opacity 0.4s ease;
+  transition: opacity 0.5s ease;
+  border-radius: 0;
 }
 
 .hero-slide.active {
@@ -667,22 +669,28 @@ body {
   background: linear-gradient(145deg, #28181e 0%, #181828 40%, #1e2018 100%);
 }
 
-.hero-arrows {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
+/* Controls container below carousel */
+.hero-controls {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 16px 32px 0;
   display: flex;
-  justify-content: space-between;
-  padding: 0 16px;
-  pointer-events: none;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+}
+
+.hero-arrows {
+  display: flex;
+  gap: 12px;
   z-index: 10;
 }
 
 .hero-arrow {
   width: 36px;
   height: 36px;
-  background: rgba(20, 20, 22, 0.75);
+  background: rgba(28, 28, 30, 0.6);
   border: 1px solid var(--border-mid);
   border-radius: 50%;
   display: flex;
@@ -691,23 +699,18 @@ body {
   font-size: 15px;
   color: var(--mid);
   cursor: pointer;
-  pointer-events: all;
-  transition: background 0.2s, color 0.2s;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
 
 .hero-arrow:hover {
-  background: rgba(20, 20, 22, 0.95);
+  background: rgba(28, 28, 30, 0.9);
   color: var(--bright);
+  border-color: var(--border-bright);
 }
 
 .hero-dots {
-  max-width: 960px;
-  margin: -12px auto 0;
-  padding: 0 32px 16px;
   display: flex;
-  justify-content: center;
   gap: 6px;
-  position: relative;
   z-index: 10;
 }
 
@@ -729,7 +732,7 @@ body {
 /* Tablet breakpoint */
 @media (max-width: 1024px) {
   .hero-wrap {
-    padding: 24px 0 24px;
+    padding: 24px 0 18px;
   }
   
   .hero-inner {
@@ -740,7 +743,7 @@ body {
     max-width: 720px;
   }
   
-  .hero-dots {
+  .hero-controls {
     max-width: 720px;
   }
 }
@@ -748,7 +751,7 @@ body {
 /* Mobile breakpoint */
 @media (max-width: 768px) {
   .hero-wrap {
-    padding: 20px 0 20px;
+    padding: 20px 0 16px;
   }
   
   .hero-inner {
@@ -760,8 +763,18 @@ body {
     max-width: 90vw;
   }
   
+  .hero-track {
+    gap: 8px;
+  }
+  
+  .hero-controls {
+    max-width: 90%;
+    padding: 14px 20px 0;
+    gap: 16px;
+  }
+  
   .hero-arrows {
-    padding: 0 12px;
+    gap: 10px;
   }
   
   .hero-arrow {
@@ -771,8 +784,6 @@ body {
   }
   
   .hero-dots {
-    max-width: 90%;
-    padding: 0 20px 12px;
     gap: 5px;
   }
   
@@ -789,7 +800,7 @@ body {
 /* Small mobile breakpoint */
 @media (max-width: 480px) {
   .hero-wrap {
-    padding: 16px 0 16px;
+    padding: 16px 0 14px;
   }
   
   .hero-inner {
@@ -800,8 +811,13 @@ body {
     max-width: 95vw;
   }
   
-  .hero-dots {
+  .hero-track {
+    gap: 6px;
+  }
+  
+  .hero-controls {
     max-width: 95%;
+    padding: 12px 16px 0;
   }
 }
 
