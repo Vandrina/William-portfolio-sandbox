@@ -599,7 +599,7 @@ body {
   position: relative;
   aspect-ratio: 16/9;
   overflow: visible;
-  perspective: 1200px;
+  perspective: 2000px;
 }
 
 .hero-track {
@@ -621,12 +621,23 @@ body {
   opacity: 0.3;
   transition: opacity 0.5s ease, transform 0.5s ease;
   border-radius: 0;
-  transform: scale(0.88) translateY(24px);
+  transform-origin: center center;
 }
 
+/* Slides before the active one - rotate to show right edge receding */
+.hero-slide.slide-before {
+  transform: rotateY(15deg);
+}
+
+/* Active slide - flat facing viewer */
 .hero-slide.active {
   opacity: 1;
-  transform: scale(1) translateY(0);
+  transform: rotateY(0deg);
+}
+
+/* Slides after the active one - rotate to show left edge receding */
+.hero-slide.slide-after {
+  transform: rotateY(-15deg);
 }
 
 .hero-slide img {
@@ -723,10 +734,19 @@ body {
   
   .hero-inner {
     max-width: 720px;
+    perspective: 1600px;
   }
   
   .hero-slide {
     max-width: 720px;
+  }
+  
+  .hero-slide.slide-before {
+    transform: rotateY(12deg);
+  }
+  
+  .hero-slide.slide-after {
+    transform: rotateY(-12deg);
   }
   
   .hero-controls {
@@ -743,16 +763,19 @@ body {
   .hero-inner {
     aspect-ratio: 16/9;
     max-width: 90%;
-    perspective: 800px;
+    perspective: 1200px;
   }
   
   .hero-slide {
     max-width: 90vw;
-    transform: scale(0.90) translateY(18px);
   }
   
-  .hero-slide.active {
-    transform: scale(1) translateY(0);
+  .hero-slide.slide-before {
+    transform: rotateY(10deg);
+  }
+  
+  .hero-slide.slide-after {
+    transform: rotateY(-10deg);
   }
   
   .hero-track {
@@ -793,16 +816,19 @@ body {
   
   .hero-inner {
     max-width: 95%;
-    perspective: 600px;
+    perspective: 1000px;
   }
   
   .hero-slide {
     max-width: 95vw;
-    transform: scale(0.92) translateY(14px);
   }
   
-  .hero-slide.active {
-    transform: scale(1) translateY(0);
+  .hero-slide.slide-before {
+    transform: rotateY(8deg);
+  }
+  
+  .hero-slide.slide-after {
+    transform: rotateY(-8deg);
   }
   
   .hero-track {
