@@ -50,12 +50,19 @@
 <div class="hero-wrap">
   <div class="hero-inner" id="heroInner">
     <div class="hero-track" id="heroTrack">
+      <!-- Clone of last slide for infinite loop -->
+      <div class="hero-slide hero-slide-6 hero-clone" data-index="-1"><img src="page-images/index/hero-horizontal/HeroGallery6.jpg" alt=""></div>
+      
+      <!-- Real slides -->
       <div class="hero-slide hero-slide-1" data-index="0"><img src="page-images/index/hero-horizontal/HeroGallery1.jpg" alt=""></div>
       <div class="hero-slide hero-slide-2" data-index="1"><img src="page-images/index/hero-horizontal/HeroGallery3.jpg" alt=""></div>
       <div class="hero-slide hero-slide-3" data-index="2"><img src="page-images/index/hero-horizontal/HeroGallery2.jpg" alt=""></div>
       <div class="hero-slide hero-slide-4" data-index="3"><img src="page-images/index/hero-horizontal/HeroGallery5.jpg" alt=""></div>
       <div class="hero-slide hero-slide-5" data-index="4"><img src="page-images/index/hero-horizontal/HeroGallery10.jpg" alt=""></div>
       <div class="hero-slide hero-slide-6" data-index="5"><img src="page-images/index/hero-horizontal/HeroGallery6.jpg" alt=""></div>
+      
+      <!-- Clone of first slide for infinite loop -->
+      <div class="hero-slide hero-slide-1 hero-clone" data-index="6"><img src="page-images/index/hero-horizontal/HeroGallery1.jpg" alt=""></div>
     </div>
     <div class="hero-arrows">
       <button class="hero-arrow" id="heroPrev">‹</button>
@@ -253,72 +260,116 @@
     
     // Hero Carousel
     var track = document.getElementById('heroTrack');
-    var slides = document.querySelectorAll('.hero-slide');
+    var allSlides = document.querySelectorAll('.hero-slide');
     var dots = document.querySelectorAll('.hero-dot');
-    var current = 0;
+    var realSlideCount = 6; // Number of actual slides (excluding clones)
+    var current = 1; // Start at first real slide (index 1, since clone is at 0)
     var timer;
     var slideWidth = 960;
+    var isTransitioning = false;
     
     function updateSlideWidth() {
-      if (slides[0]) {
-        slideWidth = slides[0].offsetWidth;
+      if (allSlides[0]) {
+        slideWidth = allSlides[0].offsetWidth;
       }
     }
     
-    function goTo(i, instant) {
-      var prev = current;
-      current = (i + slides.length) % slides.length;
-      
-      // Handle wrapping: if jumping from end to start or start to end, do it instantly
-      var isWrapping = (prev === slides.length - 1 && current === 0) || 
-                       (prev === 0 && current === slides.length - 1);
-      
-      if (instant || isWrapping) {
+    function updatePosition(index, animate) {
+      if (animate) {
+        track.style.transition = 'transform 0.6s cubic-bezier(0.4, 0.0, 0.2, 1)';
+      } else {
         track.style.transition = 'none';
       }
       
-      // Update active states
-      slides.forEach(function(slide, index) {
-        slide.classList.toggle('active', index === current);
-      });
-      dots.forEach(function(dot, index) {
-        dot.classList.toggle('active', index === current);
-      });
-      
-      // Calculate and apply transform
-      // Formula: move left by (current index * slide width) + half a slide width
-      var offset = -(current * slideWidth + slideWidth / 2);
+      var offset = -(index * slideWidth + slideWidth / 2);
       track.style.transform = 'translateX(' + offset + 'px)';
+    }
+    
+    function updateActiveStates(realIndex) {
+      // Update slide active states
+      allSlides.forEach(function(slide, index) {
+        var slideRealIndex = parseInt(slide.dataset.index);
+        slide.classList.toggle('active', slideRealIndex === realIndex);
+      });
       
-      // Re-enable transition after instant jump
-      if (instant || isWrapping) {
-        setTimeout(function() {
-          track.style.transition = 'transform 0.6s cubic-bezier(0.4, 0.0, 0.2, 1)';
-        }, 50);
+      // Update dot active states
+      dots.forEach(function(dot, index) {
+        dot.classList.toggle('active', index === realIndex);
+      });
+    }
+    
+    function goTo(direction) {
+      if (isTransitioning) return;
+      isTransitioning = true;
+      
+      if (direction === 'next') {
+        current++;
+        updatePosition(current, true);
+        
+        // If we're at the clone (last position), jump to real first slide
+        if (current === realSlideCount + 1) {
+          setTimeout(function() {
+            current = 1;
+            updatePosition(current, false);
+            updateActiveStates(0);
+            setTimeout(function() { isTransitioning = false; }, 50);
+          }, 600); // Wait for transition to complete
+          updateActiveStates(0); // Update dots during animation
+        } else {
+          updateActiveStates(current - 1);
+          setTimeout(function() { isTransitioning = false; }, 600);
+        }
+      } else {
+        current--;
+        updatePosition(current, true);
+        
+        // If we're at the clone (first position), jump to real last slide
+        if (current === 0) {
+          setTimeout(function() {
+            current = realSlideCount;
+            updatePosition(current, false);
+            updateActiveStates(realSlideCount - 1);
+            setTimeout(function() { isTransitioning = false; }, 50);
+          }, 600); // Wait for transition to complete
+          updateActiveStates(realSlideCount - 1); // Update dots during animation
+        } else {
+          updateActiveStates(current - 1);
+          setTimeout(function() { isTransitioning = false; }, 600);
+        }
       }
+    }
+    
+    function goToDirect(realIndex) {
+      if (isTransitioning) return;
+      isTransitioning = true;
+      
+      current = realIndex + 1; // +1 because of leading clone
+      updatePosition(current, true);
+      updateActiveStates(realIndex);
+      setTimeout(function() { isTransitioning = false; }, 600);
     }
     
     function startTimer() {
       clearInterval(timer);
       timer = setInterval(function () {
-        goTo(current + 1);
+        goTo('next');
       }, 5000);
     }
     
     // Event listeners
     document.getElementById('heroPrev').addEventListener('click', function () {
-      goTo(current - 1);
+      goTo('prev');
       startTimer();
     });
     
     document.getElementById('heroNext').addEventListener('click', function () {
-      goTo(current + 1);
+      goTo('next');
       startTimer();
     });
     
-    dots.forEach(function (d) {
+    dots.forEach(function (d, index) {
       d.addEventListener('click', function () {
-        goTo(parseInt(d.dataset.index));
+        goToDirect(index);
         startTimer();
       });
     });
@@ -326,12 +377,13 @@
     // Handle window resize
     window.addEventListener('resize', function() {
       updateSlideWidth();
-      goTo(current, true); // Recalculate position instantly
+      updatePosition(current, false);
     });
     
     // Initialize
     updateSlideWidth();
-    goTo(0, true);
+    updatePosition(current, false); // Start at first real slide
+    updateActiveStates(0);
     startTimer();
   })();
 </script>
