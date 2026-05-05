@@ -66,17 +66,17 @@
     </div>
   </div>
   <div class="hero-controls">
-    <button class="hero-arrow" id="heroPrev">‹</button>
-    <div class="hero-dots" id="heroDots">
-      <div class="hero-dot" data-index="0"></div>
-      <div class="hero-dot" data-index="1"></div>
-      <div class="hero-dot" data-index="2"></div>
-      <div class="hero-dot" data-index="3"></div>
-      <div class="hero-dot" data-index="4"></div>
-      <div class="hero-dot" data-index="5"></div>
-    </div>
-    <button class="hero-arrow" id="heroNext">›</button>
+  <button class="hero-arrow" id="heroPrev">‹</button>
+  <div class="hero-dots" id="heroDots">
+    <div class="hero-dot" data-index="0"></div>
+    <div class="hero-dot" data-index="1"></div>
+    <div class="hero-dot" data-index="2"></div>
+    <div class="hero-dot" data-index="3"></div>
+    <div class="hero-dot" data-index="4"></div>
+    <div class="hero-dot" data-index="5"></div>
   </div>
+  <button class="hero-arrow" id="heroNext">›</button>
+</div>
 </div>
 
   <!-- DISCIPLINES — darker base bg -->
@@ -273,6 +273,7 @@
       if (allSlides[0]) {
         slideWidth = allSlides[0].offsetWidth;
       }
+      // Update gap based on screen size
       if (window.innerWidth <= 480) {
         gap = 6;
       } else if (window.innerWidth <= 768) {
@@ -289,6 +290,7 @@
         track.style.transition = 'none';
       }
       
+      // Account for gap in offset calculation
       var offset = -(index * (slideWidth + gap) + slideWidth / 2);
       track.style.transform = 'translateX(' + offset + 'px)';
     }
@@ -296,18 +298,7 @@
     function updateActiveStates(realIndex) {
       allSlides.forEach(function(slide, index) {
         var slideRealIndex = parseInt(slide.dataset.index);
-        
-        // Remove all state classes
-        slide.classList.remove('active', 'slide-before', 'slide-after');
-        
-        // Add appropriate class based on position relative to active slide
-        if (slideRealIndex === realIndex) {
-          slide.classList.add('active');
-        } else if (slideRealIndex < realIndex || slideRealIndex === -1) {
-          slide.classList.add('slide-before');
-        } else {
-          slide.classList.add('slide-after');
-        }
+        slide.classList.toggle('active', slideRealIndex === realIndex);
       });
       
       dots.forEach(function(dot, index) {

@@ -599,7 +599,6 @@ body {
   position: relative;
   aspect-ratio: 16/9;
   overflow: visible;
-  perspective: 2000px;
 }
 
 .hero-track {
@@ -609,7 +608,6 @@ body {
   transition: transform 0.8s cubic-bezier(0.45, 0.05, 0.55, 0.95);
   position: relative;
   left: 50%;
-  transform-style: preserve-3d;
 }
 
 .hero-slide {
@@ -618,26 +616,23 @@ body {
   max-width: 960px;
   height: 100%;
   position: relative;
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
   opacity: 0.3;
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: opacity 0.5s ease;
   border-radius: 0;
-  transform-origin: center center;
 }
 
-/* Slides before the active one - rotate to show right edge receding */
-.hero-slide.slide-before {
-  transform: rotateY(15deg);
-}
-
-/* Active slide - flat facing viewer */
 .hero-slide.active {
   opacity: 1;
-  transform: rotateY(0deg);
 }
 
-/* Slides after the active one - rotate to show left edge receding */
-.hero-slide.slide-after {
-  transform: rotateY(-15deg);
+.hero-slide:first-child {
+  border-left: none;
+}
+
+.hero-slide:last-child {
+  border-right: none;
 }
 
 .hero-slide img {
@@ -734,19 +729,10 @@ body {
   
   .hero-inner {
     max-width: 720px;
-    perspective: 1600px;
   }
   
   .hero-slide {
     max-width: 720px;
-  }
-  
-  .hero-slide.slide-before {
-    transform: rotateY(12deg);
-  }
-  
-  .hero-slide.slide-after {
-    transform: rotateY(-12deg);
   }
   
   .hero-controls {
@@ -763,19 +749,10 @@ body {
   .hero-inner {
     aspect-ratio: 16/9;
     max-width: 90%;
-    perspective: 1200px;
   }
   
   .hero-slide {
     max-width: 90vw;
-  }
-  
-  .hero-slide.slide-before {
-    transform: rotateY(10deg);
-  }
-  
-  .hero-slide.slide-after {
-    transform: rotateY(-10deg);
   }
   
   .hero-track {
@@ -786,6 +763,10 @@ body {
     max-width: 90%;
     padding: 14px 20px 0;
     gap: 16px;
+  }
+  
+  .hero-arrows {
+    gap: 10px;
   }
   
   .hero-arrow {
@@ -816,19 +797,10 @@ body {
   
   .hero-inner {
     max-width: 95%;
-    perspective: 1000px;
   }
   
   .hero-slide {
     max-width: 95vw;
-  }
-  
-  .hero-slide.slide-before {
-    transform: rotateY(8deg);
-  }
-  
-  .hero-slide.slide-after {
-    transform: rotateY(-8deg);
   }
   
   .hero-track {
