@@ -683,22 +683,22 @@ body {
   width: 36px;
   height: 36px;
   background: rgba(28, 28, 30, 0.6);
-  border: 1px solid var(--border-mid);
+  border: 1px solid var(--accent-dim);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   padding-bottom: 4px;
   font-size: 18px;
-  color: var(--mid);
+  color: var(--accent);
   cursor: pointer;
   transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
 
 .hero-arrow:hover {
-  background: rgba(28, 28, 30, 0.9);
-  color: var(--bright);
-  border-color: var(--border-bright);
+  background: rgba(200, 164, 110, 0.08);
+  color: var(--accent-light);
+  border-color: var(--accent);
 }
 
 .hero-dots {
