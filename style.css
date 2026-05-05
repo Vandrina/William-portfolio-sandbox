@@ -596,11 +596,10 @@ body {
   max-width: 960px;
   margin: 0 auto;
   border-radius: 0;
-  border: 1px solid var(--border);
-  border-bottom: none;
   position: relative;
   aspect-ratio: 16/9;
   overflow: visible;
+  perspective: 1200px;
 }
 
 .hero-track {
@@ -610,6 +609,7 @@ body {
   transition: transform 0.8s cubic-bezier(0.45, 0.05, 0.55, 0.95);
   position: relative;
   left: 50%;
+  transform-style: preserve-3d;
 }
 
 .hero-slide {
@@ -618,23 +618,15 @@ body {
   max-width: 960px;
   height: 100%;
   position: relative;
-  border-left: 1px solid var(--border);
-  border-right: 1px solid var(--border);
   opacity: 0.3;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease, transform 0.5s ease;
   border-radius: 0;
+  transform: scale(0.88) translateY(24px);
 }
 
 .hero-slide.active {
   opacity: 1;
-}
-
-.hero-slide:first-child {
-  border-left: none;
-}
-
-.hero-slide:last-child {
-  border-right: none;
+  transform: scale(1) translateY(0);
 }
 
 .hero-slide img {
@@ -679,12 +671,6 @@ body {
   justify-content: center;
   gap: 20px;
   position: relative;
-}
-
-.hero-arrows {
-  display: flex;
-  gap: 12px;
-  z-index: 10;
 }
 
 .hero-arrow {
@@ -757,10 +743,16 @@ body {
   .hero-inner {
     aspect-ratio: 16/9;
     max-width: 90%;
+    perspective: 800px;
   }
   
   .hero-slide {
     max-width: 90vw;
+    transform: scale(0.90) translateY(18px);
+  }
+  
+  .hero-slide.active {
+    transform: scale(1) translateY(0);
   }
   
   .hero-track {
@@ -771,10 +763,6 @@ body {
     max-width: 90%;
     padding: 14px 20px 0;
     gap: 16px;
-  }
-  
-  .hero-arrows {
-    gap: 10px;
   }
   
   .hero-arrow {
@@ -805,10 +793,16 @@ body {
   
   .hero-inner {
     max-width: 95%;
+    perspective: 600px;
   }
   
   .hero-slide {
     max-width: 95vw;
+    transform: scale(0.92) translateY(14px);
+  }
+  
+  .hero-slide.active {
+    transform: scale(1) translateY(0);
   }
   
   .hero-track {
