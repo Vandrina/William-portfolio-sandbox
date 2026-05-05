@@ -1,0 +1,36 @@
+
+# Clean URLs for William McGuire Portfolio
+
+#Static Pages
+/index                  /index.html         200
+/about                  /about.html         200
+/contact                /contact.html       200
+/gallery                /gallery.html       200
+/privacy                /privacy.html       200
+/shop                   /shop.html          200
+/terms                  /terms.html         200
+
+# Discipline filters
+/illustration           /gallery.html       200
+/concept-art            /gallery.html       200
+/toy-design             /gallery.html       200
+/backgrounds            /gallery.html       200
+/books                  /gallery.html       200
+/nfts                   /gallery.html       200
+
+# Client filters
+/microsoft              /gallery.html       200
+/amazon                 /gallery.html       200
+/big-fish               /gallery.html       200
+/elevated-games         /gallery.html       200
+/reflective-games       /gallery.html       200
+/dreambox-learning      /gallery.html       200
+/leapfrog               /gallery.html       200
+/paramount              /gallery.html       200
+/handmade-by-robots     /gallery.html       200
+/mystery-society        /gallery.html       200
+/nordstrom              /gallery.html       200
+/nickelodeon            /gallery.html       200
+/stone-arch-books       /gallery.html       200
+/tech-smart-kids        /gallery.html       200
+/agency                 /gallery.html       200
