@@ -679,27 +679,6 @@ body {
   position: relative;
 }
 
-.hero-arrow {
-  width: 36px;
-  height: 36px;
-  background: rgba(28, 28, 30, 0.6);
-  border: 1px solid var(--accent-dim);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 4px;
-  font-size: 18px;
-  color: var(--accent-dim);
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s, border-color 0.2s;
-}
-
-.hero-arrow:hover {
-  color: var(--accent);
-  border-color: var(--accent);
-}
-
 .hero-dots {
   display: flex;
   gap: 6px;
