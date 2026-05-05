@@ -1832,6 +1832,7 @@ END OF GALLERY FOR INLINE TESTING */
 
   .contact-img {
     width: 80%;
+    margin: 0 auto;
   }
 }
 
