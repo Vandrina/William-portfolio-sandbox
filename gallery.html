@@ -491,10 +491,27 @@
       }
 
 function updateUrl() {
+  var path = window.location.pathname.replace(/^\/+|\/+$/g, '').toLowerCase();
+  var disciplines = Array.from(activeFilters.discipline);
+  var clients = Array.from(activeFilters.client);
+  
+  // If we're on a clean filter path (like /microsoft), don't change the URL
+  var validSlugs = ['illustration', 'concept-art', 'toy-design', 'backgrounds', 'books', 'nfts',
+                    'microsoft', 'amazon', 'big-fish', 'elevated-games', 'reflective-games',
+                    'dreambox-learning', 'leapfrog', 'paramount', 'handmade-by-robots',
+                    'mystery-society', 'nordstrom', 'nickelodeon', 'stone-arch-books',
+                    'tech-smart-kids', 'agency'];
+  
+  if (validSlugs.indexOf(path) !== -1) {
+    // We're on a clean URL, don't modify it
+    return;
+  }
+  
+  // Otherwise, use query string format
   var params = new URLSearchParams();
-  if (activeFilters.discipline.size > 0) params.set('view', Array.from(activeFilters.discipline).join(','));
-  if (activeFilters.client.size > 0) params.set('client', Array.from(activeFilters.client).join(','));
-  window.history.replaceState({}, '', params.toString() ? window.location.pathname + '?' + params.toString() : window.location.pathname);
+  if (disciplines.length > 0) params.set('view', disciplines.join(','));
+  if (clients.length > 0) params.set('client', clients.join(','));
+  window.history.replaceState({}, '', params.toString() ? '/gallery?' + params.toString() : '/gallery');
 }
 
 function readUrlParams() {
