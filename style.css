@@ -688,7 +688,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 4px;
+  padding-bottom: 4px;
   font-size: 18px;
   color: var(--mid);
   cursor: pointer;
