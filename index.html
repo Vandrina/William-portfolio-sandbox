@@ -240,34 +240,83 @@
 
 
 <script>
-    (function () {
-      // Hamburger
-      var btn = document.getElementById('navHamburger');
-      var menu = document.getElementById('navMobileMenu');
-      if (btn && menu) {
-        btn.addEventListener('click', function () { menu.classList.toggle('open'); });
-        document.addEventListener('click', function (e) {
-          if (!btn.contains(e.target) && !menu.contains(e.target)) menu.classList.remove('open');
-        });
-      }
-      // Hero
-      var slides = document.querySelectorAll('.hero-slide');
-      var dots = document.querySelectorAll('.hero-dot');
-      /* var counter = document.getElementById('heroCounter'); */
-      var current = 0, timer;
-      function goTo(i) {
-        slides[current].classList.remove('active'); dots[current].classList.remove('active');
-        current = (i + slides.length) % slides.length;
-        slides[current].classList.add('active'); dots[current].classList.add('active');
-        /* counter.textContent = (current + 1) + ' / ' + slides.length; */
-      }
-      function startTimer() { clearInterval(timer); timer = setInterval(function () { goTo(current + 1); }, 5000); }
-      document.getElementById('heroPrev').addEventListener('click', function () { goTo(current - 1); startTimer(); });
-      document.getElementById('heroNext').addEventListener('click', function () { goTo(current + 1); startTimer(); });
-      dots.forEach(function (d) { d.addEventListener('click', function () { goTo(parseInt(d.dataset.index)); startTimer(); }); });
+  (function () {
+    // Hamburger
+    var btn = document.getElementById('navHamburger');
+    var menu = document.getElementById('navMobileMenu');
+    if (btn && menu) {
+      btn.addEventListener('click', function () { menu.classList.toggle('open'); });
+      document.addEventListener('click', function (e) {
+        if (!btn.contains(e.target) && !menu.contains(e.target)) menu.classList.remove('open');
+      });
+    }
+    
+    // Hero Carousel
+    var track = document.getElementById('heroTrack');
+    var slides = document.querySelectorAll('.hero-slide');
+    var dots = document.querySelectorAll('.hero-dot');
+    var current = 0;
+    var timer;
+    var slideWidth = slides[0] ? slides[0].offsetWidth : 960;
+    
+    function updateSlideWidth() {
+      slideWidth = slides[0] ? slides[0].offsetWidth : 960;
+    }
+    
+    function goTo(i) {
+      // Update current index
+      current = (i + slides.length) % slides.length;
+      
+      // Update active states
+      slides.forEach(function(slide, index) {
+        slide.classList.toggle('active', index === current);
+      });
+      dots.forEach(function(dot, index) {
+        dot.classList.toggle('active', index === current);
+      });
+      
+      // Calculate and apply transform
+      var offset = -(current * slideWidth) + (slideWidth / 2);
+      track.style.transform = 'translateX(' + offset + 'px)';
+    }
+    
+    function startTimer() {
+      clearInterval(timer);
+      timer = setInterval(function () {
+        goTo(current + 1);
+      }, 5000);
+    }
+    
+    // Event listeners
+    document.getElementById('heroPrev').addEventListener('click', function () {
+      goTo(current - 1);
       startTimer();
-    })();
-  </script>
+    });
+    
+    document.getElementById('heroNext').addEventListener('click', function () {
+      goTo(current + 1);
+      startTimer();
+    });
+    
+    dots.forEach(function (d) {
+      d.addEventListener('click', function () {
+        goTo(parseInt(d.dataset.index));
+        startTimer();
+      });
+    });
+    
+    // Handle window resize
+    window.addEventListener('resize', function() {
+      updateSlideWidth();
+      goTo(current); // Recalculate position
+    });
+    
+    // Initialize
+    updateSlideWidth();
+    goTo(0);
+    startTimer();
+  })();
+</script>
 </body>
 
 </html>
