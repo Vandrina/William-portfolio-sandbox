@@ -688,7 +688,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 15px;
+  margin-bottom: 4px;
+  font-size: 18px;
   color: var(--mid);
   cursor: pointer;
   transition: background 0.2s, color 0.2s, border-color 0.2s;
@@ -716,7 +717,7 @@ body {
 }
 
 .hero-dot.active {
-  width: 20px;
+  width: 10px;
   border-radius: 3px;
   background: var(--accent);
 }
