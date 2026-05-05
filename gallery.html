@@ -491,15 +491,10 @@
       }
 
 function updateUrl() {
-  const disc = Array.from(activeFilters.discipline);
-  const client = Array.from(activeFilters.client);
-
-  // only support single filter for now (your current constraint)
-  const slug = disc[0] || client[0] || '';
-
-  const newPath = slug ? '/' + slug : '/gallery';
-
-  window.history.replaceState({}, '', newPath);
+  var params = new URLSearchParams();
+  if (activeFilters.discipline.size > 0) params.set('view', Array.from(activeFilters.discipline).join(','));
+  if (activeFilters.client.size > 0) params.set('client', Array.from(activeFilters.client).join(','));
+  window.history.replaceState({}, '', params.toString() ? window.location.pathname + '?' + params.toString() : window.location.pathname);
 }
 
 function readUrlParams() {
