@@ -1847,7 +1847,7 @@ body {
   }
 
   .contact-img {
-    width: auto;
+    width: 70%;
     justify-content: center;
   }
 }
