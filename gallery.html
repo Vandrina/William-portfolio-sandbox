@@ -538,22 +538,26 @@
   var lightboxVideoSource = document.getElementById('lightboxVideoSource');
   
   if (item.isVideo) {
-    // Show loading, hide image
-    lightboxLoading.style.display = 'flex';
-    lightboxImg.style.display = 'none';
-    lightboxVideo.style.display = 'none';
-    
-    // Set up video
-    lightboxVideoSource.src = item.file;
-    lightboxVideo.load();
-    
-    // Show video when it can play
-    lightboxVideo.addEventListener('loadedmetadata', function() {
-      lightboxLoading.style.display = 'none';
-      lightboxVideo.style.display = 'block';
-    }, { once: true });
-    
-  } else {
+  // Show loading, hide image
+  lightboxLoading.style.display = 'flex';
+  lightboxImg.style.display = 'none';
+  lightboxVideo.style.display = 'none';
+  
+  // Reset video state first
+  lightboxVideo.pause();
+  lightboxVideo.currentTime = 0;
+  
+  // Set up video
+  lightboxVideoSource.src = item.file;
+  lightboxVideo.load();
+  
+  // Show video when it can play
+  lightboxVideo.addEventListener('loadedmetadata', function() {
+    lightboxLoading.style.display = 'none';
+    lightboxVideo.style.display = 'block';
+  }, { once: true });
+  
+} else {
     // Regular image
     lightboxLoading.style.display = 'none';
     lightboxVideo.style.display = 'none';
