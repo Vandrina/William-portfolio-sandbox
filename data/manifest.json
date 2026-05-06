@@ -6976,7 +6976,9 @@
     "discipline": [
       "2d-animation"
     ],
-    "clients": [],
+    "clients": [
+      "agency"
+    ],
     "keywords": [],
     "sort": 999,
     "isVideo": true
@@ -6995,7 +6997,9 @@
     "discipline": [
       "2d-animation"
     ],
-    "clients": [],
+    "clients": [
+      "agency"
+    ],
     "keywords": [],
     "sort": 999,
     "isVideo": true
@@ -7014,7 +7018,9 @@
     "discipline": [
       "2d-animation"
     ],
-    "clients": [],
+    "clients": [
+      "agency"
+    ],
     "keywords": [],
     "sort": 999,
     "isVideo": true
@@ -7052,7 +7058,9 @@
     "discipline": [
       "2d-animation"
     ],
-    "clients": [],
+    "clients": [
+      "splainers"
+    ],
     "keywords": [],
     "sort": 999,
     "isVideo": true
@@ -7071,7 +7079,9 @@
     "discipline": [
       "2d-animation"
     ],
-    "clients": [],
+    "clients": [
+      "microsoft"
+    ],
     "keywords": [],
     "sort": 999,
     "isVideo": true
@@ -7090,7 +7100,9 @@
     "discipline": [
       "2d-animation"
     ],
-    "clients": [],
+    "clients": [
+      "microsoft"
+    ],
     "keywords": [],
     "sort": 999,
     "isVideo": true
@@ -7109,7 +7121,9 @@
     "discipline": [
       "2d-animation"
     ],
-    "clients": [],
+    "clients": [
+      "microsoft"
+    ],
     "keywords": [],
     "sort": 999,
     "isVideo": true
@@ -7128,7 +7142,9 @@
     "discipline": [
       "2d-animation"
     ],
-    "clients": [],
+    "clients": [
+      "microsoft"
+    ],
     "keywords": [],
     "sort": 999,
     "isVideo": true
@@ -7147,7 +7163,9 @@
     "discipline": [
       "2d-animation"
     ],
-    "clients": [],
+    "clients": [
+      "microsoft"
+    ],
     "keywords": [],
     "sort": 999,
     "isVideo": true
@@ -7166,7 +7184,9 @@
     "discipline": [
       "2d-animation"
     ],
-    "clients": [],
+    "clients": [
+      "microsoft"
+    ],
     "keywords": [],
     "sort": 999,
     "isVideo": true
@@ -7185,7 +7205,9 @@
     "discipline": [
       "2d-animation"
     ],
-    "clients": [],
+    "clients": [
+      "microsoft"
+    ],
     "keywords": [],
     "sort": 999,
     "isVideo": true
@@ -7204,7 +7226,9 @@
     "discipline": [
       "2d-animation"
     ],
-    "clients": [],
+    "clients": [
+      "microsoft"
+    ],
     "keywords": [],
     "sort": 999,
     "isVideo": true
@@ -7280,7 +7304,9 @@
     "discipline": [
       "3d-animation"
     ],
-    "clients": [],
+    "clients": [
+      "elevated-games"
+    ],
     "keywords": [],
     "sort": 999,
     "isVideo": true
