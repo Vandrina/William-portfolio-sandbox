@@ -82,8 +82,8 @@
         <div class="filter-all-wrap">
           <button class="filter-btn-all active" id="filterAll">View All</button>
           <div class="logic-toggle">
-            <button class="logic-btn active" data-logic="or">OR</button>
-            <button class="logic-btn" data-logic="and">AND</button>
+            <button class="logic-btn" data-logic="or">OR</button>
+            <button class="logic-btn active" data-logic="and">AND</button>
           </div>
         </div>
       </div>
@@ -185,7 +185,7 @@
 
       var manifest = [];
       var activeFilters = { discipline: new Set(), client: new Set() };
-      var filterLogic = 'or';
+      var filterLogic = 'and';
       var visibleItems = [];
       var lightboxIndex = 0;
 
