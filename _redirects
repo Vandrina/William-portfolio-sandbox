@@ -7,7 +7,7 @@
 /books                  /gallery.html?view=books                       302
 /nfts                   /gallery.html?view=nfts                        302
 /2d-animation		/gallery.html?view=2d-animation		       302
-/3d-animaton		/gallery.html?view=3d-animation		       302
+/3d-animation		/gallery.html?view=3d-animation		       302
 
 # Client filters
 /microsoft              /gallery.html?client=microsoft                 302
