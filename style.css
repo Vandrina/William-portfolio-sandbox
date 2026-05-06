@@ -1660,39 +1660,7 @@ body {
   height: auto;
 }
 
-.video-container {
-  position: relative;
-  display: inline-block;
-}
 
-.video-play-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80px;
-  height: 80px;
-  background: rgba(200, 164, 110, 0.9);
-  border: none;
-  border-radius: 50%;
-  color: #1c1c1e;
-  font-size: 32px;
-  cursor: pointer;
-  transition: all 0.2s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-left: 6px; /* Optical centering for play icon */
-}
-
-.video-play-overlay:hover {
-  background: #c8a46e;
-  transform: translate(-50%, -50%) scale(1.1);
-}
-
-.video-play-overlay.hidden {
-  display: none;
-}
 
 /* ── SCROLL TO TOP ── */
 .scroll-top {
