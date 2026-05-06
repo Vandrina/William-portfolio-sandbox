@@ -1819,6 +1819,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  contain: content;
 }
 
 /* Border and radius on the img itself so they hug the image with no gap */
