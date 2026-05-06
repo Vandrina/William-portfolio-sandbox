@@ -396,6 +396,7 @@ body {
 .btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
   padding: 9px 18px;
   font-family: var(--font-head);
@@ -1036,13 +1037,6 @@ body {
   gap: 16px;
   max-width: 960px;
   margin: 0 auto;
-}
-
-.cta-strip .btn {
-  flex: 1;
-  max-width: 280px;
-  padding: 16px 24px;
-  font-size: 14px;
 }
 
 @media (max-width: 768px) {
