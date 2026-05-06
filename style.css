@@ -1852,6 +1852,13 @@ body {
   }
 }
 
+@media (max-width: 480px) {
+  .contact-img img {
+  max-width: 270px;
+  }
+}
+
+
 /* ── ABOUT PAGE ── */
 .about-header {
   text-align: center;
