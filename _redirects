@@ -6,6 +6,8 @@
 /backgrounds            /gallery.html?view=backgrounds                 302
 /books                  /gallery.html?view=books                       302
 /nfts                   /gallery.html?view=nfts                        302
+/2d-animation		/gallery.html?view=2d-animation		       302
+/3d-animaton		/gallery.html?view=3d-animation		       302
 
 # Client filters
 /microsoft              /gallery.html?client=microsoft                 302
@@ -22,4 +24,5 @@
 /nickelodeon            /gallery.html?client=nickelodeon               302
 /stone-arch-books       /gallery.html?client=stone-arch-books          302
 /tech-smart-kids        /gallery.html?client=tech-smart-kids           302
+/sabi			/gallery.html?client=sabi		       302
 /agency                 /gallery.html?client=agency                    302
