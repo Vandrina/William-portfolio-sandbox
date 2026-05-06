@@ -799,14 +799,16 @@ body {
 /* ── DISCIPLINE CARDS ── */
 .disc-grid {
   display: flex;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 10px;
   max-width: 960px;
   margin: 0 auto;
 }
 
 .disc-card {
+  width: 306px;
+  flex: 0 0 auto;
   border-radius: var(--radius);
   overflow: hidden;
   border: 1px solid var(--border);
@@ -891,19 +893,6 @@ body {
   text-transform: uppercase;
 }
 
-@media (max-width: 768px) {
-  .disc-grid {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 86%;
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 480px) {
-  .disc-grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
 
 /* ── CLIENT CARDS ── */
 .client-grid {
