@@ -122,15 +122,21 @@
   <button class="lightbox-nav lightbox-prev" id="lightboxPrev">‹</button>
   <button class="lightbox-nav lightbox-next" id="lightboxNext">›</button>
   <div class="lightbox-inner">
-    <div class="lightbox-loading" id="lightboxLoading">
-      <div class="spinner"></div>
-      <div class="loading-text">Loading video...</div>
-    </div>
-    <img class="lightbox-img" id="lightboxImg" src="" alt="">
-    <video class="lightbox-video" id="lightboxVideo" controls preload="metadata" style="display:none;">
+  <div class="lightbox-loading" id="lightboxLoading">
+    <div class="spinner"></div>
+    <div class="loading-text">Loading video...</div>
+  </div>
+  <img class="lightbox-img" id="lightboxImg" src="" alt="">
+  <div class="video-container" style="position: relative; display: none;" id="videoContainer">
+    <video class="lightbox-video" id="lightboxVideo" preload="metadata">
       <source id="lightboxVideoSource" src="" type="video/mp4">
     </video>
-    <div class="lightbox-meta">
+    <button class="video-play-overlay" id="videoPlayBtn">▶</button>
+  </div>
+  <div class="lightbox-meta">
+    <!-- ... -->
+  </div>
+</div>
       <span class="lightbox-discipline" id="lightboxDiscipline"></span>
       <span class="lightbox-client" id="lightboxClient"></span>
     </div>
@@ -538,22 +544,38 @@
   var lightboxVideoSource = document.getElementById('lightboxVideoSource');
   
   if (item.isVideo) {
-    // Show loading, hide image
-    lightboxLoading.style.display = 'flex';
-    lightboxImg.style.display = 'none';
-    lightboxVideo.style.display = 'none';
-    
-    // Set up video
-    lightboxVideoSource.src = item.file;
-    lightboxVideo.load();
-    
-    // Show video when it can play
-    lightboxVideo.addEventListener('loadedmetadata', function() {
-      lightboxLoading.style.display = 'none';
-      lightboxVideo.style.display = 'block';
-    }, { once: true });
-    
-  } else {
+  lightboxLoading.style.display = 'flex';
+  lightboxImg.style.display = 'none';
+  var videoContainer = document.getElementById('videoContainer');
+  var videoPlayBtn = document.getElementById('videoPlayBtn');
+  videoContainer.style.display = 'none';
+  
+  lightboxVideoSource.src = item.file;
+  lightboxVideo.load();
+  
+  lightboxVideo.addEventListener('loadedmetadata', function() {
+    lightboxLoading.style.display = 'none';
+    videoContainer.style.display = 'block';
+    videoPlayBtn.classList.remove('hidden');
+  }, { once: true });
+  
+  // Play button click
+  videoPlayBtn.onclick = function() {
+    lightboxVideo.play();
+    videoPlayBtn.classList.add('hidden');
+  };
+  
+  // Show play button again when paused
+  lightboxVideo.addEventListener('pause', function() {
+    if (lightboxVideo.currentTime < lightboxVideo.duration) {
+      videoPlayBtn.classList.remove('hidden');
+    }
+  });
+  
+  lightboxVideo.addEventListener('play', function() {
+    videoPlayBtn.classList.add('hidden');
+  });
+} else {
     // Regular image
     lightboxLoading.style.display = 'none';
     lightboxVideo.style.display = 'none';
@@ -567,10 +589,16 @@
 }
 
       function closeLightbox() {
-        lightbox.classList.remove('open');
-        document.body.style.overflow = '';
-        lightboxImg.src = '';
-      }
+  lightbox.classList.remove('open');
+  document.body.style.overflow = '';
+  lightboxImg.src = '';
+  
+  // Stop and reset video
+  var vid = document.getElementById('lightboxVideo');
+  vid.pause();
+  vid.currentTime = 0;
+  vid.style.display = 'none';
+}
 
       document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
       lightbox.addEventListener('click', function (e) { if (e.target === lightbox) closeLightbox(); });
