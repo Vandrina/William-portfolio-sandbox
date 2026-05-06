@@ -119,6 +119,31 @@ body {
 .section-light {
   background: var(--bg-2);
 } 
+.section-lighter {
+  background: var(--bg3);
+}
+
+/* ── SECTION BLOCKS ── */
+.section {
+  padding: 40px 32px;
+  border-bottom: 1px solid var(--border);
+}
+
+.sec-title {
+  font-family: var(--font-head);
+  font-size: 23px;
+  font-weight: 600;
+  color: var(--mid);
+  letter-spacing: -0.02em;
+  margin: 12px 0;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 36px 20px;
+  }
+}
 
 /* Spacers */
 .spacer-sm { height: 10px; }
@@ -366,33 +391,6 @@ body {
   }
 }
 
-/* EDIT POTENTIAL: may need to adjust the sticky filter-wrap for mobile*/
-
-/* ── SECTION BLOCKS ── */
-.section {
-  padding: 40px 32px;
-  border-bottom: 1px solid var(--border);
-}
-
-.section.alt-bg {
-  background: var(--bg-2);
-}
-
-.sec-title {
-  font-family: var(--font-head);
-  font-size: 23px;
-  font-weight: 600;
-  color: var(--mid);
-  letter-spacing: -0.02em;
-  margin: 12px 0;
-  text-align: center;
-}
-
-@media (max-width: 768px) {
-  .section {
-    padding: 36px 20px;
-  }
-}
 
 /* ── BUTTONS ── */
 .btn {
