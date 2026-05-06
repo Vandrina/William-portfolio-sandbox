@@ -409,6 +409,11 @@ body {
   border: 1px solid transparent;
 }
 
+.btn-large {
+  padding: 14px 24px;
+  font-size: 16px;
+}
+
 .btn-gold {
   color: var(--accent);
   border-color: var(--accent-dim);
@@ -1043,7 +1048,6 @@ body {
     flex-direction: column;
     max-width: 320px;
     gap: 12px;
-    padding: 8px 10px;
   }
   
   .cta-strip .btn {
