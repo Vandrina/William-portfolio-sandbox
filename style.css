@@ -1853,7 +1853,7 @@ body {
 }
 
 @media (max-width: 480px) {
-  .contact-img img {
+  .contact-img {
   max-width: 270px;
   }
 }
