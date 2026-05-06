@@ -1043,6 +1043,7 @@ body {
     flex-direction: column;
     max-width: 320px;
     gap: 12px;
+    padding: 8px 10px;
   }
   
   .cta-strip .btn {
