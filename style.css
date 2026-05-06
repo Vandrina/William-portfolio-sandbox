@@ -1815,7 +1815,6 @@ body {
 /* Container: just a positioner, no bg or border */
 .contact-img {
   max-height: 450px;
-  display: flex;
   align-items: center;
   flex-shrink: 0;
 }
