@@ -1817,23 +1817,20 @@ body {
   max-height: 450px;
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-shrink: 0;
-  contain: content;
 }
 
 /* Border and radius on the img itself so they hug the image with no gap */
 .contact-img img {
   display: block;
   max-height: 450px;
-  max-width: 100%;
-  width: 100%;
-  height: auto;
+  width: auto;
   aspect-ratio: 3/4;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   object-fit: cover;
 }
+
 
 @media (max-width: 768px) {
   .contact-cols {
@@ -1845,29 +1842,27 @@ body {
   }
 
   .contact-methods {
-    width: 100%;
-    max-width: 400px;
+    width: auto;
     flex: 0 0 auto;
   }
 
   .contact-img {
     width: 100%;
-    max-width: 400px;
-    max-height: none;
-    margin: 0 auto;
-  }
-
-  .contact-img img {
+    height: 100%;
     max-height: none;
   }
 }
 
 @media (max-width: 480px) {
+  .contact-cols {
+    width: 100%;
+  }
+
   .contact-img {
-    max-width: 270px;
+    width: 80%;
+    margin: 0 auto;
   }
 }
-
 
 /* ── ABOUT PAGE ── */
 .about-header {
