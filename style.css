@@ -1033,8 +1033,7 @@ body {
 /* ── CTA STRIP ── */
 .cta-strip {
   display: flex;
-  justify-content: center;
-  gap: 16px;
+  justify-content: space-evenly;
   max-width: 960px;
   margin: 0 auto;
 }
