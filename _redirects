@@ -1,7 +1,3 @@
-# Cloudflare Pages Redirects
-# Clean URLs for William McGuire Portfolio
-# Place this file in the root of your repository
-
 # Discipline filters
 /illustration           /gallery.html?view=illustration                302
 /concept-art            /gallery.html?view=concept-art                 302
