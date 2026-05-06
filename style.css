@@ -112,6 +112,14 @@ body {
   margin: 0 auto;
 }
 
+/* Sections - Background Colors */
+.section-dark {
+  background: var(--bg);
+}
+.section-light {
+  background: var(--bg-2);
+} 
+
 /* Spacers */
 .spacer-sm { height: 10px; }
 .spacer-md { height: 25px; }
@@ -575,15 +583,6 @@ body {
 
 /* ---HOMEPAGE---*/
 
-/* Homepage section backgrounds */
-.section-disc {
-  background: var(--bg);
-}
-
-.section-clients {
-  background: var(--bg-2);
-}
-
 /* ── HERO (homepage) ── */
 .hero-wrap {
   background: var(--bg-2);
@@ -1032,7 +1031,33 @@ body {
   transition: left 0.6s ease;
 }
 
+/* ── CTA STRIP ── */
+.cta-strip {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  max-width: 960px;
+  margin: 0 auto;
+}
 
+.cta-strip .btn {
+  flex: 1;
+  max-width: 280px;
+  padding: 16px 24px;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .cta-strip {
+    flex-direction: column;
+    max-width: 320px;
+    gap: 12px;
+  }
+  
+  .cta-strip .btn {
+    max-width: none;
+  }
+}
 
 
 /* -- --GALLERY-- -- */
