@@ -1838,6 +1838,7 @@ body {
     width: 100%;
     align-items: center;
     margin-bottom: 16px;
+    justify-content: center;
   }
 
   .contact-methods {
@@ -1847,7 +1848,7 @@ body {
 
   .contact-img {
     width: 70%;
-    justify-content: center;
+    
   }
 }
 
