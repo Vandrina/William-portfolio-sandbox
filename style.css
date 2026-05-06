@@ -1815,7 +1815,9 @@ body {
 /* Container: just a positioner, no bg or border */
 .contact-img {
   max-height: 450px;
+  display: flex;
   align-items: center;
+  justify-content: center;
   flex-shrink: 0;
 }
 
@@ -1823,13 +1825,14 @@ body {
 .contact-img img {
   display: block;
   max-height: 450px;
-  width: auto;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
   aspect-ratio: 3/4;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   object-fit: cover;
 }
-
 
 @media (max-width: 768px) {
   .contact-cols {
@@ -1838,19 +1841,28 @@ body {
     width: 100%;
     align-items: center;
     margin-bottom: 16px;
-    justify-content: center;
   }
 
   .contact-methods {
-    width: auto;
+    width: 100%;
+    max-width: 400px;
     flex: 0 0 auto;
+  }
+
+  .contact-img {
+    width: 100%;
+    max-width: 400px;
+    max-height: none;
+  }
+
+  .contact-img img {
+    max-height: none;
   }
 }
 
 @media (max-width: 480px) {
   .contact-img {
-  width: 270px;
-  flex-shrink: auto;
+    max-width: 270px;
   }
 }
 
