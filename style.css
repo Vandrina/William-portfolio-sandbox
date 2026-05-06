@@ -410,8 +410,9 @@ body {
 }
 
 .btn-large {
-  padding: 14px 24px;
+  padding: 14px 36px;
   font-size: 16px;
+  font-weight: 400;
 }
 
 .btn-gold {
