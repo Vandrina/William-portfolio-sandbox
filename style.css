@@ -1845,11 +1845,6 @@ body {
     width: auto;
     flex: 0 0 auto;
   }
-
-  .contact-img {
-    width: 70%;
-    
-  }
 }
 
 @media (max-width: 480px) {
