@@ -118,17 +118,24 @@
   <button class="scroll-top" id="scrollTop" aria-label="Back to top">^</button>
 
   <div class="lightbox" id="lightbox">
-    <button class="lightbox-close" id="lightboxClose">✕</button>
-    <button class="lightbox-nav lightbox-prev" id="lightboxPrev">‹</button>
-    <button class="lightbox-nav lightbox-next" id="lightboxNext">›</button>
-    <div class="lightbox-inner">
-      <img class="lightbox-img" id="lightboxImg" src="" alt="">
-      <div class="lightbox-meta">
-        <span class="lightbox-discipline" id="lightboxDiscipline"></span>
-        <span class="lightbox-client" id="lightboxClient"></span>
-      </div>
+  <button class="lightbox-close" id="lightboxClose">✕</button>
+  <button class="lightbox-nav lightbox-prev" id="lightboxPrev">‹</button>
+  <button class="lightbox-nav lightbox-next" id="lightboxNext">›</button>
+  <div class="lightbox-inner">
+    <div class="lightbox-loading" id="lightboxLoading">
+      <div class="spinner"></div>
+      <div class="loading-text">Loading video...</div>
+    </div>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="">
+    <video class="lightbox-video" id="lightboxVideo" controls preload="metadata" style="display:none;">
+      <source id="lightboxVideoSource" src="" type="video/mp4">
+    </video>
+    <div class="lightbox-meta">
+      <span class="lightbox-discipline" id="lightboxDiscipline"></span>
+      <span class="lightbox-client" id="lightboxClient"></span>
     </div>
   </div>
+</div>
 
   <footer class="footer">
   <div class="footer-main">
@@ -521,14 +528,43 @@
       }
 
       function showLightboxItem() {
-        var index = visibleItems[lightboxIndex];
-        var item = manifest[index];
-        var el = grid.querySelector('.gal-item[data-index="' + index + '"]');
-        lightboxImg.src = el ? el.dataset.full : item.file;
-        lightboxImg.alt = (item.discipline || []).map(formatLabel).join(' · ');
-        lightboxDiscipline.textContent = (item.discipline || []).map(formatLabel).join(' · ');
-        lightboxClient.textContent = (item.clients || []).map(formatLabel).join(' · ');
-      }
+  var index = visibleItems[lightboxIndex];
+  var item = manifest[index];
+  var el = grid.querySelector('.gal-item[data-index="' + index + '"]');
+  
+  var lightboxLoading = document.getElementById('lightboxLoading');
+  var lightboxImg = document.getElementById('lightboxImg');
+  var lightboxVideo = document.getElementById('lightboxVideo');
+  var lightboxVideoSource = document.getElementById('lightboxVideoSource');
+  
+  if (item.isVideo) {
+    // Show loading, hide image
+    lightboxLoading.style.display = 'flex';
+    lightboxImg.style.display = 'none';
+    lightboxVideo.style.display = 'none';
+    
+    // Set up video
+    lightboxVideoSource.src = item.file;
+    lightboxVideo.load();
+    
+    // Show video when it can play
+    lightboxVideo.addEventListener('loadedmetadata', function() {
+      lightboxLoading.style.display = 'none';
+      lightboxVideo.style.display = 'block';
+    }, { once: true });
+    
+  } else {
+    // Regular image
+    lightboxLoading.style.display = 'none';
+    lightboxVideo.style.display = 'none';
+    lightboxImg.style.display = 'block';
+    lightboxImg.src = el ? el.dataset.full : item.file;
+    lightboxImg.alt = (item.discipline || []).map(formatLabel).join(' · ');
+  }
+  
+  lightboxDiscipline.textContent = (item.discipline || []).map(formatLabel).join(' · ');
+  lightboxClient.textContent = (item.clients || []).map(formatLabel).join(' · ');
+}
 
       function closeLightbox() {
         lightbox.classList.remove('open');
