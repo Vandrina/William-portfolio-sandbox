@@ -118,30 +118,27 @@
   <button class="scroll-top" id="scrollTop" aria-label="Back to top">^</button>
 
   <div class="lightbox" id="lightbox">
-  <div class="lightbox" id="lightbox">
-  <div class="lightbox-controls">
-    <button class="lightbox-share" id="lightboxShare" aria-label="Copy share link" title="Copy link">⎘</button>
-    <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
-  </div>
-  <button class="lightbox-nav lightbox-prev" id="lightboxPrev">‹</button>
-  <button class="lightbox-nav lightbox-next" id="lightboxNext">›</button>
-  <button class="lightbox-nav lightbox-prev" id="lightboxPrev">‹</button>
-  <button class="lightbox-nav lightbox-next" id="lightboxNext">›</button>
-  <div class="lightbox-inner">
-    <div class="lightbox-loading" id="lightboxLoading">
-      <div class="spinner"></div>
-      <div class="loading-text">Loading video...</div>
+    <div class="lightbox-controls">
+      <button class="lightbox-share" id="lightboxShare" aria-label="Copy share link" title="Copy link">⎘</button>
+      <button class="lightbox-close" id="lightboxClose">✕</button>
     </div>
-    <img class="lightbox-img" id="lightboxImg" src="" alt="">
-    <video class="lightbox-video" id="lightboxVideo" controls preload="metadata" style="display:none;">
-      <source id="lightboxVideoSource" src="" type="video/mp4">
-    </video>
-    <div class="lightbox-meta">
-      <span class="lightbox-discipline" id="lightboxDiscipline"></span>
-      <span class="lightbox-client" id="lightboxClient"></span>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev">‹</button>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext">›</button>
+    <div class="lightbox-inner">
+      <div class="lightbox-loading" id="lightboxLoading">
+        <div class="spinner"></div>
+        <div class="loading-text">Loading video...</div>
+      </div>
+      <img class="lightbox-img" id="lightboxImg" src="" alt="">
+      <video class="lightbox-video" id="lightboxVideo" controls preload="metadata" style="display:none;">
+        <source id="lightboxVideoSource" src="" type="video/mp4">
+      </video>
+      <div class="lightbox-meta">
+        <span class="lightbox-discipline" id="lightboxDiscipline"></span>
+        <span class="lightbox-client" id="lightboxClient"></span>
+      </div>
     </div>
   </div>
-</div>
 
   <footer class="footer">
   <div class="footer-main">
@@ -598,7 +595,8 @@
         if (e.key === 'ArrowLeft') { lightboxIndex = (lightboxIndex - 1 + visibleItems.length) % visibleItems.length; showLightboxItem(); }
         if (e.key === 'ArrowRight') { lightboxIndex = (lightboxIndex + 1) % visibleItems.length; showLightboxItem(); }
       });
-      document.getElementById('lightboxShare').addEventListener('click', function() {
+      // Share button - copy image.html link
+document.getElementById('lightboxShare').addEventListener('click', function() {
   var index = visibleItems[lightboxIndex];
   var item = manifest[index];
   var slug = item.file.split('/').pop().replace(/\.[^.]+$/, '');
