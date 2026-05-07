@@ -1638,14 +1638,8 @@ body {
 .lightbox-close {
   width: 40px;
   height: 40px;
-  background: var(--surface);
   border: 1px solid var(--border-mid);
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  color: var(--mid);
   font-size: 18px;
   transition: color 0.2s, border-color 0.2s;
   z-index: 1001;
@@ -1693,12 +1687,12 @@ body {
 
 .lightbox-prev {
   left: 24px;
-  border: 1px;
+  border: 1px solid var(--border-mid);
 }
 
 .lightbox-next {
   right: 24px;
-  border: 1px;
+  border: 1px solid var(--border-mid);
 }
 
 .lightbox-loading {
