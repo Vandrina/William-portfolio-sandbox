@@ -314,13 +314,6 @@
         if (!skipFilter) filterGallery();
       }
 
-      buildGallery(true);
-      readUrlParams();
-        requestAnimationFrame(function () { 
-          filterGallery();
-          checkHashForImage(); // NEW: auto-open from URL hash
-      });
-
       function filterGallery() {
         var items = grid.querySelectorAll('.gal-item');
         var selDisc = Array.from(activeFilters.discipline);
@@ -527,13 +520,12 @@
       }
 
       function openLightbox(index) {
-  lightboxIndex = visibleItems.indexOf(index);
-  if (lightboxIndex === -1) lightboxIndex = 0;
-  showLightboxItem();
-  lightbox.classList.add('open');
-  document.body.style.overflow = 'hidden';
-  updateImageHash(visibleItems[lightboxIndex]); // NEW
-}
+        lightboxIndex = visibleItems.indexOf(index);
+        if (lightboxIndex === -1) lightboxIndex = 0;
+        showLightboxItem();
+        lightbox.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
 
       function showLightboxItem() {
   var index = visibleItems[lightboxIndex];
@@ -576,20 +568,18 @@
   
   lightboxDiscipline.textContent = (item.discipline || []).map(formatLabel).join(' · ');
   lightboxClient.textContent = (item.clients || []).map(formatLabel).join(' · ');
-  updateImageHash(index);
 }
 
-  function closeLightbox() {
+      function closeLightbox() {
   lightbox.classList.remove('open');
   document.body.style.overflow = '';
   lightboxImg.src = '';
   
+  // Stop and reset video
   var vid = document.getElementById('lightboxVideo');
   vid.pause();
   vid.currentTime = 0;
   vid.style.display = 'none';
-  
-  window.history.replaceState({}, '', window.location.pathname + window.location.search); // NEW: clear hash
 }
 
       document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
@@ -625,36 +615,6 @@
           return w.charAt(0).toUpperCase() + w.slice(1);
         }).join(' ');
       }
-      // Extract slug from filename for URL hash
-function getImageSlug(filepath) {
-  if (!filepath) return '';
-  return filepath.split('/').pop().replace(/\.[^.]+$/, ''); // removes extension
-}
-
-// Update URL hash when lightbox opens/navigates
-function updateImageHash(index) {
-  var item = manifest[index];
-  if (!item) return;
-  var slug = getImageSlug(item.file);
-  if (slug) {
-    window.history.replaceState({}, '', '#' + slug);
-  }
-}
-
-// Check hash on load and auto-open matching image
-function checkHashForImage() {
-  var hash = window.location.hash.slice(1); // remove #
-  if (!hash) return;
-  hash = decodeURIComponent(hash);
-  var targetIndex = manifest.findIndex(function(item) {
-    return getImageSlug(item.file) === hash;
-  });
-  
-  if (targetIndex !== -1) {
-    openLightbox(targetIndex);
-  }
-}
-
     })();
   </script>
 </body>
