@@ -281,6 +281,14 @@
             viewer.appendChild(meta);
           }
 
+// Add title if it exists
+if (item.title) {
+  var title = document.createElement('div');
+  title.className = 'sec-title';
+  title.textContent = item.title;
+  viewer.appendChild(title);
+}
+
           // Plural forms for "View More" button
 var pluralMap = {
   'illustration': 'Illustrations',
