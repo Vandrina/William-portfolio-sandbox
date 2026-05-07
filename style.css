@@ -1581,9 +1581,6 @@ body {
 }
 
 .lightbox-close {
-  position: fixed;
-  top: 24px;
-  right: 24px;
   width: 40px;
   height: 40px;
   background: var(--surface);

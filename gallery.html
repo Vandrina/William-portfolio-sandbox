@@ -600,17 +600,23 @@ document.getElementById('lightboxShare').addEventListener('click', function() {
   var index = visibleItems[lightboxIndex];
   var item = manifest[index];
   var slug = item.file.split('/').pop().replace(/\.[^.]+$/, '');
-  var shareUrl = window.location.origin + window.location.pathname.replace('gallery.html', 'image.html') + '?img=' + encodeURIComponent(slug);
+  
+  // Handle both /gallery.html and /gallery paths
+  var basePath = window.location.pathname.replace(/gallery(\.html)?$/, 'image.html');
+  var shareUrl = window.location.origin + basePath + '?img=' + encodeURIComponent(slug);
   
   navigator.clipboard.writeText(shareUrl).then(function() {
     var btn = document.getElementById('lightboxShare');
-    var originalText = btn.textContent;
     btn.textContent = '✓';
     btn.classList.add('copied');
+    btn.style.transform = 'scale(1.1)'; // Add visual pop
     setTimeout(function() {
-      btn.textContent = originalText;
+      btn.textContent = '⎘';
       btn.classList.remove('copied');
+      btn.style.transform = '';
     }, 1500);
+  }).catch(function(err) {
+    console.error('Copy failed:', err);
   });
 });
       function formatLabel(slug) {
