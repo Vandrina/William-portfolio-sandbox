@@ -645,7 +645,7 @@ function updateImageHash(index) {
 function checkHashForImage() {
   var hash = window.location.hash.slice(1); // remove #
   if (!hash) return;
-  
+  hash = decodeURIComponent(hash);
   var targetIndex = manifest.findIndex(function(item) {
     return getImageSlug(item.file) === hash;
   });
