@@ -71,19 +71,6 @@
       flex-wrap: wrap;
     }
 
-    .btn-primary,
-    .btn-secondary {
-      display: inline-block;
-      padding: 14px 32px;
-      font-family: 'Outfit', sans-serif;
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      border-radius: 4px;
-      transition: all 0.2s ease;
-      border: 1px solid;
-    }
-
     .viewer-loading {
       text-align: center;
       padding: 100px 24px;
@@ -157,7 +144,7 @@
   </div>
 
   <div class="image-actions" id="imageActions" style="display:none;">
-    <a href="gallery.html" class="btn btn-gold">View Gallery</a>
+    <a href="gallery.html" class="btn btn-gold btn-large">View Gallery</a>
     <a href="gallery.html" id="viewMoreBtn" class="btn btn-gold">View More</a>
   </div>
 
@@ -328,7 +315,7 @@ if (item.discipline && item.discipline.length > 0) {
         errorDiv.innerHTML =
           '<div class="viewer-error-title">' + title + '</div>' +
           '<div class="viewer-error-desc">' + desc + '</div>' +
-          '<a href="gallery.html" class="btn-primary">Return to Gallery</a>';
+          '<a href="gallery.html" class="btn btn-gold btn-large">Return to Gallery</a>';
         viewer.appendChild(errorDiv);
       }
 
