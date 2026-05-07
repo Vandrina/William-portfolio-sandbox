@@ -118,7 +118,13 @@
   <button class="scroll-top" id="scrollTop" aria-label="Back to top">^</button>
 
   <div class="lightbox" id="lightbox">
-  <button class="lightbox-close" id="lightboxClose">✕</button>
+  <div class="lightbox" id="lightbox">
+  <div class="lightbox-controls">
+    <button class="lightbox-share" id="lightboxShare" aria-label="Copy share link" title="Copy link">⎘</button>
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+  </div>
+  <button class="lightbox-nav lightbox-prev" id="lightboxPrev">‹</button>
+  <button class="lightbox-nav lightbox-next" id="lightboxNext">›</button>
   <button class="lightbox-nav lightbox-prev" id="lightboxPrev">‹</button>
   <button class="lightbox-nav lightbox-next" id="lightboxNext">›</button>
   <div class="lightbox-inner">
@@ -592,7 +598,23 @@
         if (e.key === 'ArrowLeft') { lightboxIndex = (lightboxIndex - 1 + visibleItems.length) % visibleItems.length; showLightboxItem(); }
         if (e.key === 'ArrowRight') { lightboxIndex = (lightboxIndex + 1) % visibleItems.length; showLightboxItem(); }
       });
-
+      document.getElementById('lightboxShare').addEventListener('click', function() {
+  var index = visibleItems[lightboxIndex];
+  var item = manifest[index];
+  var slug = item.file.split('/').pop().replace(/\.[^.]+$/, '');
+  var shareUrl = window.location.origin + window.location.pathname.replace('gallery.html', 'image.html') + '?img=' + encodeURIComponent(slug);
+  
+  navigator.clipboard.writeText(shareUrl).then(function() {
+    var btn = document.getElementById('lightboxShare');
+    var originalText = btn.textContent;
+    btn.textContent = '✓';
+    btn.classList.add('copied');
+    setTimeout(function() {
+      btn.textContent = originalText;
+      btn.classList.remove('copied');
+    }, 1500);
+  });
+});
       function formatLabel(slug) {
         if (!slug) return '';
 
