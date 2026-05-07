@@ -1616,6 +1616,7 @@ body {
   font-size: 18px;
   transition: all 0.2s ease;
   backdrop-filter: blur(10px);
+  border: 1px solid var(--border-mid);
 }
 
 .lightbox-share.copied {
@@ -1656,22 +1657,12 @@ body {
   opacity: 1;
 }
 
-.lightbox-close:hover {
-  color: var(--bright);
-  border-color: var(--mid);
-}
-
 .lightbox-nav {
   position: fixed;
   top: 50%;
   transform: translateY(-50%);
   font-size: 22px;
   z-index: 1001;
-}
-
-.lightbox-nav:hover {
-  color: var(--bright);
-  background: rgba(20, 20, 22, 0.95);
 }
 
 .lightbox-prev {
