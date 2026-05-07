@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en" style="background:#1c1c1e">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image — William McGuire</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500&family=Space+Mono:wght@400;700&display=optional">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Image viewer specific styles */
+    .image-viewer {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 60px 24px 40px;
+      min-height: calc(100vh - 200px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .viewer-img {
+      width: 100%;
+      height: auto;
+      max-height: 80vh;
+      object-fit: contain;
+      border-radius: 4px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    }
+
+    .viewer-video {
+      width: 100%;
+      max-width: 1200px;
+      max-height: 80vh;
+      border-radius: 4px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    }
+
+    .viewer-meta {
+      margin-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      opacity: 0.7;
+    }
+
+    .viewer-tag {
+      font-family: 'Space Mono', monospace;
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #c8a46e;
+    }
+
+    .viewer-tag.client {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .image-actions {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      display: inline-block;
+      padding: 14px 32px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: all 0.2s ease;
+      border: 1px solid;
+    }
+
+    .btn-primary {
+      background: #c8a46e;
+      color: #1c1c1e;
+      border-color: #c8a46e;
+    }
+
+    .btn-primary:hover {
+      background: #d4b57f;
+      border-color: #d4b57f;
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: rgba(255, 255, 255, 0.8);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.3);
+      color: #fff;
+    }
+
+    .viewer-loading {
+      text-align: center;
+      padding: 100px 24px;
+      color: rgba(255, 255, 255, 0.5);
+      font-family: 'Inter', sans-serif;
+    }
+
+    .viewer-error {
+      text-align: center;
+      padding: 100px 24px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .viewer-error-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .viewer-error-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      opacity: 0.6;
+      margin-bottom: 32px;
+    }
+
+    @media (max-width: 768px) {
+      .image-viewer {
+        padding: 40px 16px 32px;
+      }
+
+      .viewer-img {
+        max-height: 70vh;
+      }
+
+      .image-actions {
+        padding: 32px 16px 60px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="nav-wrap">
+    <nav class="nav">
+      <a href="index.html" class="nav-id">
+        <div class="nav-name">William McGuire</div>
+        <div class="nav-sub">Illustration <span>·</span> Concept Art <span>·</span> Animation</div>
+      </a>
+      <div class="nav-links">
+        <a href="gallery.html" class="nav-item">Gallery</a>
+        <a href="about.html" class="nav-item">About</a>
+        <a href="contact.html" class="nav-item">Contact</a>
+        <a href="shop.html" class="nav-shop nav-item">Shop ↗</a>
+      </div>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="nav-mobile-menu" id="navMobileMenu">
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="shop.html" class="shop">Shop ↗</a>
+    </div>
+  </div>
+
+  <div class="image-viewer" id="imageViewer">
+    <div class="viewer-loading" id="viewerLoading">Loading...</div>
+  </div>
+
+  <div class="image-actions" id="imageActions" style="display:none;">
+    <a href="gallery.html" class="btn-secondary">View Gallery</a>
+    <a href="gallery.html" id="viewMoreBtn" class="btn-primary">View More</a>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <div class="footer-name">William McGuire</div>
+        <div class="footer-tagline">Illustrator · Concept Artist · Animator</div>
+      </div>
+      <div class="page-divider centered footer-divider"></div>
+      <div class="footer-nav">
+        <a href="gallery.html" class="footer-link">Gallery</a>
+        <a href="about.html" class="footer-link">About</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+        <a href="shop.html" class="footer-link gold">Shop ↗</a>
+      </div>
+    </div>
+
+    <div class="footer-secondary">
+      <div class="footer-left">
+        <div class="footer-copy">© william mcguire — williammcguire.net</div>
+        <div class="footer-legal">
+          <a href="privacy.html" class="footer-legal-link">Privacy</a>
+          <a href="terms.html" class="footer-legal-link">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      'use strict';
+
+      // Hamburger nav
+      var hbtn = document.getElementById('navHamburger');
+      var hmenu = document.getElementById('navMobileMenu');
+      if (hbtn && hmenu) {
+        hbtn.addEventListener('click', function () { hmenu.classList.toggle('open'); });
+        document.addEventListener('click', function (e) {
+          if (!hbtn.contains(e.target) && !hmenu.contains(e.target)) hmenu.classList.remove('open');
+        });
+      }
+
+      // Get image slug from URL
+      var params = new URLSearchParams(window.location.search);
+      var imgSlug = params.get('img');
+
+      if (!imgSlug) {
+        // No image specified, redirect to gallery
+        window.location.href = 'gallery.html';
+        return;
+      }
+
+      var viewer = document.getElementById('imageViewer');
+      var actions = document.getElementById('imageActions');
+      var loading = document.getElementById('viewerLoading');
+      var viewMoreBtn = document.getElementById('viewMoreBtn');
+
+      // Load manifest and display image
+      fetch('./data/manifest.json')
+        .then(function (r) {
+          if (!r.ok) throw new Error('HTTP ' + r.status);
+          return r.json();
+        })
+        .then(function (manifest) {
+          // Find matching image by slug
+          var item = manifest.find(function (entry) {
+            var entrySlug = entry.file.split('/').pop().replace(/\.[^.]+$/, '');
+            return entrySlug === imgSlug;
+          });
+
+          if (!item) {
+            showError('Image not found', 'The requested image could not be located.');
+            return;
+          }
+
+          // Display image or video
+          loading.style.display = 'none';
+
+          if (item.isVideo) {
+            var video = document.createElement('video');
+            video.className = 'viewer-video';
+            video.controls = true;
+            video.preload = 'metadata';
+            var source = document.createElement('source');
+            source.src = item.file;
+            source.type = 'video/mp4';
+            video.appendChild(source);
+            viewer.appendChild(video);
+          } else {
+            var img = document.createElement('img');
+            img.className = 'viewer-img';
+            img.src = item.file;
+            img.alt = formatLabel((item.discipline || [])[0] || 'Artwork');
+            viewer.appendChild(img);
+          }
+
+          // Add metadata
+          if (item.discipline || item.clients) {
+            var meta = document.createElement('div');
+            meta.className = 'viewer-meta';
+
+            if (item.discipline && item.discipline.length > 0) {
+              item.discipline.forEach(function (d) {
+                var tag = document.createElement('span');
+                tag.className = 'viewer-tag';
+                tag.textContent = formatLabel(d);
+                meta.appendChild(tag);
+              });
+            }
+
+            if (item.clients && item.clients.length > 0) {
+              item.clients.forEach(function (c) {
+                var tag = document.createElement('span');
+                tag.className = 'viewer-tag client';
+                tag.textContent = formatLabel(c);
+                meta.appendChild(tag);
+              });
+            }
+
+            viewer.appendChild(meta);
+          }
+
+          // Update "View More" button
+          if (item.discipline && item.discipline.length > 0) {
+            var firstDiscipline = item.discipline[0];
+            viewMoreBtn.textContent = 'View More ' + formatLabel(firstDiscipline);
+            viewMoreBtn.href = 'gallery.html?view=' + firstDiscipline;
+          } else {
+            // No discipline, just link to full gallery
+            viewMoreBtn.textContent = 'View More Work';
+            viewMoreBtn.href = 'gallery.html';
+          }
+
+          // Show action buttons
+          actions.style.display = 'flex';
+        })
+        .catch(function (err) {
+          console.error('Failed to load image:', err);
+          showError('Could not load image', 'Please try refreshing the page or return to the gallery.');
+        });
+
+      function showError(title, desc) {
+        loading.style.display = 'none';
+        var errorDiv = document.createElement('div');
+        errorDiv.className = 'viewer-error';
+        errorDiv.innerHTML =
+          '<div class="viewer-error-title">' + title + '</div>' +
+          '<div class="viewer-error-desc">' + desc + '</div>' +
+          '<a href="gallery.html" class="btn-primary">Return to Gallery</a>';
+        viewer.appendChild(errorDiv);
+      }
+
+      function formatLabel(slug) {
+        if (!slug) return '';
+
+        var labelMap = {
+          'backgrounds': 'Background',
+          'books': 'Book',
+          'nfts': 'NFTs',
+          'nft': 'NFTs',
+          'sabi': 'SABI',
+          '2d-animation': '2D Animation',
+          '3d-animation': '3D Animation',
+        };
+
+        if (labelMap[slug]) return labelMap[slug];
+
+        return slug.split('-').map(function (w) {
+          return w.charAt(0).toUpperCase() + w.slice(1);
+        }).join(' ');
+      }
+    })();
+  </script>
+</body>
+
+</html>
