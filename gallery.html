@@ -120,6 +120,7 @@
   <div class="lightbox" id="lightbox">
     <div class="lightbox-controls">
       <button class="lightbox-share" id="lightboxShare" aria-label="Copy share link" title="Copy link">⎘</button>
+      <span class="share-feedback" id="shareFeedback">Link copied!</span>
       <button class="lightbox-close" id="lightboxClose">✕</button>
     </div>
     <button class="lightbox-nav lightbox-prev" id="lightboxPrev">‹</button>
@@ -601,22 +602,22 @@ document.getElementById('lightboxShare').addEventListener('click', function() {
   var item = manifest[index];
   var slug = item.file.split('/').pop().replace(/\.[^.]+$/, '');
   
-  // Handle both /gallery.html and /gallery paths
   var basePath = window.location.pathname.replace(/gallery(\.html)?$/, 'image.html');
   var shareUrl = window.location.origin + basePath + '?img=' + encodeURIComponent(slug);
   
   navigator.clipboard.writeText(shareUrl).then(function() {
     var btn = document.getElementById('lightboxShare');
+    var feedback = document.getElementById('shareFeedback');
+    
     btn.textContent = '✓';
     btn.classList.add('copied');
-    btn.style.transform = 'scale(1.1)'; // Add visual pop
+    feedback.classList.add('show');
+    
     setTimeout(function() {
       btn.textContent = '⎘';
       btn.classList.remove('copied');
-      btn.style.transform = '';
+      feedback.classList.remove('show');
     }, 1500);
-  }).catch(function(err) {
-    console.error('Copy failed:', err);
   });
 });
       function formatLabel(slug) {

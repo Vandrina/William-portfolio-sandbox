@@ -1596,6 +1596,28 @@ body {
   z-index: 1001;
 }
 
+.share-feedback {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  background: rgba(200, 164, 110, 0.95);
+  color: #1c1c1e;
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 6px 12px;
+  border-radius: 3px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  white-space: nowrap;
+}
+
+.share-feedback.show {
+  opacity: 1;
+}
+
 .lightbox-close:hover {
   color: var(--bright);
   border-color: var(--mid);
