@@ -84,30 +84,6 @@
       border: 1px solid;
     }
 
-    .btn-primary {
-      background: #c8a46e;
-      color: #1c1c1e;
-      border-color: #c8a46e;
-    }
-
-    .btn-primary:hover {
-      background: #d4b57f;
-      border-color: #d4b57f;
-      transform: translateY(-1px);
-    }
-
-    .btn-secondary {
-      background: transparent;
-      color: rgba(255, 255, 255, 0.8);
-      border-color: rgba(255, 255, 255, 0.2);
-    }
-
-    .btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.05);
-      border-color: rgba(255, 255, 255, 0.3);
-      color: #fff;
-    }
-
     .viewer-loading {
       text-align: center;
       padding: 100px 24px;
@@ -181,8 +157,8 @@
   </div>
 
   <div class="image-actions" id="imageActions" style="display:none;">
-    <a href="gallery.html" class="btn-secondary">View Gallery</a>
-    <a href="gallery.html" id="viewMoreBtn" class="btn-primary">View More</a>
+    <a href="gallery.html" class="btn btn-gold">View Gallery</a>
+    <a href="gallery.html" id="viewMoreBtn" class="btn btn-gold">View More</a>
   </div>
 
   <footer class="footer">
@@ -305,16 +281,29 @@
             viewer.appendChild(meta);
           }
 
-          // Update "View More" button
-          if (item.discipline && item.discipline.length > 0) {
-            var firstDiscipline = item.discipline[0];
-            viewMoreBtn.textContent = 'View More ' + formatLabel(firstDiscipline);
-            viewMoreBtn.href = 'gallery.html?view=' + firstDiscipline;
-          } else {
-            // No discipline, just link to full gallery
-            viewMoreBtn.textContent = 'View More Work';
-            viewMoreBtn.href = 'gallery.html';
-          }
+          // Plural forms for "View More" button
+var pluralMap = {
+  'illustration': 'Illustrations',
+  'concept-art': 'Concept Art',
+  'character-design': 'Character Designs',
+  'toy-design': 'Toy Designs',
+  'backgrounds': 'Backgrounds',
+  'books': 'Books',
+  'nfts': 'NFTs',
+  '2d-animation': '2D Animation',
+  '3d-animation': '3D Animation'
+};
+
+// Update "View More" button
+if (item.discipline && item.discipline.length > 0) {
+  var firstDiscipline = item.discipline[0];
+  var pluralLabel = pluralMap[firstDiscipline] || formatLabel(firstDiscipline);
+  viewMoreBtn.textContent = 'View More ' + pluralLabel;
+  viewMoreBtn.href = 'gallery.html?view=' + firstDiscipline;
+} else {
+  viewMoreBtn.textContent = 'View More Work';
+  viewMoreBtn.href = 'gallery.html';
+}
 
           // Show action buttons
           actions.style.display = 'flex';
