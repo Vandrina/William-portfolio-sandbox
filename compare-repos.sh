@@ -16,6 +16,7 @@ FILES=(
     "shop.html"
     "terms.html"
     "style.css"
+    "image.html"
     "data/manifest.json"
 )
 
