@@ -15,8 +15,8 @@ FILES=(
     "privacy.html"
     "shop.html"
     "terms.html"
-    "style.css"
     "image.html"
+    "style.css"
     "data/manifest.json"
 )
 
