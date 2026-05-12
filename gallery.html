@@ -553,11 +553,12 @@
         });
         if (view || client) updateAllButton();
         var logic = params.get('logic');
-        if (logic === 'or' || logic === 'and') {
-          filterLogic = logic;
+        if (activeFilters.discipline.size > 1 ||      activeFilters.client.size > 1) {
+          filterLogic = 'or';
           document.querySelectorAll('.logic-btn').forEach(function(b) {
-          b.classList.toggle('active', b.dataset.logic === logic);
-        });
+          b.classList.toggle('active', b.dataset.logic === 'or');
+          });
+        }
       }
 
       function openLightbox(index) {
