@@ -552,6 +552,12 @@
           if (b) b.classList.add('active');
         });
         if (view || client) updateAllButton();
+        var logic = params.get('logic');
+        if (logic === 'or' || logic === 'and') {
+          filterLogic = logic;
+          document.querySelectorAll('.logic-btn').forEach(function(b) {
+          b.classList.toggle('active', b.dataset.logic === logic);
+        });
       }
 
       function openLightbox(index) {
