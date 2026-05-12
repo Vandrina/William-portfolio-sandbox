@@ -1,3 +1,4 @@
+<!-- In components/header (or components/navigation) -->
 <!DOCTYPE html>
 <html lang="en" style="background:#1c1c1e">
 
@@ -10,23 +11,29 @@
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500&family=Space+Mono:wght@400;700&display=optional">
   <link rel="stylesheet" href="style.css">
- <!-- Favicons -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.jpg">
-<link rel="icon" type="image/png" sizes="192x192" href="/apple-touch-icon.jpg">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.jpg">
+  <link rel="icon" type="image/png" sizes="192x192" href="/apple-touch-icon.jpg">
 
-<!-- Open Graph (social sharing) -->
-<meta property="og:image" content="https://william-portfolio-sandbox.pages.dev/og-image.jpg">
-<meta property="og:image:width" content="7680">
-<meta property="og:image:height" content="4320">
-<meta property="og:title" content="William McGuire — Illustrator & Concept Artist">
-<meta property="og:description" content="A portfolio of illustration, concept art, and animation that captures that elusive 'Ohhh!' in the first three seconds.">
-<meta property="og:url" content="https://william-portfolio-sandbox.pages.dev">
-<meta property="og:type" content="website">
+  <!-- Open Graph (social sharing) -->
+  <meta property="og:image" content="https://william-portfolio-sandbox.pages.dev/og-image.jpg">
+  <meta property="og:image:width" content="7680">
+  <meta property="og:image:height" content="4320">
+  <meta property="og:title" content="William McGuire — Illustrator & Concept Artist">
+  <meta property="og:description" content="A portfolio of illustration, concept art, and animation that captures that elusive 'Ohhh!' in the first three seconds.">
+  <meta property="og:url" content="https://william-portfolio-sandbox.pages.dev">
+  <meta property="og:type" content="website">
 
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://william-portfolio-sandbox.pages.dev/og-image.jpg">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://william-portfolio-sandbox.pages.dev/og-image.jpg">
+  
+  <!-- GoatCounter analytics -->
+  <!-- <script data-goatcounter="https://ACCOUNT.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script> -->
+  
+  
   <style>
     /* Image viewer specific styles */
     .image-viewer {
@@ -132,29 +139,30 @@
 </head>
 
 <body>
-  <div class="nav-wrap">
-    <nav class="nav">
-      <a href="index.html" class="nav-id">
-        <div class="nav-name">William McGuire</div>
-        <div class="nav-sub">Illustration <span>·</span> Concept Art <span>·</span> Animation</div>
-      </a>
-      <div class="nav-links">
-        <a href="gallery.html" class="nav-item">Gallery</a>
-        <a href="about.html" class="nav-item">About</a>
-        <a href="contact.html" class="nav-item">Contact</a>
-        <a href="shop.html" class="nav-shop nav-item">Shop ↗</a>
-      </div>
-      <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-    </nav>
-    <div class="nav-mobile-menu" id="navMobileMenu">
-      <a href="gallery.html">Gallery</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="shop.html" class="shop">Shop ↗</a>
+
+<div class="nav-wrap">
+  <nav class="nav">
+    <a href="index.html" class="nav-id">
+      <div class="nav-name">William McGuire</div>
+      <div class="nav-sub">Illustration <span>·</span> Concept Art <span>·</span> Animation</div>
+    </a>
+    <div class="nav-links">
+      <a href="gallery.html" class="nav-item">Gallery</a>
+      <a href="about.html" class="nav-item">About</a>
+      <a href="contact.html" class="nav-item">Contact</a>
+      <a href="shop.html" class="nav-shop nav-item">Shop ↗</a>
     </div>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="nav-mobile-menu" id="navMobileMenu">
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="shop.html" class="shop">Shop ↗</a>
   </div>
+</div>
 
   <div class="image-viewer" id="imageViewer">
     <div class="viewer-loading" id="viewerLoading">Loading...</div>
