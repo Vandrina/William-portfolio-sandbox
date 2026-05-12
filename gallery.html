@@ -552,7 +552,6 @@
           if (b) b.classList.add('active');
         });
         if (view || client) updateAllButton();
-        var logic = params.get('logic');
         if (activeFilters.discipline.size > 1 ||      activeFilters.client.size > 1) {
           filterLogic = 'or';
           document.querySelectorAll('.logic-btn').forEach(function(b) {
