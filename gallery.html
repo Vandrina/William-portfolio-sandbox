@@ -209,13 +209,11 @@
         document.addEventListener('click', function (e) { if (!hbtn.contains(e.target) && !hmenu.contains(e.target)) hmenu.classList.remove('open'); });
       }
 
-      // Scroll to top — show when page title scrolls out of view
+      // Scroll to top — show after scrolling 400px
       var scrollTopBtn = document.getElementById('scrollTop');
-      var pageHead = document.querySelector('.gallery-grid');
-      var scrollObserver = new IntersectionObserver(function (entries) {
-        scrollTopBtn.classList.toggle('visible', !entries[0].isIntersecting);
-      }, { threshold: 0 });
-      if (pageHead) scrollObserver.observe(pageHead);
+      window.addEventListener('scroll', function() {
+        scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
+      });
       scrollTopBtn.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
 
       var manifest = [];
