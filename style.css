@@ -31,31 +31,31 @@
 }
 
 
-/* ── FOCUS STYLES ── */
-/* Remove default outline but immediately replace it */
+/* ── FOCUS STYLES (GLOW) ── */
 *:focus {
-  outline: none; /* Only safe because we're adding replacement below */
+  outline: none;
 }
 
-/* Visible focus indicator for all interactive elements */
 a:focus,
 button:focus,
 input:focus,
 select:focus,
 textarea:focus,
 [tabindex]:focus {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(200, 164, 110, 0.4);
+  transition: box-shadow 0.2s ease;
 }
 
-/* Exception: buttons that use background color changes */
+/* Stronger glow for buttons */
 .btn:focus {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
-  /* Or use box-shadow if you prefer glow effect */
-  /* box-shadow: 0 0 0 3px rgba(200, 164, 110, 0.4); */
+  box-shadow: 0 0 0 3px rgba(200, 164, 110, 0.5),
+              0 0 12px rgba(200, 164, 110, 0.3);
 }
 
+/* Subtle glow for nav items */
+.nav-item:focus {
+  box-shadow: 0 0 0 2px rgba(200, 164, 110, 0.3);
+}
 
 /* ── Reset ── */
 * {
