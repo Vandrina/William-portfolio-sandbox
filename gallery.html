@@ -555,6 +555,31 @@
       function openLightbox(index) {
         lightboxIndex = visibleItems.indexOf(index);
         if (lightboxIndex === -1) lightboxIndex = 0;
+        function openLightbox(index) {
+  lightboxIndex = visibleItems.indexOf(index);
+  if (lightboxIndex === -1) lightboxIndex = 0;
+  
+  // ── ANALYTICS: Track image clicks (UNCOMMENT when copying to live site) ──
+  // var item = manifest[index];
+  // if (window.goatcounter) {
+  //   window.goatcounter.count({
+  //     path: 'gallery-click-' + (item.file || '').split('/').pop().replace(/\.[^.]+$/, ''),
+  //     title: ((item.discipline || []).join(' ') + ' — ' + (item.clients || []).join(' ')),
+  //     event: true
+  //   });
+  // }
+  // if (window.gtag) {
+  //   gtag('event', 'gallery_image_click', {
+  //     'image_file': (item.file || '').split('/').pop(),
+  //     'image_discipline': (item.discipline || []).join(','),
+  //     'image_client': (item.clients || []).join(',')
+  //   });
+  // }
+  
+  showLightboxItem();
+  lightbox.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
         showLightboxItem();
         lightbox.classList.add('open');
         document.body.style.overflow = 'hidden';
