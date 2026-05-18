@@ -82,6 +82,7 @@
             <button class="filter-btn" data-type="discipline" data-value="backgrounds" aria-label="filter to backgrounds">Backgrounds</button>
             <button class="filter-btn" data-type="discipline" data-value="books" aria-label="filter to books">Books</button>
             <button class="filter-btn" data-type="discipline" data-value="nfts" aria-label="filter to NFTs">NFTs</button>
+            <button class="filter-btn" data-type="discipline" data-value="childrens-art" aria-label="filter to children's art">Children's Art</button>
             <button class="filter-btn" data-type="discipline" data-value="2d-animation" aria-label="filter to 2d animation">2D Animation</button>
             <button class="filter-btn" data-type="discipline" data-value="3d-animation" aria-label="filter to 3d animation">3D Animation</button>
           </div>
@@ -289,7 +290,7 @@
             var aPrefix = parseInt((a.file || '').split('/').pop()) || 999;
             var bPrefix = parseInt((b.file || '').split('/').pop()) || 999;
             if (aPrefix !== bPrefix) return aPrefix - bPrefix;
-            var disciplineOrder = { 'concept-art': 1, 'illustration': 2, 'toy-design': 3, 'nfts': 4, 'backgrounds': 5, 'books': 6 };
+            var disciplineOrder = { 'concept-art': 1, 'illustration': 2, 'toy-design': 3, 'nfts': 4, 'backgrounds': 5, 'books': 6, 'childrens-art': 7 };
             var aD = disciplineOrder[(a.discipline || [])[0]] || 99;
             var bD = disciplineOrder[(b.discipline || [])[0]] || 99;
             return aD - bD;
