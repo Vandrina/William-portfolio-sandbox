@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Directory paths
-LIVE="/Users/jessewhitaker/Desktop/Work/Live Sites/William-portfolio"
-SANDBOX="/Users/jessewhitaker/Desktop/Work/Live Sites/William-portfolio-sandbox"
+LIVE="/Users/vandrina/Desktop/Work/Live Sites/William-portfolio"
+SANDBOX="/Users/vandrina/Desktop/Work/Live Sites/William-portfolio-sandbox"
 
 # Files to compare
 FILES=(
